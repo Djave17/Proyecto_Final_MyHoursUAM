@@ -1,0 +1,7 @@
+C:\Users\geral\source\repos\MyHoursUAM App\obj\Debug\MyHoursUAM App.csproj.AssemblyReference.cache
+C:\Users\geral\source\repos\MyHoursUAM App\obj\Debug\MyHoursUAM_App.GUI.Eventos.Eventos.resources
+C:\Users\geral\source\repos\MyHoursUAM App\obj\Debug\MyHoursUAM_App.GUI.LogIn.imgIconApp.resources
+C:\Users\geral\source\repos\MyHoursUAM App\obj\Debug\MyHoursUAM_App.GUI.Rol.InterfazRoles.resources
+C:\Users\geral\source\repos\MyHoursUAM App\obj\Debug\MyHoursUAM_App.Properties.Resources.resources
+C:\Users\geral\source\repos\MyHoursUAM App\obj\Debug\MyHoursUAM App.csproj.GenerateResource.cache
+C:\Users\geral\source\repos\MyHoursUAM App\obj\Debug\MyHoursUAM App.csproj.CoreCompileInputs.cache
