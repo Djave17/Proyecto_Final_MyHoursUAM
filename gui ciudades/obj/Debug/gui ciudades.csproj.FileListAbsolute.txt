@@ -1,0 +1,22 @@
+C:\Users\User\Desktop\guiciudades\gui ciudades\bin\Debug\gui ciudades.exe.config
+C:\Users\User\Desktop\guiciudades\gui ciudades\bin\Debug\gui ciudades.exe
+C:\Users\User\Desktop\guiciudades\gui ciudades\bin\Debug\gui ciudades.pdb
+C:\Users\User\Desktop\guiciudades\gui ciudades\obj\Debug\gui ciudades.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\guiciudades\gui ciudades\obj\Debug\gui_ciudades.Form1.resources
+C:\Users\User\Desktop\guiciudades\gui ciudades\obj\Debug\gui_ciudades.Formulario.CiudadFrm.resources
+C:\Users\User\Desktop\guiciudades\gui ciudades\obj\Debug\gui_ciudades.Properties.Resources.resources
+C:\Users\User\Desktop\guiciudades\gui ciudades\obj\Debug\gui ciudades.csproj.GenerateResource.cache
+C:\Users\User\Desktop\guiciudades\gui ciudades\obj\Debug\gui ciudades.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\guiciudades\gui ciudades\obj\Debug\gui ciudades.exe
+C:\Users\User\Desktop\guiciudades\gui ciudades\obj\Debug\gui ciudades.pdb
+C:\Users\User\Desktop\gui ciudades\bin\Debug\gui ciudades.exe.config
+C:\Users\User\Desktop\gui ciudades\bin\Debug\gui ciudades.exe
+C:\Users\User\Desktop\gui ciudades\bin\Debug\gui ciudades.pdb
+C:\Users\User\Desktop\gui ciudades\obj\Debug\gui ciudades.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\gui ciudades\obj\Debug\gui_ciudades.Form1.resources
+C:\Users\User\Desktop\gui ciudades\obj\Debug\gui_ciudades.Formulario.CiudadFrm.resources
+C:\Users\User\Desktop\gui ciudades\obj\Debug\gui_ciudades.Properties.Resources.resources
+C:\Users\User\Desktop\gui ciudades\obj\Debug\gui ciudades.csproj.GenerateResource.cache
+C:\Users\User\Desktop\gui ciudades\obj\Debug\gui ciudades.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\gui ciudades\obj\Debug\gui ciudades.exe
+C:\Users\User\Desktop\gui ciudades\obj\Debug\gui ciudades.pdb
