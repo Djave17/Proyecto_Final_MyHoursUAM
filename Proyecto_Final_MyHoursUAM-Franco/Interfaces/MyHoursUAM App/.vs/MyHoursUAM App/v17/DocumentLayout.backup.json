@@ -1,0 +1,325 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|c:\\users\\user\\desktop\\proyecto_final_myhoursuam-geraldine\\proyecto_final_myhoursuam-geraldine\\interfaces\\myhoursuam app\\gui estudiantes\\rol\\interfazroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui estudiantes\\rol\\interfazroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\gui estudiantes\\rol\\interfazroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui estudiantes\\rol\\interfazroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|c:\\users\\user\\desktop\\proyecto_final_myhoursuam-geraldine\\proyecto_final_myhoursuam-geraldine\\interfaces\\myhoursuam app\\gui estudiantes\\login\\logintrabajador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui estudiantes\\login\\logintrabajador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|c:\\users\\user\\desktop\\proyecto_final_myhoursuam-geraldine\\proyecto_final_myhoursuam-geraldine\\interfaces\\myhoursuam app\\gui estudiantes\\login\\logintrabajador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui estudiantes\\login\\logintrabajador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|c:\\users\\user\\desktop\\proyecto_final_myhoursuam-geraldine\\proyecto_final_myhoursuam-geraldine\\interfaces\\myhoursuam app\\gui estudiantes\\login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui estudiantes\\login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|c:\\users\\user\\desktop\\proyecto_final_myhoursuam-geraldine\\proyecto_final_myhoursuam-geraldine\\interfaces\\myhoursuam app\\gui estudiantes\\login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui estudiantes\\login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|c:\\users\\user\\desktop\\proyecto_final_myhoursuam-geraldine\\proyecto_final_myhoursuam-geraldine\\interfaces\\myhoursuam app\\archivo\\archivoguardarcrear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:archivo\\archivoguardarcrear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|c:\\users\\user\\desktop\\proyecto_final_myhoursuam-geraldine\\proyecto_final_myhoursuam-geraldine\\interfaces\\myhoursuam app\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\gui estudiantes\\asistencia\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui estudiantes\\asistencia\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|c:\\users\\user\\desktop\\proyecto_final_myhoursuam-geraldine\\proyecto_final_myhoursuam-geraldine\\interfaces\\myhoursuam app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\gui administrador\\a\u00F1adir eventos\\a\u00F1adir eventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui administrador\\a\u00F1adir eventos\\a\u00F1adir eventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\gui administrador\\asistencia\\actualizar estado\\actualizar_estado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui administrador\\asistencia\\actualizar estado\\actualizar_estado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\gui administrador\\ajustes\\ajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui administrador\\ajustes\\ajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\gui estudiantes\\launcher\\launcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui estudiantes\\launcher\\launcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\gui estudiantes\\gestiones\\gestiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui estudiantes\\gestiones\\gestiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\gui estudiantes\\eventos\\eventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui estudiantes\\eventos\\eventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\gui estudiantes\\asistencia\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui estudiantes\\asistencia\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\gui estudiantes\\ajustes\\ajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui estudiantes\\ajustes\\ajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\gui administrador\\asistencia\\lista de asistencia\\lista_asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F706725-CAD1-4F51-B32D-EF3712219BAA}|MyHoursUAM App.csproj|solutionrelative:gui administrador\\asistencia\\lista de asistencia\\lista_asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginTrabajador.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\LogIn\\LoginTrabajador.cs",
+              "RelativeDocumentMoniker": "GUI Estudiantes\\LogIn\\LoginTrabajador.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\LogIn\\LoginTrabajador.cs",
+              "RelativeToolTip": "GUI Estudiantes\\LogIn\\LoginTrabajador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T01:58:17.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ArchivoGuardarCrear.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\Archivo\\ArchivoGuardarCrear.cs",
+              "RelativeDocumentMoniker": "Archivo\\ArchivoGuardarCrear.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\Archivo\\ArchivoGuardarCrear.cs",
+              "RelativeToolTip": "Archivo\\ArchivoGuardarCrear.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T00:01:02.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\Class1.cs",
+              "RelativeDocumentMoniker": "Class1.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\Class1.cs",
+              "RelativeToolTip": "Class1.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAA7wD0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T23:40:00.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InterfazRoles.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Rol\\InterfazRoles.cs",
+              "RelativeDocumentMoniker": "GUI Estudiantes\\Rol\\InterfazRoles.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Rol\\InterfazRoles.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GUI Estudiantes\\Rol\\InterfazRoles.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T22:49:32.867Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InterfazRoles.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Rol\\InterfazRoles.cs",
+              "RelativeDocumentMoniker": "GUI Estudiantes\\Rol\\InterfazRoles.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Rol\\InterfazRoles.cs",
+              "RelativeToolTip": "GUI Estudiantes\\Rol\\InterfazRoles.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAYwCoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T00:32:22.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LogIn.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\LogIn\\LogIn.cs",
+              "RelativeDocumentMoniker": "GUI Estudiantes\\LogIn\\LogIn.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\LogIn\\LogIn.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GUI Estudiantes\\LogIn\\LogIn.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T22:49:26.825Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LogIn.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\LogIn\\LogIn.cs",
+              "RelativeDocumentMoniker": "GUI Estudiantes\\LogIn\\LogIn.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\LogIn\\LogIn.cs",
+              "RelativeToolTip": "GUI Estudiantes\\LogIn\\LogIn.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T23:51:24.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginTrabajador.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\LogIn\\LoginTrabajador.cs",
+              "RelativeDocumentMoniker": "GUI Estudiantes\\LogIn\\LoginTrabajador.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\LogIn\\LoginTrabajador.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GUI Estudiantes\\LogIn\\LoginTrabajador.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T01:53:31.577Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Asistencia.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Asistencia\\Asistencia.cs",
+              "RelativeDocumentMoniker": "GUI Estudiantes\\Asistencia\\Asistencia.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Asistencia\\Asistencia.cs",
+              "RelativeToolTip": "GUI Estudiantes\\Asistencia\\Asistencia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T22:46:26.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T00:45:18.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Ajustes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Administrador\\Ajustes\\Ajustes.cs",
+              "RelativeDocumentMoniker": "GUI Administrador\\Ajustes\\Ajustes.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Administrador\\Ajustes\\Ajustes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GUI Administrador\\Ajustes\\Ajustes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T22:44:59.411Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "A\u00F1adir Eventos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Administrador\\A\u00F1adir Eventos\\A\u00F1adir Eventos.cs",
+              "RelativeDocumentMoniker": "GUI Administrador\\A\u00F1adir Eventos\\A\u00F1adir Eventos.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Administrador\\A\u00F1adir Eventos\\A\u00F1adir Eventos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GUI Administrador\\A\u00F1adir Eventos\\A\u00F1adir Eventos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T22:45:43.576Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Ajustes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Ajustes\\Ajustes.cs",
+              "RelativeDocumentMoniker": "GUI Estudiantes\\Ajustes\\Ajustes.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Ajustes\\Ajustes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T22:45:51.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Asistencia.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Asistencia\\Asistencia.cs",
+              "RelativeDocumentMoniker": "GUI Estudiantes\\Asistencia\\Asistencia.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Asistencia\\Asistencia.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GUI Estudiantes\\Asistencia\\Asistencia.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T22:46:11.358Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Actualizar_Estado.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Administrador\\Asistencia\\Actualizar Estado\\Actualizar_Estado.cs",
+              "RelativeDocumentMoniker": "GUI Administrador\\Asistencia\\Actualizar Estado\\Actualizar_Estado.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Administrador\\Asistencia\\Actualizar Estado\\Actualizar_Estado.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GUI Administrador\\Asistencia\\Actualizar Estado\\Actualizar_Estado.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T22:45:35.223Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Launcher.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Launcher\\Launcher.cs",
+              "RelativeDocumentMoniker": "GUI Estudiantes\\Launcher\\Launcher.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Launcher\\Launcher.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T22:47:10.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Gestiones.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Gestiones\\Gestiones.cs",
+              "RelativeDocumentMoniker": "GUI Estudiantes\\Gestiones\\Gestiones.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Gestiones\\Gestiones.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T22:47:13.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Eventos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Eventos\\Eventos.cs",
+              "RelativeDocumentMoniker": "GUI Estudiantes\\Eventos\\Eventos.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM\\Interfaces\\MyHoursUAM App\\GUI Estudiantes\\Eventos\\Eventos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T02:50:58.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Lista_Asistencia.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto_Final_MyHoursUAM-Geraldine\\Proyecto_Final_MyHoursUAM-Geraldine\\Interfaces\\MyHoursUAM App\\GUI Administrador\\Asistencia\\Lista de Asistencia\\Lista_Asistencia.cs",
+              "RelativeDocumentMoniker": "GUI Administrador\\Asistencia\\Lista de Asistencia\\Lista_Asistencia.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM\\Interfaces\\MyHoursUAM App\\GUI Administrador\\Asistencia\\Lista de Asistencia\\Lista_Asistencia.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T22:45:32.551Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
