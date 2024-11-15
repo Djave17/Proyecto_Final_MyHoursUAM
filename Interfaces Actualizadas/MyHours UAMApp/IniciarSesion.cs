@@ -15,6 +15,8 @@ namespace MyHours_UAMApp
         public IniciarSesion()
         {
             InitializeComponent();
+            txbCIF.KeyDown += BloquearTeclasEspeciales;
+            txbContraseña.KeyDown += BloquearTeclasEspeciales;
         }
 
         private void lblRotulo3_Click(object sender, EventArgs e)
@@ -62,6 +64,18 @@ namespace MyHours_UAMApp
             }
         }
 
+        // Evento para bloquear Espacio y Enter en txbCIF y txbContraseña
+        private void BloquearTeclasEspeciales(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Space || e.KeyCode == Keys.Enter)
+            {
+                //Esto bloquea la accion de laa teclas configuradas
+                e.SuppressKeyPress = true; 
+            }
+        }
+
+
+
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             txbCIF.Clear();
@@ -84,6 +98,16 @@ namespace MyHours_UAMApp
             Rol form = new Rol();
             form.Show();
             this.Hide();
+        }
+
+        private void lblRotulo1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbCIF_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -44,9 +44,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(186, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(140, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(119, 150);
+            this.pictureBox1.Size = new System.Drawing.Size(89, 122);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
@@ -56,9 +57,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(147, 231);
+            this.label1.Location = new System.Drawing.Point(110, 188);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 23);
+            this.label1.Size = new System.Drawing.Size(169, 19);
             this.label1.TabIndex = 33;
             this.label1.Text = "Selecciona tu Rol";
             // 
@@ -67,9 +69,10 @@
             this.lblRotulo1.AutoSize = true;
             this.lblRotulo1.Font = new System.Drawing.Font("MS UI Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRotulo1.ForeColor = System.Drawing.Color.Teal;
-            this.lblRotulo1.Location = new System.Drawing.Point(32, 183);
+            this.lblRotulo1.Location = new System.Drawing.Point(24, 149);
+            this.lblRotulo1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRotulo1.Name = "lblRotulo1";
-            this.lblRotulo1.Size = new System.Drawing.Size(418, 33);
+            this.lblRotulo1.Size = new System.Drawing.Size(346, 27);
             this.lblRotulo1.TabIndex = 32;
             this.lblRotulo1.Text = "Bienvenid@ a MyHoursUAM";
             // 
@@ -80,9 +83,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.Teal;
-            this.button3.Location = new System.Drawing.Point(247, 479);
+            this.button3.Location = new System.Drawing.Point(185, 389);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(214, 35);
+            this.button3.Size = new System.Drawing.Size(160, 28);
             this.button3.TabIndex = 31;
             this.button3.Text = "Administrador";
             this.button3.UseVisualStyleBackColor = false;
@@ -95,9 +99,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.Teal;
-            this.button1.Location = new System.Drawing.Point(53, 479);
+            this.button1.Location = new System.Drawing.Point(40, 389);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 35);
+            this.button1.Size = new System.Drawing.Size(119, 28);
             this.button1.TabIndex = 30;
             this.button1.Text = "Estudiante";
             this.button1.UseVisualStyleBackColor = false;
@@ -106,9 +111,10 @@
             // pctAdminIcon
             // 
             this.pctAdminIcon.Image = ((System.Drawing.Image)(resources.GetObject("pctAdminIcon.Image")));
-            this.pctAdminIcon.Location = new System.Drawing.Point(271, 324);
+            this.pctAdminIcon.Location = new System.Drawing.Point(203, 263);
+            this.pctAdminIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pctAdminIcon.Name = "pctAdminIcon";
-            this.pctAdminIcon.Size = new System.Drawing.Size(116, 129);
+            this.pctAdminIcon.Size = new System.Drawing.Size(87, 105);
             this.pctAdminIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctAdminIcon.TabIndex = 29;
             this.pctAdminIcon.TabStop = false;
@@ -116,19 +122,20 @@
             // pctStudentIcon
             // 
             this.pctStudentIcon.Image = ((System.Drawing.Image)(resources.GetObject("pctStudentIcon.Image")));
-            this.pctStudentIcon.Location = new System.Drawing.Point(70, 324);
+            this.pctStudentIcon.Location = new System.Drawing.Point(52, 263);
+            this.pctStudentIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pctStudentIcon.Name = "pctStudentIcon";
-            this.pctStudentIcon.Size = new System.Drawing.Size(142, 144);
+            this.pctStudentIcon.Size = new System.Drawing.Size(106, 117);
             this.pctStudentIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctStudentIcon.TabIndex = 28;
             this.pctStudentIcon.TabStop = false;
             // 
             // Rol
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(500, 533);
+            this.ClientSize = new System.Drawing.Size(375, 433);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRotulo1);
@@ -136,10 +143,12 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pctAdminIcon);
             this.Controls.Add(this.pctStudentIcon);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Rol";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Rol";
+            this.Text = "MyHoursUAM - Rol ";
             this.Load += new System.EventHandler(this.Rol_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctAdminIcon)).EndInit();
