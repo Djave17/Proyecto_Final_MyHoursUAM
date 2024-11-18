@@ -67,3 +67,4 @@ C:\Users\geral\Downloads\Proyecto_Final_MyHoursUAM-Geraldine\Proyecto_Final_MyHo
 C:\Users\geral\Downloads\Proyecto_Final_MyHoursUAM-Geraldine\Proyecto_Final_MyHoursUAM-Geraldine\Interfaces Actualizadas\MyHours UAMApp\obj\Debug\MyHours UAMApp.csproj.CoreCompileInputs.cache
 C:\Users\geral\Downloads\Proyecto_Final_MyHoursUAM-Geraldine\Proyecto_Final_MyHoursUAM-Geraldine\Interfaces Actualizadas\MyHours UAMApp\obj\Debug\MyHours UAMApp.exe
 C:\Users\geral\Downloads\Proyecto_Final_MyHoursUAM-Geraldine\Proyecto_Final_MyHoursUAM-Geraldine\Interfaces Actualizadas\MyHours UAMApp\obj\Debug\MyHours UAMApp.pdb
+C:\Users\geral\Downloads\Proyecto_Final_MyHoursUAM-Geraldine\Proyecto_Final_MyHoursUAM-Geraldine\Interfaces Actualizadas\MyHours UAMApp\obj\Debug\MyHours_UAMApp.UserReporte.resources

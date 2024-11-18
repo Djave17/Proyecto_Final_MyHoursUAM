@@ -37,6 +37,7 @@
             this.pcbStudentIcon = new System.Windows.Forms.PictureBox();
             this.pnlAreaAdministrador = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEditarAsitencia = new System.Windows.Forms.Button();
@@ -153,11 +154,12 @@
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
             this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
-            this.pnlAreaAdministrador.Size = new System.Drawing.Size(220, 745);
+            this.pnlAreaAdministrador.Size = new System.Drawing.Size(220, 849);
             this.pnlAreaAdministrador.TabIndex = 8;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnEditarAsitencia);
@@ -168,8 +170,25 @@
             this.panel1.Location = new System.Drawing.Point(0, 90);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 674);
+            this.panel1.Size = new System.Drawing.Size(220, 769);
             this.panel1.TabIndex = 2;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(-3, 640);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(220, 119);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "📄 Reporte";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button1
             // 
@@ -299,7 +318,7 @@
             this.gpbGestiones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpbGestiones.Name = "gpbGestiones";
             this.gpbGestiones.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gpbGestiones.Size = new System.Drawing.Size(852, 620);
+            this.gpbGestiones.Size = new System.Drawing.Size(852, 748);
             this.gpbGestiones.TabIndex = 11;
             this.gpbGestiones.TabStop = false;
             this.gpbGestiones.Text = "Eventos Inscritos";
@@ -468,7 +487,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1107, 745);
+            this.ClientSize = new System.Drawing.Size(1107, 849);
             this.Controls.Add(this.gpbGestiones);
             this.Controls.Add(this.pnlPieArriba);
             this.Controls.Add(this.pnlAreaAdministrador);
@@ -530,5 +549,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblCerrarSesion;
         private System.Windows.Forms.PictureBox pcbLogOutIcon;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -63,5 +63,17 @@ namespace MyHours_UAMApp
             form.Show();
             this.Close();
         }
+
+        private void gpbCambioContraseña_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UserReporte form = new UserReporte();
+            form.Show();
+            this.Close();
+        }
     }
 }

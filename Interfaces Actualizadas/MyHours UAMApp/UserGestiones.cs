@@ -59,5 +59,12 @@ namespace MyHours_UAMApp
             form.Show();
             this.Close();
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            UserReporte form = new UserReporte();
+            form.Show();
+            this.Close();
+        }
     }
 }

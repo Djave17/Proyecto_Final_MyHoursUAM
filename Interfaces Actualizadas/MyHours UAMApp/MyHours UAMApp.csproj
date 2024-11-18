@@ -132,6 +132,12 @@
     <Compile Include="UserMiPerfil.Designer.cs">
       <DependentUpon>UserMiPerfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserReporte.Designer.cs">
+      <DependentUpon>UserReporte.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminAdd.resx">
       <DependentUpon>AdminAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserMiPerfil.resx">
       <DependentUpon>UserMiPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserReporte.resx">
+      <DependentUpon>UserReporte.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
