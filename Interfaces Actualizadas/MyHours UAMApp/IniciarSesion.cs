@@ -97,7 +97,7 @@ namespace MyHours_UAMApp
         {
             Rol form = new Rol();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void lblRotulo1_Click(object sender, EventArgs e)
@@ -106,6 +106,11 @@ namespace MyHours_UAMApp
         }
 
         private void txbCIF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pcbIconApp_Click(object sender, EventArgs e)
         {
 
         }

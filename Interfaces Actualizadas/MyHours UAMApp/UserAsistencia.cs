@@ -21,7 +21,7 @@ namespace MyHours_UAMApp
         {
             UserCambiarContraseña form = new UserCambiarContraseña();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
     
@@ -29,35 +29,35 @@ namespace MyHours_UAMApp
         {
             UserMiPerfil  form = new UserMiPerfil();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnEditarAsitencia_Click(object sender, EventArgs e)
         {
             UserGestiones form = new UserGestiones();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnAsistencia_Click(object sender, EventArgs e)
         {
             UserAsistencia form = new UserAsistencia();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnVerEventos_Click(object sender, EventArgs e)
         {
             UserEvento form = new UserEvento();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void lblCerrarSesion_Click(object sender, EventArgs e)
         {
             Rol form = new Rol();
             form.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

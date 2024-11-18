@@ -26,42 +26,42 @@ namespace MyHours_UAMApp
         {
             UserEvento form = new UserEvento();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnAsistencia_Click(object sender, EventArgs e)
         {
             UserAsistencia form = new UserAsistencia();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnEditarAsitencia_Click(object sender, EventArgs e)
         {
             UserGestiones form = new UserGestiones();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             UserMiPerfil form = new UserMiPerfil();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnAjustes_Click(object sender, EventArgs e)
         {
             UserCambiarContraseña form = new UserCambiarContraseña();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void lblCerrarSesion_Click(object sender, EventArgs e)
         {
             Rol form = new Rol();
             form.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

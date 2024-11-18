@@ -81,10 +81,10 @@
             this.pnlPieArriba.Controls.Add(this.lblEstudiante);
             this.pnlPieArriba.Controls.Add(this.pcbStudentIcon);
             this.pnlPieArriba.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlPieArriba.Location = new System.Drawing.Point(165, 0);
-            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlPieArriba.Location = new System.Drawing.Point(220, 0);
+            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlPieArriba.Name = "pnlPieArriba";
-            this.pnlPieArriba.Size = new System.Drawing.Size(665, 73);
+            this.pnlPieArriba.Size = new System.Drawing.Size(887, 90);
             this.pnlPieArriba.TabIndex = 9;
             // 
             // lblCerrarSesion
@@ -92,10 +92,9 @@
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
-            this.lblCerrarSesion.Location = new System.Drawing.Point(584, 35);
-            this.lblCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCerrarSesion.Location = new System.Drawing.Point(779, 43);
             this.lblCerrarSesion.Name = "lblCerrarSesion";
-            this.lblCerrarSesion.Size = new System.Drawing.Size(83, 13);
+            this.lblCerrarSesion.Size = new System.Drawing.Size(102, 16);
             this.lblCerrarSesion.TabIndex = 4;
             this.lblCerrarSesion.Text = "Cerrar Sesion";
             this.lblCerrarSesion.Click += new System.EventHandler(this.lblCerrarSesion_Click);
@@ -103,10 +102,10 @@
             // pcbLogOutIcon
             // 
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
-            this.pcbLogOutIcon.Location = new System.Drawing.Point(540, 19);
-            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.pcbLogOutIcon.Location = new System.Drawing.Point(720, 23);
+            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcbLogOutIcon.Name = "pcbLogOutIcon";
-            this.pcbLogOutIcon.Size = new System.Drawing.Size(40, 41);
+            this.pcbLogOutIcon.Size = new System.Drawing.Size(53, 50);
             this.pcbLogOutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLogOutIcon.TabIndex = 3;
             this.pcbLogOutIcon.TabStop = false;
@@ -116,10 +115,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(20, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(27, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 31);
+            this.label1.Size = new System.Drawing.Size(236, 38);
             this.label1.TabIndex = 2;
             this.label1.Text = "DASHBOARD";
             // 
@@ -128,20 +126,19 @@
             this.lblEstudiante.AutoSize = true;
             this.lblEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstudiante.ForeColor = System.Drawing.Color.Teal;
-            this.lblEstudiante.Location = new System.Drawing.Point(475, 35);
-            this.lblEstudiante.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEstudiante.Location = new System.Drawing.Point(633, 43);
             this.lblEstudiante.Name = "lblEstudiante";
-            this.lblEstudiante.Size = new System.Drawing.Size(67, 13);
+            this.lblEstudiante.Size = new System.Drawing.Size(80, 16);
             this.lblEstudiante.TabIndex = 0;
             this.lblEstudiante.Text = "Estudiante";
             // 
             // pcbStudentIcon
             // 
             this.pcbStudentIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbStudentIcon.Image")));
-            this.pcbStudentIcon.Location = new System.Drawing.Point(434, 21);
-            this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.pcbStudentIcon.Location = new System.Drawing.Point(579, 26);
+            this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcbStudentIcon.Name = "pcbStudentIcon";
-            this.pcbStudentIcon.Size = new System.Drawing.Size(36, 38);
+            this.pcbStudentIcon.Size = new System.Drawing.Size(48, 47);
             this.pcbStudentIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbStudentIcon.TabIndex = 0;
             this.pcbStudentIcon.TabStop = false;
@@ -154,9 +151,9 @@
             this.pnlAreaAdministrador.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlAreaAdministrador.ForeColor = System.Drawing.Color.White;
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
-            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
-            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 605);
+            this.pnlAreaAdministrador.Size = new System.Drawing.Size(220, 745);
             this.pnlAreaAdministrador.TabIndex = 8;
             // 
             // panel1
@@ -168,10 +165,10 @@
             this.panel1.Controls.Add(this.btnAsistencia);
             this.panel1.Controls.Add(this.btnVerEventos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 73);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 90);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(165, 548);
+            this.panel1.Size = new System.Drawing.Size(220, 674);
             this.panel1.TabIndex = 2;
             // 
             // button1
@@ -182,10 +179,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(9, 310);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(12, 382);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 99);
+            this.button1.Size = new System.Drawing.Size(208, 122);
             this.button1.TabIndex = 13;
             this.button1.Text = "👤 Mi Perfil";
             this.button1.UseVisualStyleBackColor = false;
@@ -194,10 +191,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(0, 117);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(0, 144);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(4, 103);
+            this.panel2.Size = new System.Drawing.Size(5, 127);
             this.panel2.TabIndex = 3;
             // 
             // btnEditarAsitencia
@@ -208,10 +205,10 @@
             this.btnEditarAsitencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarAsitencia.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarAsitencia.ForeColor = System.Drawing.Color.White;
-            this.btnEditarAsitencia.Location = new System.Drawing.Point(2, 208);
-            this.btnEditarAsitencia.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditarAsitencia.Location = new System.Drawing.Point(3, 256);
+            this.btnEditarAsitencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditarAsitencia.Name = "btnEditarAsitencia";
-            this.btnEditarAsitencia.Size = new System.Drawing.Size(165, 97);
+            this.btnEditarAsitencia.Size = new System.Drawing.Size(220, 119);
             this.btnEditarAsitencia.TabIndex = 9;
             this.btnEditarAsitencia.Text = "✍️ Gestiones";
             this.btnEditarAsitencia.UseVisualStyleBackColor = false;
@@ -225,10 +222,10 @@
             this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjustes.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjustes.ForeColor = System.Drawing.Color.White;
-            this.btnAjustes.Location = new System.Drawing.Point(0, 414);
-            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAjustes.Location = new System.Drawing.Point(0, 510);
+            this.btnAjustes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAjustes.Name = "btnAjustes";
-            this.btnAjustes.Size = new System.Drawing.Size(165, 99);
+            this.btnAjustes.Size = new System.Drawing.Size(220, 122);
             this.btnAjustes.TabIndex = 12;
             this.btnAjustes.Text = "⚙️   Ajustes";
             this.btnAjustes.UseVisualStyleBackColor = false;
@@ -242,10 +239,10 @@
             this.btnAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsistencia.ForeColor = System.Drawing.Color.White;
-            this.btnAsistencia.Location = new System.Drawing.Point(0, 104);
-            this.btnAsistencia.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAsistencia.Location = new System.Drawing.Point(0, 128);
+            this.btnAsistencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAsistencia.Name = "btnAsistencia";
-            this.btnAsistencia.Size = new System.Drawing.Size(165, 99);
+            this.btnAsistencia.Size = new System.Drawing.Size(220, 122);
             this.btnAsistencia.TabIndex = 11;
             this.btnAsistencia.Text = "🗒️  Asistencia";
             this.btnAsistencia.UseVisualStyleBackColor = false;
@@ -259,10 +256,10 @@
             this.btnVerEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerEventos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerEventos.ForeColor = System.Drawing.Color.White;
-            this.btnVerEventos.Location = new System.Drawing.Point(-2, 5);
-            this.btnVerEventos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVerEventos.Location = new System.Drawing.Point(-3, 6);
+            this.btnVerEventos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVerEventos.Name = "btnVerEventos";
-            this.btnVerEventos.Size = new System.Drawing.Size(165, 99);
+            this.btnVerEventos.Size = new System.Drawing.Size(220, 122);
             this.btnVerEventos.TabIndex = 10;
             this.btnVerEventos.Text = "👁  Ver Eventos";
             this.btnVerEventos.UseVisualStyleBackColor = false;
@@ -273,18 +270,18 @@
             this.pnlIcon.Controls.Add(this.pictureBox1);
             this.pnlIcon.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlIcon.Location = new System.Drawing.Point(0, 0);
-            this.pnlIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlIcon.Name = "pnlIcon";
-            this.pnlIcon.Size = new System.Drawing.Size(165, 73);
+            this.pnlIcon.Size = new System.Drawing.Size(220, 90);
             this.pnlIcon.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(61, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(81, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 63);
+            this.pictureBox1.Size = new System.Drawing.Size(52, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -298,11 +295,11 @@
             this.gpbGestiones.Controls.Add(this.groupBox1);
             this.gpbGestiones.Controls.Add(this.gpbCONANCA);
             this.gpbGestiones.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbGestiones.Location = new System.Drawing.Point(182, 82);
-            this.gpbGestiones.Margin = new System.Windows.Forms.Padding(2);
+            this.gpbGestiones.Location = new System.Drawing.Point(243, 101);
+            this.gpbGestiones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpbGestiones.Name = "gpbGestiones";
-            this.gpbGestiones.Padding = new System.Windows.Forms.Padding(2);
-            this.gpbGestiones.Size = new System.Drawing.Size(639, 504);
+            this.gpbGestiones.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gpbGestiones.Size = new System.Drawing.Size(852, 620);
             this.gpbGestiones.TabIndex = 11;
             this.gpbGestiones.TabStop = false;
             this.gpbGestiones.Text = "Eventos Inscritos";
@@ -311,11 +308,11 @@
             // 
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Location = new System.Drawing.Point(15, 353);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(20, 434);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(603, 81);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(804, 100);
             this.groupBox3.TabIndex = 40;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Visita a Colegio Bautista";
@@ -325,10 +322,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(12, 37);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(16, 46);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 19);
+            this.label5.Size = new System.Drawing.Size(214, 23);
             this.label5.TabIndex = 44;
             this.label5.Text = "Estado: Sin Registrar";
             // 
@@ -340,10 +336,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(535, 28);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Location = new System.Drawing.Point(713, 34);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(48, 28);
+            this.button4.Size = new System.Drawing.Size(64, 34);
             this.button4.TabIndex = 43;
             this.button4.Text = "✔️";
             this.button4.UseVisualStyleBackColor = false;
@@ -352,11 +348,11 @@
             // 
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Location = new System.Drawing.Point(15, 249);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(20, 306);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(603, 81);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(804, 100);
             this.groupBox2.TabIndex = 40;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Rally Nacional de Innovacion";
@@ -366,10 +362,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(12, 37);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(16, 46);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(179, 19);
+            this.label4.Size = new System.Drawing.Size(214, 23);
             this.label4.TabIndex = 43;
             this.label4.Text = "Estado: Sin Registrar";
             // 
@@ -381,10 +376,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(535, 28);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(713, 34);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(48, 28);
+            this.button3.Size = new System.Drawing.Size(64, 34);
             this.button3.TabIndex = 42;
             this.button3.Text = "✔️";
             this.button3.UseVisualStyleBackColor = false;
@@ -393,11 +388,11 @@
             // 
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Location = new System.Drawing.Point(15, 154);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(20, 190);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(603, 81);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(804, 100);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Donacion de Sangre";
@@ -407,10 +402,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(12, 32);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(16, 39);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(179, 19);
+            this.label3.Size = new System.Drawing.Size(214, 23);
             this.label3.TabIndex = 42;
             this.label3.Text = "Estado: Sin Registrar";
             // 
@@ -422,10 +416,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(535, 30);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(713, 37);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(48, 28);
+            this.button2.Size = new System.Drawing.Size(64, 34);
             this.button2.TabIndex = 41;
             this.button2.Text = "✔️";
             this.button2.UseVisualStyleBackColor = false;
@@ -434,11 +428,11 @@
             // 
             this.gpbCONANCA.Controls.Add(this.label2);
             this.gpbCONANCA.Controls.Add(this.btnGuardar);
-            this.gpbCONANCA.Location = new System.Drawing.Point(15, 56);
-            this.gpbCONANCA.Margin = new System.Windows.Forms.Padding(2);
+            this.gpbCONANCA.Location = new System.Drawing.Point(20, 69);
+            this.gpbCONANCA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpbCONANCA.Name = "gpbCONANCA";
-            this.gpbCONANCA.Padding = new System.Windows.Forms.Padding(2);
-            this.gpbCONANCA.Size = new System.Drawing.Size(603, 81);
+            this.gpbCONANCA.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gpbCONANCA.Size = new System.Drawing.Size(804, 100);
             this.gpbCONANCA.TabIndex = 0;
             this.gpbCONANCA.TabStop = false;
             this.gpbCONANCA.Text = "CONANCA";
@@ -448,10 +442,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(12, 30);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(16, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 19);
+            this.label2.Size = new System.Drawing.Size(214, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Estado: Sin Registrar";
             // 
@@ -463,25 +456,25 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(535, 28);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Location = new System.Drawing.Point(713, 34);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(48, 28);
+            this.btnGuardar.Size = new System.Drawing.Size(64, 34);
             this.btnGuardar.TabIndex = 40;
             this.btnGuardar.Text = "✔️";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
             // UserAsistencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 605);
+            this.ClientSize = new System.Drawing.Size(1107, 745);
             this.Controls.Add(this.gpbGestiones);
             this.Controls.Add(this.pnlPieArriba);
             this.Controls.Add(this.pnlAreaAdministrador);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserAsistencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Asistencia";

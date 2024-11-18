@@ -21,35 +21,35 @@ namespace MyHours_UAMApp
         {
             AdminAdd form = new AdminAdd();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnVerEventos_Click(object sender, EventArgs e)
         {
             AdminVer form = new AdminVer();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnAsistencia_Click(object sender, EventArgs e)
         {
             AdminAsistencia form = new AdminAsistencia();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnAjustes_Click(object sender, EventArgs e)
         {
             AdminAjustes form = new AdminAjustes();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void lblCerrarSesion_Click(object sender, EventArgs e)
         {
             Rol form = new Rol();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void label3_Click(object sender, EventArgs e)

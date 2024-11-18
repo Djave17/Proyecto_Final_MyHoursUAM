@@ -26,14 +26,28 @@ namespace MyHours_UAMApp
         {
             IniciarSesion form = new IniciarSesion();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             IniciarSesion form = new IniciarSesion();
             form.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            IniciarSesion form = new IniciarSesion();
+            form.Show();
+            this.Close();
+        }
+
+        private void btnStudent_Click(object sender, EventArgs e)
+        {
+            IniciarSesion form = new IniciarSesion();
+            form.Show();
+            this.Close();
         }
     }
 }
