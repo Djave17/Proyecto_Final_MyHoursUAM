@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,10 +45,6 @@
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Metodos.cs",
@@ -56,10 +52,26 @@
               "RelativeDocumentMoniker": "Estructuras\\Metodos\\Metodos.cs",
               "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM - Interfaces actualizadas\\MyHoursUAM\\Estructuras\\Metodos\\Metodos.cs",
               "RelativeToolTip": "Estructuras\\Metodos\\Metodos.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAAA6wPEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAiwOgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T02:27:24.184Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminVer.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM - Interfaces actualizadas\\MyHoursUAM\\Administrador\\AdminVer.cs",
+              "RelativeDocumentMoniker": "Administrador\\AdminVer.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM - Interfaces actualizadas\\MyHoursUAM\\Administrador\\AdminVer.cs",
+              "RelativeToolTip": "Administrador\\AdminVer.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAuwAoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T04:38:59.862Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Bookmark",
@@ -99,18 +111,6 @@
               "RelativeToolTip": "Forms\\Administrador\\AdminAdd.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T02:29:12.291Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdminVer.cs",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM - Interfaces actualizadas\\MyHoursUAM\\Administrador\\AdminVer.cs",
-              "RelativeDocumentMoniker": "Administrador\\AdminVer.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM - Interfaces actualizadas\\MyHoursUAM\\Administrador\\AdminVer.cs",
-              "RelativeToolTip": "Administrador\\AdminVer.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAuwAoAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T04:38:59.862Z"
             },
             {
               "$type": "Document",

@@ -214,6 +214,11 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             //Forma de llamar en documentacion: Metodos.EliminarPartido(indice);
         }
 
+        //====================Administrador====================
+        // Funcion para aprobar solicitud de asistencia a un evento
+
+
+
         // ==================Estudiantes==================
         // Funcion para enviar compronante de asistencia a un evento
         // Funcion para enviar combrobante de asistencia a un partido
