@@ -56,6 +56,10 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         // ==================Lista de eventos===================
         private static List<Evento> eventos = new List<Evento>();
 
+
+        // ==================Lista de partidos===================
+        private static List<Partido> partidos = new List<Partido>();
+
         // ==================Login===================
         // Función para login de estudiante
         static public bool LoginEstudiante(string usuario, string contrasena) // Esta es una prueba gente 
@@ -155,9 +159,60 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
         // ==================Partidos==================
         // Función para registrar un nuevo partido
-        // Función para editar un partido existente en la lista
-        // Función para eliminar un partido de la lista según el índice
+        static public void RegistrarPartido(string nombrePartido, string fechaPartido, string horaPartido, string lugarPartido, string descripcionPartido, string organizador, int horasConvalidas, string rival, string deporteEvento)
+        {
+            Partido nuevoPartido = new Partido
+            {
+                nombreEvento = nombrePartido,
+                fechaEvento = fechaPartido,
+                horaEvento = horaPartido,
+                lugarEvento = lugarPartido,
+                descripcionEvento = descripcionPartido,
+                organizadorEvento = organizador,
+                horasConvalidas = horasConvalidas,
+                rival = rival,
+                deporteEvento = deporteEvento
+            };
 
+            partidos.Add(nuevoPartido);
+            //Forma de llamar en documentacion: Metodos.RegistrarPartido("nombrePartido", "fechaPartido", "horaPartido", "lugarPartido", "descripcionPartido", "organizador", horasConvalidas, "rival", "deporteEvento");
+        }
+        // Función para editar un partido existente en la lista
+        static public void EditarPartido(int indice, string nombrePartido, string fechaPartido, string horaPartido, string lugarPartido, string descripcionPartido, string organizador, int horasConvalidas, string rival, string deporteEvento)
+        {
+            if (indice >= 0 && indice < partidos.Count)
+            {
+                //Guardar la lista
+                partidos[indice].nombreEvento = nombrePartido;
+                partidos[indice].fechaEvento = fechaPartido;
+                partidos[indice].horaEvento = horaPartido;
+                partidos[indice].lugarEvento = lugarPartido;
+                partidos[indice].descripcionEvento = descripcionPartido;
+                partidos[indice].organizadorEvento = organizador;
+                partidos[indice].horasConvalidas = horasConvalidas;
+                partidos[indice].rival = rival;
+                partidos[indice].deporteEvento = deporteEvento;
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException("El índice proporcionado está fuera del rango de la lista de partidos.");
+            }
+            //Forma de llamar en documentacion: Metodos.EditarPartido(indice, "nombrePartido", "fechaPartido", "horaPartido", "lugarPartido", "descripcionPartido", "organizador", horasConvalidas, "rival", "deporteEvento");
+        }
+
+        // Función para eliminar un partido de la lista según el índice
+        static public void EliminarPartido(int indice)
+        {
+            if (indice >= 0 && indice < partidos.Count)
+            {
+                partidos.RemoveAt(indice);
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException("El índice proporcionado está fuera del rango de la lista de partidos.");
+            }
+            //Forma de llamar en documentacion: Metodos.EliminarPartido(indice);
+        }
 
         // ==================Estudiantes==================
         // Funcion para enviar compronante de asistencia a un evento
