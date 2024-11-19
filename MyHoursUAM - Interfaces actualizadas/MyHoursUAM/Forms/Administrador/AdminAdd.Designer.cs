@@ -45,6 +45,8 @@
             this.pnlIcon = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gpbNuevoEvento = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.rbtPartidos = new System.Windows.Forms.RadioButton();
             this.rbtHorasLaborales = new System.Windows.Forms.RadioButton();
             this.lblTypeBeneficios = new System.Windows.Forms.Label();
@@ -54,17 +56,15 @@
             this.lblTipodeEvento = new System.Windows.Forms.Label();
             this.txbHorario = new System.Windows.Forms.TextBox();
             this.lblHorario = new System.Windows.Forms.Label();
-            this.txbNameEvento = new System.Windows.Forms.TextBox();
+            this.txtNombreEvento = new System.Windows.Forms.TextBox();
             this.nombreEvento = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txbCupos = new System.Windows.Forms.TextBox();
+            this.txtCupos = new System.Windows.Forms.TextBox();
             this.lblCupos = new System.Windows.Forms.Label();
-            this.txbLugar = new System.Windows.Forms.TextBox();
+            this.txtLugar = new System.Windows.Forms.TextBox();
             this.lblLugar = new System.Windows.Forms.Label();
             this.lblRotulo2 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -290,13 +290,13 @@
             this.gpbNuevoEvento.Controls.Add(this.lblTipodeEvento);
             this.gpbNuevoEvento.Controls.Add(this.txbHorario);
             this.gpbNuevoEvento.Controls.Add(this.lblHorario);
-            this.gpbNuevoEvento.Controls.Add(this.txbNameEvento);
+            this.gpbNuevoEvento.Controls.Add(this.txtNombreEvento);
             this.gpbNuevoEvento.Controls.Add(this.nombreEvento);
             this.gpbNuevoEvento.Controls.Add(this.btnCancel);
             this.gpbNuevoEvento.Controls.Add(this.btnGuardar);
-            this.gpbNuevoEvento.Controls.Add(this.txbCupos);
+            this.gpbNuevoEvento.Controls.Add(this.txtCupos);
             this.gpbNuevoEvento.Controls.Add(this.lblCupos);
-            this.gpbNuevoEvento.Controls.Add(this.txbLugar);
+            this.gpbNuevoEvento.Controls.Add(this.txtLugar);
             this.gpbNuevoEvento.Controls.Add(this.lblLugar);
             this.gpbNuevoEvento.Controls.Add(this.lblRotulo2);
             this.gpbNuevoEvento.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -309,6 +309,30 @@
             this.gpbNuevoEvento.TabStop = false;
             this.gpbNuevoEvento.Text = "Cambio de Contraseña";
             this.gpbNuevoEvento.Enter += new System.EventHandler(this.gpbNuevoEvento_Enter);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Teal;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(9, 379);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(242, 23);
+            this.textBox1.TabIndex = 52;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 361);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 16);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Hora de Envio:";
             // 
             // rbtPartidos
             // 
@@ -421,18 +445,18 @@
             this.lblHorario.TabIndex = 42;
             this.lblHorario.Text = "Horario:";
             // 
-            // txbNameEvento
+            // txtNombreEvento
             // 
-            this.txbNameEvento.BackColor = System.Drawing.Color.Teal;
-            this.txbNameEvento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbNameEvento.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbNameEvento.ForeColor = System.Drawing.Color.White;
-            this.txbNameEvento.Location = new System.Drawing.Point(6, 187);
-            this.txbNameEvento.Margin = new System.Windows.Forms.Padding(2);
-            this.txbNameEvento.Multiline = true;
-            this.txbNameEvento.Name = "txbNameEvento";
-            this.txbNameEvento.Size = new System.Drawing.Size(242, 23);
-            this.txbNameEvento.TabIndex = 41;
+            this.txtNombreEvento.BackColor = System.Drawing.Color.Teal;
+            this.txtNombreEvento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreEvento.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreEvento.ForeColor = System.Drawing.Color.White;
+            this.txtNombreEvento.Location = new System.Drawing.Point(6, 187);
+            this.txtNombreEvento.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreEvento.Multiline = true;
+            this.txtNombreEvento.Name = "txtNombreEvento";
+            this.txtNombreEvento.Size = new System.Drawing.Size(242, 23);
+            this.txtNombreEvento.TabIndex = 41;
             // 
             // nombreEvento
             // 
@@ -477,18 +501,18 @@
             this.btnGuardar.Text = "✔️";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // txbCupos
+            // txtCupos
             // 
-            this.txbCupos.BackColor = System.Drawing.Color.Teal;
-            this.txbCupos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbCupos.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCupos.ForeColor = System.Drawing.Color.White;
-            this.txbCupos.Location = new System.Drawing.Point(8, 327);
-            this.txbCupos.Margin = new System.Windows.Forms.Padding(2);
-            this.txbCupos.Multiline = true;
-            this.txbCupos.Name = "txbCupos";
-            this.txbCupos.Size = new System.Drawing.Size(242, 23);
-            this.txbCupos.TabIndex = 35;
+            this.txtCupos.BackColor = System.Drawing.Color.Teal;
+            this.txtCupos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCupos.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCupos.ForeColor = System.Drawing.Color.White;
+            this.txtCupos.Location = new System.Drawing.Point(8, 327);
+            this.txtCupos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCupos.Multiline = true;
+            this.txtCupos.Name = "txtCupos";
+            this.txtCupos.Size = new System.Drawing.Size(242, 23);
+            this.txtCupos.TabIndex = 35;
             // 
             // lblCupos
             // 
@@ -501,18 +525,18 @@
             this.lblCupos.TabIndex = 34;
             this.lblCupos.Text = "Cupos:";
             // 
-            // txbLugar
+            // txtLugar
             // 
-            this.txbLugar.BackColor = System.Drawing.Color.Teal;
-            this.txbLugar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbLugar.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbLugar.ForeColor = System.Drawing.Color.White;
-            this.txbLugar.Location = new System.Drawing.Point(8, 280);
-            this.txbLugar.Margin = new System.Windows.Forms.Padding(2);
-            this.txbLugar.Multiline = true;
-            this.txbLugar.Name = "txbLugar";
-            this.txbLugar.Size = new System.Drawing.Size(242, 23);
-            this.txbLugar.TabIndex = 33;
+            this.txtLugar.BackColor = System.Drawing.Color.Teal;
+            this.txtLugar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLugar.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLugar.ForeColor = System.Drawing.Color.White;
+            this.txtLugar.Location = new System.Drawing.Point(8, 280);
+            this.txtLugar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLugar.Multiline = true;
+            this.txtLugar.Name = "txtLugar";
+            this.txtLugar.Size = new System.Drawing.Size(242, 23);
+            this.txtLugar.TabIndex = 33;
             // 
             // lblLugar
             // 
@@ -536,30 +560,6 @@
             this.lblRotulo2.Size = new System.Drawing.Size(260, 16);
             this.lblRotulo2.TabIndex = 0;
             this.lblRotulo2.Text = "Todos los campos son requeridos";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 361);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 16);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "Hora de Envio:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.Teal;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(9, 379);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 23);
-            this.textBox1.TabIndex = 52;
             // 
             // AdminAdd
             // 
@@ -606,14 +606,14 @@
         private System.Windows.Forms.GroupBox gpbNuevoEvento;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txbCupos;
+        private System.Windows.Forms.TextBox txtCupos;
         private System.Windows.Forms.Label lblCupos;
-        private System.Windows.Forms.TextBox txbLugar;
+        private System.Windows.Forms.TextBox txtLugar;
         private System.Windows.Forms.Label lblLugar;
         private System.Windows.Forms.Label lblRotulo2;
         private System.Windows.Forms.TextBox txbHorario;
         private System.Windows.Forms.Label lblHorario;
-        private System.Windows.Forms.TextBox txbNameEvento;
+        private System.Windows.Forms.TextBox txtNombreEvento;
         private System.Windows.Forms.Label nombreEvento;
         private System.Windows.Forms.RadioButton rbtAcademico;
         private System.Windows.Forms.RadioButton rbtExtracurricular;
