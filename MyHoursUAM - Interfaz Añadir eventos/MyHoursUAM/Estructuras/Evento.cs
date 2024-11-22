@@ -17,9 +17,6 @@ namespace MyHours_UAMApp.Estructuras
         public string lugarEvento { get; set; }
         public string idEvento { get; set; }
         public int cupos { get; set; }
-
-
-
         public enum TipoEvento
         {
             deportivo,
@@ -27,6 +24,7 @@ namespace MyHours_UAMApp.Estructuras
             social,
             voluntario
         }
-        
+        public TipoEvento tipoEvento { get; set; }
+
     }
 }

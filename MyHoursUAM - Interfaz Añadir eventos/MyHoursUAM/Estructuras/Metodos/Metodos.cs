@@ -14,9 +14,19 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         /// <summary>
         /// Devuelve todos los eventos como una lista.
         /// </summary>
-        public static List<Evento> GetEventos()
+        public static List<string[]> GetEventosAsString()
         {
-            return eventos;
+            return eventos.Select(p => new string[]
+            {
+                p.nombreEvento,
+                p.lugarEvento,
+                p.tipoEvento.ToString(),
+                p.horaEvento,
+                p.fechaEvento,
+                p.descripcionEvento,
+                p.cupos.ToString(),
+                p.cantidadConvalidar.ToString(),
+            }).ToList();
         }
         private static List<Partido> partidos = new List<Partido>();
 
@@ -37,8 +47,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             string tipoEvento,
             string tipoBeneficio,
             string nombreEvento,
-            int cantidadConvalidar,
-            int cupos,
+            int cantidadAConvalidar,
+            int cupo,
             string horaEnvio,
             string hora,
             string fecha,
@@ -52,8 +62,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 string.IsNullOrWhiteSpace(hora) ||
                 string.IsNullOrWhiteSpace(fecha) ||
                 string.IsNullOrWhiteSpace(lugar) ||
-                cantidadConvalidar <= 0 ||
-                cupos <= 0)
+                cantidadAConvalidar <= 0 ||
+                cupo <= 0)
             {
                 return "Todos los campos obligatorios deben estar completos y válidos.";
             }
@@ -67,7 +77,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 horaEvento = hora,
                 lugarEvento = lugar,
                 descripcionEvento = $"Tipo: {tipoEvento}, Beneficio: {tipoBeneficio}",
-                cantidadConvalidar = cantidadConvalidar,
+                cupos = cupo,
+                cantidadConvalidar = cantidadAConvalidar,
                 organizadorEvento = "Administrador", // Puede ser dinámico
             };
 
@@ -84,8 +95,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             string tipoEvento,
             string tipoBeneficio,
             string nombreEvento,
-            int cantidadConvalidar,
-            int cupos,
+            int cantidadAConvalidar,
+            int cupo,
             string horaEnvio,
             string hora,
             string fecha,
@@ -105,8 +116,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 string.IsNullOrWhiteSpace(hora) ||
                 string.IsNullOrWhiteSpace(fecha) ||
                 string.IsNullOrWhiteSpace(lugar) ||
-                cantidadConvalidar <= 0 ||
-                cupos <= 0)
+                cantidadAConvalidar <= 0 ||
+                cupo <= 0)
             {
                 return "Todos los campos obligatorios deben estar completos y válidos.";
             }
@@ -120,7 +131,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 horaEvento = hora,
                 lugarEvento = lugar,
                 descripcionEvento = $"Tipo: {tipoEvento}, Beneficio: {tipoBeneficio}",
-                cantidadConvalidar = cantidadConvalidar,
+                cupos = cupo,
+                cantidadConvalidar = cantidadAConvalidar,
                 organizadorEvento = "Administrador",
             };
 
@@ -146,8 +158,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         public static string RegistrarPartido(
             string tipoDeporte,
             string nombrePartido,
-            int cantidadConvalidar,
-            int cupos,
+            int cantidadAConvalidar,
+            int cupo,
             string horaEnvio,
             string hora,
             string fecha,
@@ -162,8 +174,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 string.IsNullOrWhiteSpace(fecha) ||
                 string.IsNullOrWhiteSpace(lugar) ||
                 string.IsNullOrWhiteSpace(rival) ||
-                cantidadConvalidar <= 0 ||
-                cupos <= 0)
+                cantidadAConvalidar <= 0 ||
+                cupo <= 0)
             {
                 return "Todos los campos obligatorios deben estar completos y válidos.";
             }
@@ -180,7 +192,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 fechaEvento = fecha,
                 horaEvento = hora,
                 descripcionEvento = $"{horaEnvio}",
-                cantidadConvalidar = cantidadConvalidar,
+                cantidadConvalidar = cantidadAConvalidar,
+                cupos = cupo,
                 organizadorEvento = "Administrador", // Puede ser dinámico
             };
 
@@ -196,8 +209,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             int indice,
             string tipoDeporte,
             string nombrePartido,
-            int cantidadConvalidar,
-            int cupos,
+            int cantidadAConvalidar,
+            int cupo,
             string horaEnvio,
             string hora,
             string fecha,
@@ -218,8 +231,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 string.IsNullOrWhiteSpace(fecha) ||
                 string.IsNullOrWhiteSpace(lugar) ||
                 string.IsNullOrWhiteSpace(rival) ||
-                cantidadConvalidar <= 0 ||
-                cupos <= 0)
+                cantidadAConvalidar <= 0 ||
+                cupo <= 0)
             {
                 return "Todos los campos obligatorios deben estar completos y válidos.";
             }
@@ -236,7 +249,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 fechaEvento = fecha,
                 horaEvento = hora,
                 descripcionEvento = $"Hora de Envío: {horaEnvio}",
-                cantidadConvalidar = cantidadConvalidar,
+                cantidadConvalidar = cantidadAConvalidar,
+                cupos = cupo,
                 organizadorEvento = "Administrador",
             };
 

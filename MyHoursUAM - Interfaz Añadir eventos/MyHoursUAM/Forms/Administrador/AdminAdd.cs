@@ -10,6 +10,18 @@ namespace MyHours_UAMApp
         public AdminAdd()
         {
             InitializeComponent();
+            CargarEventosEnListView();
+        }
+        private void CargarEventosEnListView()
+        {
+            lvwEventos.Items.Clear();
+            var eventos = Metodos.GetEventosAsString();
+
+            foreach (var evento in eventos)
+            {
+                var listItem = new ListViewItem(evento);
+                lvwEventos.Items.Add(listItem);
+            }
         }
 
         private void AdminAdd_Load(object sender, EventArgs e)
@@ -87,12 +99,101 @@ namespace MyHours_UAMApp
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (lvwEventos.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Por favor, seleccione un evento para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            int indice = lvwEventos.SelectedIndices[0];
+
+            try
+            {
+                string mensaje = Metodos.EliminarPartido(indice);
+
+                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarEventosEnListView();
+                LimpiarCampos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al eliminar el evento: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            if (lvwEventos.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Por favor, seleccione un evento para editar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            int indice = lvwEventos.SelectedIndices[0];
+
+            try
+            {
+                string mensaje = Metodos.EditarEvento(
+                    indice,
+                    cbxEvento.Text,
+                    cbxBeneficio.Text,
+                    txtNombreEvento.Text,
+                    int.Parse(txbHorasConvalidas.Text),
+                    int.Parse(txtCupos.Text),
+                    txbHoraEnvio.Text,
+                    txbHorario.Text,
+                    dtpFecha.Text,
+                    txbLugar.Text
+                );
+
+                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarEventosEnListView();
+                LimpiarCampos(); // Limpiar los campos después de editar
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al editar el evento: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
+        private void LimpiarCampos()
+        {
+            cbxEvento.SelectedIndex = -1;
+            cbxBeneficio.SelectedIndex = -1;
+            txtNombreEvento.Clear();
+            txbHorasConvalidas.Clear();
+            txtCupos.Clear();
+            txbHoraEnvio.Clear();
+            txbHorario.Clear();
+            dtpFecha.Value = DateTime.Now;
+            txbLugar.Clear();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string mensaje = Metodos.RegistrarEvento(
+                    cbxEvento.Text,
+                    cbxBeneficio.Text,
+                    txtNombreEvento.Text,
+                    int.Parse(txbHorasConvalidas.Text),
+                    int.Parse(txtCupos.Text),
+                    txbHoraEnvio.Text,
+                    txbHorario.Text,
+                    dtpFecha.Text,
+                    txbLugar.Text
+
+                );
+
+                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarEventosEnListView();
+                LimpiarCampos(); // Limpiar los campos después de guardar
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al registrar el evento: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

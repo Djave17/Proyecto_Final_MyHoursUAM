@@ -46,13 +46,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gpbNuevoEvento = new System.Windows.Forms.GroupBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbLugar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblNombreEvento = new System.Windows.Forms.Label();
             this.txbHorasConvalidas = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.lvwEventosRecienAdd = new System.Windows.Forms.ListView();
+            this.lvwEventos = new System.Windows.Forms.ListView();
             this.clhNombreEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhTipeEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhTipoConvalidacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -62,7 +62,7 @@
             this.clhHoraEnvio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBeneficio = new System.Windows.Forms.ComboBox();
             this.cbxEvento = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbHoraEnvio = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTypeBeneficios = new System.Windows.Forms.Label();
             this.lblTipodeEvento = new System.Windows.Forms.Label();
@@ -288,16 +288,16 @@
             // 
             this.gpbNuevoEvento.BackColor = System.Drawing.Color.White;
             this.gpbNuevoEvento.Controls.Add(this.dtpFecha);
-            this.gpbNuevoEvento.Controls.Add(this.textBox2);
+            this.gpbNuevoEvento.Controls.Add(this.txbLugar);
             this.gpbNuevoEvento.Controls.Add(this.label4);
             this.gpbNuevoEvento.Controls.Add(this.lblNombreEvento);
             this.gpbNuevoEvento.Controls.Add(this.txbHorasConvalidas);
             this.gpbNuevoEvento.Controls.Add(this.btnEliminar);
             this.gpbNuevoEvento.Controls.Add(this.label3);
-            this.gpbNuevoEvento.Controls.Add(this.lvwEventosRecienAdd);
+            this.gpbNuevoEvento.Controls.Add(this.lvwEventos);
             this.gpbNuevoEvento.Controls.Add(this.cbxBeneficio);
             this.gpbNuevoEvento.Controls.Add(this.cbxEvento);
-            this.gpbNuevoEvento.Controls.Add(this.textBox1);
+            this.gpbNuevoEvento.Controls.Add(this.txbHoraEnvio);
             this.gpbNuevoEvento.Controls.Add(this.label2);
             this.gpbNuevoEvento.Controls.Add(this.lblTypeBeneficios);
             this.gpbNuevoEvento.Controls.Add(this.lblTipodeEvento);
@@ -333,18 +333,18 @@
             this.dtpFecha.Size = new System.Drawing.Size(240, 26);
             this.dtpFecha.TabIndex = 62;
             // 
-            // textBox2
+            // txbLugar
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Teal;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(7, 318);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 23);
-            this.textBox2.TabIndex = 61;
+            this.txbLugar.BackColor = System.Drawing.Color.Teal;
+            this.txbLugar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbLugar.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbLugar.ForeColor = System.Drawing.Color.White;
+            this.txbLugar.Location = new System.Drawing.Point(7, 318);
+            this.txbLugar.Margin = new System.Windows.Forms.Padding(2);
+            this.txbLugar.Multiline = true;
+            this.txbLugar.Name = "txbLugar";
+            this.txbLugar.Size = new System.Drawing.Size(242, 23);
+            this.txbLugar.TabIndex = 61;
             // 
             // label4
             // 
@@ -405,9 +405,9 @@
             this.label3.Text = "Eventos";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // lvwEventosRecienAdd
+            // lvwEventos
             // 
-            this.lvwEventosRecienAdd.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvwEventos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clhNombreEvento,
             this.clhTipeEvento,
             this.clhTipoConvalidacion,
@@ -415,15 +415,16 @@
             this.clhLugar,
             this.clhCupos,
             this.clhHoraEnvio});
-            this.lvwEventosRecienAdd.HideSelection = false;
-            this.lvwEventosRecienAdd.Location = new System.Drawing.Point(9, 477);
-            this.lvwEventosRecienAdd.Margin = new System.Windows.Forms.Padding(2);
-            this.lvwEventosRecienAdd.Name = "lvwEventosRecienAdd";
-            this.lvwEventosRecienAdd.Size = new System.Drawing.Size(622, 282);
-            this.lvwEventosRecienAdd.TabIndex = 55;
-            this.lvwEventosRecienAdd.UseCompatibleStateImageBehavior = false;
-            this.lvwEventosRecienAdd.View = System.Windows.Forms.View.Details;
-            this.lvwEventosRecienAdd.SelectedIndexChanged += new System.EventHandler(this.lvwEventosRecienAdd_SelectedIndexChanged);
+            this.lvwEventos.FullRowSelect = true;
+            this.lvwEventos.HideSelection = false;
+            this.lvwEventos.Location = new System.Drawing.Point(9, 477);
+            this.lvwEventos.Margin = new System.Windows.Forms.Padding(2);
+            this.lvwEventos.Name = "lvwEventos";
+            this.lvwEventos.Size = new System.Drawing.Size(622, 282);
+            this.lvwEventos.TabIndex = 55;
+            this.lvwEventos.UseCompatibleStateImageBehavior = false;
+            this.lvwEventos.View = System.Windows.Forms.View.Details;
+            this.lvwEventos.SelectedIndexChanged += new System.EventHandler(this.lvwEventosRecienAdd_SelectedIndexChanged);
             // 
             // clhNombreEvento
             // 
@@ -488,18 +489,18 @@
             this.cbxEvento.Size = new System.Drawing.Size(161, 27);
             this.cbxEvento.TabIndex = 53;
             // 
-            // textBox1
+            // txbHoraEnvio
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Teal;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(310, 264);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 23);
-            this.textBox1.TabIndex = 52;
+            this.txbHoraEnvio.BackColor = System.Drawing.Color.Teal;
+            this.txbHoraEnvio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbHoraEnvio.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbHoraEnvio.ForeColor = System.Drawing.Color.White;
+            this.txbHoraEnvio.Location = new System.Drawing.Point(310, 264);
+            this.txbHoraEnvio.Margin = new System.Windows.Forms.Padding(2);
+            this.txbHoraEnvio.Multiline = true;
+            this.txbHoraEnvio.Name = "txbHoraEnvio";
+            this.txbHoraEnvio.Size = new System.Drawing.Size(242, 23);
+            this.txbHoraEnvio.TabIndex = 52;
             // 
             // label2
             // 
@@ -614,6 +615,7 @@
             this.btnGuardar.TabIndex = 38;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtCupos
             // 
@@ -722,12 +724,12 @@
         private System.Windows.Forms.PictureBox pcbLogOutIcon;
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbHoraEnvio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbxEvento;
         private System.Windows.Forms.ComboBox cbxBeneficio;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListView lvwEventosRecienAdd;
+        private System.Windows.Forms.ListView lvwEventos;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.ColumnHeader clhTipeEvento;
         private System.Windows.Forms.ColumnHeader clhTipoConvalidacion;
@@ -739,7 +741,7 @@
         private System.Windows.Forms.TextBox txbHorasConvalidas;
         private System.Windows.Forms.Label lblNombreEvento;
         private System.Windows.Forms.Button btnAddPartidos;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbLugar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtpFecha;
     }
