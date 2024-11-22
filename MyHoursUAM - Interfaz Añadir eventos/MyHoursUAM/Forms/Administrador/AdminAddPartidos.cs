@@ -55,7 +55,6 @@ namespace MyHours_UAMApp.Forms.Administrador
             
             };
 
-            // Crear un nuevo ListViewItem y agregarlo al ListView
             ListViewItem partido = new ListViewItem(new string[]
             {
                 nuevoPartido.nombrePartido,
