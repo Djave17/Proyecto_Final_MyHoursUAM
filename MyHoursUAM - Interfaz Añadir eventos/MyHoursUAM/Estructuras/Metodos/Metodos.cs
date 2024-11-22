@@ -41,7 +41,7 @@ using System.Threading.Tasks;
 //private System.Windows.Forms.TextBox textBox1;
 //private System.Windows.Forms.Label label2;
 
-namespace MyHours_UAMApp.Estructuras.Metodos
+/*namespace MyHours_UAMApp.Estructuras.Metodos
 {
     public static class Metodos
 
@@ -244,3 +244,4 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
     }
 }
+*/

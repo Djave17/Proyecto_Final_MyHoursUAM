@@ -10,22 +10,13 @@ namespace MyHours_UAMApp.Estructuras
     {
         public string nombreEvento { get; set; }
         public string fechaEvento { get; set; }
-        public string horaEvento { get; set; }
-        public string descripcionEvento { get; set; }
-        public int horasConvalidas { get; set; }
-        public string organizadorEvento { get; set; }
         public string lugarEvento { get; set; }
+        public string cuposEvento { get; set; }
+        public string horaEnvio { get; set; }
+        public string horasConvalidar { get; set; }
         public string idEvento { get; set; }
-
-
-
-        public enum TipoEvento
-        {
-            deportivo,
-            cultural,
-            social,
-            voluntario
-        }
-        
+        public string tipoBeneficio { get; set; }
+        public string TipoEvento { get; set; }
+       
     }
 }

@@ -12,7 +12,6 @@ namespace MyHours_UAMApp.Estructuras
         public string lugarPartido { get; set; }
         public string rival { get; set; }
         public string deporteEvento { get; set; }
-        public TipoEvento deporte { get; set; }
 
     }
 }

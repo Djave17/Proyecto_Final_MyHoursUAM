@@ -48,14 +48,6 @@
             this.txbHorasConvalidas = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.lvwEventosRecienAdd = new System.Windows.Forms.ListView();
-            this.clhNombreEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhTipeEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhTipoConvalidacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhHorario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhLugar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhCupos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhHoraEnvio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBeneficio = new System.Windows.Forms.ComboBox();
             this.cbxEvento = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -73,6 +65,7 @@
             this.txtLugar = new System.Windows.Forms.TextBox();
             this.lblLugar = new System.Windows.Forms.Label();
             this.lblRotulo2 = new System.Windows.Forms.Label();
+            this.dgvEventos = new System.Windows.Forms.DataGridView();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -81,6 +74,7 @@
             this.pnlIcon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gpbNuevoEvento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEventos)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlPieArriba
@@ -269,11 +263,11 @@
             // gpbNuevoEvento
             // 
             this.gpbNuevoEvento.BackColor = System.Drawing.Color.White;
+            this.gpbNuevoEvento.Controls.Add(this.dgvEventos);
             this.gpbNuevoEvento.Controls.Add(this.lblNombreEvento);
             this.gpbNuevoEvento.Controls.Add(this.txbHorasConvalidas);
             this.gpbNuevoEvento.Controls.Add(this.btnEliminar);
             this.gpbNuevoEvento.Controls.Add(this.label3);
-            this.gpbNuevoEvento.Controls.Add(this.lvwEventosRecienAdd);
             this.gpbNuevoEvento.Controls.Add(this.cbxBeneficio);
             this.gpbNuevoEvento.Controls.Add(this.cbxEvento);
             this.gpbNuevoEvento.Controls.Add(this.textBox1);
@@ -336,6 +330,7 @@
             this.btnEliminar.TabIndex = 57;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label3
             // 
@@ -348,63 +343,6 @@
             this.label3.TabIndex = 56;
             this.label3.Text = "Eventos";
             this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // lvwEventosRecienAdd
-            // 
-            this.lvwEventosRecienAdd.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clhNombreEvento,
-            this.clhTipeEvento,
-            this.clhTipoConvalidacion,
-            this.clhHorario,
-            this.clhLugar,
-            this.clhCupos,
-            this.clhHoraEnvio});
-            this.lvwEventosRecienAdd.HideSelection = false;
-            this.lvwEventosRecienAdd.Location = new System.Drawing.Point(9, 477);
-            this.lvwEventosRecienAdd.Margin = new System.Windows.Forms.Padding(2);
-            this.lvwEventosRecienAdd.Name = "lvwEventosRecienAdd";
-            this.lvwEventosRecienAdd.Size = new System.Drawing.Size(622, 282);
-            this.lvwEventosRecienAdd.TabIndex = 55;
-            this.lvwEventosRecienAdd.UseCompatibleStateImageBehavior = false;
-            this.lvwEventosRecienAdd.View = System.Windows.Forms.View.Details;
-            this.lvwEventosRecienAdd.SelectedIndexChanged += new System.EventHandler(this.lvwEventosRecienAdd_SelectedIndexChanged);
-            // 
-            // clhNombreEvento
-            // 
-            this.clhNombreEvento.DisplayIndex = 2;
-            this.clhNombreEvento.Text = "Nombre";
-            this.clhNombreEvento.Width = 180;
-            // 
-            // clhTipeEvento
-            // 
-            this.clhTipeEvento.DisplayIndex = 0;
-            this.clhTipeEvento.Text = "Tipo de Evento";
-            this.clhTipeEvento.Width = 180;
-            // 
-            // clhTipoConvalidacion
-            // 
-            this.clhTipoConvalidacion.DisplayIndex = 1;
-            this.clhTipoConvalidacion.Text = "Tipo de convalidacion";
-            this.clhTipoConvalidacion.Width = 200;
-            // 
-            // clhHorario
-            // 
-            this.clhHorario.Text = "Horario";
-            this.clhHorario.Width = 80;
-            // 
-            // clhLugar
-            // 
-            this.clhLugar.Text = "Lugar";
-            this.clhLugar.Width = 80;
-            // 
-            // clhCupos
-            // 
-            this.clhCupos.Text = "Cupos";
-            // 
-            // clhHoraEnvio
-            // 
-            this.clhHoraEnvio.Text = "Hora de Envio";
-            this.clhHoraEnvio.Width = 180;
             // 
             // cbxBeneficio
             // 
@@ -541,6 +479,7 @@
             this.btnEditar.TabIndex = 39;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGuardar
             // 
@@ -557,6 +496,7 @@
             this.btnGuardar.TabIndex = 38;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtCupos
             // 
@@ -618,6 +558,17 @@
             this.lblRotulo2.TabIndex = 0;
             this.lblRotulo2.Text = "Todos los campos son requeridos";
             // 
+            // dgvEventos
+            // 
+            this.dgvEventos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEventos.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvEventos.Location = new System.Drawing.Point(7, 479);
+            this.dgvEventos.Name = "dgvEventos";
+            this.dgvEventos.Size = new System.Drawing.Size(622, 286);
+            this.dgvEventos.TabIndex = 60;
+            this.dgvEventos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // AdminAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -644,6 +595,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gpbNuevoEvento.ResumeLayout(false);
             this.gpbNuevoEvento.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEventos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -683,16 +635,9 @@
         private System.Windows.Forms.ComboBox cbxEvento;
         private System.Windows.Forms.ComboBox cbxBeneficio;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListView lvwEventosRecienAdd;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.ColumnHeader clhTipeEvento;
-        private System.Windows.Forms.ColumnHeader clhTipoConvalidacion;
-        private System.Windows.Forms.ColumnHeader clhNombreEvento;
-        private System.Windows.Forms.ColumnHeader clhHorario;
-        private System.Windows.Forms.ColumnHeader clhLugar;
-        private System.Windows.Forms.ColumnHeader clhCupos;
-        private System.Windows.Forms.ColumnHeader clhHoraEnvio;
         private System.Windows.Forms.TextBox txbHorasConvalidas;
         private System.Windows.Forms.Label lblNombreEvento;
+        private System.Windows.Forms.DataGridView dgvEventos;
     }
 }
