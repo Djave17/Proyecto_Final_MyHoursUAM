@@ -30,8 +30,30 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminAddPartidos));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAddPartidos = new System.Windows.Forms.Button();
+            this.btnAñadirEventos = new System.Windows.Forms.Button();
+            this.btnAsistencia = new System.Windows.Forms.Button();
+            this.btnAjustes = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.gpbAddPartidos = new System.Windows.Forms.GroupBox();
+            this.lvPartidos = new System.Windows.Forms.ListView();
+            this.clhNombrePartido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhLugarPartido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhDeporte = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhHora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhHoraEnvio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhCantidadConvalidar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhCupos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.tbxLugar = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txbHorario = new System.Windows.Forms.TextBox();
+            this.lblHorario = new System.Windows.Forms.Label();
+            this.txtNombreEvento = new System.Windows.Forms.TextBox();
+            this.nombreEvento = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.lblNombreEvento = new System.Windows.Forms.Label();
             this.txbHorasConvalidas = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -44,31 +66,9 @@
             this.txtCupos = new System.Windows.Forms.TextBox();
             this.lblCupos = new System.Windows.Forms.Label();
             this.lblRotulo2 = new System.Windows.Forms.Label();
-            this.btnAddPartidos = new System.Windows.Forms.Button();
-            this.btnAñadirEventos = new System.Windows.Forms.Button();
-            this.btnAsistencia = new System.Windows.Forms.Button();
-            this.btnAjustes = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.tbxLugar = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txbHorario = new System.Windows.Forms.TextBox();
-            this.lblHorario = new System.Windows.Forms.Label();
-            this.txtNombreEvento = new System.Windows.Forms.TextBox();
-            this.nombreEvento = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lvwEventosRecienAdd = new System.Windows.Forms.ListView();
-            this.clhNombrePartido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhLugarPartido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhDeporte = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhHora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhHoraEnvio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhCantidadConvalidar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhCupos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
-            this.gpbAddPartidos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gpbAddPartidos.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,6 +84,83 @@
             this.panel1.Size = new System.Drawing.Size(165, 821);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(56, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.WaitOnLoad = true;
+            // 
+            // btnAddPartidos
+            // 
+            this.btnAddPartidos.BackColor = System.Drawing.Color.Teal;
+            this.btnAddPartidos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddPartidos.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPartidos.ForeColor = System.Drawing.Color.Snow;
+            this.btnAddPartidos.Location = new System.Drawing.Point(2, 210);
+            this.btnAddPartidos.Name = "btnAddPartidos";
+            this.btnAddPartidos.Size = new System.Drawing.Size(165, 130);
+            this.btnAddPartidos.TabIndex = 17;
+            this.btnAddPartidos.Text = "Añadir Partido";
+            this.btnAddPartidos.UseVisualStyleBackColor = false;
+            this.btnAddPartidos.Click += new System.EventHandler(this.btnAddPartidos_Click);
+            // 
+            // btnAñadirEventos
+            // 
+            this.btnAñadirEventos.BackColor = System.Drawing.Color.Transparent;
+            this.btnAñadirEventos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAñadirEventos.FlatAppearance.BorderSize = 0;
+            this.btnAñadirEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAñadirEventos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirEventos.ForeColor = System.Drawing.Color.White;
+            this.btnAñadirEventos.Location = new System.Drawing.Point(0, 81);
+            this.btnAñadirEventos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAñadirEventos.Name = "btnAñadirEventos";
+            this.btnAñadirEventos.Size = new System.Drawing.Size(163, 124);
+            this.btnAñadirEventos.TabIndex = 14;
+            this.btnAñadirEventos.Text = "➕ Añadir Eventos";
+            this.btnAñadirEventos.UseVisualStyleBackColor = false;
+            this.btnAñadirEventos.Click += new System.EventHandler(this.btnAñadirEventos_Click);
+            // 
+            // btnAsistencia
+            // 
+            this.btnAsistencia.BackColor = System.Drawing.Color.Transparent;
+            this.btnAsistencia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAsistencia.FlatAppearance.BorderSize = 0;
+            this.btnAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsistencia.ForeColor = System.Drawing.Color.White;
+            this.btnAsistencia.Location = new System.Drawing.Point(0, 332);
+            this.btnAsistencia.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAsistencia.Name = "btnAsistencia";
+            this.btnAsistencia.Size = new System.Drawing.Size(165, 123);
+            this.btnAsistencia.TabIndex = 15;
+            this.btnAsistencia.Text = "🗒️  Asistencia";
+            this.btnAsistencia.UseVisualStyleBackColor = false;
+            this.btnAsistencia.Click += new System.EventHandler(this.btnAsistencia_Click);
+            // 
+            // btnAjustes
+            // 
+            this.btnAjustes.BackColor = System.Drawing.Color.Transparent;
+            this.btnAjustes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAjustes.FlatAppearance.BorderSize = 0;
+            this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjustes.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjustes.ForeColor = System.Drawing.Color.White;
+            this.btnAjustes.Location = new System.Drawing.Point(0, 472);
+            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAjustes.Name = "btnAjustes";
+            this.btnAjustes.Size = new System.Drawing.Size(165, 120);
+            this.btnAjustes.TabIndex = 16;
+            this.btnAjustes.Text = "⚙️   Ajustes";
+            this.btnAjustes.UseVisualStyleBackColor = false;
+            this.btnAjustes.Click += new System.EventHandler(this.btnAjustes_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -98,7 +175,7 @@
             // 
             // gpbAddPartidos
             // 
-            this.gpbAddPartidos.Controls.Add(this.lvwEventosRecienAdd);
+            this.gpbAddPartidos.Controls.Add(this.lvPartidos);
             this.gpbAddPartidos.Controls.Add(this.dtpFecha);
             this.gpbAddPartidos.Controls.Add(this.tbxLugar);
             this.gpbAddPartidos.Controls.Add(this.label4);
@@ -127,236 +204,64 @@
             this.gpbAddPartidos.TabStop = false;
             this.gpbAddPartidos.Text = "Añadir Partidos";
             // 
-            // lblNombreEvento
+            // lvPartidos
             // 
-            this.lblNombreEvento.AutoSize = true;
-            this.lblNombreEvento.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreEvento.Location = new System.Drawing.Point(328, 93);
-            this.lblNombreEvento.Name = "lblNombreEvento";
-            this.lblNombreEvento.Size = new System.Drawing.Size(178, 16);
-            this.lblNombreEvento.TabIndex = 79;
-            this.lblNombreEvento.Text = "Cantidad a convalidar:";
+            this.lvPartidos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clhNombrePartido,
+            this.clhLugarPartido,
+            this.clhDeporte,
+            this.clhHora,
+            this.clhFecha,
+            this.clhHoraEnvio,
+            this.clhCantidadConvalidar,
+            this.clhCupos});
+            this.lvPartidos.FullRowSelect = true;
+            this.lvPartidos.HideSelection = false;
+            this.lvPartidos.Location = new System.Drawing.Point(0, 389);
+            this.lvPartidos.Margin = new System.Windows.Forms.Padding(2);
+            this.lvPartidos.Name = "lvPartidos";
+            this.lvPartidos.Size = new System.Drawing.Size(616, 352);
+            this.lvPartidos.TabIndex = 88;
+            this.lvPartidos.UseCompatibleStateImageBehavior = false;
+            this.lvPartidos.View = System.Windows.Forms.View.Details;
             // 
-            // txbHorasConvalidas
+            // clhNombrePartido
             // 
-            this.txbHorasConvalidas.BackColor = System.Drawing.Color.Teal;
-            this.txbHorasConvalidas.Location = new System.Drawing.Point(331, 112);
-            this.txbHorasConvalidas.Name = "txbHorasConvalidas";
-            this.txbHorasConvalidas.Size = new System.Drawing.Size(245, 26);
-            this.txbHorasConvalidas.TabIndex = 78;
+            this.clhNombrePartido.Text = "Nombre";
+            this.clhNombrePartido.Width = 120;
             // 
-            // btnEliminar
+            // clhLugarPartido
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Teal;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(292, 322);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(83, 28);
-            this.btnEliminar.TabIndex = 77;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.clhLugarPartido.Text = "Lugar";
+            this.clhLugarPartido.Width = 120;
             // 
-            // cbxTipoDeporte
+            // clhDeporte
             // 
-            this.cbxTipoDeporte.FormattingEnabled = true;
-            this.cbxTipoDeporte.Items.AddRange(new object[] {
-            "Futbol",
-            "Baloncesto",
-            "Voleibol",
-            "Tenis de Mesa",
-            "Voleibol Playa",
-            "Futbol Sala",
-            "Karate",
-            "Taekwondo",
-            "Ajedrez",
-            "Natacion",
-            "Atletismo"});
-            this.cbxTipoDeporte.Location = new System.Drawing.Point(151, 48);
-            this.cbxTipoDeporte.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxTipoDeporte.Name = "cbxTipoDeporte";
-            this.cbxTipoDeporte.Size = new System.Drawing.Size(161, 27);
-            this.cbxTipoDeporte.TabIndex = 75;
+            this.clhDeporte.Text = "Deporte";
+            this.clhDeporte.Width = 90;
             // 
-            // tbxHoraEnvio
+            // clhHora
             // 
-            this.tbxHoraEnvio.BackColor = System.Drawing.Color.Teal;
-            this.tbxHoraEnvio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxHoraEnvio.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxHoraEnvio.ForeColor = System.Drawing.Color.White;
-            this.tbxHoraEnvio.Location = new System.Drawing.Point(332, 210);
-            this.tbxHoraEnvio.Margin = new System.Windows.Forms.Padding(2);
-            this.tbxHoraEnvio.Multiline = true;
-            this.tbxHoraEnvio.Name = "tbxHoraEnvio";
-            this.tbxHoraEnvio.Size = new System.Drawing.Size(242, 23);
-            this.tbxHoraEnvio.TabIndex = 74;
+            this.clhHora.Text = "Hora";
             // 
-            // label2
+            // clhFecha
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(329, 192);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 16);
-            this.label2.TabIndex = 73;
-            this.label2.Text = "Hora de Envio:";
+            this.clhFecha.Text = "Fecha";
+            this.clhFecha.Width = 100;
             // 
-            // lblTipodeEvento
+            // clhHoraEnvio
             // 
-            this.lblTipodeEvento.AutoSize = true;
-            this.lblTipodeEvento.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipodeEvento.Location = new System.Drawing.Point(5, 53);
-            this.lblTipodeEvento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTipodeEvento.Name = "lblTipodeEvento";
-            this.lblTipodeEvento.Size = new System.Drawing.Size(134, 16);
-            this.lblTipodeEvento.TabIndex = 71;
-            this.lblTipodeEvento.Text = "Tipo de Deporte:";
+            this.clhHoraEnvio.Text = "Hora de envio";
+            this.clhHoraEnvio.Width = 200;
             // 
-            // btnEditar
+            // clhCantidadConvalidar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.Teal;
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(395, 322);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(64, 28);
-            this.btnEditar.TabIndex = 66;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
+            this.clhCantidadConvalidar.Text = "Cantidad a convalidar";
             // 
-            // btnGuardar
+            // clhCupos
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Teal;
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(194, 322);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(81, 28);
-            this.btnGuardar.TabIndex = 65;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            // 
-            // txtCupos
-            // 
-            this.txtCupos.BackColor = System.Drawing.Color.Teal;
-            this.txtCupos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCupos.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCupos.ForeColor = System.Drawing.Color.White;
-            this.txtCupos.Location = new System.Drawing.Point(331, 158);
-            this.txtCupos.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCupos.Multiline = true;
-            this.txtCupos.Name = "txtCupos";
-            this.txtCupos.Size = new System.Drawing.Size(242, 23);
-            this.txtCupos.TabIndex = 64;
-            // 
-            // lblCupos
-            // 
-            this.lblCupos.AutoSize = true;
-            this.lblCupos.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCupos.Location = new System.Drawing.Point(329, 138);
-            this.lblCupos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCupos.Name = "lblCupos";
-            this.lblCupos.Size = new System.Drawing.Size(58, 16);
-            this.lblCupos.TabIndex = 63;
-            this.lblCupos.Text = "Cupos:";
-            // 
-            // lblRotulo2
-            // 
-            this.lblRotulo2.AutoSize = true;
-            this.lblRotulo2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRotulo2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblRotulo2.Location = new System.Drawing.Point(3, 24);
-            this.lblRotulo2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblRotulo2.Name = "lblRotulo2";
-            this.lblRotulo2.Size = new System.Drawing.Size(260, 16);
-            this.lblRotulo2.TabIndex = 60;
-            this.lblRotulo2.Text = "Todos los campos son requeridos";
-            // 
-            // btnAddPartidos
-            // 
-            this.btnAddPartidos.BackColor = System.Drawing.Color.Teal;
-            this.btnAddPartidos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddPartidos.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPartidos.ForeColor = System.Drawing.Color.Snow;
-            this.btnAddPartidos.Location = new System.Drawing.Point(2, 210);
-            this.btnAddPartidos.Name = "btnAddPartidos";
-            this.btnAddPartidos.Size = new System.Drawing.Size(165, 130);
-            this.btnAddPartidos.TabIndex = 17;
-            this.btnAddPartidos.Text = "Añadir Partido";
-            this.btnAddPartidos.UseVisualStyleBackColor = false;
-            // 
-            // btnAñadirEventos
-            // 
-            this.btnAñadirEventos.BackColor = System.Drawing.Color.Transparent;
-            this.btnAñadirEventos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAñadirEventos.FlatAppearance.BorderSize = 0;
-            this.btnAñadirEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAñadirEventos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadirEventos.ForeColor = System.Drawing.Color.White;
-            this.btnAñadirEventos.Location = new System.Drawing.Point(0, 81);
-            this.btnAñadirEventos.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAñadirEventos.Name = "btnAñadirEventos";
-            this.btnAñadirEventos.Size = new System.Drawing.Size(163, 124);
-            this.btnAñadirEventos.TabIndex = 14;
-            this.btnAñadirEventos.Text = "➕ Añadir Eventos";
-            this.btnAñadirEventos.UseVisualStyleBackColor = false;
-            // 
-            // btnAsistencia
-            // 
-            this.btnAsistencia.BackColor = System.Drawing.Color.Transparent;
-            this.btnAsistencia.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAsistencia.FlatAppearance.BorderSize = 0;
-            this.btnAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsistencia.ForeColor = System.Drawing.Color.White;
-            this.btnAsistencia.Location = new System.Drawing.Point(0, 332);
-            this.btnAsistencia.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAsistencia.Name = "btnAsistencia";
-            this.btnAsistencia.Size = new System.Drawing.Size(165, 123);
-            this.btnAsistencia.TabIndex = 15;
-            this.btnAsistencia.Text = "🗒️  Asistencia";
-            this.btnAsistencia.UseVisualStyleBackColor = false;
-            // 
-            // btnAjustes
-            // 
-            this.btnAjustes.BackColor = System.Drawing.Color.Transparent;
-            this.btnAjustes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAjustes.FlatAppearance.BorderSize = 0;
-            this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjustes.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAjustes.ForeColor = System.Drawing.Color.White;
-            this.btnAjustes.Location = new System.Drawing.Point(0, 472);
-            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAjustes.Name = "btnAjustes";
-            this.btnAjustes.Size = new System.Drawing.Size(165, 120);
-            this.btnAjustes.TabIndex = 16;
-            this.btnAjustes.Text = "⚙️   Ajustes";
-            this.btnAjustes.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(56, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.WaitOnLoad = true;
+            this.clhCupos.Text = "Cupos";
+            this.clhCupos.Width = 75;
             // 
             // dtpFecha
             // 
@@ -452,63 +357,166 @@
             this.lblFecha.TabIndex = 80;
             this.lblFecha.Text = "Fecha:";
             // 
-            // lvwEventosRecienAdd
+            // lblNombreEvento
             // 
-            this.lvwEventosRecienAdd.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clhNombrePartido,
-            this.clhLugarPartido,
-            this.clhDeporte,
-            this.clhHora,
-            this.clhFecha,
-            this.clhHoraEnvio,
-            this.clhCantidadConvalidar,
-            this.clhCupos});
-            this.lvwEventosRecienAdd.HideSelection = false;
-            this.lvwEventosRecienAdd.Location = new System.Drawing.Point(0, 389);
-            this.lvwEventosRecienAdd.Margin = new System.Windows.Forms.Padding(2);
-            this.lvwEventosRecienAdd.Name = "lvwEventosRecienAdd";
-            this.lvwEventosRecienAdd.Size = new System.Drawing.Size(616, 352);
-            this.lvwEventosRecienAdd.TabIndex = 88;
-            this.lvwEventosRecienAdd.UseCompatibleStateImageBehavior = false;
-            this.lvwEventosRecienAdd.View = System.Windows.Forms.View.Details;
+            this.lblNombreEvento.AutoSize = true;
+            this.lblNombreEvento.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEvento.Location = new System.Drawing.Point(328, 93);
+            this.lblNombreEvento.Name = "lblNombreEvento";
+            this.lblNombreEvento.Size = new System.Drawing.Size(178, 16);
+            this.lblNombreEvento.TabIndex = 79;
+            this.lblNombreEvento.Text = "Cantidad a convalidar:";
             // 
-            // clhNombrePartido
+            // txbHorasConvalidas
             // 
-            this.clhNombrePartido.Text = "Nombre";
-            this.clhNombrePartido.Width = 120;
+            this.txbHorasConvalidas.BackColor = System.Drawing.Color.Teal;
+            this.txbHorasConvalidas.Location = new System.Drawing.Point(331, 112);
+            this.txbHorasConvalidas.Name = "txbHorasConvalidas";
+            this.txbHorasConvalidas.Size = new System.Drawing.Size(245, 26);
+            this.txbHorasConvalidas.TabIndex = 78;
             // 
-            // clhLugarPartido
+            // btnEliminar
             // 
-            this.clhLugarPartido.Text = "Lugar";
-            this.clhLugarPartido.Width = 120;
+            this.btnEliminar.BackColor = System.Drawing.Color.Teal;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(292, 322);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(83, 28);
+            this.btnEliminar.TabIndex = 77;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // clhDeporte
+            // cbxTipoDeporte
             // 
-            this.clhDeporte.Text = "Deporte";
-            this.clhDeporte.Width = 90;
+            this.cbxTipoDeporte.FormattingEnabled = true;
+            this.cbxTipoDeporte.Items.AddRange(new object[] {
+            "Futbol",
+            "Baloncesto",
+            "Voleibol",
+            "Tenis de Mesa",
+            "Voleibol Playa",
+            "Futbol Sala",
+            "Karate",
+            "Taekwondo",
+            "Ajedrez",
+            "Natacion",
+            "Atletismo"});
+            this.cbxTipoDeporte.Location = new System.Drawing.Point(151, 48);
+            this.cbxTipoDeporte.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxTipoDeporte.Name = "cbxTipoDeporte";
+            this.cbxTipoDeporte.Size = new System.Drawing.Size(161, 27);
+            this.cbxTipoDeporte.TabIndex = 75;
             // 
-            // clhHora
+            // tbxHoraEnvio
             // 
-            this.clhHora.Text = "Hora";
+            this.tbxHoraEnvio.BackColor = System.Drawing.Color.Teal;
+            this.tbxHoraEnvio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxHoraEnvio.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxHoraEnvio.ForeColor = System.Drawing.Color.White;
+            this.tbxHoraEnvio.Location = new System.Drawing.Point(332, 210);
+            this.tbxHoraEnvio.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxHoraEnvio.Multiline = true;
+            this.tbxHoraEnvio.Name = "tbxHoraEnvio";
+            this.tbxHoraEnvio.Size = new System.Drawing.Size(242, 23);
+            this.tbxHoraEnvio.TabIndex = 74;
             // 
-            // clhFecha
+            // label2
             // 
-            this.clhFecha.Text = "Fecha";
-            this.clhFecha.Width = 100;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(329, 192);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 16);
+            this.label2.TabIndex = 73;
+            this.label2.Text = "Hora de Envio:";
             // 
-            // clhHoraEnvio
+            // lblTipodeEvento
             // 
-            this.clhHoraEnvio.Text = "Hora de envio";
-            this.clhHoraEnvio.Width = 200;
+            this.lblTipodeEvento.AutoSize = true;
+            this.lblTipodeEvento.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipodeEvento.Location = new System.Drawing.Point(5, 53);
+            this.lblTipodeEvento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTipodeEvento.Name = "lblTipodeEvento";
+            this.lblTipodeEvento.Size = new System.Drawing.Size(134, 16);
+            this.lblTipodeEvento.TabIndex = 71;
+            this.lblTipodeEvento.Text = "Tipo de Deporte:";
             // 
-            // clhCantidadConvalidar
+            // btnEditar
             // 
-            this.clhCantidadConvalidar.Text = "Cantidad a convalidar";
+            this.btnEditar.BackColor = System.Drawing.Color.Teal;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(395, 322);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(64, 28);
+            this.btnEditar.TabIndex = 66;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // clhCupos
+            // btnGuardar
             // 
-            this.clhCupos.Text = "Cupos";
-            this.clhCupos.Width = 75;
+            this.btnGuardar.BackColor = System.Drawing.Color.Teal;
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(194, 322);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(81, 28);
+            this.btnGuardar.TabIndex = 65;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // txtCupos
+            // 
+            this.txtCupos.BackColor = System.Drawing.Color.Teal;
+            this.txtCupos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCupos.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCupos.ForeColor = System.Drawing.Color.White;
+            this.txtCupos.Location = new System.Drawing.Point(331, 158);
+            this.txtCupos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCupos.Multiline = true;
+            this.txtCupos.Name = "txtCupos";
+            this.txtCupos.Size = new System.Drawing.Size(242, 23);
+            this.txtCupos.TabIndex = 64;
+            // 
+            // lblCupos
+            // 
+            this.lblCupos.AutoSize = true;
+            this.lblCupos.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCupos.Location = new System.Drawing.Point(329, 138);
+            this.lblCupos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCupos.Name = "lblCupos";
+            this.lblCupos.Size = new System.Drawing.Size(58, 16);
+            this.lblCupos.TabIndex = 63;
+            this.lblCupos.Text = "Cupos:";
+            // 
+            // lblRotulo2
+            // 
+            this.lblRotulo2.AutoSize = true;
+            this.lblRotulo2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRotulo2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblRotulo2.Location = new System.Drawing.Point(3, 24);
+            this.lblRotulo2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRotulo2.Name = "lblRotulo2";
+            this.lblRotulo2.Size = new System.Drawing.Size(260, 16);
+            this.lblRotulo2.TabIndex = 60;
+            this.lblRotulo2.Text = "Todos los campos son requeridos";
             // 
             // AdminAddPartidos
             // 
@@ -521,9 +529,9 @@
             this.Name = "AdminAddPartidos";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gpbAddPartidos.ResumeLayout(false);
             this.gpbAddPartidos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -559,7 +567,7 @@
         private System.Windows.Forms.TextBox txtNombreEvento;
         private System.Windows.Forms.Label nombreEvento;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.ListView lvwEventosRecienAdd;
+        private System.Windows.Forms.ListView lvPartidos;
         private System.Windows.Forms.ColumnHeader clhNombrePartido;
         private System.Windows.Forms.ColumnHeader clhLugarPartido;
         private System.Windows.Forms.ColumnHeader clhDeporte;

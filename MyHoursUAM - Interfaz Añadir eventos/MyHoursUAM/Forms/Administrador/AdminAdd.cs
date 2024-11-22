@@ -84,5 +84,15 @@ namespace MyHours_UAMApp
         {
 
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -162,3 +162,6 @@ D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM - Interfaz 
 D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM - Interfaz Añadir eventos\MyHoursUAM\obj\Debug\MyHours UAMApp.csproj.CoreCompileInputs.cache
 D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM - Interfaz Añadir eventos\MyHoursUAM\obj\Debug\MyHours UAMApp.exe
 D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM - Interfaz Añadir eventos\MyHoursUAM\obj\Debug\MyHours UAMApp.pdb
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM - Interfaz Añadir eventos\MyHoursUAM\bin\Debug\MyHours UAMApp.exe.config
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM - Interfaz Añadir eventos\MyHoursUAM\bin\Debug\MyHours UAMApp.exe
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM - Interfaz Añadir eventos\MyHoursUAM\bin\Debug\MyHours UAMApp.pdb

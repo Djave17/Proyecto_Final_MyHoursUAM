@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnlAreaAdministrador = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAddPartidos = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAñadirEventos = new System.Windows.Forms.Button();
             this.btnAsistencia = new System.Windows.Forms.Button();
@@ -44,6 +45,9 @@
             this.pnlIcon = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gpbNuevoEvento = new System.Windows.Forms.GroupBox();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.lblNombreEvento = new System.Windows.Forms.Label();
             this.txbHorasConvalidas = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -72,10 +76,6 @@
             this.lblCupos = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblRotulo2 = new System.Windows.Forms.Label();
-            this.btnAddPartidos = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -187,6 +187,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(165, 784);
             this.panel1.TabIndex = 2;
+            // 
+            // btnAddPartidos
+            // 
+            this.btnAddPartidos.BackColor = System.Drawing.Color.Teal;
+            this.btnAddPartidos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddPartidos.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPartidos.ForeColor = System.Drawing.Color.Snow;
+            this.btnAddPartidos.Location = new System.Drawing.Point(0, 120);
+            this.btnAddPartidos.Name = "btnAddPartidos";
+            this.btnAddPartidos.Size = new System.Drawing.Size(165, 130);
+            this.btnAddPartidos.TabIndex = 13;
+            this.btnAddPartidos.Text = "Añadir Partido";
+            this.btnAddPartidos.UseVisualStyleBackColor = false;
+            this.btnAddPartidos.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -308,6 +322,41 @@
             this.gpbNuevoEvento.Text = "Añadir Eventos";
             this.gpbNuevoEvento.Enter += new System.EventHandler(this.gpbNuevoEvento_Enter);
             // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CalendarMonthBackground = System.Drawing.Color.Teal;
+            this.dtpFecha.CalendarTitleBackColor = System.Drawing.SystemColors.Control;
+            this.dtpFecha.CalendarTrailingForeColor = System.Drawing.SystemColors.Highlight;
+            this.dtpFecha.Location = new System.Drawing.Point(9, 264);
+            this.dtpFecha.MinDate = new System.DateTime(2010, 3, 11, 0, 0, 0, 0);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(240, 26);
+            this.dtpFecha.TabIndex = 62;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.Teal;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.White;
+            this.textBox2.Location = new System.Drawing.Point(7, 318);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(242, 23);
+            this.textBox2.TabIndex = 61;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(5, 298);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 16);
+            this.label4.TabIndex = 60;
+            this.label4.Text = "Lugar:";
+            // 
             // lblNombreEvento
             // 
             this.lblNombreEvento.AutoSize = true;
@@ -342,6 +391,7 @@
             this.btnEliminar.TabIndex = 57;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label3
             // 
@@ -547,6 +597,7 @@
             this.btnEditar.TabIndex = 39;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGuardar
             // 
@@ -611,55 +662,6 @@
             this.lblRotulo2.Size = new System.Drawing.Size(260, 16);
             this.lblRotulo2.TabIndex = 0;
             this.lblRotulo2.Text = "Todos los campos son requeridos";
-            // 
-            // btnAddPartidos
-            // 
-            this.btnAddPartidos.BackColor = System.Drawing.Color.Teal;
-            this.btnAddPartidos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddPartidos.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPartidos.ForeColor = System.Drawing.Color.Snow;
-            this.btnAddPartidos.Location = new System.Drawing.Point(0, 120);
-            this.btnAddPartidos.Name = "btnAddPartidos";
-            this.btnAddPartidos.Size = new System.Drawing.Size(165, 130);
-            this.btnAddPartidos.TabIndex = 13;
-            this.btnAddPartidos.Text = "Añadir Partido";
-            this.btnAddPartidos.UseVisualStyleBackColor = false;
-            this.btnAddPartidos.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.Teal;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(7, 318);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 23);
-            this.textBox2.TabIndex = 61;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(5, 298);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 16);
-            this.label4.TabIndex = 60;
-            this.label4.Text = "Lugar:";
-            // 
-            // dtpFecha
-            // 
-            this.dtpFecha.CalendarMonthBackground = System.Drawing.Color.Teal;
-            this.dtpFecha.CalendarTitleBackColor = System.Drawing.SystemColors.Control;
-            this.dtpFecha.CalendarTrailingForeColor = System.Drawing.SystemColors.Highlight;
-            this.dtpFecha.Location = new System.Drawing.Point(9, 264);
-            this.dtpFecha.MinDate = new System.DateTime(2010, 3, 11, 0, 0, 0, 0);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(240, 26);
-            this.dtpFecha.TabIndex = 62;
             // 
             // AdminAdd
             // 
