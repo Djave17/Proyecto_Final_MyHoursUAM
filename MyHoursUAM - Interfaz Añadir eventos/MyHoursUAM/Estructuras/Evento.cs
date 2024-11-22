@@ -12,10 +12,11 @@ namespace MyHours_UAMApp.Estructuras
         public string fechaEvento { get; set; }
         public string horaEvento { get; set; }
         public string descripcionEvento { get; set; }
-        public int horasConvalidas { get; set; }
+        public int cantidadConvalidar { get; set; }
         public string organizadorEvento { get; set; }
         public string lugarEvento { get; set; }
         public string idEvento { get; set; }
+        public int cupos { get; set; }
 
 
 

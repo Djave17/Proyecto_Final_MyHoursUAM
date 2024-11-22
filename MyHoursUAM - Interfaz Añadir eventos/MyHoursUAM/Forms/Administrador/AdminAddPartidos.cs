@@ -33,6 +33,8 @@ namespace MyHours_UAMApp.Forms.Administrador
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            
+        
             try
             {
                 string mensaje = Metodos.RegistrarPartido(
@@ -44,17 +46,19 @@ namespace MyHours_UAMApp.Forms.Administrador
                     txbHorario.Text,
                     dtpFecha.Text,
                     tbxLugar.Text,
-                    lblNombreEvento.Text // Asumido como rival, ajustar si necesario
+                    "Rival no definido" // No se si dejarlo gente ayuda__---asda-sdasd
                 );
 
                 MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarPartidosEnListView();
+                LimpiarCampos(); // Limpiar los campos después de guardar
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al registrar el partido: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        
         // Método para cargar los partidos en el ListView
         private void CargarPartidosEnListView()
         {
@@ -84,6 +88,7 @@ namespace MyHours_UAMApp.Forms.Administrador
 
                 MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarPartidosEnListView();
+                LimpiarCampos(); 
             }
             catch (Exception ex)
             {
@@ -113,11 +118,12 @@ namespace MyHours_UAMApp.Forms.Administrador
                     txbHorario.Text,
                     dtpFecha.Text,
                     tbxLugar.Text,
-                    lblNombreEvento.Text // Asumido como rival, ajustar si necesario
+                    "Rival no definido" // Ajustar según la lógica
                 );
 
                 MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarPartidosEnListView();
+                LimpiarCampos(); // Limpiar los campos después de editar
             }
             catch (Exception ex)
             {
@@ -150,6 +156,19 @@ namespace MyHours_UAMApp.Forms.Administrador
             AdminAsistencia adminAsistencia = new AdminAsistencia();
             adminAsistencia.Show();
             this.Close();
+        }
+
+        // Método para limpiar los campos del formulario
+        private void LimpiarCampos()
+        {
+            cbxTipoDeporte.SelectedIndex = -1;
+            txtNombreEvento.Clear();
+            txbHorasConvalidas.Clear();
+            txtCupos.Clear();
+            tbxHoraEnvio.Clear();
+            txbHorario.Clear();
+            dtpFecha.Value = DateTime.Now;
+            tbxLugar.Clear();
         }
     }
 }

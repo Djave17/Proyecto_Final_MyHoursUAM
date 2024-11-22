@@ -67,7 +67,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 horaEvento = hora,
                 lugarEvento = lugar,
                 descripcionEvento = $"Tipo: {tipoEvento}, Beneficio: {tipoBeneficio}",
-                horasConvalidas = cantidadConvalidar,
+                cantidadConvalidar = cantidadConvalidar,
                 organizadorEvento = "Administrador", // Puede ser dinámico
             };
 
@@ -120,7 +120,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 horaEvento = hora,
                 lugarEvento = lugar,
                 descripcionEvento = $"Tipo: {tipoEvento}, Beneficio: {tipoBeneficio}",
-                horasConvalidas = cantidadConvalidar,
+                cantidadConvalidar = cantidadConvalidar,
                 organizadorEvento = "Administrador",
             };
 
@@ -180,7 +180,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 fechaEvento = fecha,
                 horaEvento = hora,
                 descripcionEvento = $"{horaEnvio}",
-                horasConvalidas = cantidadConvalidar,
+                cantidadConvalidar = cantidadConvalidar,
                 organizadorEvento = "Administrador", // Puede ser dinámico
             };
 
@@ -236,7 +236,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 fechaEvento = fecha,
                 horaEvento = hora,
                 descripcionEvento = $"Hora de Envío: {horaEnvio}",
-                horasConvalidas = cantidadConvalidar,
+                cantidadConvalidar = cantidadConvalidar,
                 organizadorEvento = "Administrador",
             };
 
@@ -272,7 +272,9 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 p.deporte.ToString(),
                 p.horaEvento,
                 p.fechaEvento,
-                p.descripcionEvento
+                p.descripcionEvento,
+                p.cupos.ToString(),
+                p.cantidadConvalidar.ToString(),
             }).ToList();
         }
     }
