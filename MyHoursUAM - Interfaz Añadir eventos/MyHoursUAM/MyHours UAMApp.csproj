@@ -75,6 +75,12 @@
     <Compile Include="Forms\Administrador\AdminVer.Designer.cs">
       <DependentUpon>AdminVer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Administrador\AdminAddPartidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\AdminAddPartidos.Designer.cs">
+      <DependentUpon>AdminAddPartidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Administrador\SplashScreenAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Administrador\AdminVer.resx">
       <DependentUpon>AdminVer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrador\AdminAddPartidos.resx">
+      <DependentUpon>AdminAddPartidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Administrador\SplashScreenAdmin.resx">
       <DependentUpon>SplashScreenAdmin.cs</DependentUpon>
