@@ -1,7 +1,9 @@
-﻿using System;
+﻿using MyHours_UAMApp.Forms.Administrador;
+using System;
 using System.Windows.Forms;
-
+using MyHours_UAMApp.Estructuras.Metodos;
 namespace MyHours_UAMApp
+
 {
     public partial class AdminAdd : Form
     {
@@ -24,6 +26,7 @@ namespace MyHours_UAMApp
 
         private void btnVerEventos_Click(object sender, EventArgs e)
         {
+            
             AdminVer form = new AdminVer();
             form.Show();
             this.Close();
@@ -66,6 +69,18 @@ namespace MyHours_UAMApp
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdminAddPartidos form = new AdminAddPartidos();
+            form.Show();
+            this.Close();
+        }
+
+        private void lblLugar_Click(object sender, EventArgs e)
         {
 
         }

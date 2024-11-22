@@ -43,67 +43,48 @@ using System.Threading.Tasks;
 
 namespace MyHours_UAMApp.Estructuras.Metodos
 {
-    public static class Metodos
-
+    internal static class Metodos
     {
-        // ==================Lista para prueba===================
         private static List<Estudiante> estudiantes = new List<Estudiante>
-            {
-                new Estudiante { cifEstudiante = "12345", contraseñaEstudiante = "password1" },
-                new Estudiante { cifEstudiante = "67890", contraseñaEstudiante = "password2" }
-            };
+        {
+            new Estudiante { cifEstudiante = "12345", contraseñaEstudiante = "password1" },
+            new Estudiante { cifEstudiante = "67890", contraseñaEstudiante = "password2" }
+        };
 
-        // ==================Lista de eventos===================
         private static List<Evento> eventos = new List<Evento>();
-
-
-        // ==================Lista de partidos===================
         private static List<Partido> partidos = new List<Partido>();
 
-        // ==================Login===================
-        // Función para login de estudiante
-        static public bool LoginEstudiante(string usuario, string contrasena) // Esta es una prueba gente 
+        public static bool LoginEstudiante(string usuario, string contrasena)
         {
-            // Se busca el estudiante en la lista de estudiantes
             var estudiante = estudiantes.FirstOrDefault(e => e.cifEstudiante == usuario);
-
-            // Si se encuentra, se verifica que la contraseña sea correcta
             if (estudiante != null)
             {
                 if (estudiante.contraseñaEstudiante == contrasena)
                 {
-                    return true; // Contraseña correcta
+                    return true;
                 }
                 else
                 {
-                    return false; // Contraseña incorrecta
+                    return false;
                 }
             }
-
-            // Si no se encuentra el estudiante, se devuelve false
             return false;
         }
 
-        // Función para login de administrador
-        static public bool LoginAdmin(string usuario, string contrasena)
+        public static bool LoginAdmin(string usuario, string contrasena)
         {
-            // Se verifica que el usuario y la contraseña sean correctos
             if (usuario == "admin" && contrasena == "admin")
             {
-                return true; // Usuario y contraseña correctos
+                return true;
             }
             else
             {
-                return false; // Usuario y/o contraseña incorrectos
+                return false;
             }
         }
 
-
-        // ==================Eventos==================
-        // Función para registrar un nuevo evento
-        static public void RegistrarEvento(string nombreEvento, string fechaEvento, string horaEvento, string lugarEvento, string descripcionEvento, string organizador, int horasConvalidas)
+        public static void RegistrarEvento(string nombreEvento, string fechaEvento, string horaEvento, string lugarEvento, string descripcionEvento, string organizador, int horasConvalidas)
         {
-
             Evento nuevoEvento = new Evento
             {
                 nombreEvento = nombreEvento,
@@ -116,16 +97,12 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             };
 
             eventos.Add(nuevoEvento);
-
-            //Forma de llamar en documentacion: Metodos.RegistrarEvento("nombreEvento", "fechaEvento", "horaEvento", "lugarEvento", "descripcionEvento", "organizador", horasConvalidas);
-
         }
-        // Función para editar un evento existente en la lista
-        static public void EditarEvento(int indice, string nombreEvento, string fechaEvento, string horaEvento, string lugarEvento, string descripcionEvento, string organizador, int horasConvalidas)
+
+        public static void EditarEvento(int indice, string nombreEvento, string fechaEvento, string horaEvento, string lugarEvento, string descripcionEvento, string organizador, int horasConvalidas)
         {
             if (indice >= 0 && indice < eventos.Count)
             {
-                //Guardar la lista
                 eventos[indice].nombreEvento = nombreEvento;
                 eventos[indice].fechaEvento = fechaEvento;
                 eventos[indice].horaEvento = horaEvento;
@@ -133,18 +110,14 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 eventos[indice].descripcionEvento = descripcionEvento;
                 eventos[indice].organizadorEvento = organizador;
                 eventos[indice].horasConvalidas = horasConvalidas;
-
             }
             else
             {
                 throw new ArgumentOutOfRangeException("El índice proporcionado está fuera del rango de la lista de eventos.");
             }
-
-            //Forma de llamar en documentacion: Metodos.EditarEvento(indice, "nombreEvento", "fechaEvento", "horaEvento", "lugarEvento", "descripcionEvento", "organizador", horasConvalidas);
         }
 
-        // Función para eliminar un evento de la lista según el índice
-        static public void EliminarEvento(int indice)
+        public static void EliminarEvento(int indice)
         {
             if (indice >= 0 && indice < eventos.Count)
             {
@@ -154,12 +127,9 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             {
                 throw new ArgumentOutOfRangeException("El índice proporcionado está fuera del rango de la lista de eventos.");
             }
-            //Forma de llamar en documentacion: Metodos.EliminarEvento(indice);
         }
 
-        // ==================Partidos==================
-        // Función para registrar un nuevo partido
-        static public void RegistrarPartido(string nombrePartido, string fechaPartido, string horaPartido, string lugarPartido, string descripcionPartido, string organizador, int horasConvalidas, string rival, string deporteEvento)
+        public static void RegistrarPartido(string nombrePartido, string fechaPartido, string horaPartido, string lugarPartido, string descripcionPartido, string organizador, int horasConvalidas, string rival, Partido.TipoDeporte deporte)
         {
             Partido nuevoPartido = new Partido
             {
@@ -171,18 +141,16 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 organizadorEvento = organizador,
                 horasConvalidas = horasConvalidas,
                 rival = rival,
-                deporteEvento = deporteEvento
+                deporte = (Partido.TipoDeporte)deporte
             };
 
             partidos.Add(nuevoPartido);
-            //Forma de llamar en documentacion: Metodos.RegistrarPartido("nombrePartido", "fechaPartido", "horaPartido", "lugarPartido", "descripcionPartido", "organizador", horasConvalidas, "rival", "deporteEvento");
         }
-        // Función para editar un partido existente en la lista
-        static public void EditarPartido(int indice, string nombrePartido, string fechaPartido, string horaPartido, string lugarPartido, string descripcionPartido, string organizador, int horasConvalidas, string rival, string deporteEvento)
+
+        public static void EditarPartido(int indice, string nombrePartido, string fechaPartido, string horaPartido, string lugarPartido, string descripcionPartido, string organizador, int horasConvalidas, string rival, string deporteEvento)
         {
             if (indice >= 0 && indice < partidos.Count)
             {
-                //Guardar la lista
                 partidos[indice].nombreEvento = nombrePartido;
                 partidos[indice].fechaEvento = fechaPartido;
                 partidos[indice].horaEvento = horaPartido;
@@ -191,17 +159,14 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 partidos[indice].organizadorEvento = organizador;
                 partidos[indice].horasConvalidas = horasConvalidas;
                 partidos[indice].rival = rival;
-                partidos[indice].deporteEvento = deporteEvento;
             }
             else
             {
                 throw new ArgumentOutOfRangeException("El índice proporcionado está fuera del rango de la lista de partidos.");
             }
-            //Forma de llamar en documentacion: Metodos.EditarPartido(indice, "nombrePartido", "fechaPartido", "horaPartido", "lugarPartido", "descripcionPartido", "organizador", horasConvalidas, "rival", "deporteEvento");
         }
 
-        // Función para eliminar un partido de la lista según el índice
-        static public void EliminarPartido(int indice)
+        public static void EliminarPartido(int indice)
         {
             if (indice >= 0 && indice < partidos.Count)
             {
@@ -211,36 +176,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             {
                 throw new ArgumentOutOfRangeException("El índice proporcionado está fuera del rango de la lista de partidos.");
             }
-            //Forma de llamar en documentacion: Metodos.EliminarPartido(indice);
         }
-
-        //====================Administrador====================
-        // Funcion para aprobar solicitud de asistencia a un evento
-
-
-
-        // ==================Estudiantes==================
-        // Funcion para enviar compronante de asistencia a un evento
-        // Funcion para enviar combrobante de asistencia a un partido
-        // Funcion para ver la lista de eventos a los que ha asistido un estudiante
-        // Funcion para ver la lista de partidos a los que ha asistido un estudiante
-        // Funcion para ver la cantidad de horas completadas por un estudiante
-
-        //==================CRUD==================
-        //-----------------Eventos----------------
-        // Función para guardar la lista de eventos en un archivo binario
-        // Función para cargar la lista de eventos desde un archivo binario
-
-        //-------------------Partidos-------------------
-        // Función para guardar la lista de partidos en un archivo binario
-        // Función para cargar la lista de partidos desde un archivo binario
-
-        //-------------------Estudiantes-------------------
-        // Función para guardar la asistencia de la lista de eventos a los que ha asistido un estudiante
-        // Función para guardar la asistencia de la lista de partidos a los que ha asistido un estudiante
-        // Función para guardar la cantidad de horas completadas por un estudiante
-
-
-
     }
+ 
+    
 }
