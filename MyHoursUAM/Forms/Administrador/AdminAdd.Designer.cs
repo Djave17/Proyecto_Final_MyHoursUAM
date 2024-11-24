@@ -54,15 +54,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lvwEventos = new System.Windows.Forms.ListView();
             this.clhNombreEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhTipeEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhTipoEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhTipoConvalidacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhHorario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhLugar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhCupos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhHoraEnvio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhEstadoEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBeneficio = new System.Windows.Forms.ComboBox();
             this.cbxEvento = new System.Windows.Forms.ComboBox();
-            this.txbHoraEnvio = new System.Windows.Forms.TextBox();
+            this.tbxEstado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTypeBeneficios = new System.Windows.Forms.Label();
             this.lblTipodeEvento = new System.Windows.Forms.Label();
@@ -76,6 +76,9 @@
             this.lblCupos = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblRotulo2 = new System.Windows.Forms.Label();
+            this.clhIDEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhConvalida = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -97,7 +100,7 @@
             this.pnlPieArriba.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPieArriba.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.pnlPieArriba.Location = new System.Drawing.Point(165, 0);
-            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPieArriba.Name = "pnlPieArriba";
             this.pnlPieArriba.Size = new System.Drawing.Size(666, 73);
             this.pnlPieArriba.TabIndex = 3;
@@ -119,7 +122,7 @@
             // 
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
             this.pcbLogOutIcon.Location = new System.Drawing.Point(532, 11);
-            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbLogOutIcon.Name = "pcbLogOutIcon";
             this.pcbLogOutIcon.Size = new System.Drawing.Size(40, 41);
             this.pcbLogOutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -142,7 +145,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(410, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -169,7 +172,7 @@
             this.pnlAreaAdministrador.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlAreaAdministrador.ForeColor = System.Drawing.Color.White;
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
-            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
             this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 848);
             this.pnlAreaAdministrador.TabIndex = 2;
@@ -183,7 +186,7 @@
             this.panel1.Controls.Add(this.btnAjustes);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 73);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(165, 784);
             this.panel1.TabIndex = 2;
@@ -192,7 +195,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(2, 12);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(4, 103);
             this.panel2.TabIndex = 21;
@@ -206,7 +209,7 @@
             this.btnAddPartidos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPartidos.ForeColor = System.Drawing.Color.White;
             this.btnAddPartidos.Location = new System.Drawing.Point(-2, 119);
-            this.btnAddPartidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddPartidos.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddPartidos.Name = "btnAddPartidos";
             this.btnAddPartidos.Size = new System.Drawing.Size(165, 120);
             this.btnAddPartidos.TabIndex = 20;
@@ -223,7 +226,7 @@
             this.btnAñadirEventos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirEventos.ForeColor = System.Drawing.Color.White;
             this.btnAñadirEventos.Location = new System.Drawing.Point(-2, -9);
-            this.btnAñadirEventos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAñadirEventos.Margin = new System.Windows.Forms.Padding(2);
             this.btnAñadirEventos.Name = "btnAñadirEventos";
             this.btnAñadirEventos.Size = new System.Drawing.Size(152, 124);
             this.btnAñadirEventos.TabIndex = 9;
@@ -240,7 +243,7 @@
             this.btnAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsistencia.ForeColor = System.Drawing.Color.White;
             this.btnAsistencia.Location = new System.Drawing.Point(-2, 242);
-            this.btnAsistencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAsistencia.Margin = new System.Windows.Forms.Padding(2);
             this.btnAsistencia.Name = "btnAsistencia";
             this.btnAsistencia.Size = new System.Drawing.Size(165, 123);
             this.btnAsistencia.TabIndex = 11;
@@ -257,7 +260,7 @@
             this.btnAjustes.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjustes.ForeColor = System.Drawing.Color.White;
             this.btnAjustes.Location = new System.Drawing.Point(-2, 382);
-            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2);
             this.btnAjustes.Name = "btnAjustes";
             this.btnAjustes.Size = new System.Drawing.Size(165, 120);
             this.btnAjustes.TabIndex = 12;
@@ -270,7 +273,7 @@
             this.pnlIcon.Controls.Add(this.pictureBox1);
             this.pnlIcon.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlIcon.Location = new System.Drawing.Point(0, 0);
-            this.pnlIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pnlIcon.Name = "pnlIcon";
             this.pnlIcon.Size = new System.Drawing.Size(165, 73);
             this.pnlIcon.TabIndex = 1;
@@ -279,7 +282,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(61, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -300,7 +303,7 @@
             this.gpbNuevoEvento.Controls.Add(this.lvwEventos);
             this.gpbNuevoEvento.Controls.Add(this.cbxBeneficio);
             this.gpbNuevoEvento.Controls.Add(this.cbxEvento);
-            this.gpbNuevoEvento.Controls.Add(this.txbHoraEnvio);
+            this.gpbNuevoEvento.Controls.Add(this.tbxEstado);
             this.gpbNuevoEvento.Controls.Add(this.label2);
             this.gpbNuevoEvento.Controls.Add(this.lblTypeBeneficios);
             this.gpbNuevoEvento.Controls.Add(this.lblTipodeEvento);
@@ -316,9 +319,9 @@
             this.gpbNuevoEvento.Controls.Add(this.lblRotulo2);
             this.gpbNuevoEvento.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbNuevoEvento.Location = new System.Drawing.Point(170, 78);
-            this.gpbNuevoEvento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbNuevoEvento.Margin = new System.Windows.Forms.Padding(2);
             this.gpbNuevoEvento.Name = "gpbNuevoEvento";
-            this.gpbNuevoEvento.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbNuevoEvento.Padding = new System.Windows.Forms.Padding(2);
             this.gpbNuevoEvento.Size = new System.Drawing.Size(661, 770);
             this.gpbNuevoEvento.TabIndex = 11;
             this.gpbNuevoEvento.TabStop = false;
@@ -345,7 +348,7 @@
             this.txbLugar.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbLugar.ForeColor = System.Drawing.Color.White;
             this.txbLugar.Location = new System.Drawing.Point(7, 318);
-            this.txbLugar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbLugar.Margin = new System.Windows.Forms.Padding(2);
             this.txbLugar.Multiline = true;
             this.txbLugar.Name = "txbLugar";
             this.txbLugar.Size = new System.Drawing.Size(369, 23);
@@ -390,7 +393,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Location = new System.Drawing.Point(301, 522);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(42, 28);
             this.btnEliminar.TabIndex = 57;
@@ -413,17 +416,20 @@
             // lvwEventos
             // 
             this.lvwEventos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clhIDEvento,
             this.clhNombreEvento,
-            this.clhTipeEvento,
             this.clhTipoConvalidacion,
             this.clhHorario,
+            this.clhFecha,
             this.clhLugar,
+            this.clhConvalida,
             this.clhCupos,
-            this.clhHoraEnvio});
+            this.clhTipoEvento,
+            this.clhEstadoEvento});
             this.lvwEventos.FullRowSelect = true;
             this.lvwEventos.HideSelection = false;
             this.lvwEventos.Location = new System.Drawing.Point(7, 576);
-            this.lvwEventos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwEventos.Margin = new System.Windows.Forms.Padding(2);
             this.lvwEventos.Name = "lvwEventos";
             this.lvwEventos.Size = new System.Drawing.Size(646, 182);
             this.lvwEventos.TabIndex = 55;
@@ -437,11 +443,11 @@
             this.clhNombreEvento.Text = "Nombre";
             this.clhNombreEvento.Width = 180;
             // 
-            // clhTipeEvento
+            // clhTipoEvento
             // 
-            this.clhTipeEvento.DisplayIndex = 0;
-            this.clhTipeEvento.Text = "Tipo de Evento";
-            this.clhTipeEvento.Width = 180;
+            this.clhTipoEvento.DisplayIndex = 0;
+            this.clhTipoEvento.Text = "Tipo de Evento";
+            this.clhTipoEvento.Width = 180;
             // 
             // clhTipoConvalidacion
             // 
@@ -456,17 +462,20 @@
             // 
             // clhLugar
             // 
+            this.clhLugar.DisplayIndex = 4;
             this.clhLugar.Text = "Lugar";
             this.clhLugar.Width = 80;
             // 
             // clhCupos
             // 
+            this.clhCupos.DisplayIndex = 5;
             this.clhCupos.Text = "Cupos";
             // 
-            // clhHoraEnvio
+            // clhEstadoEvento
             // 
-            this.clhHoraEnvio.Text = "Hora de Envio";
-            this.clhHoraEnvio.Width = 180;
+            this.clhEstadoEvento.DisplayIndex = 6;
+            this.clhEstadoEvento.Text = "Hora de Envio";
+            this.clhEstadoEvento.Width = 180;
             // 
             // cbxBeneficio
             // 
@@ -475,7 +484,7 @@
             "Horas Laborales",
             "Partidos"});
             this.cbxBeneficio.Location = new System.Drawing.Point(152, 96);
-            this.cbxBeneficio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxBeneficio.Margin = new System.Windows.Forms.Padding(2);
             this.cbxBeneficio.Name = "cbxBeneficio";
             this.cbxBeneficio.Size = new System.Drawing.Size(224, 27);
             this.cbxBeneficio.TabIndex = 54;
@@ -489,23 +498,23 @@
             "Cultural ",
             "Social"});
             this.cbxEvento.Location = new System.Drawing.Point(152, 51);
-            this.cbxEvento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxEvento.Margin = new System.Windows.Forms.Padding(2);
             this.cbxEvento.Name = "cbxEvento";
             this.cbxEvento.Size = new System.Drawing.Size(224, 27);
             this.cbxEvento.TabIndex = 53;
             // 
-            // txbHoraEnvio
+            // tbxEstado
             // 
-            this.txbHoraEnvio.BackColor = System.Drawing.Color.Teal;
-            this.txbHoraEnvio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbHoraEnvio.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbHoraEnvio.ForeColor = System.Drawing.Color.White;
-            this.txbHoraEnvio.Location = new System.Drawing.Point(10, 474);
-            this.txbHoraEnvio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txbHoraEnvio.Multiline = true;
-            this.txbHoraEnvio.Name = "txbHoraEnvio";
-            this.txbHoraEnvio.Size = new System.Drawing.Size(366, 23);
-            this.txbHoraEnvio.TabIndex = 52;
+            this.tbxEstado.BackColor = System.Drawing.Color.Teal;
+            this.tbxEstado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxEstado.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxEstado.ForeColor = System.Drawing.Color.White;
+            this.tbxEstado.Location = new System.Drawing.Point(10, 474);
+            this.tbxEstado.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxEstado.Multiline = true;
+            this.tbxEstado.Name = "tbxEstado";
+            this.tbxEstado.Size = new System.Drawing.Size(366, 23);
+            this.tbxEstado.TabIndex = 52;
             // 
             // label2
             // 
@@ -514,9 +523,9 @@
             this.label2.Location = new System.Drawing.Point(7, 456);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 16);
+            this.label2.Size = new System.Drawing.Size(63, 16);
             this.label2.TabIndex = 51;
-            this.label2.Text = "Hora de Envio:";
+            this.label2.Text = "Estado:";
             // 
             // lblTypeBeneficios
             // 
@@ -547,7 +556,7 @@
             this.txbHorario.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbHorario.ForeColor = System.Drawing.Color.White;
             this.txbHorario.Location = new System.Drawing.Point(7, 210);
-            this.txbHorario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbHorario.Margin = new System.Windows.Forms.Padding(2);
             this.txbHorario.Multiline = true;
             this.txbHorario.Name = "txbHorario";
             this.txbHorario.Size = new System.Drawing.Size(369, 23);
@@ -571,7 +580,7 @@
             this.txtNombreEvento.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreEvento.ForeColor = System.Drawing.Color.White;
             this.txtNombreEvento.Location = new System.Drawing.Point(7, 163);
-            this.txtNombreEvento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreEvento.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreEvento.Multiline = true;
             this.txtNombreEvento.Name = "txtNombreEvento";
             this.txtNombreEvento.Size = new System.Drawing.Size(369, 23);
@@ -597,7 +606,7 @@
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Location = new System.Drawing.Point(358, 522);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(42, 28);
             this.btnEditar.TabIndex = 39;
@@ -614,7 +623,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(244, 522);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(42, 28);
             this.btnGuardar.TabIndex = 38;
@@ -629,7 +638,7 @@
             this.txtCupos.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCupos.ForeColor = System.Drawing.Color.White;
             this.txtCupos.Location = new System.Drawing.Point(9, 422);
-            this.txtCupos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCupos.Margin = new System.Windows.Forms.Padding(2);
             this.txtCupos.Multiline = true;
             this.txtCupos.Name = "txtCupos";
             this.txtCupos.Size = new System.Drawing.Size(367, 23);
@@ -670,6 +679,21 @@
             this.lblRotulo2.TabIndex = 0;
             this.lblRotulo2.Text = "Todos los campos son requeridos";
             // 
+            // clhIDEvento
+            // 
+            this.clhIDEvento.DisplayIndex = 7;
+            this.clhIDEvento.Text = "IDEvento";
+            // 
+            // clhFecha
+            // 
+            this.clhFecha.DisplayIndex = 8;
+            this.clhFecha.Text = "Fecha";
+            // 
+            // clhConvalida
+            // 
+            this.clhConvalida.DisplayIndex = 9;
+            this.clhConvalida.Text = "Convalida";
+            // 
             // AdminAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -681,7 +705,7 @@
             this.Controls.Add(this.pnlAreaAdministrador);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Añadir Eventos";
@@ -728,20 +752,20 @@
         private System.Windows.Forms.PictureBox pcbLogOutIcon;
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox txbHoraEnvio;
+        private System.Windows.Forms.TextBox tbxEstado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbxEvento;
         private System.Windows.Forms.ComboBox cbxBeneficio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListView lvwEventos;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.ColumnHeader clhTipeEvento;
+        private System.Windows.Forms.ColumnHeader clhTipoEvento;
         private System.Windows.Forms.ColumnHeader clhTipoConvalidacion;
         private System.Windows.Forms.ColumnHeader clhNombreEvento;
         private System.Windows.Forms.ColumnHeader clhHorario;
         private System.Windows.Forms.ColumnHeader clhLugar;
         private System.Windows.Forms.ColumnHeader clhCupos;
-        private System.Windows.Forms.ColumnHeader clhHoraEnvio;
+        private System.Windows.Forms.ColumnHeader clhEstadoEvento;
         private System.Windows.Forms.TextBox txbHorasConvalidas;
         private System.Windows.Forms.Label lblNombreEvento;
         private System.Windows.Forms.TextBox txbLugar;
@@ -749,5 +773,8 @@
         private System.Windows.Forms.Button btnAddPartidos;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.ColumnHeader clhIDEvento;
+        private System.Windows.Forms.ColumnHeader clhFecha;
+        private System.Windows.Forms.ColumnHeader clhConvalida;
     }
 }

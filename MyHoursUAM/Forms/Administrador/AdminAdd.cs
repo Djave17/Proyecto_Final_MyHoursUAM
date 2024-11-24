@@ -123,20 +123,23 @@ namespace MyHours_UAMApp
             }
 
             int indice = lvwEventos.SelectedIndices[0];
+             //verificar si el ID existe
+            var ID = Guid.NewGuid().ToString();
 
             try
             {
                 string mensaje = Metodos.EditarEvento(
                     indice,
-                    cbxEvento.Text,
-                    cbxBeneficio.Text,
+                    ID,
                     txtNombreEvento.Text,
-                    int.Parse(txbHorasConvalidas.Text),
-                    int.Parse(txtCupos.Text),
-                    txbHoraEnvio.Text,
+                    cbxBeneficio.Text,
                     txbHorario.Text,
                     dtpFecha.Text,
-                    txbLugar.Text
+                    txbLugar.Text,
+                    int.Parse(txbHorasConvalidas.Text),
+                    int.Parse(txtCupos.Text),
+                    tbxEstado.Text,
+                    cbxBeneficio.Text
                 );
 
                 MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -156,7 +159,7 @@ namespace MyHours_UAMApp
             txtNombreEvento.Clear();
             txbHorasConvalidas.Clear();
             txtCupos.Clear();
-            txbHoraEnvio.Clear();
+            tbxEstado.Clear();
             txbHorario.Clear();
             dtpFecha.Value = DateTime.Now;
             txbLugar.Clear();
@@ -164,18 +167,22 @@ namespace MyHours_UAMApp
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            //verificar si el ID existe
+            var ID = Guid.NewGuid().ToString();
+
             try
             {
                 string mensaje = Metodos.RegistrarEvento(
-                    cbxEvento.Text,
-                    cbxBeneficio.Text,
+                    ID,
                     txtNombreEvento.Text,
-                    int.Parse(txbHorasConvalidas.Text),
-                    int.Parse(txtCupos.Text),
-                    txbHoraEnvio.Text,
+                    cbxBeneficio.Text,
                     txbHorario.Text,
                     dtpFecha.Text,
-                    txbLugar.Text
+                    txbLugar.Text,
+                    int.Parse(txbHorasConvalidas.Text),
+                    int.Parse(txtCupos.Text),
+                    tbxEstado.Text,
+                    cbxBeneficio.Text
 
                 );
 

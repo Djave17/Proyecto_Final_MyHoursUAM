@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using static MyHours_UAMApp.Estructuras.Evento;
 
 namespace MyHours_UAMApp.Estructuras.Metodos
 {
@@ -17,14 +18,18 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         {
             return eventos.Select(p => new string[]
             {
+                p.idEvento,
                 p.nombreEvento,
-                p.lugarEvento,
-                p.tipoEvento.ToString(),
+                p.tipoBeneficio,
                 p.horaEvento,
                 p.fechaEvento,
-                p.descripcionEvento,
-                p.cupos.ToString(),
+                p.lugarEvento,
                 p.cantidadConvalidar.ToString(),
+                p.cupos.ToString(),
+                p.tipoEvento.ToString(),
+                p.estadoEvento.ToString(),
+               
+                
             }).ToList();
         }
         private static List<Partido> partidos = new List<Partido>();
@@ -43,21 +48,23 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         /// <param name="lugar">Lugar donde se llevará a cabo el evento.</param>
         /// <returns>Mensaje indicando el resultado del registro.</returns>
         public static string RegistrarEvento(
-            string tipoEvento,
-            string tipoBeneficio,
+            string idEvento,
             string nombreEvento,
-            int cantidadAConvalidar,
-            int cupo,
-            string horaEnvio,
+            string tipoBeneficio,
             string hora,
             string fecha,
-            string lugar)
+            string lugar,
+            int cantidadAConvalidar,
+            int cupo,
+            string tipoEvento,
+            string estadoEvento)
+           
         {
             // Validar campos obligatorios
             if (string.IsNullOrWhiteSpace(tipoEvento) ||
                 string.IsNullOrWhiteSpace(tipoBeneficio) ||
                 string.IsNullOrWhiteSpace(nombreEvento) ||
-                string.IsNullOrWhiteSpace(horaEnvio) ||
+                string.IsNullOrWhiteSpace(estadoEvento) ||
                 string.IsNullOrWhiteSpace(hora) ||
                 string.IsNullOrWhiteSpace(fecha) ||
                 string.IsNullOrWhiteSpace(lugar) ||
@@ -72,13 +79,19 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             {
                 idEvento = "E" + eventoCounter++,
                 nombreEvento = nombreEvento,
-                fechaEvento = fecha,
+                tipoBeneficio = tipoBeneficio,
                 horaEvento = hora,
+                fechaEvento = fecha,
                 lugarEvento = lugar,
-                descripcionEvento = $"Tipo: {tipoEvento}, Beneficio: {tipoBeneficio}",
-                cupos = cupo,
                 cantidadConvalidar = cantidadAConvalidar,
-                organizadorEvento = "Administrador", // Puede ser dinámico
+                cupos = cupo,
+                tipoEvento = Enum.TryParse(tipoEvento, true, out Evento.TipoEvento tipoEventoEnum)
+                    ? tipoEventoEnum
+                    : Evento.TipoEvento.deportivo, // Valor predeterminado
+                estadoEvento = Enum.TryParse(estadoEvento, true, out Evento.EstadoEvento estadoEventoEnum)
+                    ? estadoEventoEnum
+                    : Evento.EstadoEvento.No_Disponible, // Valor predeterminado
+
             };
 
             eventos.Add(nuevoEvento);
@@ -91,15 +104,16 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         /// </summary>
         public static string EditarEvento(
             int indice,
-            string tipoEvento,
-            string tipoBeneficio,
+            string idEvento,
             string nombreEvento,
-            int cantidadAConvalidar,
-            int cupo,
-            string horaEnvio,
+            string tipoBeneficio,
             string hora,
             string fecha,
-            string lugar)
+            string lugar,
+            int cantidadAConvalidar,
+            int cupo,
+            string tipoEvento,
+            string estadoEvento)
         {
             // Validar índice
             if (indice < 0 || indice >= eventos.Count)
@@ -111,7 +125,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             if (string.IsNullOrWhiteSpace(tipoEvento) ||
                 string.IsNullOrWhiteSpace(tipoBeneficio) ||
                 string.IsNullOrWhiteSpace(nombreEvento) ||
-                string.IsNullOrWhiteSpace(horaEnvio) ||
+                string.IsNullOrWhiteSpace(estadoEvento) ||
                 string.IsNullOrWhiteSpace(hora) ||
                 string.IsNullOrWhiteSpace(fecha) ||
                 string.IsNullOrWhiteSpace(lugar) ||
@@ -126,13 +140,18 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             {
                 idEvento = eventos[indice].idEvento, // Mantener el ID existente
                 nombreEvento = nombreEvento,
-                fechaEvento = fecha,
+                tipoBeneficio = tipoBeneficio,
                 horaEvento = hora,
+                fechaEvento = fecha,
                 lugarEvento = lugar,
-                descripcionEvento = $"Tipo: {tipoEvento}, Beneficio: {tipoBeneficio}",
-                cupos = cupo,
                 cantidadConvalidar = cantidadAConvalidar,
-                organizadorEvento = "Administrador",
+                cupos = cupo,
+                tipoEvento = Enum.TryParse(tipoEvento, true, out Evento.TipoEvento tipoEventoEnum)
+                    ? tipoEventoEnum
+                    : Evento.TipoEvento.deportivo, // Valor predeterminado
+                estadoEvento = Enum.TryParse(estadoEvento, true, out Evento.EstadoEvento estadoEventoEnum)
+                    ? estadoEventoEnum
+                    : Evento.EstadoEvento.No_Disponible, // Valor predeterminado
             };
 
             return $"Evento '{nombreEvento}' editado exitosamente.";
@@ -155,6 +174,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             return $"Evento '{nombreEvento}' eliminado exitosamente.";
         }
         public static string RegistrarPartido(
+            
             string tipoDeporte,
             string nombrePartido,
             int cantidadAConvalidar,
@@ -247,7 +267,6 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                     : Partido.TipoDeporte.futbol, // Valor predeterminado
                 fechaEvento = fecha,
                 horaEvento = hora,
-                descripcionEvento = $"Hora de Envío: {horaEnvio}",
                 cantidadConvalidar = cantidadAConvalidar,
                 cupos = cupo,
                 organizadorEvento = "Administrador",
