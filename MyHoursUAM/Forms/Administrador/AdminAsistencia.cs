@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyHours_UAMApp.Forms.Administrador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,6 +55,13 @@ namespace MyHours_UAMApp
         {
             Rol form = new Rol();
             form.Show();
+            this.Close();
+        }
+
+        private void btnGraficos_Click(object sender, EventArgs e)
+        {
+            AdminGrafico adminGrafico = new AdminGrafico();
+            adminGrafico.Show();
             this.Close();
         }
     }

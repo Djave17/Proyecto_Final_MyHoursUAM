@@ -33,16 +33,17 @@ namespace MyHours_UAMApp.Forms.Administrador
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            
-        
+
+            var ID = Guid.NewGuid().ToString();
             try
             {
                 string mensaje = Metodos.RegistrarPartido(
+                    ID,
                     cbxTipoDeporte.Text,
                     txtNombreEvento.Text,
                     int.Parse(txbHorasConvalidas.Text),
                     int.Parse(txtCupos.Text),
-                    tbxHoraEnvio.Text,
+                    tbxEstado.Text,
                     txbHorario.Text,
                     dtpFecha.Text,
                     tbxLugar.Text,
@@ -105,16 +106,18 @@ namespace MyHours_UAMApp.Forms.Administrador
             }
 
             int indice = lvPartidos.SelectedIndices[0];
+            var ID = Guid.NewGuid().ToString();
 
             try
             {
                 string mensaje = Metodos.EditarPartido(
                     indice,
+                    ID,
                     cbxTipoDeporte.Text,
                     txtNombreEvento.Text,
                     int.Parse(txbHorasConvalidas.Text),
                     int.Parse(txtCupos.Text),
-                    tbxHoraEnvio.Text,
+                    tbxEstado.Text,
                     txbHorario.Text,
                     dtpFecha.Text,
                     tbxLugar.Text,
@@ -165,7 +168,7 @@ namespace MyHours_UAMApp.Forms.Administrador
             txtNombreEvento.Clear();
             txbHorasConvalidas.Clear();
             txtCupos.Clear();
-            tbxHoraEnvio.Clear();
+            tbxEstado.SelectedIndex = -1;
             txbHorario.Clear();
             dtpFecha.Value = DateTime.Now;
             tbxLugar.Clear();
@@ -181,6 +184,46 @@ namespace MyHours_UAMApp.Forms.Administrador
         private void gpbAddPartidos_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCambiarEstado_Click(object sender, EventArgs e)
+        {
+            if (lvPartidos.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Por favor, seleccione un evento para cambiar su estado.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int indice = lvPartidos.SelectedIndices[0]; // Obtener el índice del evento seleccionado
+
+            try
+            {
+                // Alternar el estado del evento
+                string mensaje = Metodos.CambiarEstadoPartido(indice);
+
+                // Mostrar el mensaje de éxito
+                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Actualizar el ListView con los nuevos datos
+                CargarPartidosEnListView();
+            }
+            catch (Exception ex)
+            {
+                // Manejar errores
+                MessageBox.Show($"Error al cambiar el estado del evento: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void lvPartidos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGraficos_Click(object sender, EventArgs e)
+        {
+            AdminGrafico form = new AdminGrafico();
+            form.Show();
+            this.Close();
         }
     }
 }

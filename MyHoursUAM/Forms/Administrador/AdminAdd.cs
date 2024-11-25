@@ -202,5 +202,41 @@ namespace MyHours_UAMApp
             form.Show();
             this.Close();
         }
+
+        private void btnCambiarEstado_Click(object sender, EventArgs e)
+        {
+            // Verificar si hay un evento seleccionado
+            if (lvwEventos.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Por favor, seleccione un evento para cambiar su estado.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int indice = lvwEventos.SelectedIndices[0]; // Obtener el índice del evento seleccionado
+
+            try
+            {
+                // Alternar el estado del evento
+                string mensaje = Metodos.CambiarEstadoEvento(indice);
+
+                // Mostrar el mensaje de éxito
+                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Actualizar el ListView con los nuevos datos
+                CargarEventosEnListView();
+            }
+            catch (Exception ex)
+            {
+                // Manejar errores
+                MessageBox.Show($"Error al cambiar el estado del evento: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnGraficos_Click(object sender, EventArgs e)
+        {
+            AdminGrafico adminGrafico = new AdminGrafico();
+            adminGrafico.Show();
+            this.Close();
+        }
     }
 }

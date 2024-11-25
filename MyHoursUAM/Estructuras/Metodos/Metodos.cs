@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using static MyHours_UAMApp.Estructuras.Evento;
 
 namespace MyHours_UAMApp.Estructuras.Metodos
@@ -10,6 +11,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
     {
         private static List<Evento> eventos = new List<Evento>();
         private static int eventoCounter = 1; // Contador para IDs de eventos
+        private static int partidoCounter = 1; // Contador para IDs de partidos
 
         /// <summary>
         /// Devuelve todos los eventos como una lista.
@@ -31,6 +33,12 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                
                 
             }).ToList();
+        }
+        public static (List<string[]>, List<string[]>) EventosPartidos()
+        {
+            var eventos = GetEventosAsString();
+            var partidos = GetPartidosAsStringArray();
+            return (eventos, partidos);
         }
         private static List<Partido> partidos = new List<Partido>();
 
@@ -174,7 +182,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             return $"Evento '{nombreEvento}' eliminado exitosamente.";
         }
         public static string RegistrarPartido(
-            
+            string idEvento,
             string tipoDeporte,
             string nombrePartido,
             int cantidadAConvalidar,
@@ -183,7 +191,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             string hora,
             string fecha,
             string lugar,
-            string rival)
+            string estadoEvento)
         {
             // Validar campos obligatorios
             if (string.IsNullOrWhiteSpace(tipoDeporte) ||
@@ -192,7 +200,6 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 string.IsNullOrWhiteSpace(hora) ||
                 string.IsNullOrWhiteSpace(fecha) ||
                 string.IsNullOrWhiteSpace(lugar) ||
-                string.IsNullOrWhiteSpace(rival) ||
                 cantidadAConvalidar <= 0 ||
                 cupo <= 0)
             {
@@ -202,18 +209,19 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             // Crear un nuevo partido
             Partido nuevoPartido = new Partido
             {
+                idEvento = "P" + partidoCounter++,
                 nombrePartido = nombrePartido,
                 lugarPartido = lugar,
-                rival = rival,
                 deporte = Enum.TryParse(tipoDeporte, true, out Partido.TipoDeporte deporteEnum)
                     ? deporteEnum
                     : Partido.TipoDeporte.futbol, // Valor predeterminado
                 fechaEvento = fecha,
                 horaEvento = hora,
-                descripcionEvento = $"{horaEnvio}",
                 cantidadConvalidar = cantidadAConvalidar,
                 cupos = cupo,
-                organizadorEvento = "Administrador", // Puede ser dinámico
+                estadoEvento = Enum.TryParse(estadoEvento, true, out Evento.EstadoEvento estadoEventoEnum)
+                    ? estadoEventoEnum
+                    : Evento.EstadoEvento.No_Disponible, // Valor predeterminado
             };
 
             partidos.Add(nuevoPartido);
@@ -226,6 +234,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         /// </summary>
         public static string EditarPartido(
             int indice,
+            string idEvento,
             string tipoDeporte,
             string nombrePartido,
             int cantidadAConvalidar,
@@ -234,7 +243,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             string hora,
             string fecha,
             string lugar,
-            string rival)
+            string estadoEvento)
         {
             // Validar índice
             if (indice < 0 || indice >= partidos.Count)
@@ -249,7 +258,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 string.IsNullOrWhiteSpace(hora) ||
                 string.IsNullOrWhiteSpace(fecha) ||
                 string.IsNullOrWhiteSpace(lugar) ||
-                string.IsNullOrWhiteSpace(rival) ||
+                string.IsNullOrWhiteSpace(estadoEvento) ||
                 cantidadAConvalidar <= 0 ||
                 cupo <= 0)
             {
@@ -259,9 +268,10 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             // Editar el partido existente
             partidos[indice] = new Partido
             {
+                idEvento = partidos[indice].idEvento, // Mantener el ID existente
                 nombrePartido = nombrePartido,
                 lugarPartido = lugar,
-                rival = rival,
+                
                 deporte = Enum.TryParse(tipoDeporte, true, out Partido.TipoDeporte deporteEnum)
                     ? deporteEnum
                     : Partido.TipoDeporte.futbol, // Valor predeterminado
@@ -269,7 +279,10 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 horaEvento = hora,
                 cantidadConvalidar = cantidadAConvalidar,
                 cupos = cupo,
-                organizadorEvento = "Administrador",
+                estadoEvento = Enum.TryParse(estadoEvento, true, out Evento.EstadoEvento estadoEventoEnum)
+                    ? estadoEventoEnum
+                    : Evento.EstadoEvento.No_Disponible, // Valor predeterminado
+
             };
 
             return $"Partido '{nombrePartido}' editado exitosamente.";
@@ -299,16 +312,121 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         {
             return partidos.Select(p => new string[]
             {
+                p.idEvento,
                 p.nombrePartido,
                 p.lugarPartido,
                 p.deporte.ToString(),
                 p.horaEvento,
                 p.fechaEvento,
-                p.descripcionEvento,
                 p.cantidadConvalidar.ToString(),
                 p.cupos.ToString(),
+                p.estadoEvento.ToString(),
 
             }).ToList();
+        }
+        //Cambiar estado del evento
+        public static string CambiarEstadoEvento(int indice)
+        {
+            // Validar índice
+            if (indice < 0 || indice >= eventos.Count)
+            {
+                throw new ArgumentOutOfRangeException("Índice fuera de rango.");
+            }
+
+            // Obtener el evento seleccionado
+            var evento = eventos[indice];
+
+            // Alternar el estado
+
+            if (evento.estadoEvento == Evento.EstadoEvento.Disponible)
+            {
+                evento.estadoEvento = Evento.EstadoEvento.No_Disponible;
+            }
+            else if (evento.estadoEvento == Evento.EstadoEvento.No_Disponible)
+            {
+                evento.estadoEvento = Evento.EstadoEvento.Disponible;
+            }
+            
+
+            // Retornar mensaje de éxito
+            return $"El estado del evento '{evento.nombreEvento}' se cambió a {evento.estadoEvento}.";
+        }
+        public static string CambiarEstadoPartido(int indice)
+        {
+            // Validar índice
+            if (indice < 0 || indice >= partidos.Count)
+            {
+                throw new ArgumentOutOfRangeException("Índice fuera de rango.");
+            }
+            // Obtener el partido seleccionado
+            var partido = partidos[indice];
+            // Alternar el estado
+            if (partido.estadoEvento == Partido.EstadoEvento.Disponible)
+            {
+                partido.estadoEvento = Partido.EstadoEvento.No_Disponible;
+            }
+            else if (partido.estadoEvento == Partido.EstadoEvento.No_Disponible)
+            {
+                partido.estadoEvento = Partido.EstadoEvento.Disponible;
+            }
+            // Retornar mensaje de éxito
+            return $"El estado del partido '{partido.nombrePartido}' se cambió a {partido.estadoEvento}.";
+        }
+
+
+        // Método para registrar asistencia
+        public static string RegistrarAsistencia(int indiceEvento, string cifEstudiante)
+        {
+            // Validar índice
+            if (indiceEvento < 0 || indiceEvento >= eventos.Count)
+            {
+                throw new ArgumentOutOfRangeException("Índice fuera de rango.");
+            }
+
+            // Obtener el evento y validar su disponibilidad
+            var evento = eventos[indiceEvento];
+            if (evento.estadoEvento != Evento.EstadoEvento.Disponible)
+            {
+                return $"El evento '{evento.nombreEvento}' no está disponible para asistencia.";
+            }
+
+            // Verificar si el estudiante ya ha asistido al evento
+            var estudiante = BuscarEstudiante(cifEstudiante); // Método que busca al estudiante
+            if (estudiante == null)
+            {
+                throw new InvalidOperationException("Estudiante no encontrado.");
+            }
+
+            if (estudiante.eventosAsistidos.Contains(evento.idEvento))
+            {
+                return $"El estudiante ya asistió al evento '{evento.nombreEvento}'.";
+            }
+
+            // Registrar asistencia
+            estudiante.eventosAsistidos.Add(evento.idEvento);
+            estudiante.asistencia.horasCompletadas += evento.cantidadConvalidar;
+
+            // Actualizar cupos del evento
+            evento.cupos--;
+            if (evento.cupos <= 0)
+            {
+                evento.estadoEvento = Evento.EstadoEvento.No_Disponible;
+            }
+
+            return $"Asistencia registrada exitosamente para el evento '{evento.nombreEvento}'.";
+        }
+
+        // Método auxiliar para buscar un estudiante (simulación de búsqueda)
+        private static Estudiante BuscarEstudiante(string cifEstudiante)
+        {
+            // Aquí se buscaría en la base de datos o lista de estudiantes
+            // Por ahora, retornar un estudiante de ejemplo
+            return new Estudiante
+            {
+                cifEstudiante = cifEstudiante,
+                eventosAsistidos = new List<string>(),
+                asistencia = new Asistencia()
+            };
         }
     }
 

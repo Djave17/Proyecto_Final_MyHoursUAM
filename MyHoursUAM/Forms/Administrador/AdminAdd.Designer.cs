@@ -45,6 +45,7 @@
             this.pnlIcon = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gpbNuevoEvento = new System.Windows.Forms.GroupBox();
+            this.btnCambiarEstado = new System.Windows.Forms.Button();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txbLugar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,12 +54,15 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lvwEventos = new System.Windows.Forms.ListView();
+            this.clhIDEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhNombreEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhTipoEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhTipoConvalidacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhHorario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhLugar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhConvalida = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhCupos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhTipoEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhEstadoEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBeneficio = new System.Windows.Forms.ComboBox();
             this.cbxEvento = new System.Windows.Forms.ComboBox();
@@ -76,9 +80,7 @@
             this.lblCupos = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblRotulo2 = new System.Windows.Forms.Label();
-            this.clhIDEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhConvalida = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnGraficos = new System.Windows.Forms.Button();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -179,6 +181,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnGraficos);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnAddPartidos);
             this.panel1.Controls.Add(this.btnAñadirEventos);
@@ -293,6 +296,7 @@
             // gpbNuevoEvento
             // 
             this.gpbNuevoEvento.BackColor = System.Drawing.Color.White;
+            this.gpbNuevoEvento.Controls.Add(this.btnCambiarEstado);
             this.gpbNuevoEvento.Controls.Add(this.dtpFecha);
             this.gpbNuevoEvento.Controls.Add(this.txbLugar);
             this.gpbNuevoEvento.Controls.Add(this.label4);
@@ -327,6 +331,23 @@
             this.gpbNuevoEvento.TabStop = false;
             this.gpbNuevoEvento.Text = "Añadir Eventos";
             this.gpbNuevoEvento.Enter += new System.EventHandler(this.gpbNuevoEvento_Enter);
+            // 
+            // btnCambiarEstado
+            // 
+            this.btnCambiarEstado.BackColor = System.Drawing.Color.Teal;
+            this.btnCambiarEstado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCambiarEstado.FlatAppearance.BorderSize = 0;
+            this.btnCambiarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiarEstado.ForeColor = System.Drawing.Color.White;
+            this.btnCambiarEstado.Location = new System.Drawing.Point(370, 520);
+            this.btnCambiarEstado.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCambiarEstado.Name = "btnCambiarEstado";
+            this.btnCambiarEstado.Size = new System.Drawing.Size(130, 28);
+            this.btnCambiarEstado.TabIndex = 63;
+            this.btnCambiarEstado.Text = "Cambiar Estado";
+            this.btnCambiarEstado.UseVisualStyleBackColor = false;
+            this.btnCambiarEstado.Click += new System.EventHandler(this.btnCambiarEstado_Click);
             // 
             // dtpFecha
             // 
@@ -392,7 +413,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(301, 522);
+            this.btnEliminar.Location = new System.Drawing.Point(256, 520);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(42, 28);
@@ -437,17 +458,16 @@
             this.lvwEventos.View = System.Windows.Forms.View.Details;
             this.lvwEventos.SelectedIndexChanged += new System.EventHandler(this.lvwEventosRecienAdd_SelectedIndexChanged);
             // 
+            // clhIDEvento
+            // 
+            this.clhIDEvento.DisplayIndex = 7;
+            this.clhIDEvento.Text = "IDEvento";
+            // 
             // clhNombreEvento
             // 
             this.clhNombreEvento.DisplayIndex = 2;
             this.clhNombreEvento.Text = "Nombre";
             this.clhNombreEvento.Width = 180;
-            // 
-            // clhTipoEvento
-            // 
-            this.clhTipoEvento.DisplayIndex = 0;
-            this.clhTipoEvento.Text = "Tipo de Evento";
-            this.clhTipoEvento.Width = 180;
             // 
             // clhTipoConvalidacion
             // 
@@ -460,16 +480,32 @@
             this.clhHorario.Text = "Horario";
             this.clhHorario.Width = 80;
             // 
+            // clhFecha
+            // 
+            this.clhFecha.DisplayIndex = 8;
+            this.clhFecha.Text = "Fecha";
+            // 
             // clhLugar
             // 
             this.clhLugar.DisplayIndex = 4;
             this.clhLugar.Text = "Lugar";
             this.clhLugar.Width = 80;
             // 
+            // clhConvalida
+            // 
+            this.clhConvalida.DisplayIndex = 9;
+            this.clhConvalida.Text = "Convalida";
+            // 
             // clhCupos
             // 
             this.clhCupos.DisplayIndex = 5;
             this.clhCupos.Text = "Cupos";
+            // 
+            // clhTipoEvento
+            // 
+            this.clhTipoEvento.DisplayIndex = 0;
+            this.clhTipoEvento.Text = "Tipo de Evento";
+            this.clhTipoEvento.Width = 180;
             // 
             // clhEstadoEvento
             // 
@@ -605,7 +641,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(358, 522);
+            this.btnEditar.Location = new System.Drawing.Point(313, 520);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(42, 28);
@@ -622,7 +658,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(244, 522);
+            this.btnGuardar.Location = new System.Drawing.Point(199, 520);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(42, 28);
@@ -679,20 +715,22 @@
             this.lblRotulo2.TabIndex = 0;
             this.lblRotulo2.Text = "Todos los campos son requeridos";
             // 
-            // clhIDEvento
+            // btnGraficos
             // 
-            this.clhIDEvento.DisplayIndex = 7;
-            this.clhIDEvento.Text = "IDEvento";
-            // 
-            // clhFecha
-            // 
-            this.clhFecha.DisplayIndex = 8;
-            this.clhFecha.Text = "Fecha";
-            // 
-            // clhConvalida
-            // 
-            this.clhConvalida.DisplayIndex = 9;
-            this.clhConvalida.Text = "Convalida";
+            this.btnGraficos.BackColor = System.Drawing.Color.Transparent;
+            this.btnGraficos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGraficos.FlatAppearance.BorderSize = 0;
+            this.btnGraficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGraficos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraficos.ForeColor = System.Drawing.Color.White;
+            this.btnGraficos.Location = new System.Drawing.Point(-2, 497);
+            this.btnGraficos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGraficos.Name = "btnGraficos";
+            this.btnGraficos.Size = new System.Drawing.Size(165, 120);
+            this.btnGraficos.TabIndex = 22;
+            this.btnGraficos.Text = "📈 Graficos";
+            this.btnGraficos.UseVisualStyleBackColor = false;
+            this.btnGraficos.Click += new System.EventHandler(this.btnGraficos_Click);
             // 
             // AdminAdd
             // 
@@ -776,5 +814,7 @@
         private System.Windows.Forms.ColumnHeader clhIDEvento;
         private System.Windows.Forms.ColumnHeader clhFecha;
         private System.Windows.Forms.ColumnHeader clhConvalida;
+        private System.Windows.Forms.Button btnCambiarEstado;
+        private System.Windows.Forms.Button btnGraficos;
     }
 }
