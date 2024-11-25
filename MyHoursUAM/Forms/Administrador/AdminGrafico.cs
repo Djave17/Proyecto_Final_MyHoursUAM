@@ -47,7 +47,7 @@ namespace MyHours_UAMApp.Forms.Administrador
 
             // Crear gráfico para partidos
             graficoHoras.Series.Clear();
-            var partidosPorCategoria = partidos.GroupBy(p => p[1]);
+            var partidosPorCategoria = partidos.GroupBy(p => p[3]);
 
             var seriePartidos = new Series("Partidos por Categoría");
             seriePartidos.ChartType = SeriesChartType.Column;
