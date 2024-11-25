@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyHours_UAMApp.Estructuras;
 
 namespace MyHours_UAMApp
 {
@@ -77,6 +78,31 @@ namespace MyHours_UAMApp
             UserPartidos form = new UserPartidos();
             form.Show();
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e) //Enviar asistencia
+        {
+            if (lvwEventos.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Seleccione un evento para registrar la asistencia.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int indiceEvento = lvwEventos.SelectedIndices[0];
+
+            try
+            {
+                // Usar el CIF almacenado en la sesión
+                string mensaje = Metodos.RegistrarAsistencia(indiceEvento, SesionActual.CifEstudiante);
+                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Actualizar vista
+                CargarEventosEnListView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al registrar la asistencia: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

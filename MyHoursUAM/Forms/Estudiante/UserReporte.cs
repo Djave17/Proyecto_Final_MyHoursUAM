@@ -15,6 +15,7 @@ namespace MyHours_UAMApp
         public UserReporte()
         {
             InitializeComponent();
+           
         }
 
         private void UserReporte_Load(object sender, EventArgs e)

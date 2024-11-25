@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyHours_UAMApp.Estructuras;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,14 +32,21 @@ namespace MyHours_UAMApp
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+            string cif = txbCIF.Text; // Obtenido del campo de texto
+            string contraseña = txbContraseña.Text;
+
             if (txbCIF.Text == "admin" && txbContraseña.Text== "admin")
             {
+                
+                SesionActual.CifAdministrador = cif;
+
                 SplashScreenAdmin form = new SplashScreenAdmin();
                 form.Show();
                 this.Hide();
             }
             else if (txbCIF.Text == "user" && txbContraseña.Text == "user")
             {
+                SesionActual.CifEstudiante = cif;
                 SplashScreenUser form = new SplashScreenUser();
                 form.Show();
                 this.Hide();

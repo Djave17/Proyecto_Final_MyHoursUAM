@@ -372,6 +372,62 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             // Retornar mensaje de éxito
             return $"El estado del partido '{partido.nombrePartido}' se cambió a {partido.estadoEvento}.";
         }
+
+
+        // Método para registrar asistencia
+        public static string RegistrarAsistencia(int indiceEvento, string cifEstudiante)
+        {
+            // Validar índice
+            if (indiceEvento < 0 || indiceEvento >= eventos.Count)
+            {
+                throw new ArgumentOutOfRangeException("Índice fuera de rango.");
+            }
+
+            // Obtener el evento y validar su disponibilidad
+            var evento = eventos[indiceEvento];
+            if (evento.estadoEvento != Evento.EstadoEvento.Disponible)
+            {
+                return $"El evento '{evento.nombreEvento}' no está disponible para asistencia.";
+            }
+
+            // Verificar si el estudiante ya ha asistido al evento
+            var estudiante = BuscarEstudiante(cifEstudiante); // Método que busca al estudiante
+            if (estudiante == null)
+            {
+                throw new InvalidOperationException("Estudiante no encontrado.");
+            }
+
+            if (estudiante.eventosAsistidos.Contains(evento.idEvento))
+            {
+                return $"El estudiante ya asistió al evento '{evento.nombreEvento}'.";
+            }
+
+            // Registrar asistencia
+            estudiante.eventosAsistidos.Add(evento.idEvento);
+            estudiante.asistencia.horasCompletadas += evento.cantidadConvalidar;
+
+            // Actualizar cupos del evento
+            evento.cupos--;
+            if (evento.cupos <= 0)
+            {
+                evento.estadoEvento = Evento.EstadoEvento.No_Disponible;
+            }
+
+            return $"Asistencia registrada exitosamente para el evento '{evento.nombreEvento}'.";
+        }
+
+        // Método auxiliar para buscar un estudiante (simulación de búsqueda)
+        private static Estudiante BuscarEstudiante(string cifEstudiante)
+        {
+            // Aquí se buscaría en la base de datos o lista de estudiantes
+            // Por ahora, retornar un estudiante de ejemplo
+            return new Estudiante
+            {
+                cifEstudiante = cifEstudiante,
+                eventosAsistidos = new List<string>(),
+                asistencia = new Asistencia()
+            };
+        }
     }
 
 }

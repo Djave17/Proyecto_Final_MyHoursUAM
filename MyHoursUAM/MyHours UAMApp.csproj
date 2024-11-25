@@ -53,6 +53,7 @@
     <Compile Include="Estructuras\Evento.cs" />
     <Compile Include="Estructuras\Metodos\Metodos.cs" />
     <Compile Include="Estructuras\Partido.cs" />
+    <Compile Include="Estructuras\SesionActual.cs" />
     <Compile Include="Forms\Administrador\AdminAdd.cs">
       <SubType>Form</SubType>
     </Compile>
