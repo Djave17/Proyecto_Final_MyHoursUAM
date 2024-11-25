@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnlAreaAdministrador = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGraficos = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAddPartidos = new System.Windows.Forms.Button();
             this.btnAñadirEventos = new System.Windows.Forms.Button();
@@ -66,7 +67,6 @@
             this.clhEstadoEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBeneficio = new System.Windows.Forms.ComboBox();
             this.cbxEvento = new System.Windows.Forms.ComboBox();
-            this.tbxEstado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTypeBeneficios = new System.Windows.Forms.Label();
             this.lblTipodeEvento = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@
             this.lblCupos = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblRotulo2 = new System.Windows.Forms.Label();
-            this.btnGraficos = new System.Windows.Forms.Button();
+            this.tbxEstado = new System.Windows.Forms.ComboBox();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -104,7 +104,7 @@
             this.pnlPieArriba.Location = new System.Drawing.Point(165, 0);
             this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPieArriba.Name = "pnlPieArriba";
-            this.pnlPieArriba.Size = new System.Drawing.Size(666, 73);
+            this.pnlPieArriba.Size = new System.Drawing.Size(681, 73);
             this.pnlPieArriba.TabIndex = 3;
             // 
             // lblCerrarSesion
@@ -176,7 +176,7 @@
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
             this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
-            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 848);
+            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 857);
             this.pnlAreaAdministrador.TabIndex = 2;
             // 
             // panel1
@@ -193,6 +193,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(165, 784);
             this.panel1.TabIndex = 2;
+            // 
+            // btnGraficos
+            // 
+            this.btnGraficos.BackColor = System.Drawing.Color.Transparent;
+            this.btnGraficos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGraficos.FlatAppearance.BorderSize = 0;
+            this.btnGraficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGraficos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraficos.ForeColor = System.Drawing.Color.White;
+            this.btnGraficos.Location = new System.Drawing.Point(-2, 497);
+            this.btnGraficos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGraficos.Name = "btnGraficos";
+            this.btnGraficos.Size = new System.Drawing.Size(165, 120);
+            this.btnGraficos.TabIndex = 22;
+            this.btnGraficos.Text = "📈 Graficos";
+            this.btnGraficos.UseVisualStyleBackColor = false;
+            this.btnGraficos.Click += new System.EventHandler(this.btnGraficos_Click);
             // 
             // panel2
             // 
@@ -296,6 +313,7 @@
             // gpbNuevoEvento
             // 
             this.gpbNuevoEvento.BackColor = System.Drawing.Color.White;
+            this.gpbNuevoEvento.Controls.Add(this.tbxEstado);
             this.gpbNuevoEvento.Controls.Add(this.btnCambiarEstado);
             this.gpbNuevoEvento.Controls.Add(this.dtpFecha);
             this.gpbNuevoEvento.Controls.Add(this.txbLugar);
@@ -307,7 +325,6 @@
             this.gpbNuevoEvento.Controls.Add(this.lvwEventos);
             this.gpbNuevoEvento.Controls.Add(this.cbxBeneficio);
             this.gpbNuevoEvento.Controls.Add(this.cbxEvento);
-            this.gpbNuevoEvento.Controls.Add(this.tbxEstado);
             this.gpbNuevoEvento.Controls.Add(this.label2);
             this.gpbNuevoEvento.Controls.Add(this.lblTypeBeneficios);
             this.gpbNuevoEvento.Controls.Add(this.lblTipodeEvento);
@@ -326,7 +343,7 @@
             this.gpbNuevoEvento.Margin = new System.Windows.Forms.Padding(2);
             this.gpbNuevoEvento.Name = "gpbNuevoEvento";
             this.gpbNuevoEvento.Padding = new System.Windows.Forms.Padding(2);
-            this.gpbNuevoEvento.Size = new System.Drawing.Size(661, 770);
+            this.gpbNuevoEvento.Size = new System.Drawing.Size(655, 770);
             this.gpbNuevoEvento.TabIndex = 11;
             this.gpbNuevoEvento.TabStop = false;
             this.gpbNuevoEvento.Text = "Añadir Eventos";
@@ -400,10 +417,12 @@
             // txbHorasConvalidas
             // 
             this.txbHorasConvalidas.BackColor = System.Drawing.Color.Teal;
-            this.txbHorasConvalidas.Location = new System.Drawing.Point(10, 373);
+            this.txbHorasConvalidas.ForeColor = System.Drawing.SystemColors.Window;
+            this.txbHorasConvalidas.Location = new System.Drawing.Point(7, 372);
             this.txbHorasConvalidas.Name = "txbHorasConvalidas";
             this.txbHorasConvalidas.Size = new System.Drawing.Size(367, 26);
             this.txbHorasConvalidas.TabIndex = 58;
+            this.txbHorasConvalidas.TextChanged += new System.EventHandler(this.txbHorasConvalidas_TextChanged);
             // 
             // btnEliminar
             // 
@@ -538,19 +557,6 @@
             this.cbxEvento.Name = "cbxEvento";
             this.cbxEvento.Size = new System.Drawing.Size(224, 27);
             this.cbxEvento.TabIndex = 53;
-            // 
-            // tbxEstado
-            // 
-            this.tbxEstado.BackColor = System.Drawing.Color.Teal;
-            this.tbxEstado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxEstado.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxEstado.ForeColor = System.Drawing.Color.White;
-            this.tbxEstado.Location = new System.Drawing.Point(10, 474);
-            this.tbxEstado.Margin = new System.Windows.Forms.Padding(2);
-            this.tbxEstado.Multiline = true;
-            this.tbxEstado.Name = "tbxEstado";
-            this.tbxEstado.Size = new System.Drawing.Size(366, 23);
-            this.tbxEstado.TabIndex = 52;
             // 
             // label2
             // 
@@ -715,29 +721,23 @@
             this.lblRotulo2.TabIndex = 0;
             this.lblRotulo2.Text = "Todos los campos son requeridos";
             // 
-            // btnGraficos
+            // tbxEstado
             // 
-            this.btnGraficos.BackColor = System.Drawing.Color.Transparent;
-            this.btnGraficos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGraficos.FlatAppearance.BorderSize = 0;
-            this.btnGraficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGraficos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGraficos.ForeColor = System.Drawing.Color.White;
-            this.btnGraficos.Location = new System.Drawing.Point(-2, 497);
-            this.btnGraficos.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGraficos.Name = "btnGraficos";
-            this.btnGraficos.Size = new System.Drawing.Size(165, 120);
-            this.btnGraficos.TabIndex = 22;
-            this.btnGraficos.Text = "📈 Graficos";
-            this.btnGraficos.UseVisualStyleBackColor = false;
-            this.btnGraficos.Click += new System.EventHandler(this.btnGraficos_Click);
+            this.tbxEstado.FormattingEnabled = true;
+            this.tbxEstado.Items.AddRange(new object[] {
+            "Disponible",
+            "No_Disponible"});
+            this.tbxEstado.Location = new System.Drawing.Point(8, 475);
+            this.tbxEstado.Name = "tbxEstado";
+            this.tbxEstado.Size = new System.Drawing.Size(368, 27);
+            this.tbxEstado.TabIndex = 90;
             // 
             // AdminAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(830, 857);
+            this.ClientSize = new System.Drawing.Size(846, 857);
             this.Controls.Add(this.gpbNuevoEvento);
             this.Controls.Add(this.pnlPieArriba);
             this.Controls.Add(this.pnlAreaAdministrador);
@@ -790,7 +790,6 @@
         private System.Windows.Forms.PictureBox pcbLogOutIcon;
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox tbxEstado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbxEvento;
         private System.Windows.Forms.ComboBox cbxBeneficio;
@@ -816,5 +815,6 @@
         private System.Windows.Forms.ColumnHeader clhConvalida;
         private System.Windows.Forms.Button btnCambiarEstado;
         private System.Windows.Forms.Button btnGraficos;
+        private System.Windows.Forms.ComboBox tbxEstado;
     }
 }
