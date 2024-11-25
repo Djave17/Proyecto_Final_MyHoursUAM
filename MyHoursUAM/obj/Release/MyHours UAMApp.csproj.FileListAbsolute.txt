@@ -1,0 +1,24 @@
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\MyHours UAMApp.exe.config
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\MyHours UAMApp.exe
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\MyHours UAMApp.pdb
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.AssemblyReference.cache
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAdd.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAjustes.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAsistencia.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Administrador.AdminAddPartidos.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Administrador.AdminGrafico.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreenAdmin.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreenUser.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.UserCambiarContraseña.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.UserEvento.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.UserPartidos.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.UserMiPerfil.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.UserReporte.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.IniciarSesion.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.Rol.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreen.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.Properties.Resources.resources
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.GenerateResource.cache
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.CoreCompileInputs.cache
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours UAMApp.exe
+C:\Users\seque\OneDrive\Desktop\Metodologia y Programacion\RepoActualizado\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours UAMApp.pdb
