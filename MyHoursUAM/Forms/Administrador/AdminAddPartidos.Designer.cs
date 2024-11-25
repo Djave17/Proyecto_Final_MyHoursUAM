@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminAddPartidos));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGraficos = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAddPartidos = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -74,7 +75,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnGraficos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gpbAddPartidos.SuspendLayout();
@@ -97,6 +97,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(165, 829);
             this.panel1.TabIndex = 0;
+            // 
+            // btnGraficos
+            // 
+            this.btnGraficos.BackColor = System.Drawing.Color.Transparent;
+            this.btnGraficos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGraficos.FlatAppearance.BorderSize = 0;
+            this.btnGraficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGraficos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraficos.ForeColor = System.Drawing.Color.White;
+            this.btnGraficos.Location = new System.Drawing.Point(-2, 596);
+            this.btnGraficos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGraficos.Name = "btnGraficos";
+            this.btnGraficos.Size = new System.Drawing.Size(165, 120);
+            this.btnGraficos.TabIndex = 22;
+            this.btnGraficos.Text = "📈 Graficos";
+            this.btnGraficos.UseVisualStyleBackColor = false;
+            this.btnGraficos.Click += new System.EventHandler(this.btnGraficos_Click);
             // 
             // panel2
             // 
@@ -433,6 +450,7 @@
             // txbHorasConvalidas
             // 
             this.txbHorasConvalidas.BackColor = System.Drawing.Color.Teal;
+            this.txbHorasConvalidas.ForeColor = System.Drawing.SystemColors.Window;
             this.txbHorasConvalidas.Location = new System.Drawing.Point(8, 323);
             this.txbHorasConvalidas.Name = "txbHorasConvalidas";
             this.txbHorasConvalidas.Size = new System.Drawing.Size(362, 26);
@@ -639,23 +657,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(663, 73);
             this.panel3.TabIndex = 3;
-            // 
-            // btnGraficos
-            // 
-            this.btnGraficos.BackColor = System.Drawing.Color.Transparent;
-            this.btnGraficos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGraficos.FlatAppearance.BorderSize = 0;
-            this.btnGraficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGraficos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGraficos.ForeColor = System.Drawing.Color.White;
-            this.btnGraficos.Location = new System.Drawing.Point(-2, 596);
-            this.btnGraficos.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGraficos.Name = "btnGraficos";
-            this.btnGraficos.Size = new System.Drawing.Size(165, 120);
-            this.btnGraficos.TabIndex = 22;
-            this.btnGraficos.Text = "📈 Graficos";
-            this.btnGraficos.UseVisualStyleBackColor = false;
-            this.btnGraficos.Click += new System.EventHandler(this.btnGraficos_Click);
             // 
             // AdminAddPartidos
             // 

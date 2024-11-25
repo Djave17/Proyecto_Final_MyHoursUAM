@@ -125,7 +125,18 @@ namespace MyHours_UAMApp
             int indice = lvwEventos.SelectedIndices[0];
              //verificar si el ID existe
             var ID = Guid.NewGuid().ToString();
-
+            ///Cargar los datos del evento seleccionado en los campos de texto///
+            //cbxEvento.SelectedIndex = indice;
+            //txtNombreEvento.Text = lvwEventos.SelectedItems[0].SubItems[1].Text;
+            //cbxBeneficio.SelectedIndex = cbxBeneficio.FindStringExact(lvwEventos.SelectedItems[0].SubItems[2].Text);
+            //txbHorario.Text = lvwEventos.SelectedItems[0].SubItems[3].Text;
+            //dtpFecha.Text = lvwEventos.SelectedItems[0].SubItems[4].Text;
+            //txbLugar.Text = lvwEventos.SelectedItems[0].SubItems[5].Text;
+            //txbHorasConvalidas.Text = lvwEventos.SelectedItems[0].SubItems[6].Text;
+            //txtCupos.Text = lvwEventos.SelectedItems[0].SubItems[7].Text;
+            //tbxEstado.SelectedIndex = tbxEstado.FindStringExact(lvwEventos.SelectedItems[0].SubItems[8].Text);
+            //cbxBeneficio.SelectedIndex = cbxBeneficio.FindStringExact(lvwEventos.SelectedItems[0].SubItems[9].Text);
+        
             try
             {
                 string mensaje = Metodos.EditarEvento(
@@ -159,7 +170,7 @@ namespace MyHours_UAMApp
             txtNombreEvento.Clear();
             txbHorasConvalidas.Clear();
             txtCupos.Clear();
-            tbxEstado.Clear();
+            tbxEstado.SelectedIndex = -1; 
             txbHorario.Clear();
             dtpFecha.Value = DateTime.Now;
             txbLugar.Clear();
@@ -237,6 +248,11 @@ namespace MyHours_UAMApp
             AdminGrafico adminGrafico = new AdminGrafico();
             adminGrafico.Show();
             this.Close();
+        }
+
+        private void txbHorasConvalidas_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
