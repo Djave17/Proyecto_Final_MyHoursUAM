@@ -114,7 +114,7 @@ Este proyecto fue desarrollado por estudiantes de la Universidad Americana (UAM)
 - Carlos Alfredo Abea Martinez - QA 
 
 ---
-##📬 Contacto
+## 📬 Contacto
 
 Correo del lider: dsancheza@uamv.edu.ni
 **Universidad Americana (UAM)**
