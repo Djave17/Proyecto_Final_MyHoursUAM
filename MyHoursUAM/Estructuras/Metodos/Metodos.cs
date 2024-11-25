@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using static MyHours_UAMApp.Estructuras.Evento;
 
 namespace MyHours_UAMApp.Estructuras.Metodos
@@ -10,6 +11,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
     {
         private static List<Evento> eventos = new List<Evento>();
         private static int eventoCounter = 1; // Contador para IDs de eventos
+        private static int partidoCounter = 1; // Contador para IDs de partidos
 
         /// <summary>
         /// Devuelve todos los eventos como una lista.
@@ -174,7 +176,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             return $"Evento '{nombreEvento}' eliminado exitosamente.";
         }
         public static string RegistrarPartido(
-            
+            string idEvento,
             string tipoDeporte,
             string nombrePartido,
             int cantidadAConvalidar,
@@ -202,6 +204,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             // Crear un nuevo partido
             Partido nuevoPartido = new Partido
             {
+                idEvento = "P" + partidoCounter++,
                 nombrePartido = nombrePartido,
                 lugarPartido = lugar,
                 rival = rival,
@@ -226,6 +229,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         /// </summary>
         public static string EditarPartido(
             int indice,
+            string idEvento,
             string tipoDeporte,
             string nombrePartido,
             int cantidadAConvalidar,
@@ -259,6 +263,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             // Editar el partido existente
             partidos[indice] = new Partido
             {
+                idEvento = partidos[indice].idEvento, // Mantener el ID existente
                 nombrePartido = nombrePartido,
                 lugarPartido = lugar,
                 rival = rival,
@@ -299,6 +304,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         {
             return partidos.Select(p => new string[]
             {
+                p.idEvento,
                 p.nombrePartido,
                 p.lugarPartido,
                 p.deporte.ToString(),
@@ -309,6 +315,54 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 p.cupos.ToString(),
 
             }).ToList();
+        }
+        //Cambiar estado del evento
+        public static string CambiarEstadoEvento(int indice)
+        {
+            // Validar índice
+            if (indice < 0 || indice >= eventos.Count)
+            {
+                throw new ArgumentOutOfRangeException("Índice fuera de rango.");
+            }
+
+            // Obtener el evento seleccionado
+            var evento = eventos[indice];
+
+            // Alternar el estado
+
+            if (evento.estadoEvento == Evento.EstadoEvento.Disponible)
+            {
+                evento.estadoEvento = Evento.EstadoEvento.No_Disponible;
+            }
+            else if (evento.estadoEvento == Evento.EstadoEvento.No_Disponible)
+            {
+                evento.estadoEvento = Evento.EstadoEvento.Disponible;
+            }
+            
+
+            // Retornar mensaje de éxito
+            return $"El estado del evento '{evento.nombreEvento}' se cambió a {evento.estadoEvento}.";
+        }
+        public static string CambiarEstadoPartido(int indice)
+        {
+            // Validar índice
+            if (indice < 0 || indice >= partidos.Count)
+            {
+                throw new ArgumentOutOfRangeException("Índice fuera de rango.");
+            }
+            // Obtener el partido seleccionado
+            var partido = partidos[indice];
+            // Alternar el estado
+            if (partido.estadoEvento == Partido.EstadoEvento.Disponible)
+            {
+                partido.estadoEvento = Partido.EstadoEvento.No_Disponible;
+            }
+            else if (partido.estadoEvento == Partido.EstadoEvento.No_Disponible)
+            {
+                partido.estadoEvento = Partido.EstadoEvento.Disponible;
+            }
+            // Retornar mensaje de éxito
+            return $"El estado del partido '{partido.nombrePartido}' se cambió a {partido.estadoEvento}.";
         }
     }
 

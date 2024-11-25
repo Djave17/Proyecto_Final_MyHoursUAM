@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyHours_UAMApp.Estructuras.Metodos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace MyHours_UAMApp
         public UserEvento()
         {
             InitializeComponent();
+            CargarEventosEnListView();
+        }
+        private void CargarEventosEnListView()
+        {
+            lvwEventos.Items.Clear();
+            var eventos = Metodos.GetEventosAsString();
+
+            foreach (var evento in eventos)
+            {
+                var listItem = new ListViewItem(evento);
+                lvwEventos.Items.Add(listItem);
+            }
         }
 
         private void btnVerEventos_Click(object sender, EventArgs e)
