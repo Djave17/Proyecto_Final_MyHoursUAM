@@ -103,7 +103,7 @@ MyHoursUAM/
      
 ---
 
-## 👥 Colaboradores
+##  👥 Colaboradores
 Este proyecto fue desarrollado por estudiantes de la Universidad Americana (UAM) como parte del curso Análisis y Diseño de Sistemas y Metodología de la programación.
 
 - Franco Xavier Aguilera Ortez - Desarrollador BackEnd
