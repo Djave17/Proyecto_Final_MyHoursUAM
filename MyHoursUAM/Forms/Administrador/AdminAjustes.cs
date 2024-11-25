@@ -52,5 +52,12 @@ namespace MyHours_UAMApp
             form.Show();
             this.Close();
         }
+
+        private void btnGraficos_Click(object sender, EventArgs e)
+        {
+            AdminGrafico adminGrafico = new AdminGrafico();
+            adminGrafico.Show();
+            this.Close();
+        }
     }
 }

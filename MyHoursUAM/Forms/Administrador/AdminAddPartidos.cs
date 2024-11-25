@@ -43,7 +43,7 @@ namespace MyHours_UAMApp.Forms.Administrador
                     txtNombreEvento.Text,
                     int.Parse(txbHorasConvalidas.Text),
                     int.Parse(txtCupos.Text),
-                    tbxHoraEnvio.Text,
+                    tbxEstado.Text,
                     txbHorario.Text,
                     dtpFecha.Text,
                     tbxLugar.Text,
@@ -117,7 +117,7 @@ namespace MyHours_UAMApp.Forms.Administrador
                     txtNombreEvento.Text,
                     int.Parse(txbHorasConvalidas.Text),
                     int.Parse(txtCupos.Text),
-                    tbxHoraEnvio.Text,
+                    tbxEstado.Text,
                     txbHorario.Text,
                     dtpFecha.Text,
                     tbxLugar.Text,
@@ -168,7 +168,7 @@ namespace MyHours_UAMApp.Forms.Administrador
             txtNombreEvento.Clear();
             txbHorasConvalidas.Clear();
             txtCupos.Clear();
-            tbxHoraEnvio.Clear();
+            tbxEstado.SelectedIndex = -1;
             txbHorario.Clear();
             dtpFecha.Value = DateTime.Now;
             tbxLugar.Clear();
@@ -199,7 +199,7 @@ namespace MyHours_UAMApp.Forms.Administrador
             try
             {
                 // Alternar el estado del evento
-                string mensaje = Metodos.CambiarEstadoEvento(indice);
+                string mensaje = Metodos.CambiarEstadoPartido(indice);
 
                 // Mostrar el mensaje de éxito
                 MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -212,6 +212,18 @@ namespace MyHours_UAMApp.Forms.Administrador
                 // Manejar errores
                 MessageBox.Show($"Error al cambiar el estado del evento: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void lvPartidos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGraficos_Click(object sender, EventArgs e)
+        {
+            AdminGrafico form = new AdminGrafico();
+            form.Show();
+            this.Close();
         }
     }
 }

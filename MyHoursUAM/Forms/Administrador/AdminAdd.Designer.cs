@@ -80,6 +80,7 @@
             this.lblCupos = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblRotulo2 = new System.Windows.Forms.Label();
+            this.btnGraficos = new System.Windows.Forms.Button();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -180,6 +181,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnGraficos);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnAddPartidos);
             this.panel1.Controls.Add(this.btnAñadirEventos);
@@ -713,6 +715,23 @@
             this.lblRotulo2.TabIndex = 0;
             this.lblRotulo2.Text = "Todos los campos son requeridos";
             // 
+            // btnGraficos
+            // 
+            this.btnGraficos.BackColor = System.Drawing.Color.Transparent;
+            this.btnGraficos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGraficos.FlatAppearance.BorderSize = 0;
+            this.btnGraficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGraficos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraficos.ForeColor = System.Drawing.Color.White;
+            this.btnGraficos.Location = new System.Drawing.Point(-2, 497);
+            this.btnGraficos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGraficos.Name = "btnGraficos";
+            this.btnGraficos.Size = new System.Drawing.Size(165, 120);
+            this.btnGraficos.TabIndex = 22;
+            this.btnGraficos.Text = "📈 Graficos";
+            this.btnGraficos.UseVisualStyleBackColor = false;
+            this.btnGraficos.Click += new System.EventHandler(this.btnGraficos_Click);
+            // 
             // AdminAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -796,5 +815,6 @@
         private System.Windows.Forms.ColumnHeader clhFecha;
         private System.Windows.Forms.ColumnHeader clhConvalida;
         private System.Windows.Forms.Button btnCambiarEstado;
+        private System.Windows.Forms.Button btnGraficos;
     }
 }

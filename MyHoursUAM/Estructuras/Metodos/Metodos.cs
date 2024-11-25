@@ -34,6 +34,12 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 
             }).ToList();
         }
+        public static (List<string[]>, List<string[]>) EventosPartidos()
+        {
+            var eventos = GetEventosAsString();
+            var partidos = GetPartidosAsStringArray();
+            return (eventos, partidos);
+        }
         private static List<Partido> partidos = new List<Partido>();
 
         /// <summary>
@@ -185,7 +191,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             string hora,
             string fecha,
             string lugar,
-            string rival)
+            string estadoEvento)
         {
             // Validar campos obligatorios
             if (string.IsNullOrWhiteSpace(tipoDeporte) ||
@@ -194,7 +200,6 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 string.IsNullOrWhiteSpace(hora) ||
                 string.IsNullOrWhiteSpace(fecha) ||
                 string.IsNullOrWhiteSpace(lugar) ||
-                string.IsNullOrWhiteSpace(rival) ||
                 cantidadAConvalidar <= 0 ||
                 cupo <= 0)
             {
@@ -207,16 +212,16 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 idEvento = "P" + partidoCounter++,
                 nombrePartido = nombrePartido,
                 lugarPartido = lugar,
-                rival = rival,
                 deporte = Enum.TryParse(tipoDeporte, true, out Partido.TipoDeporte deporteEnum)
                     ? deporteEnum
                     : Partido.TipoDeporte.futbol, // Valor predeterminado
                 fechaEvento = fecha,
                 horaEvento = hora,
-                descripcionEvento = $"{horaEnvio}",
                 cantidadConvalidar = cantidadAConvalidar,
                 cupos = cupo,
-                organizadorEvento = "Administrador", // Puede ser dinámico
+                estadoEvento = Enum.TryParse(estadoEvento, true, out Evento.EstadoEvento estadoEventoEnum)
+                    ? estadoEventoEnum
+                    : Evento.EstadoEvento.No_Disponible, // Valor predeterminado
             };
 
             partidos.Add(nuevoPartido);
@@ -238,7 +243,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             string hora,
             string fecha,
             string lugar,
-            string rival)
+            string estadoEvento)
         {
             // Validar índice
             if (indice < 0 || indice >= partidos.Count)
@@ -253,7 +258,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 string.IsNullOrWhiteSpace(hora) ||
                 string.IsNullOrWhiteSpace(fecha) ||
                 string.IsNullOrWhiteSpace(lugar) ||
-                string.IsNullOrWhiteSpace(rival) ||
+                string.IsNullOrWhiteSpace(estadoEvento) ||
                 cantidadAConvalidar <= 0 ||
                 cupo <= 0)
             {
@@ -266,7 +271,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 idEvento = partidos[indice].idEvento, // Mantener el ID existente
                 nombrePartido = nombrePartido,
                 lugarPartido = lugar,
-                rival = rival,
+                
                 deporte = Enum.TryParse(tipoDeporte, true, out Partido.TipoDeporte deporteEnum)
                     ? deporteEnum
                     : Partido.TipoDeporte.futbol, // Valor predeterminado
@@ -274,7 +279,10 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 horaEvento = hora,
                 cantidadConvalidar = cantidadAConvalidar,
                 cupos = cupo,
-                organizadorEvento = "Administrador",
+                estadoEvento = Enum.TryParse(estadoEvento, true, out Evento.EstadoEvento estadoEventoEnum)
+                    ? estadoEventoEnum
+                    : Evento.EstadoEvento.No_Disponible, // Valor predeterminado
+
             };
 
             return $"Partido '{nombrePartido}' editado exitosamente.";
@@ -310,9 +318,9 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 p.deporte.ToString(),
                 p.horaEvento,
                 p.fechaEvento,
-                p.descripcionEvento,
                 p.cantidadConvalidar.ToString(),
                 p.cupos.ToString(),
+                p.estadoEvento.ToString(),
 
             }).ToList();
         }

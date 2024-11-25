@@ -231,5 +231,12 @@ namespace MyHours_UAMApp
                 MessageBox.Show($"Error al cambiar el estado del evento: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnGraficos_Click(object sender, EventArgs e)
+        {
+            AdminGrafico adminGrafico = new AdminGrafico();
+            adminGrafico.Show();
+            this.Close();
+        }
     }
 }
