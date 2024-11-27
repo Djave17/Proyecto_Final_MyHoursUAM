@@ -93,7 +93,7 @@ namespace MyHours_UAMApp
             try
             {
                 // Usar el CIF almacenado en la sesión
-                string mensaje = Metodos.RegistrarAsistencia(indiceEvento, SesionActual.CifEstudiante);
+                string mensaje = Metodos.RegistrarAsistencia(indiceEvento, SesionActual.EstudianteActual.cifEstudiante);
                 MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Actualizar vista

@@ -9,10 +9,28 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 {
     internal static class Metodos
     {
-        private static List<Evento> eventos = new List<Evento>();
+        public static List<Evento> eventos = new List<Evento>();
+
+        // Obtener eventos asistidos por un estudiante
+        public static List<Evento> ObtenerEventosAsistidos(string cifEstudiante)
+        {
+            var estudiante = SesionActual.EstudianteActual;
+            return eventos.Where(e => estudiante.eventosAsistidos.Contains(e.idEvento)).ToList();
+        }
+
         private static int eventoCounter = 1; // Contador para IDs de eventos
         private static int partidoCounter = 1; // Contador para IDs de partidos
 
+        public static List<Estudiante> estudiantes = new List<Estudiante>
+        {
+            new Estudiante { cifEstudiante = "23020386", nombreEstudiante = "David Sanchez", contraseñaEstudiante = "123" },
+            new Estudiante { cifEstudiante = "2021002", nombreEstudiante = "Ana López", contraseñaEstudiante = "estudiante2" }
+        };
+
+        public static List<Administrador> administradores = new List<Administrador>
+        {
+            new Administrador { cifAdministrador = "admin", contraseñaAdministrador = "admin" }
+        };
         /// <summary>
         /// Devuelve todos los eventos como una lista.
         /// </summary>
@@ -390,13 +408,14 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 return $"El evento '{evento.nombreEvento}' no está disponible para asistencia.";
             }
 
-            // Verificar si el estudiante ya ha asistido al evento
-            var estudiante = BuscarEstudiante(cifEstudiante); // Método que busca al estudiante
+            // Buscar estudiante activo
+            var estudiante = estudiantes.FirstOrDefault(e => e.cifEstudiante == cifEstudiante);
             if (estudiante == null)
             {
-                throw new InvalidOperationException("Estudiante no encontrado.");
+                return "El estudiante no existe.";
             }
 
+            // Verificar si el estudiante ya asistió al evento
             if (estudiante.eventosAsistidos.Contains(evento.idEvento))
             {
                 return $"El estudiante ya asistió al evento '{evento.nombreEvento}'.";
@@ -404,7 +423,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
             // Registrar asistencia
             estudiante.eventosAsistidos.Add(evento.idEvento);
-            estudiante.asistencia.horasCompletadas += evento.cantidadConvalidar;
+            estudiante.HorasCompletadas += evento.cantidadConvalidar;
 
             // Actualizar cupos del evento
             evento.cupos--;
@@ -415,18 +434,46 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
             return $"Asistencia registrada exitosamente para el evento '{evento.nombreEvento}'.";
         }
-
-        // Método auxiliar para buscar un estudiante (simulación de búsqueda)
-        private static Estudiante BuscarEstudiante(string cifEstudiante)
+        // Método para validar inicio de sesión y determinar el rol
+        public static (bool, string) ValidarCredenciales(string usuario, string contraseña)
         {
-            // Aquí se buscaría en la base de datos o lista de estudiantes
-            // Por ahora, retornar un estudiante de ejemplo
-            return new Estudiante
+            // Validar si es administrador
+            var admin = administradores.FirstOrDefault(a => a.cifAdministrador == usuario && a.contraseñaAdministrador == contraseña);
+            if (admin != null)
             {
-                cifEstudiante = cifEstudiante,
-                eventosAsistidos = new List<string>(),
-                asistencia = new Asistencia()
-            };
+                return (true, "Administrador");
+            }
+
+            // Validar si es estudiante
+            var estudiante = estudiantes.FirstOrDefault(e => e.cifEstudiante == usuario && e.contraseñaEstudiante == contraseña);
+            if (estudiante != null)
+            {
+                return (true, "Estudiante");
+            }
+
+            // Credenciales inválidas
+            return (false, null);
+        }
+        public static int CalcularHorasLaborales(string cifEstudiante)
+        {
+            var estudiante = SesionActual.EstudianteActual;
+            if (estudiante == null) return 0;
+
+            var eventosAsistidos = ObtenerEventosAsistidos(cifEstudiante);
+            return eventosAsistidos.Sum(e => e.cantidadConvalidar); // Suponiendo que cantidadConvalidar representa las horas
+        }
+
+        // Calcular el beneficio acumulado de partidos
+        public static int CalcularBeneficioPartidos(string cifEstudiante)
+        {
+            var estudiante = SesionActual.EstudianteActual;
+            if (estudiante == null) return 0;
+
+            var partidosAsistidos = eventos.OfType<Partido>()
+                .Where(p => estudiante.eventosAsistidos.Contains(p.idEvento))
+                .ToList();
+
+            return partidosAsistidos.Count; // Calculando cantidad de partidos asistidos como beneficio
         }
     }
 

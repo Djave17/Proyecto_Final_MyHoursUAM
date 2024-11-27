@@ -12,6 +12,7 @@ namespace MyHours_UAMApp.Estructuras
         public string nombreEstudiante { get; set; }
 
         public string apellidoEstudiante { get; set; }
+        public int HorasCompletadas { get; set; }
 
         public string correoEstudiante { get; set; }
         public string cifEstudiante { get; set; }
