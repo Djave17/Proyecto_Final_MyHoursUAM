@@ -304,7 +304,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(957, 309);
+            this.chart1.Size = new System.Drawing.Size(898, 307);
             this.chart1.TabIndex = 14;
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
@@ -316,7 +316,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(191, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(994, 365);
+            this.groupBox1.Size = new System.Drawing.Size(938, 365);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dashboard";
@@ -328,7 +328,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(191, 458);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(994, 348);
+            this.groupBox2.Size = new System.Drawing.Size(938, 357);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Eventos asistidos";
@@ -346,10 +346,10 @@
             this.clhTipoEvento});
             this.lvwEventos.FullRowSelect = true;
             this.lvwEventos.HideSelection = false;
-            this.lvwEventos.Location = new System.Drawing.Point(0, 24);
+            this.lvwEventos.Location = new System.Drawing.Point(12, 24);
             this.lvwEventos.Margin = new System.Windows.Forms.Padding(2);
             this.lvwEventos.Name = "lvwEventos";
-            this.lvwEventos.Size = new System.Drawing.Size(978, 319);
+            this.lvwEventos.Size = new System.Drawing.Size(907, 307);
             this.lvwEventos.TabIndex = 94;
             this.lvwEventos.UseCompatibleStateImageBehavior = false;
             this.lvwEventos.View = System.Windows.Forms.View.Details;
@@ -407,7 +407,7 @@
             // 
             this.lblHorasLaborales.AutoSize = true;
             this.lblHorasLaborales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorasLaborales.Location = new System.Drawing.Point(1231, 174);
+            this.lblHorasLaborales.Location = new System.Drawing.Point(1135, 87);
             this.lblHorasLaborales.Name = "lblHorasLaborales";
             this.lblHorasLaborales.Size = new System.Drawing.Size(51, 20);
             this.lblHorasLaborales.TabIndex = 17;
@@ -417,7 +417,7 @@
             // 
             this.lblBeneficioPartidos.AutoSize = true;
             this.lblBeneficioPartidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBeneficioPartidos.Location = new System.Drawing.Point(1231, 380);
+            this.lblBeneficioPartidos.Location = new System.Drawing.Point(1135, 121);
             this.lblBeneficioPartidos.Name = "lblBeneficioPartidos";
             this.lblBeneficioPartidos.Size = new System.Drawing.Size(51, 20);
             this.lblBeneficioPartidos.TabIndex = 18;

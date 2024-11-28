@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using System.Windows.Forms;
 using static MyHours_UAMApp.Estructuras.Evento;
 
 namespace MyHours_UAMApp.Estructuras.Metodos
@@ -10,13 +11,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
     internal static class Metodos
     {
         public static List<Evento> eventos = new List<Evento>();
+        private static int contadorSolicitudes = 1; // Contador global para IDs únicos de las solicitud
 
-        // Obtener eventos asistidos por un estudiante
-        public static List<Evento> ObtenerEventosAsistidos(string cifEstudiante)
-        {
-            var estudiante = SesionActual.EstudianteActual;
-            return eventos.Where(e => estudiante.eventosAsistidos.Contains(e.idEvento)).ToList();
-        }
 
         private static int eventoCounter = 1; // Contador para IDs de eventos
         private static int partidoCounter = 1; // Contador para IDs de partidos
@@ -58,7 +54,11 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             var partidos = GetPartidosAsStringArray();
             return (eventos, partidos);
         }
-        private static List<Partido> partidos = new List<Partido>();
+        public static List<Partido> partidos = new List<Partido>();
+
+        public static List<SolicitudAsistencia> Solicitudes = new List<SolicitudAsistencia>();
+
+
 
         /// <summary>
         /// Registra un nuevo evento con validaciones de campos obligatorios.
@@ -475,6 +475,103 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
             return partidosAsistidos.Count; // Calculando cantidad de partidos asistidos como beneficio
         }
+        
+
+        // Enviar solicitud de asistencia
+        public static void EnviarSolicitud(string estudianteId, Evento evento)
+        {
+            // Validar si ya existe una solicitud para este evento
+            if (Solicitudes.Any(s => s.EstudianteId == estudianteId && s.Evento.idEvento == evento.idEvento))
+            {
+                throw new InvalidOperationException("Ya existe una solicitud para este evento.");
+            }
+
+            // Crear y agregar la nueva solicitud
+            Solicitudes.Add(new SolicitudAsistencia
+            {
+                Id = contadorSolicitudes++, // Generar un ID único
+                EstudianteId = estudianteId,
+                Evento = evento,
+                EstadoSolicitud = SolicitudAsistencia.Estado.Pendiente,
+                FechaSolicitud = DateTime.Now
+            });
+        }
+
+        // Procesar solicitud (aprobar o rechazar)
+        public static void ProcesarSolicitud(int solicitudId, SolicitudAsistencia.Estado nuevoEstado)
+        {
+            var solicitud = Solicitudes.FirstOrDefault(s => s.Id == solicitudId);
+            if (solicitud != null)
+            {
+                solicitud.EstadoSolicitud = nuevoEstado;
+            }
+            else
+            {
+                throw new KeyNotFoundException("No se encontró la solicitud con el ID proporcionado.");
+            }
+        }
+
+        // Obtener eventos asistidos por un estudiante
+        public static List<Evento> ObtenerEventosAsistidos(string estudianteId)
+        {
+            return Solicitudes
+                .Where(s => s.EstudianteId == estudianteId && s.EstadoSolicitud == SolicitudAsistencia.Estado.Aprobado)
+                .Select(s => s.Evento)
+                .ToList();
+        }
+        public static void CargarSolicitudesEnListView(ListView listView)
+        {
+            // Limpiar los elementos existentes en el ListView
+            listView.Items.Clear();
+
+            // Recorrer las solicitudes y agregarlas al ListView
+            foreach (var solicitud in Solicitudes)
+            {
+                // Crear un nuevo elemento de ListView
+                var item = new ListViewItem(solicitud.Id.ToString());
+                item.SubItems.Add(solicitud.EstudianteId);
+                item.SubItems.Add(solicitud.Evento.nombreEvento); // Asumiendo que Evento tiene una propiedad Nombre
+                item.SubItems.Add(solicitud.EstadoSolicitud.ToString());
+                item.SubItems.Add(solicitud.FechaSolicitud.ToString("dd/MM/yyyy HH:mm"));
+
+                // Agregar el elemento al ListView
+                listView.Items.Add(item);
+            }
+        }
+
+        public static void ConfirmarSolicitud(int solicitudId)
+        {
+            var solicitud = Solicitudes.FirstOrDefault(s => s.Id == solicitudId);
+            if (solicitud != null)
+            {
+                solicitud.EstadoSolicitud = SolicitudAsistencia.Estado.Aprobado;
+                MessageBox.Show("La solicitud ha sido confirmada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Console.WriteLine($"Solicitud con Id {solicitudId} ha sido confirmada.");
+            }
+            else
+            {
+                throw new KeyNotFoundException($"No se encontró la solicitud con Id {solicitudId}.");
+            }
+        }
+
+        public static void RechazarSolicitud(int solicitudId)
+        {
+            var solicitud = Solicitudes.FirstOrDefault(s => s.Id == solicitudId);
+            if (solicitud != null)
+            {
+                solicitud.EstadoSolicitud = SolicitudAsistencia.Estado.Rechazado;
+                Console.WriteLine($"Solicitud con Id {solicitudId} ha sido rechazada.");
+            }
+            else
+            {
+                throw new KeyNotFoundException($"No se encontró la solicitud con Id {solicitudId}.");
+            }
+        }
+
+
+
+
+
     }
 
 }

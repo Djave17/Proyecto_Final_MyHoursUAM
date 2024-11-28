@@ -36,8 +36,8 @@ namespace MyHours_UAMApp
             {
                 lvwEventos.Items.Add(new ListViewItem(new[]
                 {
-                    evento.tipoBeneficio, evento.descripcionEvento, evento.nombreEvento,
-                    evento.horaEvento, evento.lugarEvento, evento.idEvento, evento.fechaEvento
+                    evento.tipoBeneficio, evento.tipoBeneficio, evento.nombreEvento,
+                    evento.horaEvento, evento.lugarEvento, evento.idEvento, evento.fechaEvento, 
                 }));
             }
 

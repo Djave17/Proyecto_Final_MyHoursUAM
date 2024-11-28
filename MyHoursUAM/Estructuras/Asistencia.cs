@@ -17,7 +17,9 @@ namespace MyHours_UAMApp.Estructuras
         public string partidosAsistidos { get; set; }
         public int horasCompletadas { get; set; }
 
-        
+        public SolicitudAsistencia solicitudAsistencia { get; set; }
+
+
 
 
     }

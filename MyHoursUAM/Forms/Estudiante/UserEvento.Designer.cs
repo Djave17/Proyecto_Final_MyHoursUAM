@@ -295,9 +295,9 @@
             this.gbxEstudianteEventos.Controls.Add(this.label2);
             this.gbxEstudianteEventos.Controls.Add(this.button2);
             this.gbxEstudianteEventos.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxEstudianteEventos.Location = new System.Drawing.Point(191, 88);
+            this.gbxEstudianteEventos.Location = new System.Drawing.Point(191, 93);
             this.gbxEstudianteEventos.Name = "gbxEstudianteEventos";
-            this.gbxEstudianteEventos.Size = new System.Drawing.Size(658, 521);
+            this.gbxEstudianteEventos.Size = new System.Drawing.Size(673, 540);
             this.gbxEstudianteEventos.TabIndex = 13;
             this.gbxEstudianteEventos.TabStop = false;
             this.gbxEstudianteEventos.Text = "Eventos";
@@ -425,6 +425,7 @@
             this.Name = "UserEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserEvento";
+            this.Load += new System.EventHandler(this.UserEvento_Load);
             this.pnlPieArriba.ResumeLayout(false);
             this.pnlPieArriba.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).EndInit();
