@@ -333,7 +333,6 @@
             // 
             // clhCantidadConvalidar
             // 
-            this.clhCantidadConvalidar.DisplayIndex = 6;
             this.clhCantidadConvalidar.Text = "Cantidad a convalidar";
             // 
             // clhEstado

@@ -82,9 +82,10 @@ namespace MyHours_UAMApp
 
         private void button2_Click(object sender, EventArgs e) //Enviar asistencia
         {
+            // Verificar que se haya seleccionado un evento
             if (lvwEventos.SelectedItems.Count == 0)
             {
-                MessageBox.Show("Seleccione un evento para registrar la asistencia.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Seleccione un evento para enviar la solicitud de asistencia.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -92,17 +93,26 @@ namespace MyHours_UAMApp
 
             try
             {
-                // Usar el CIF almacenado en la sesión
-                string mensaje = Metodos.RegistrarAsistencia(indiceEvento, SesionActual.CifEstudiante);
-                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Obtener el evento seleccionado
+                var eventoSeleccionado = Metodos.eventos[indiceEvento];
 
-                // Actualizar vista
+                // Enviar solicitud usando el método actualizado
+                Metodos.EnviarSolicitud(SesionActual.EstudianteActual.cifEstudiante, eventoSeleccionado);
+
+                MessageBox.Show("Solicitud de asistencia enviada correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Actualizar vista (opcional: si necesitas reflejar solicitudes pendientes en la interfaz del estudiante)
                 CargarEventosEnListView();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al registrar la asistencia: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al enviar la solicitud: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void UserEvento_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using MyHours_UAMApp.Estructuras;
+using MyHours_UAMApp.Estructuras.Metodos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyHours_UAMApp.Forms;
 
 namespace MyHours_UAMApp
 {
@@ -32,33 +34,47 @@ namespace MyHours_UAMApp
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            string cif = txbCIF.Text; // Obtenido del campo de texto
-            string contraseña = txbContraseña.Text;
+            string usuario = txbCIF.Text.Trim();
+            string contraseña = txbContraseña.Text.Trim();
 
-            if (txbCIF.Text == "admin" && txbContraseña.Text== "admin")
+            // Validaciones básicas
+            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contraseña))
             {
-                
-                SesionActual.CifAdministrador = cif;
-
-                SplashScreenAdmin form = new SplashScreenAdmin();
-                form.Show();
-                this.Hide();
+                MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else if (txbCIF.Text == "user" && txbContraseña.Text == "user")
+
+            // Validar credenciales usando Metodos.cs
+            var (exito, rol) = Metodos.ValidarCredenciales(usuario, contraseña);
+            if (exito)
             {
-                SesionActual.CifEstudiante = cif;
-                SplashScreenUser form = new SplashScreenUser();
-                form.Show();
-                this.Hide();
+                // Limpiar sesión previa
+                SesionActual.LimpiarSesion();
+
+                if (rol == "Administrador")
+                {
+                    // Configurar sesión para administrador
+                    SesionActual.AdministradorActual = Metodos.administradores.FirstOrDefault(admin => admin.cifAdministrador == usuario);
+                    MessageBox.Show("Bienvenido, Administrador.", "Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AbrirFormularioAdministrador();
+                }
+                else if (rol == "Estudiante")
+                {
+                    // Configurar sesión para estudiante
+                    SesionActual.EstudianteActual = Metodos.estudiantes.FirstOrDefault(est => est.cifEstudiante == usuario);
+                    MessageBox.Show("Bienvenido, Estudiante.", "Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AbrirFormularioEstudiante();
+                }
             }
             else
             {
-                MessageBox.Show("El Usuario o Contraseña es incorrecto.");
-                txbCIF.Clear();
+                MessageBox.Show("Usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txbContraseña.Clear();
-                txbCIF.Focus();
             }
         }
+
+
+        
 
         private void chbVerContraseña_CheckedChanged(object sender, EventArgs e)
         {
@@ -121,6 +137,19 @@ namespace MyHours_UAMApp
         private void pcbIconApp_Click(object sender, EventArgs e)
         {
 
+        }
+        private void AbrirFormularioAdministrador()
+        {
+            SplashScreenAdmin form = new SplashScreenAdmin();
+            form.Show();
+            this.Close();
+        }
+
+        private void AbrirFormularioEstudiante()
+        {
+            SplashScreenUser form = new SplashScreenUser();
+            form.Show();
+            this.Close();
         }
     }
 }

@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Estructuras\Administrador.cs" />
     <Compile Include="Estructuras\Asistencia.cs" />
+    <Compile Include="Estructuras\SolicitudAsistencia.cs" />
     <Compile Include="Estructuras\Estudiante.cs" />
     <Compile Include="Estructuras\Evento.cs" />
     <Compile Include="Estructuras\Metodos\Metodos.cs" />

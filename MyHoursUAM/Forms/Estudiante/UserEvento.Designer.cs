@@ -295,9 +295,9 @@
             this.gbxEstudianteEventos.Controls.Add(this.label2);
             this.gbxEstudianteEventos.Controls.Add(this.button2);
             this.gbxEstudianteEventos.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxEstudianteEventos.Location = new System.Drawing.Point(191, 88);
+            this.gbxEstudianteEventos.Location = new System.Drawing.Point(191, 93);
             this.gbxEstudianteEventos.Name = "gbxEstudianteEventos";
-            this.gbxEstudianteEventos.Size = new System.Drawing.Size(658, 521);
+            this.gbxEstudianteEventos.Size = new System.Drawing.Size(673, 540);
             this.gbxEstudianteEventos.TabIndex = 13;
             this.gbxEstudianteEventos.TabStop = false;
             this.gbxEstudianteEventos.Text = "Eventos";
@@ -327,18 +327,15 @@
             // 
             // clhIDEvento
             // 
-            this.clhIDEvento.DisplayIndex = 7;
             this.clhIDEvento.Text = "IDEvento";
             // 
             // clhNombreEvento
             // 
-            this.clhNombreEvento.DisplayIndex = 2;
             this.clhNombreEvento.Text = "Nombre";
             this.clhNombreEvento.Width = 180;
             // 
             // clhTipoConvalidacion
             // 
-            this.clhTipoConvalidacion.DisplayIndex = 1;
             this.clhTipoConvalidacion.Text = "Tipo de convalidacion";
             this.clhTipoConvalidacion.Width = 200;
             // 
@@ -349,34 +346,28 @@
             // 
             // clhFecha
             // 
-            this.clhFecha.DisplayIndex = 8;
             this.clhFecha.Text = "Fecha";
             // 
             // clhLugar
             // 
-            this.clhLugar.DisplayIndex = 4;
             this.clhLugar.Text = "Lugar";
             this.clhLugar.Width = 80;
             // 
             // clhConvalida
             // 
-            this.clhConvalida.DisplayIndex = 9;
             this.clhConvalida.Text = "Convalida";
             // 
             // clhCupos
             // 
-            this.clhCupos.DisplayIndex = 5;
             this.clhCupos.Text = "Cupos";
             // 
             // clhTipoEvento
             // 
-            this.clhTipoEvento.DisplayIndex = 0;
             this.clhTipoEvento.Text = "Tipo de Evento";
             this.clhTipoEvento.Width = 180;
             // 
             // clhEstadoEvento
             // 
-            this.clhEstadoEvento.DisplayIndex = 6;
             this.clhEstadoEvento.Text = "Hora de Envio";
             this.clhEstadoEvento.Width = 180;
             // 
@@ -425,6 +416,7 @@
             this.Name = "UserEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserEvento";
+            this.Load += new System.EventHandler(this.UserEvento_Load);
             this.pnlPieArriba.ResumeLayout(false);
             this.pnlPieArriba.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).EndInit();

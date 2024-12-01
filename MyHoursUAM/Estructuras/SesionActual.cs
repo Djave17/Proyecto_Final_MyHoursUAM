@@ -7,12 +7,30 @@ using MyHours_UAMApp.Estructuras;
 
 namespace MyHours_UAMApp.Estructuras
 {
-    internal class SesionActual
+    internal class SesionActual: Estudiante
     {
-        public  Estudiante estudiante { get; set; }
-        public static string CifEstudiante { get; set; }
-        public static string CifAdministrador { get; set; }
+        // Propiedad para almacenar el usuario autenticado
+        public static Estudiante EstudianteActual { get; set; }
+        public static Administrador AdministradorActual { get; set; }
 
+        // Método para determinar si es un estudiante activo
+        public static bool EsEstudiante()
+        {
+            return EstudianteActual != null;
+        }
+
+        // Método para determinar si es un administrador activo
+        public static bool EsAdministrador()
+        {
+            return AdministradorActual != null;
+        }
+
+        // Limpiar la sesión actual
+        public static void LimpiarSesion()
+        {
+            EstudianteActual = null;
+            AdministradorActual = null;
+        }
 
     }
 }

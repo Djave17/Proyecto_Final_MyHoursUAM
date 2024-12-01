@@ -1,4 +1,5 @@
-﻿using MyHours_UAMApp.Estructuras.Metodos;
+﻿using MyHours_UAMApp.Estructuras;
+using MyHours_UAMApp.Estructuras.Metodos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,6 +84,33 @@ namespace MyHours_UAMApp
                 var listItem = new ListViewItem(partido);
                 lvPartidos.Items.Add(listItem);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (lvPartidos.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Seleccione un partido para enviar la solicitud de asistencia.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int indicePartido = lvPartidos.SelectedIndices[0];
+            try
+            {
+                var partidoSeleccionado = Metodos.partidos[indicePartido];
+
+                Metodos.EnviarSolicitud(SesionActual.EstudianteActual.cifEstudiante,partidoSeleccionado);
+                MessageBox.Show("Solicitud de partido enviada correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarPartidosEnListView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al enviar la solicitud de partido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void lvPartidos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

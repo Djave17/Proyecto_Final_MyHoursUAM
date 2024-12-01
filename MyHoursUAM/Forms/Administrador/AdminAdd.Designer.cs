@@ -46,6 +46,7 @@
             this.pnlIcon = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gpbNuevoEvento = new System.Windows.Forms.GroupBox();
+            this.tbxEstado = new System.Windows.Forms.ComboBox();
             this.btnCambiarEstado = new System.Windows.Forms.Button();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txbLugar = new System.Windows.Forms.TextBox();
@@ -80,7 +81,6 @@
             this.lblCupos = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblRotulo2 = new System.Windows.Forms.Label();
-            this.tbxEstado = new System.Windows.Forms.ComboBox();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -349,6 +349,17 @@
             this.gpbNuevoEvento.Text = "Añadir Eventos";
             this.gpbNuevoEvento.Enter += new System.EventHandler(this.gpbNuevoEvento_Enter);
             // 
+            // tbxEstado
+            // 
+            this.tbxEstado.FormattingEnabled = true;
+            this.tbxEstado.Items.AddRange(new object[] {
+            "Disponible",
+            "No_Disponible"});
+            this.tbxEstado.Location = new System.Drawing.Point(8, 475);
+            this.tbxEstado.Name = "tbxEstado";
+            this.tbxEstado.Size = new System.Drawing.Size(368, 27);
+            this.tbxEstado.TabIndex = 90;
+            // 
             // btnCambiarEstado
             // 
             this.btnCambiarEstado.BackColor = System.Drawing.Color.Teal;
@@ -479,19 +490,20 @@
             // 
             // clhIDEvento
             // 
-            this.clhIDEvento.DisplayIndex = 7;
+            this.clhIDEvento.DisplayIndex = 9;
             this.clhIDEvento.Text = "IDEvento";
+            this.clhIDEvento.Width = 50;
             // 
             // clhNombreEvento
             // 
-            this.clhNombreEvento.DisplayIndex = 2;
+            this.clhNombreEvento.DisplayIndex = 0;
             this.clhNombreEvento.Text = "Nombre";
             this.clhNombreEvento.Width = 180;
             // 
             // clhTipoConvalidacion
             // 
-            this.clhTipoConvalidacion.DisplayIndex = 1;
-            this.clhTipoConvalidacion.Text = "Tipo de convalidacion";
+            this.clhTipoConvalidacion.DisplayIndex = 8;
+            this.clhTipoConvalidacion.Text = "Beneficio:";
             this.clhTipoConvalidacion.Width = 200;
             // 
             // clhHorario
@@ -501,35 +513,32 @@
             // 
             // clhFecha
             // 
-            this.clhFecha.DisplayIndex = 8;
             this.clhFecha.Text = "Fecha";
             // 
             // clhLugar
             // 
-            this.clhLugar.DisplayIndex = 4;
+            this.clhLugar.DisplayIndex = 1;
             this.clhLugar.Text = "Lugar";
             this.clhLugar.Width = 80;
             // 
             // clhConvalida
             // 
-            this.clhConvalida.DisplayIndex = 9;
             this.clhConvalida.Text = "Convalida";
             // 
             // clhCupos
             // 
-            this.clhCupos.DisplayIndex = 5;
             this.clhCupos.Text = "Cupos";
             // 
             // clhTipoEvento
             // 
-            this.clhTipoEvento.DisplayIndex = 0;
+            this.clhTipoEvento.DisplayIndex = 2;
             this.clhTipoEvento.Text = "Tipo de Evento";
             this.clhTipoEvento.Width = 180;
             // 
             // clhEstadoEvento
             // 
-            this.clhEstadoEvento.DisplayIndex = 6;
-            this.clhEstadoEvento.Text = "Hora de Envio";
+            this.clhEstadoEvento.DisplayIndex = 5;
+            this.clhEstadoEvento.Text = "Estado Evento";
             this.clhEstadoEvento.Width = 180;
             // 
             // cbxBeneficio
@@ -720,17 +729,6 @@
             this.lblRotulo2.Size = new System.Drawing.Size(260, 16);
             this.lblRotulo2.TabIndex = 0;
             this.lblRotulo2.Text = "Todos los campos son requeridos";
-            // 
-            // tbxEstado
-            // 
-            this.tbxEstado.FormattingEnabled = true;
-            this.tbxEstado.Items.AddRange(new object[] {
-            "Disponible",
-            "No_Disponible"});
-            this.tbxEstado.Location = new System.Drawing.Point(8, 475);
-            this.tbxEstado.Name = "tbxEstado";
-            this.tbxEstado.Size = new System.Drawing.Size(368, 27);
-            this.tbxEstado.TabIndex = 90;
             // 
             // AdminAdd
             // 
