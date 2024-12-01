@@ -30,17 +30,13 @@ namespace MyHours_UAMApp
                 return;
             }
 
+            // Obtener eventos asistidos
             var eventosAsistidos = Metodos.ObtenerEventosAsistidos(estudiante.cifEstudiante);
 
-            foreach (var evento in eventosAsistidos)
-            {
-                lvwEventos.Items.Add(new ListViewItem(new[]
-                {
-                    evento.tipoBeneficio, evento.tipoBeneficio, evento.nombreEvento,
-                    evento.horaEvento, evento.lugarEvento, evento.idEvento, evento.fechaEvento, 
-                }));
-            }
+            // Usar el método centralizado para cargar los eventos en el ListView
+            Metodos.CargarEventosAsistidos(lvwEventos, eventosAsistidos);
 
+            // Actualizar etiquetas de horas y beneficios
             int horasLaborales = Metodos.CalcularHorasLaborales(estudiante.cifEstudiante);
             lblHorasLaborales.Text = $"Horas laborales: {horasLaborales}";
 

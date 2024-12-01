@@ -46,3 +46,27 @@ C:\Users\seque\OneDrive\Desktop\MyHoursUAM\Proyecto_Final_MyHoursUAM\MyHoursUAM\
 C:\Users\seque\OneDrive\Desktop\MyHoursUAM\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours UAMApp.csproj.CoreCompileInputs.cache
 C:\Users\seque\OneDrive\Desktop\MyHoursUAM\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours UAMApp.exe
 C:\Users\seque\OneDrive\Desktop\MyHoursUAM\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours UAMApp.pdb
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Debug\MyHours UAMApp.exe.config
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Debug\MyHours UAMApp.exe
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Debug\MyHours UAMApp.pdb
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours UAMApp.csproj.AssemblyReference.cache
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.AdminAdd.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.AdminAjustes.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.AdminAsistencia.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.Forms.Administrador.AdminAddPartidos.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.Forms.Administrador.AdminGrafico.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.SplashScreenAdmin.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.SplashScreenUser.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.UserCambiarContraseña.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.UserEvento.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.UserPartidos.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.UserMiPerfil.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.UserReporte.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.IniciarSesion.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.Rol.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.SplashScreen.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.Properties.Resources.resources
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours UAMApp.csproj.GenerateResource.cache
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours UAMApp.csproj.CoreCompileInputs.cache
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours UAMApp.exe
+D:\Desktop\Proyecto final\main\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours UAMApp.pdb

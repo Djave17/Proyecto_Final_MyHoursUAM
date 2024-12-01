@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace MyHours_UAMApp.Estructuras
 {
+    [Serializable]
     internal class Estudiante
     {
         public string nombreEstudiante { get; set; }

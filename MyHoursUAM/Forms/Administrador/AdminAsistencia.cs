@@ -88,9 +88,9 @@ namespace MyHours_UAMApp
                 int solicitudId = int.Parse(lvAsistencia.SelectedItems[0].Text);
 
                 // Confirmar la solicitud
-                Metodos.ConfirmarSolicitud(solicitudId);
+                string mensaje = Metodos.ConfirmarSolicitud(solicitudId);
 
-                MessageBox.Show("La solicitud ha sido confirmada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Actualizar vista
                 Metodos.CargarSolicitudesEnListView(lvAsistencia);
@@ -113,8 +113,8 @@ namespace MyHours_UAMApp
             {
                 int solicitudId = int.Parse(lvAsistencia.SelectedItems[0].Text);
                 // Rechazar la solicitud
-                Metodos.RechazarSolicitud(solicitudId);
-                MessageBox.Show("La solicitud ha sido rechazada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string mensaje = Metodos.RechazarSolicitud(solicitudId);
+                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Actualizar vista
                 Metodos.CargarSolicitudesEnListView(lvAsistencia);
             }
