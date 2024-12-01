@@ -34,5 +34,7 @@ namespace MyHours_UAMApp.Estructuras
         }
         public TipoEvento tipoEvento { get; set; }
 
+        
+
     }
 }

@@ -47,7 +47,7 @@ namespace MyHours_UAMApp.Forms.Administrador
 
             // Crear gráfico para partidos
             graficoHoras.Series.Clear();
-            var partidosPorCategoria = partidos.GroupBy(p => p[2]); 
+            var partidosPorCategoria = partidos.GroupBy(p => p[3]);
 
             var seriePartidos = new Series("Partidos por Categoría");
             seriePartidos.ChartType = SeriesChartType.Column;
@@ -61,42 +61,43 @@ namespace MyHours_UAMApp.Forms.Administrador
             graficoHoras.ChartAreas[0].AxisX.Title = "Categorías";
             graficoHoras.ChartAreas[0].AxisY.Title = "Cantidad de Partidos";
         }
-        private void btnGraficos_Click(object sender, EventArgs e)
+        private void AdminGrafico_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnAjustes_Click(object sender, EventArgs e)
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            AdminAjustes form = new AdminAjustes();
-            form.Show();
-            this.Close();
+
         }
 
-        private void btnAsistencia_Click(object sender, EventArgs e)
+        private void btnAñadirEventos_Click(object sender, EventArgs e)
         {
-            AdminAsistencia form = new AdminAsistencia();
-            form.Show();
+            AdminAdd adminAdd = new AdminAdd();
+            adminAdd.Show();
             this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AdminAddPartidos form = new AdminAddPartidos();
-            form.Show();
+            AdminAddPartidos adminAddPartidos = new AdminAddPartidos();
+            adminAddPartidos.Show();
             this.Close();
         }
 
-        private void btnAñadirEventos_Click(object sender, EventArgs e)
+        private void btnAsistencia_Click(object sender, EventArgs e)
         {
-            AdminAdd form = new AdminAdd();
-            form.Show();
+            AdminAsistencia adminAsistencia = new AdminAsistencia();
+            adminAsistencia.Show();
             this.Close();
+
         }
 
-        private void graficoCupos_Click(object sender, EventArgs e)
+        private void btnAjustes_Click(object sender, EventArgs e)
         {
-
+            AdminAjustes adminAjustes = new AdminAjustes();
+            adminAjustes.Show();
+            this.Close();
         }
     }
 }

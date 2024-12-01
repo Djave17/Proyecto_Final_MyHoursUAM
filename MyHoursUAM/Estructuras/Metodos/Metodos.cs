@@ -2,15 +2,31 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Windows.Forms;
 using static MyHours_UAMApp.Estructuras.Evento;
 
 namespace MyHours_UAMApp.Estructuras.Metodos
 {
-        class Metodos
+    internal static class Metodos
     {
-        private static List<Evento> eventos = new List<Evento>();
-        private static int eventoCounter = 1; // Contador para IDs de eventos
+        public static List<Evento> eventos = new List<Evento>();
+        private static int contadorSolicitudes = 1; // Contador global para IDs únicos de las solicitud
 
+
+        private static int eventoCounter = 1; // Contador para IDs de eventos
+        private static int partidoCounter = 1; // Contador para IDs de partidos
+
+        public static List<Estudiante> estudiantes = new List<Estudiante>
+        {
+            new Estudiante { cifEstudiante = "23020386", nombreEstudiante = "David Sanchez", contraseñaEstudiante = "123" },
+            new Estudiante { cifEstudiante = "2021002", nombreEstudiante = "Ana López", contraseñaEstudiante = "estudiante2" }
+        };
+
+        public static List<Administrador> administradores = new List<Administrador>
+        {
+            new Administrador { cifAdministrador = "admin", contraseñaAdministrador = "admin" }
+        };
         /// <summary>
         /// Devuelve todos los eventos como una lista.
         /// </summary>
@@ -32,14 +48,17 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 
             }).ToList();
         }
-        public static (List<string[]>, List<string[]>)EventosPartidos()
+        public static (List<string[]>, List<string[]>) EventosPartidos()
         {
             var eventos = GetEventosAsString();
             var partidos = GetPartidosAsStringArray();
             return (eventos, partidos);
         }
+        public static List<Partido> partidos = new List<Partido>();
 
-        private static List<Partido> partidos = new List<Partido>();
+        public static List<SolicitudAsistencia> Solicitudes = new List<SolicitudAsistencia>();
+
+
 
         /// <summary>
         /// Registra un nuevo evento con validaciones de campos obligatorios.
@@ -181,7 +200,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             return $"Evento '{nombreEvento}' eliminado exitosamente.";
         }
         public static string RegistrarPartido(
-            
+            string idEvento,
             string tipoDeporte,
             string nombrePartido,
             int cantidadAConvalidar,
@@ -190,7 +209,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             string hora,
             string fecha,
             string lugar,
-            string rival)
+            string estadoEvento)
         {
             // Validar campos obligatorios
             if (string.IsNullOrWhiteSpace(tipoDeporte) ||
@@ -199,7 +218,6 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 string.IsNullOrWhiteSpace(hora) ||
                 string.IsNullOrWhiteSpace(fecha) ||
                 string.IsNullOrWhiteSpace(lugar) ||
-                string.IsNullOrWhiteSpace(rival) ||
                 cantidadAConvalidar <= 0 ||
                 cupo <= 0)
             {
@@ -209,18 +227,19 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             // Crear un nuevo partido
             Partido nuevoPartido = new Partido
             {
+                idEvento = "P" + partidoCounter++,
                 nombrePartido = nombrePartido,
                 lugarPartido = lugar,
-                rival = rival,
                 deporte = Enum.TryParse(tipoDeporte, true, out Partido.TipoDeporte deporteEnum)
                     ? deporteEnum
                     : Partido.TipoDeporte.futbol, // Valor predeterminado
                 fechaEvento = fecha,
                 horaEvento = hora,
-                descripcionEvento = $"{horaEnvio}",
                 cantidadConvalidar = cantidadAConvalidar,
                 cupos = cupo,
-                organizadorEvento = "Administrador", // Puede ser dinámico
+                estadoEvento = Enum.TryParse(estadoEvento, true, out Evento.EstadoEvento estadoEventoEnum)
+                    ? estadoEventoEnum
+                    : Evento.EstadoEvento.No_Disponible, // Valor predeterminado
             };
 
             partidos.Add(nuevoPartido);
@@ -233,6 +252,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         /// </summary>
         public static string EditarPartido(
             int indice,
+            string idEvento,
             string tipoDeporte,
             string nombrePartido,
             int cantidadAConvalidar,
@@ -241,7 +261,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             string hora,
             string fecha,
             string lugar,
-            string rival)
+            string estadoEvento)
         {
             // Validar índice
             if (indice < 0 || indice >= partidos.Count)
@@ -256,7 +276,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 string.IsNullOrWhiteSpace(hora) ||
                 string.IsNullOrWhiteSpace(fecha) ||
                 string.IsNullOrWhiteSpace(lugar) ||
-                string.IsNullOrWhiteSpace(rival) ||
+                string.IsNullOrWhiteSpace(estadoEvento) ||
                 cantidadAConvalidar <= 0 ||
                 cupo <= 0)
             {
@@ -266,9 +286,10 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             // Editar el partido existente
             partidos[indice] = new Partido
             {
+                idEvento = partidos[indice].idEvento, // Mantener el ID existente
                 nombrePartido = nombrePartido,
                 lugarPartido = lugar,
-                rival = rival,
+                
                 deporte = Enum.TryParse(tipoDeporte, true, out Partido.TipoDeporte deporteEnum)
                     ? deporteEnum
                     : Partido.TipoDeporte.futbol, // Valor predeterminado
@@ -276,7 +297,10 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 horaEvento = hora,
                 cantidadConvalidar = cantidadAConvalidar,
                 cupos = cupo,
-                organizadorEvento = "Administrador",
+                estadoEvento = Enum.TryParse(estadoEvento, true, out Evento.EstadoEvento estadoEventoEnum)
+                    ? estadoEventoEnum
+                    : Evento.EstadoEvento.No_Disponible, // Valor predeterminado
+
             };
 
             return $"Partido '{nombrePartido}' editado exitosamente.";
@@ -306,17 +330,256 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         {
             return partidos.Select(p => new string[]
             {
+                p.idEvento,
                 p.nombrePartido,
                 p.lugarPartido,
                 p.deporte.ToString(),
                 p.horaEvento,
                 p.fechaEvento,
-                p.descripcionEvento,
                 p.cantidadConvalidar.ToString(),
                 p.cupos.ToString(),
+                p.estadoEvento.ToString(),
 
             }).ToList();
         }
+        //Cambiar estado del evento
+        public static string CambiarEstadoEvento(int indice)
+        {
+            // Validar índice
+            if (indice < 0 || indice >= eventos.Count)
+            {
+                throw new ArgumentOutOfRangeException("Índice fuera de rango.");
+            }
+
+            // Obtener el evento seleccionado
+            var evento = eventos[indice];
+
+            // Alternar el estado
+
+            if (evento.estadoEvento == Evento.EstadoEvento.Disponible)
+            {
+                evento.estadoEvento = Evento.EstadoEvento.No_Disponible;
+            }
+            else if (evento.estadoEvento == Evento.EstadoEvento.No_Disponible)
+            {
+                evento.estadoEvento = Evento.EstadoEvento.Disponible;
+            }
+            
+
+            // Retornar mensaje de éxito
+            return $"El estado del evento '{evento.nombreEvento}' se cambió a {evento.estadoEvento}.";
+        }
+        public static string CambiarEstadoPartido(int indice)
+        {
+            // Validar índice
+            if (indice < 0 || indice >= partidos.Count)
+            {
+                throw new ArgumentOutOfRangeException("Índice fuera de rango.");
+            }
+            // Obtener el partido seleccionado
+            var partido = partidos[indice];
+            // Alternar el estado
+            if (partido.estadoEvento == Partido.EstadoEvento.Disponible)
+            {
+                partido.estadoEvento = Partido.EstadoEvento.No_Disponible;
+            }
+            else if (partido.estadoEvento == Partido.EstadoEvento.No_Disponible)
+            {
+                partido.estadoEvento = Partido.EstadoEvento.Disponible;
+            }
+            // Retornar mensaje de éxito
+            return $"El estado del partido '{partido.nombrePartido}' se cambió a {partido.estadoEvento}.";
+        }
+
+
+        // Método para registrar asistencia
+        public static string RegistrarAsistencia(int indiceEvento, string cifEstudiante)
+        {
+            // Validar índice
+            if (indiceEvento < 0 || indiceEvento >= eventos.Count)
+            {
+                throw new ArgumentOutOfRangeException("Índice fuera de rango.");
+            }
+
+            // Obtener el evento y validar su disponibilidad
+            var evento = eventos[indiceEvento];
+            if (evento.estadoEvento != Evento.EstadoEvento.Disponible)
+            {
+                return $"El evento '{evento.nombreEvento}' no está disponible para asistencia.";
+            }
+
+            // Buscar estudiante activo
+            var estudiante = estudiantes.FirstOrDefault(e => e.cifEstudiante == cifEstudiante);
+            if (estudiante == null)
+            {
+                return "El estudiante no existe.";
+            }
+
+            // Verificar si el estudiante ya asistió al evento
+            if (estudiante.eventosAsistidos.Contains(evento.idEvento))
+            {
+                return $"El estudiante ya asistió al evento '{evento.nombreEvento}'.";
+            }
+
+            // Registrar asistencia
+            estudiante.eventosAsistidos.Add(evento.idEvento);
+            estudiante.HorasCompletadas += evento.cantidadConvalidar;
+
+            // Actualizar cupos del evento
+            evento.cupos--;
+            if (evento.cupos <= 0)
+            {
+                evento.estadoEvento = Evento.EstadoEvento.No_Disponible;
+            }
+
+            return $"Asistencia registrada exitosamente para el evento '{evento.nombreEvento}'.";
+        }
+        // Método para validar inicio de sesión y determinar el rol
+        public static (bool, string) ValidarCredenciales(string usuario, string contraseña)
+        {
+            // Validar si es administrador
+            var admin = administradores.FirstOrDefault(a => a.cifAdministrador == usuario && a.contraseñaAdministrador == contraseña);
+            if (admin != null)
+            {
+                return (true, "Administrador");
+            }
+
+            // Validar si es estudiante
+            var estudiante = estudiantes.FirstOrDefault(e => e.cifEstudiante == usuario && e.contraseñaEstudiante == contraseña);
+            if (estudiante != null)
+            {
+                return (true, "Estudiante");
+            }
+
+            // Credenciales inválidas
+            return (false, null);
+        }
+        public static int CalcularHorasLaborales(string cifEstudiante)
+        {
+            var estudiante = SesionActual.EstudianteActual;
+            if (estudiante == null) return 0;
+
+            var eventosAsistidos = ObtenerEventosAsistidos(cifEstudiante);
+            return eventosAsistidos.Sum(e => e.cantidadConvalidar); // Suponiendo que cantidadConvalidar representa las horas
+        }
+
+        // Calcular el beneficio acumulado de partidos
+        public static int CalcularBeneficioPartidos(string cifEstudiante)
+        {
+            var estudiante = SesionActual.EstudianteActual;
+            if (estudiante == null) return 0;
+
+            var partidosAsistidos = eventos.OfType<Partido>()
+                .Where(p => estudiante.eventosAsistidos.Contains(p.idEvento))
+                .ToList();
+
+            return partidosAsistidos.Count; // Calculando cantidad de partidos asistidos como beneficio
+        }
+        
+
+        // Enviar solicitud de asistencia
+        public static void EnviarSolicitud(string estudianteId, Evento evento)
+        {
+            // Validar si ya existe una solicitud para este evento
+            if (Solicitudes.Any(s => s.EstudianteId == estudianteId && s.Evento.idEvento == evento.idEvento))
+            {
+                throw new InvalidOperationException("Ya existe una solicitud para este evento.");
+            }
+
+            // Crear y agregar la nueva solicitud
+            Solicitudes.Add(new SolicitudAsistencia
+            {
+                Id = contadorSolicitudes++, // Generar un ID único
+                EstudianteId = estudianteId,
+                Evento = evento,
+                EstadoSolicitud = SolicitudAsistencia.Estado.Pendiente,
+                FechaSolicitud = DateTime.Now
+            });
+        }
+
+        // Procesar solicitud (aprobar o rechazar)
+        public static void ProcesarSolicitud(int solicitudId, SolicitudAsistencia.Estado nuevoEstado)
+        {
+            var solicitud = Solicitudes.FirstOrDefault(s => s.Id == solicitudId);
+            if (solicitud != null)
+            {
+                solicitud.EstadoSolicitud = nuevoEstado;
+            }
+            else
+            {
+                throw new KeyNotFoundException("No se encontró la solicitud con el ID proporcionado.");
+            }
+        }
+
+        // Obtener eventos asistidos por un estudiante
+        public static List<Evento> ObtenerEventosAsistidos(string estudianteId)
+        {
+            return Solicitudes
+                .Where(s => s.EstudianteId == estudianteId && s.EstadoSolicitud == SolicitudAsistencia.Estado.Aprobado)
+                .Select(s => s.Evento)
+                .ToList();
+        }
+        public static void CargarSolicitudesEnListView(ListView listView)
+        {
+            // Limpiar los elementos existentes en el ListView
+            listView.Items.Clear();
+
+            // Recorrer las solicitudes y agregarlas al ListView
+            foreach (var solicitud in Solicitudes)
+            {
+                // Crear un nuevo elemento de ListView
+                var item = new ListViewItem(solicitud.Id.ToString());
+                item.SubItems.Add(solicitud.EstudianteId);
+                string nombreEvento = string.Empty;
+                if (solicitud.Evento is Partido partido)
+                {
+                    nombreEvento = partido.nombrePartido;
+                }
+                else
+                {
+                    nombreEvento = solicitud.Evento.nombreEvento;
+                }
+                item.SubItems.Add(nombreEvento); // Asumiendo que Evento tiene una propiedad Nombre
+                item.SubItems.Add(solicitud.EstadoSolicitud.ToString());
+                item.SubItems.Add(solicitud.FechaSolicitud.ToString("dd/MM/yyyy HH:mm"));
+
+                // Agregar el elemento al ListView
+                listView.Items.Add(item);
+            }
+        }
+
+        public static void ConfirmarSolicitud(int solicitudId)
+        {
+            var solicitud = Solicitudes.FirstOrDefault(s => s.Id == solicitudId);
+            if (solicitud != null)
+            {
+                solicitud.EstadoSolicitud = SolicitudAsistencia.Estado.Aprobado;
+                MessageBox.Show("La solicitud ha sido confirmada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Console.WriteLine($"Solicitud con Id {solicitudId} ha sido confirmada.");
+            }
+            else
+            {
+                throw new KeyNotFoundException($"No se encontró la solicitud con Id {solicitudId}.");
+            }
+        }
+
+        public static void RechazarSolicitud(int solicitudId)
+        {
+            var solicitud = Solicitudes.FirstOrDefault(s => s.Id == solicitudId);
+            if (solicitud != null)
+            {
+                solicitud.EstadoSolicitud = SolicitudAsistencia.Estado.Rechazado;
+                Console.WriteLine($"Solicitud con Id {solicitudId} ha sido rechazada.");
+            }
+            else
+            {
+                throw new KeyNotFoundException($"No se encontró la solicitud con Id {solicitudId}.");
+            }
+        }
+
+
+
+
 
     }
 

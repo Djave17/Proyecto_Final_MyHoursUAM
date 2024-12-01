@@ -2,7 +2,6 @@
 using System;
 using System.Windows.Forms;
 using MyHours_UAMApp.Estructuras.Metodos;
-using System.Collections.Generic;
 namespace MyHours_UAMApp
 
 {
@@ -13,7 +12,6 @@ namespace MyHours_UAMApp
             InitializeComponent();
             CargarEventosEnListView();
         }
-
         private void CargarEventosEnListView()
         {
             lvwEventos.Items.Clear();
@@ -82,7 +80,7 @@ namespace MyHours_UAMApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AdminGrafico form = new AdminGrafico();
+            AdminAddPartidos form = new AdminAddPartidos();
             form.Show();
             this.Close();
         }
@@ -127,7 +125,18 @@ namespace MyHours_UAMApp
             int indice = lvwEventos.SelectedIndices[0];
              //verificar si el ID existe
             var ID = Guid.NewGuid().ToString();
-
+            ///Cargar los datos del evento seleccionado en los campos de texto///
+            //cbxEvento.SelectedIndex = indice;
+            //txtNombreEvento.Text = lvwEventos.SelectedItems[0].SubItems[1].Text;
+            //cbxBeneficio.SelectedIndex = cbxBeneficio.FindStringExact(lvwEventos.SelectedItems[0].SubItems[2].Text);
+            //txbHorario.Text = lvwEventos.SelectedItems[0].SubItems[3].Text;
+            //dtpFecha.Text = lvwEventos.SelectedItems[0].SubItems[4].Text;
+            //txbLugar.Text = lvwEventos.SelectedItems[0].SubItems[5].Text;
+            //txbHorasConvalidas.Text = lvwEventos.SelectedItems[0].SubItems[6].Text;
+            //txtCupos.Text = lvwEventos.SelectedItems[0].SubItems[7].Text;
+            //tbxEstado.SelectedIndex = tbxEstado.FindStringExact(lvwEventos.SelectedItems[0].SubItems[8].Text);
+            //cbxBeneficio.SelectedIndex = cbxBeneficio.FindStringExact(lvwEventos.SelectedItems[0].SubItems[9].Text);
+        
             try
             {
                 string mensaje = Metodos.EditarEvento(
@@ -161,7 +170,7 @@ namespace MyHours_UAMApp
             txtNombreEvento.Clear();
             txbHorasConvalidas.Clear();
             txtCupos.Clear();
-            tbxEstado.Clear();
+            tbxEstado.SelectedIndex = -1; 
             txbHorario.Clear();
             dtpFecha.Value = DateTime.Now;
             txbLugar.Clear();
@@ -200,16 +209,50 @@ namespace MyHours_UAMApp
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            AdminGrafico form = new AdminGrafico();
+            AdminAddPartidos form = new AdminAddPartidos();
             form.Show();
             this.Close();
         }
 
-        private void btn_AddPartido_Click(object sender, EventArgs e)
+        private void btnCambiarEstado_Click(object sender, EventArgs e)
         {
-            AdminAddPartidos form = new AdminAddPartidos();
-            form.Show();
+            // Verificar si hay un evento seleccionado
+            if (lvwEventos.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Por favor, seleccione un evento para cambiar su estado.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int indice = lvwEventos.SelectedIndices[0]; // Obtener el índice del evento seleccionado
+
+            try
+            {
+                // Alternar el estado del evento
+                string mensaje = Metodos.CambiarEstadoEvento(indice);
+
+                // Mostrar el mensaje de éxito
+                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Actualizar el ListView con los nuevos datos
+                CargarEventosEnListView();
+            }
+            catch (Exception ex)
+            {
+                // Manejar errores
+                MessageBox.Show($"Error al cambiar el estado del evento: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnGraficos_Click(object sender, EventArgs e)
+        {
+            AdminGrafico adminGrafico = new AdminGrafico();
+            adminGrafico.Show();
             this.Close();
+        }
+
+        private void txbHorasConvalidas_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

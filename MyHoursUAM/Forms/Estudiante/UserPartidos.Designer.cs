@@ -51,14 +51,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.lvPartidos = new System.Windows.Forms.ListView();
-            this.clhNombrePartido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhLugarPartido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhDeporte = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhLugar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhHora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhHoraEnvio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhCantidadConvalidar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhCupos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhConvalidar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStudentIcon)).BeginInit();
@@ -290,7 +290,7 @@
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(170, 77);
+            this.listView1.Location = new System.Drawing.Point(170, 78);
             this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(693, 541);
@@ -346,13 +346,13 @@
             // lvPartidos
             // 
             this.lvPartidos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clhNombrePartido,
-            this.clhLugarPartido,
+            this.clhID,
+            this.clhNombre,
+            this.clhLugar,
             this.clhDeporte,
             this.clhHora,
             this.clhFecha,
-            this.clhHoraEnvio,
-            this.clhCantidadConvalidar,
+            this.clhConvalidar,
             this.clhCupos});
             this.lvPartidos.FullRowSelect = true;
             this.lvPartidos.HideSelection = false;
@@ -365,43 +365,42 @@
             this.lvPartidos.View = System.Windows.Forms.View.Details;
             this.lvPartidos.SelectedIndexChanged += new System.EventHandler(this.lvPartidos_SelectedIndexChanged);
             // 
-            // clhNombrePartido
+            // clhID
             // 
-            this.clhNombrePartido.Text = "Nombre";
-            this.clhNombrePartido.Width = 120;
+            this.clhID.Text = "ID";
             // 
-            // clhLugarPartido
+            // clhNombre
             // 
-            this.clhLugarPartido.Text = "Lugar";
-            this.clhLugarPartido.Width = 120;
+            this.clhNombre.Text = "Nombre";
+            this.clhNombre.Width = 100;
             // 
             // clhDeporte
             // 
             this.clhDeporte.Text = "Deporte";
             this.clhDeporte.Width = 90;
             // 
+            // clhLugar
+            // 
+            this.clhLugar.Text = "Lugar";
+            // 
             // clhHora
             // 
             this.clhHora.Text = "Hora";
+            this.clhHora.Width = 100;
             // 
             // clhFecha
             // 
             this.clhFecha.Text = "Fecha";
-            this.clhFecha.Width = 100;
-            // 
-            // clhHoraEnvio
-            // 
-            this.clhHoraEnvio.Text = "Hora de envio";
-            this.clhHoraEnvio.Width = 200;
-            // 
-            // clhCantidadConvalidar
-            // 
-            this.clhCantidadConvalidar.Text = "Cantidad a convalidar";
+            this.clhFecha.Width = 200;
             // 
             // clhCupos
             // 
             this.clhCupos.Text = "Cupos";
-            this.clhCupos.Width = 75;
+            // 
+            // clhConvalidar
+            // 
+            this.clhConvalidar.Text = "Cantidad a convalidar";
+            this.clhConvalidar.Width = 75;
             // 
             // UserPartidos
             // 
@@ -451,17 +450,17 @@
         private System.Windows.Forms.Button btnPartidos;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.GroupBox gbxEstudianteEventos;
-        private System.Windows.Forms.ListView lvPartidos;
-        private System.Windows.Forms.ColumnHeader clhNombrePartido;
-        private System.Windows.Forms.ColumnHeader clhLugarPartido;
-        private System.Windows.Forms.ColumnHeader clhDeporte;
-        private System.Windows.Forms.ColumnHeader clhHora;
-        private System.Windows.Forms.ColumnHeader clhFecha;
-        private System.Windows.Forms.ColumnHeader clhHoraEnvio;
-        private System.Windows.Forms.ColumnHeader clhCantidadConvalidar;
-        private System.Windows.Forms.ColumnHeader clhCupos;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListView lvPartidos;
+        private System.Windows.Forms.ColumnHeader clhID;
+        private System.Windows.Forms.ColumnHeader clhNombre;
+        private System.Windows.Forms.ColumnHeader clhDeporte;
+        private System.Windows.Forms.ColumnHeader clhLugar;
+        private System.Windows.Forms.ColumnHeader clhHora;
+        private System.Windows.Forms.ColumnHeader clhFecha;
+        private System.Windows.Forms.ColumnHeader clhCupos;
+        private System.Windows.Forms.ColumnHeader clhConvalidar;
     }
 }

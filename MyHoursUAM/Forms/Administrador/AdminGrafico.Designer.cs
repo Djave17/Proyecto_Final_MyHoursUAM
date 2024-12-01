@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminGrafico));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlPieArriba = new System.Windows.Forms.Panel();
             this.lblCerrarSesion = new System.Windows.Forms.Label();
             this.pcbLogOutIcon = new System.Windows.Forms.PictureBox();
@@ -51,6 +51,7 @@
             this.pnlIcon = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGraficos = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.graficoCupos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.graficoHoras = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlPieArriba.SuspendLayout();
@@ -76,8 +77,8 @@
             this.pnlPieArriba.Location = new System.Drawing.Point(165, 0);
             this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPieArriba.Name = "pnlPieArriba";
-            this.pnlPieArriba.Size = new System.Drawing.Size(669, 73);
-            this.pnlPieArriba.TabIndex = 12;
+            this.pnlPieArriba.Size = new System.Drawing.Size(674, 73);
+            this.pnlPieArriba.TabIndex = 14;
             // 
             // lblCerrarSesion
             // 
@@ -149,8 +150,8 @@
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
             this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
-            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 713);
-            this.pnlAreaAdministrador.TabIndex = 11;
+            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 701);
+            this.pnlAreaAdministrador.TabIndex = 13;
             // 
             // panel2
             // 
@@ -279,54 +280,57 @@
             this.btnGraficos.TabIndex = 23;
             this.btnGraficos.Text = "📈 Graficos";
             this.btnGraficos.UseVisualStyleBackColor = false;
-            this.btnGraficos.Click += new System.EventHandler(this.btnGraficos_Click);
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
             // graficoCupos
             // 
-            chartArea1.Name = "ChartArea1";
-            this.graficoCupos.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.graficoCupos.Legends.Add(legend1);
-            this.graficoCupos.Location = new System.Drawing.Point(214, 89);
+            chartArea7.Name = "ChartArea1";
+            this.graficoCupos.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.graficoCupos.Legends.Add(legend7);
+            this.graficoCupos.Location = new System.Drawing.Point(191, 88);
             this.graficoCupos.Name = "graficoCupos";
             this.graficoCupos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.graficoCupos.Series.Add(series1);
-            this.graficoCupos.Size = new System.Drawing.Size(573, 296);
-            this.graficoCupos.TabIndex = 13;
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.graficoCupos.Series.Add(series7);
+            this.graficoCupos.Size = new System.Drawing.Size(517, 284);
+            this.graficoCupos.TabIndex = 15;
             this.graficoCupos.Text = "chart1";
-            this.graficoCupos.Click += new System.EventHandler(this.graficoCupos_Click);
             // 
             // graficoHoras
             // 
-            chartArea2.Name = "ChartArea1";
-            this.graficoHoras.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.graficoHoras.Legends.Add(legend2);
-            this.graficoHoras.Location = new System.Drawing.Point(214, 391);
+            chartArea8.Name = "ChartArea1";
+            this.graficoHoras.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.graficoHoras.Legends.Add(legend8);
+            this.graficoHoras.Location = new System.Drawing.Point(191, 382);
             this.graficoHoras.Name = "graficoHoras";
             this.graficoHoras.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.graficoHoras.Series.Add(series2);
-            this.graficoHoras.Size = new System.Drawing.Size(573, 310);
-            this.graficoHoras.TabIndex = 14;
+            series8.ChartArea = "ChartArea1";
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.graficoHoras.Series.Add(series8);
+            this.graficoHoras.Size = new System.Drawing.Size(517, 317);
+            this.graficoHoras.TabIndex = 16;
             this.graficoHoras.Text = "chart2";
             // 
             // AdminGrafico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 713);
+            this.ClientSize = new System.Drawing.Size(839, 701);
             this.Controls.Add(this.graficoHoras);
             this.Controls.Add(this.graficoCupos);
             this.Controls.Add(this.pnlPieArriba);
             this.Controls.Add(this.pnlAreaAdministrador);
             this.Name = "AdminGrafico";
             this.Text = "AdminGrafico";
+            this.Load += new System.EventHandler(this.AdminGrafico_Load);
             this.pnlPieArriba.ResumeLayout(false);
             this.pnlPieArriba.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).EndInit();
@@ -342,6 +346,7 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Panel pnlPieArriba;
         private System.Windows.Forms.Label lblCerrarSesion;
         private System.Windows.Forms.PictureBox pcbLogOutIcon;
@@ -349,15 +354,16 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlAreaAdministrador;
-        private System.Windows.Forms.Button btnGraficos;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnAñadirEventos;
         private System.Windows.Forms.Button btnAsistencia;
         private System.Windows.Forms.Button btnAjustes;
         private System.Windows.Forms.Panel pnlIcon;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnGraficos;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.DataVisualization.Charting.Chart graficoCupos;
         private System.Windows.Forms.DataVisualization.Charting.Chart graficoHoras;
     }
