@@ -97,7 +97,7 @@ MyHoursUAM/
   4. **Ejecuta la solución:**
      ```
      Abre MyHours UAMApp.sln en Visual Studio.
-     Configura la base de datos en la carpeta Properties.
+    
      
   6. **¡Inicia el proyecto! 🎉**
      
