@@ -32,10 +32,21 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         private static int eventoCounter = 1; // Contador para IDs de eventos
         private static int partidoCounter = 1; // Contador para IDs de partidos
 
+        public static void Inicializar()
+        {
+            // Cargar listas desde los archivos binarios
+            eventos = eventoService.GetAll();
+            partidos = partidoService.GetAll();
+            solicitudes = solicitudesService.GetAll();
+
+            // Sincronizar contadores con los datos existentes
+            SincronizarContadores();
+        }
+
         public static List<Estudiante> estudiantes = new List<Estudiante>
         {
             new Estudiante { cifEstudiante = "23020386", nombreEstudiante = "David Sanchez", contraseñaEstudiante = "123" },
-            new Estudiante { cifEstudiante = "2021002", nombreEstudiante = "Ana López", contraseñaEstudiante = "estudiante2" }
+            new Estudiante { cifEstudiante = "123", nombreEstudiante = "123", contraseñaEstudiante = "123" }
         };
 
         public static List<Administrador> administradores = new List<Administrador>
@@ -540,19 +551,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             solicitudesService.SaveData();
             eventoService.SaveData();
         }
-        // Procesar solicitud (aprobar o rechazar)
-        public static void ProcesarSolicitud(int solicitudId, SolicitudAsistencia.Estado nuevoEstado)
-        {
-            var solicitud = Solicitudes.FirstOrDefault(s => s.Id == solicitudId);
-            if (solicitud != null)
-            {
-                solicitud.EstadoSolicitud = nuevoEstado;
-            }
-            else
-            {
-                throw new KeyNotFoundException("No se encontró la solicitud con el ID proporcionado.");
-            }
-        }
+       
 
         // Obtener eventos asistidos por un estudiante
         public static List<Evento> ObtenerEventosAsistidos(string estudianteId)
@@ -684,6 +683,20 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
         //public static List<Estudiante> estudiantes = CargarEstudiantesSincronizados();
 
+        private static void SincronizarContadores()
+        {
+            if (eventos.Count > 0)
+            {
+                // Obtener el número más alto entre los IDs de eventos existentes
+                eventoCounter = eventos.Max(e => int.Parse(e.idEvento.TrimStart('E'))) + 1;
+            }
+
+            if (partidos.Count > 0)
+            {
+                // Obtener el número más alto entre los IDs de partidos existentes
+                partidoCounter = partidos.Max(p => int.Parse(p.idEvento.TrimStart('P'))) + 1;
+            }
+        }
 
     }
 }
