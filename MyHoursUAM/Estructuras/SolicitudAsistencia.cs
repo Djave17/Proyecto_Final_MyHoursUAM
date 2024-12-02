@@ -9,7 +9,7 @@ namespace MyHours_UAMApp.Estructuras
     [Serializable]
     internal class SolicitudAsistencia
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string EstudianteId { get; set; }
         public string EventoId { get; set; }
         public Evento Eventos { get; set; }

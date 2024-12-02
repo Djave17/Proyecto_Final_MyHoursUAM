@@ -36,13 +36,14 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         public static void Inicializar()
         {
             // Cargar listas desde los archivos binarios
-            eventos = eventoService.GetAll();
-            partidos = partidoService.GetAll();
-            solicitudes = solicitudesService.GetAll();
+            eventos = eventoService.GetAll() ?? new List<Evento>();
+            partidos = partidoService.GetAll() ?? new List<Partido>();
+            solicitudes = solicitudesService.GetAll() ?? new List<SolicitudAsistencia>();
 
             // Sincronizar contadores con los datos existentes
             SincronizarContadores();
         }
+
 
         public static List<Estudiante> estudiantes = new List<Estudiante>
         {
@@ -534,7 +535,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             // Crear y agregar la nueva solicitud
             solicitudesService.Add(new SolicitudAsistencia
             {
-                Id = contadorSolicitudes++, // Generar un ID único
+                Id = "S" + contadorSolicitudes++, // Generar un ID único
                 EventoId = evento.idEvento,
                 EstudianteId = estudianteId,
                 Eventos = evento,
@@ -581,7 +582,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             // Crear y agregar la nueva solicitud
             solicitudesService.Add(new SolicitudAsistencia
             {
-                Id = contadorSolicitudes++, // Generar un ID único
+                Id = "S" + contadorSolicitudes++, // Generar un ID único
                 EventoId = partido.idEvento,    
                 EstudianteId = estudianteId,
                 Eventos = partido,
@@ -643,26 +644,33 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             listView.Items.Clear();
             foreach (var solicitud in solicitudes)
             {
+                
+
                 var item = new ListViewItem(solicitud.Id.ToString());
-                item.SubItems.Add(solicitud.EstudianteId);
                 string nombreEvento = string.Empty;
+                string idEvento = string.Empty;
                 if (solicitud.Eventos is Partido partido) //Validacion para mostrar nombre de evento o partido
                 {
                     nombreEvento = partido.nombrePartido;
+                    idEvento = partido.idEvento;
                 }
                 else
                 {
                     nombreEvento = solicitud.Eventos.nombreEvento;
+                    idEvento = solicitud.Eventos.idEvento;
                 }
+                item.SubItems.Add(idEvento);
+                item.SubItems.Add(solicitud.EstudianteId);
+                
                 item.SubItems.Add(nombreEvento);
-
+               
                 item.SubItems.Add(solicitud.EstadoSolicitud.ToString());
                 item.SubItems.Add(solicitud.FechaSolicitud.ToString("dd/MM/yyyy HH:mm"));
                 listView.Items.Add(item);
             }
         }
        
-        public static string ConfirmarSolicitud(int solicitudId)
+        public static string ConfirmarSolicitud(string solicitudId)
         {
             var solicitud = solicitudes.FirstOrDefault(s => s.Id == solicitudId);
             if (solicitud == null)
@@ -700,7 +708,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
 
         // Rechazar una solicitud
-        public static string RechazarSolicitud(int solicitudId)
+        public static string RechazarSolicitud(string solicitudId)
         {
             var solicitud = solicitudes.FirstOrDefault(s => s.Id == solicitudId);
             if (solicitud == null)
@@ -755,18 +763,24 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
         private static void SincronizarContadores()
         {
-            if (eventos.Count > 0)
+            if (eventos != null && eventos.Count > 0)
             {
                 // Obtener el número más alto entre los IDs de eventos existentes
                 eventoCounter = eventos.Max(e => int.Parse(e.idEvento.TrimStart('E'))) + 1;
             }
 
-            if (partidos.Count > 0)
+            if (partidos != null && partidos.Count > 0)
             {
                 // Obtener el número más alto entre los IDs de partidos existentes
                 partidoCounter = partidos.Max(p => int.Parse(p.idEvento.TrimStart('P'))) + 1;
             }
+
+            if (solicitudes != null && solicitudes.Count > 0)
+            {
+                contadorSolicitudes = solicitudes.Max(s => int.Parse(s.Id.TrimStart('S'))) + 1;
+            }
         }
+
 
     }
 }
