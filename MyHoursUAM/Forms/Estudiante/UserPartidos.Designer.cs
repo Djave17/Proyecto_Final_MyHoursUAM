@@ -53,12 +53,12 @@
             this.lvPartidos = new System.Windows.Forms.ListView();
             this.clhID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhDeporte = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhLugar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhDeporte = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhHora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhCupos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhConvalidar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhCupos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStudentIcon)).BeginInit();
@@ -86,6 +86,7 @@
             // 
             // lblCerrarSesion
             // 
+            this.lblCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
@@ -99,6 +100,7 @@
             // 
             // pcbLogOutIcon
             // 
+            this.pcbLogOutIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
             this.pcbLogOutIcon.Location = new System.Drawing.Point(571, 19);
             this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
@@ -110,6 +112,7 @@
             // 
             // lblEstudiante
             // 
+            this.lblEstudiante.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblEstudiante.AutoSize = true;
             this.lblEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstudiante.ForeColor = System.Drawing.Color.Teal;
@@ -122,6 +125,7 @@
             // 
             // pcbStudentIcon
             // 
+            this.pcbStudentIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbStudentIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbStudentIcon.Image")));
             this.pcbStudentIcon.Location = new System.Drawing.Point(465, 21);
             this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(2);
@@ -299,6 +303,9 @@
             // 
             // gbxEstudianteEventos
             // 
+            this.gbxEstudianteEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbxEstudianteEventos.Controls.Add(this.label3);
             this.gbxEstudianteEventos.Controls.Add(this.label2);
             this.gbxEstudianteEventos.Controls.Add(this.button2);
@@ -345,6 +352,9 @@
             // 
             // lvPartidos
             // 
+            this.lvPartidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvPartidos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clhID,
             this.clhNombre,
@@ -374,14 +384,14 @@
             this.clhNombre.Text = "Nombre";
             this.clhNombre.Width = 100;
             // 
+            // clhLugar
+            // 
+            this.clhLugar.Text = "Lugar";
+            // 
             // clhDeporte
             // 
             this.clhDeporte.Text = "Deporte";
             this.clhDeporte.Width = 90;
-            // 
-            // clhLugar
-            // 
-            this.clhLugar.Text = "Lugar";
             // 
             // clhHora
             // 
@@ -393,14 +403,14 @@
             this.clhFecha.Text = "Fecha";
             this.clhFecha.Width = 200;
             // 
-            // clhCupos
-            // 
-            this.clhCupos.Text = "Cupos";
-            // 
             // clhConvalidar
             // 
             this.clhConvalidar.Text = "Cantidad a convalidar";
             this.clhConvalidar.Width = 75;
+            // 
+            // clhCupos
+            // 
+            this.clhCupos.Text = "Cupos";
             // 
             // UserPartidos
             // 

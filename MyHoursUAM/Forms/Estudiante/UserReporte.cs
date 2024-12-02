@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace MyHours_UAMApp
 {
@@ -30,22 +31,19 @@ namespace MyHours_UAMApp
                 return;
             }
 
+            // Obtener eventos asistidos
             var eventosAsistidos = Metodos.ObtenerEventosAsistidos(estudiante.cifEstudiante);
 
-            foreach (var evento in eventosAsistidos)
-            {
-                lvwEventos.Items.Add(new ListViewItem(new[]
-                {
-                    evento.tipoBeneficio, evento.tipoBeneficio, evento.nombreEvento,
-                    evento.horaEvento, evento.lugarEvento, evento.idEvento, evento.fechaEvento, 
-                }));
-            }
+            // Usar el método centralizado para cargar los eventos en el ListView
+            Metodos.CargarEventosAsistidos(lvwEventos, eventosAsistidos);
 
+            // Actualizar etiquetas de horas y beneficios
             int horasLaborales = Metodos.CalcularHorasLaborales(estudiante.cifEstudiante);
             lblHorasLaborales.Text = $"Horas laborales: {horasLaborales}";
 
             int beneficioPartidos = Metodos.CalcularBeneficioPartidos(estudiante.cifEstudiante);
             lblBeneficioPartidos.Text = $"Partidos asistidos: {beneficioPartidos}";
+            CargarGrafico(); //LLamar funcion del grafico
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -110,5 +108,36 @@ namespace MyHours_UAMApp
         {
 
         }
+
+        private void CargarGrafico() //Grafico para el reporte
+        {
+            chart1.Series.Clear();
+
+            // Crear una nueva serie
+            var series = new Series("Convalidación")
+            {
+                ChartType = SeriesChartType.Column
+            };
+            foreach (ListViewItem item in lvwEventos.Items)
+            {
+                string nombreEvento = item.SubItems[1].Text;
+                string convalidacionStr = item.SubItems[3].Text; 
+
+                if (double.TryParse(convalidacionStr, out double convalidacion))
+                {
+                    series.Points.AddXY(nombreEvento, convalidacion);
+                }
+                else
+                {
+                    MessageBox.Show($"Error al convertir la convalidación para el evento: {nombreEvento}. Valor: {convalidacionStr}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            chart1.Series.Add(series);
+            chart1.ChartAreas[0].AxisX.Title = "Eventos";
+            chart1.ChartAreas[0].AxisY.Title = "Convalidación";
+
+        }
+
     }
 }

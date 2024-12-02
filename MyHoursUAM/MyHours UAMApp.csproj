@@ -147,6 +147,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\CrudService.cs" />
     <EmbeddedResource Include="Forms\Administrador\AdminAdd.resx">
       <DependentUpon>AdminAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,11 +215,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\Administrador\administrador\" />
-    <Folder Include="Forms\servicios\" />
-    <Folder Include="Forms\Sesion\estudiante\" />
-    <Folder Include="Servicios\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

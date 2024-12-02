@@ -87,6 +87,7 @@
             // 
             // lblCerrarSesion
             // 
+            this.lblCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
@@ -100,6 +101,7 @@
             // 
             // pcbLogOutIcon
             // 
+            this.pcbLogOutIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
             this.pcbLogOutIcon.Location = new System.Drawing.Point(557, 23);
             this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
@@ -111,6 +113,7 @@
             // 
             // lblEstudiante
             // 
+            this.lblEstudiante.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblEstudiante.AutoSize = true;
             this.lblEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstudiante.ForeColor = System.Drawing.Color.Teal;
@@ -123,6 +126,7 @@
             // 
             // pcbStudentIcon
             // 
+            this.pcbStudentIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbStudentIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbStudentIcon.Image")));
             this.pcbStudentIcon.Location = new System.Drawing.Point(451, 26);
             this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(2);
@@ -290,6 +294,9 @@
             // 
             // gbxEstudianteEventos
             // 
+            this.gbxEstudianteEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbxEstudianteEventos.Controls.Add(this.lvwEventos);
             this.gbxEstudianteEventos.Controls.Add(this.label3);
             this.gbxEstudianteEventos.Controls.Add(this.label2);
@@ -304,6 +311,9 @@
             // 
             // lvwEventos
             // 
+            this.lvwEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvwEventos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clhIDEvento,
             this.clhNombreEvento,
@@ -327,18 +337,15 @@
             // 
             // clhIDEvento
             // 
-            this.clhIDEvento.DisplayIndex = 7;
             this.clhIDEvento.Text = "IDEvento";
             // 
             // clhNombreEvento
             // 
-            this.clhNombreEvento.DisplayIndex = 2;
             this.clhNombreEvento.Text = "Nombre";
             this.clhNombreEvento.Width = 180;
             // 
             // clhTipoConvalidacion
             // 
-            this.clhTipoConvalidacion.DisplayIndex = 1;
             this.clhTipoConvalidacion.Text = "Tipo de convalidacion";
             this.clhTipoConvalidacion.Width = 200;
             // 
@@ -349,34 +356,28 @@
             // 
             // clhFecha
             // 
-            this.clhFecha.DisplayIndex = 8;
             this.clhFecha.Text = "Fecha";
             // 
             // clhLugar
             // 
-            this.clhLugar.DisplayIndex = 4;
             this.clhLugar.Text = "Lugar";
             this.clhLugar.Width = 80;
             // 
             // clhConvalida
             // 
-            this.clhConvalida.DisplayIndex = 9;
             this.clhConvalida.Text = "Convalida";
             // 
             // clhCupos
             // 
-            this.clhCupos.DisplayIndex = 5;
             this.clhCupos.Text = "Cupos";
             // 
             // clhTipoEvento
             // 
-            this.clhTipoEvento.DisplayIndex = 0;
             this.clhTipoEvento.Text = "Tipo de Evento";
             this.clhTipoEvento.Width = 180;
             // 
             // clhEstadoEvento
             // 
-            this.clhEstadoEvento.DisplayIndex = 6;
             this.clhEstadoEvento.Text = "Hora de Envio";
             this.clhEstadoEvento.Width = 180;
             // 

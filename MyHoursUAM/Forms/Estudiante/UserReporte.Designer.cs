@@ -215,18 +215,19 @@
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
             this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
-            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 840);
+            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 749);
             this.pnlAreaAdministrador.TabIndex = 12;
             // 
             // pnlPieArriba
             // 
+            this.pnlPieArriba.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPieArriba.BackColor = System.Drawing.Color.White;
             this.pnlPieArriba.Controls.Add(this.lblCerrarSesion);
             this.pnlPieArriba.Controls.Add(this.pcbLogOutIcon);
             this.pnlPieArriba.Controls.Add(this.label1);
             this.pnlPieArriba.Controls.Add(this.lblEstudiante);
             this.pnlPieArriba.Controls.Add(this.pcbStudentIcon);
-            this.pnlPieArriba.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPieArriba.Location = new System.Drawing.Point(165, 0);
             this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPieArriba.Name = "pnlPieArriba";
@@ -238,7 +239,7 @@
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
-            this.lblCerrarSesion.Location = new System.Drawing.Point(937, 35);
+            this.lblCerrarSesion.Location = new System.Drawing.Point(1222, 35);
             this.lblCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCerrarSesion.Name = "lblCerrarSesion";
             this.lblCerrarSesion.Size = new System.Drawing.Size(83, 13);
@@ -249,7 +250,7 @@
             // pcbLogOutIcon
             // 
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
-            this.pcbLogOutIcon.Location = new System.Drawing.Point(893, 19);
+            this.pcbLogOutIcon.Location = new System.Drawing.Point(1096, 19);
             this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbLogOutIcon.Name = "pcbLogOutIcon";
             this.pcbLogOutIcon.Size = new System.Drawing.Size(40, 41);
@@ -274,7 +275,7 @@
             this.lblEstudiante.AutoSize = true;
             this.lblEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstudiante.ForeColor = System.Drawing.Color.Teal;
-            this.lblEstudiante.Location = new System.Drawing.Point(828, 35);
+            this.lblEstudiante.Location = new System.Drawing.Point(1025, 35);
             this.lblEstudiante.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEstudiante.Name = "lblEstudiante";
             this.lblEstudiante.Size = new System.Drawing.Size(67, 13);
@@ -284,7 +285,7 @@
             // pcbStudentIcon
             // 
             this.pcbStudentIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbStudentIcon.Image")));
-            this.pcbStudentIcon.Location = new System.Drawing.Point(787, 21);
+            this.pcbStudentIcon.Location = new System.Drawing.Point(985, 19);
             this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbStudentIcon.Name = "pcbStudentIcon";
             this.pcbStudentIcon.Size = new System.Drawing.Size(36, 38);
@@ -311,6 +312,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Silver;
             this.groupBox1.Controls.Add(this.chart1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -328,13 +332,16 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(191, 458);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(938, 357);
+            this.groupBox2.Size = new System.Drawing.Size(938, 358);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Eventos asistidos";
             // 
             // lvwEventos
             // 
+            this.lvwEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvwEventos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clhIDEvento,
             this.clhNombreEvento,
@@ -349,7 +356,7 @@
             this.lvwEventos.Location = new System.Drawing.Point(12, 24);
             this.lvwEventos.Margin = new System.Windows.Forms.Padding(2);
             this.lvwEventos.Name = "lvwEventos";
-            this.lvwEventos.Size = new System.Drawing.Size(907, 307);
+            this.lvwEventos.Size = new System.Drawing.Size(907, 316);
             this.lvwEventos.TabIndex = 94;
             this.lvwEventos.UseCompatibleStateImageBehavior = false;
             this.lvwEventos.View = System.Windows.Forms.View.Details;
@@ -357,49 +364,46 @@
             // 
             // clhIDEvento
             // 
-            this.clhIDEvento.DisplayIndex = 5;
             this.clhIDEvento.Text = "IDEvento";
             this.clhIDEvento.Width = 98;
             // 
             // clhNombreEvento
             // 
-            this.clhNombreEvento.DisplayIndex = 2;
             this.clhNombreEvento.Text = "Nombre";
             this.clhNombreEvento.Width = 180;
             // 
             // clhTipoConvalidacion
             // 
-            this.clhTipoConvalidacion.DisplayIndex = 1;
+            this.clhTipoConvalidacion.DisplayIndex = 3;
             this.clhTipoConvalidacion.Text = "Tipo de convalidacion";
             this.clhTipoConvalidacion.Width = 200;
             // 
             // clhConvalida
             // 
-            this.clhConvalida.DisplayIndex = 7;
+            this.clhConvalida.DisplayIndex = 4;
             this.clhConvalida.Text = "Convalida";
             this.clhConvalida.Width = 101;
             // 
             // clhHorario
             // 
-            this.clhHorario.DisplayIndex = 3;
+            this.clhHorario.DisplayIndex = 5;
             this.clhHorario.Text = "Horario";
             this.clhHorario.Width = 80;
             // 
             // clhFecha
             // 
-            this.clhFecha.DisplayIndex = 6;
+            this.clhFecha.DisplayIndex = 7;
             this.clhFecha.Text = "Fecha";
             this.clhFecha.Width = 80;
             // 
             // clhLugar
             // 
-            this.clhLugar.DisplayIndex = 4;
             this.clhLugar.Text = "Lugar";
             this.clhLugar.Width = 80;
             // 
             // clhTipoEvento
             // 
-            this.clhTipoEvento.DisplayIndex = 0;
+            this.clhTipoEvento.DisplayIndex = 2;
             this.clhTipoEvento.Text = "Tipo de Evento";
             this.clhTipoEvento.Width = 180;
             // 
@@ -429,7 +433,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1481, 840);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.lblBeneficioPartidos);
             this.Controls.Add(this.lblHorasLaborales);
             this.Controls.Add(this.groupBox2);

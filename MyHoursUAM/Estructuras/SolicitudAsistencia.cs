@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyHours_UAMApp.Estructuras
 {
+    [Serializable]
     internal class SolicitudAsistencia
     {
         public int Id { get; set; }
