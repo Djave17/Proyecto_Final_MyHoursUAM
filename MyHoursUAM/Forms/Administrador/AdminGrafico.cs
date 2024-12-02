@@ -99,5 +99,12 @@ namespace MyHours_UAMApp.Forms.Administrador
             adminAjustes.Show();
             this.Close();
         }
+
+        private void lblCerrarSesion_Click(object sender, EventArgs e)
+        {
+            IniciarSesion form = new IniciarSesion();
+            form.Show();
+            this.Close();
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace MyHours_UAMApp
            progressBar.Increment(2);
            if (progressBar.Value == 100 ) {
                 timer1.Enabled = false;
-                Rol form = new Rol();
+                IniciarSesion form = new IniciarSesion();
                 form.Show();
                 this.Hide();
         }

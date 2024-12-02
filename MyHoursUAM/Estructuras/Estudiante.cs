@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace MyHours_UAMApp.Estructuras
 {
+    [Serializable]
     internal class Estudiante
     {
         public string nombreEstudiante { get; set; }
@@ -20,6 +21,7 @@ namespace MyHours_UAMApp.Estructuras
         
        
         public List<string> eventosAsistidos { get;  set; } // IDs de eventos asistidos
+        public List<string> partidosAsistidos { get; set; } // IDs de eventos asistidos
         public Asistencia asistencia { get; set; }
 
         // Constructor

@@ -18,6 +18,8 @@ namespace MyHours_UAMApp
         public AdminAsistencia()
         {
             InitializeComponent();
+            Metodos.CargarSolicitudesEnListView(lvAsistencia);
+
         }
 
         private void btnAñadirEventos_Click(object sender, EventArgs e)
@@ -43,7 +45,7 @@ namespace MyHours_UAMApp
 
         private void lblCerrarSesion_Click(object sender, EventArgs e)
         {
-            Rol form = new Rol();
+            IniciarSesion form = new IniciarSesion();
             form.Show();
             this.Close();
         }
@@ -55,7 +57,7 @@ namespace MyHours_UAMApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Rol form = new Rol();
+            AdminAddPartidos form = new AdminAddPartidos();
             form.Show();
             this.Close();
         }
@@ -67,13 +69,7 @@ namespace MyHours_UAMApp
             this.Close();
         }
 
-        private void AdminAsistencia_Load(object sender, EventArgs e)
-        {
-            
-
-            // Cargar datos en el ListView
-            Metodos.CargarSolicitudesEnListView(lvAsistencia);
-        }
+        
 
         private void btnConfirmarAsistencia_Click(object sender, EventArgs e)
         {
@@ -88,9 +84,9 @@ namespace MyHours_UAMApp
                 int solicitudId = int.Parse(lvAsistencia.SelectedItems[0].Text);
 
                 // Confirmar la solicitud
-                Metodos.ConfirmarSolicitud(solicitudId);
+                string mensaje = Metodos.ConfirmarSolicitud(solicitudId);
 
-                MessageBox.Show("La solicitud ha sido confirmada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Actualizar vista
                 Metodos.CargarSolicitudesEnListView(lvAsistencia);
@@ -113,15 +109,26 @@ namespace MyHours_UAMApp
             {
                 int solicitudId = int.Parse(lvAsistencia.SelectedItems[0].Text);
                 // Rechazar la solicitud
-                Metodos.RechazarSolicitud(solicitudId);
-                MessageBox.Show("La solicitud ha sido rechazada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string mensaje = Metodos.RechazarSolicitud(solicitudId);
+                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Actualizar vista
                 Metodos.CargarSolicitudesEnListView(lvAsistencia);
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al rechazar la solicitud: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void lvAsistencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlPieArriba_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

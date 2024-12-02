@@ -47,6 +47,7 @@
             // 
             // pcbIconApp
             // 
+            this.pcbIconApp.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pcbIconApp.Image = ((System.Drawing.Image)(resources.GetObject("pcbIconApp.Image")));
             this.pcbIconApp.Location = new System.Drawing.Point(117, 25);
             this.pcbIconApp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -59,6 +60,7 @@
             // 
             // btnIniciarSesion
             // 
+            this.btnIniciarSesion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnIniciarSesion.BackColor = System.Drawing.Color.Teal;
             this.btnIniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIniciarSesion.FlatAppearance.BorderSize = 0;
@@ -76,6 +78,7 @@
             // 
             // chbVerContraseña
             // 
+            this.chbVerContraseña.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chbVerContraseña.AutoSize = true;
             this.chbVerContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chbVerContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -92,6 +95,7 @@
             // 
             // txbContraseña
             // 
+            this.txbContraseña.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txbContraseña.BackColor = System.Drawing.Color.MintCream;
             this.txbContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbContraseña.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,6 +110,7 @@
             // 
             // lblContraseña
             // 
+            this.lblContraseña.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseña.ForeColor = System.Drawing.Color.Teal;
@@ -117,6 +122,7 @@
             // 
             // txbCIF
             // 
+            this.txbCIF.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txbCIF.BackColor = System.Drawing.Color.MintCream;
             this.txbCIF.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbCIF.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,6 +136,7 @@
             // 
             // lblCIF
             // 
+            this.lblCIF.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCIF.AutoSize = true;
             this.lblCIF.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCIF.ForeColor = System.Drawing.Color.Teal;
@@ -141,6 +148,7 @@
             // 
             // lblRotulo1
             // 
+            this.lblRotulo1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblRotulo1.AutoSize = true;
             this.lblRotulo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRotulo1.ForeColor = System.Drawing.Color.Teal;
@@ -153,6 +161,7 @@
             // 
             // pnl1
             // 
+            this.pnl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pnl1.BackColor = System.Drawing.Color.Teal;
             this.pnl1.Location = new System.Drawing.Point(15, 233);
             this.pnl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -162,6 +171,7 @@
             // 
             // pnl2
             // 
+            this.pnl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pnl2.BackColor = System.Drawing.Color.Teal;
             this.pnl2.Location = new System.Drawing.Point(13, 305);
             this.pnl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -171,6 +181,7 @@
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLimpiar.BackColor = System.Drawing.Color.Teal;
             this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
@@ -188,10 +199,11 @@
             // 
             // lblSalir
             // 
+            this.lblSalir.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSalir.AutoSize = true;
             this.lblSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalir.ForeColor = System.Drawing.Color.Teal;
-            this.lblSalir.Location = new System.Drawing.Point(177, 496);
+            this.lblSalir.Location = new System.Drawing.Point(129, 496);
             this.lblSalir.Name = "lblSalir";
             this.lblSalir.Size = new System.Drawing.Size(48, 20);
             this.lblSalir.TabIndex = 39;
@@ -200,15 +212,14 @@
             // 
             // lblAtras
             // 
+            this.lblAtras.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAtras.AutoSize = true;
             this.lblAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAtras.ForeColor = System.Drawing.Color.Teal;
             this.lblAtras.Location = new System.Drawing.Point(67, 496);
             this.lblAtras.Name = "lblAtras";
-            this.lblAtras.Size = new System.Drawing.Size(54, 20);
+            this.lblAtras.Size = new System.Drawing.Size(0, 20);
             this.lblAtras.TabIndex = 40;
-            this.lblAtras.Text = "Atras";
-            this.lblAtras.Click += new System.EventHandler(this.lblAtras_Click);
             // 
             // IniciarSesion
             // 

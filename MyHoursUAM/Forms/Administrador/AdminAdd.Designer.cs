@@ -46,6 +46,7 @@
             this.pnlIcon = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gpbNuevoEvento = new System.Windows.Forms.GroupBox();
+            this.tbxEstado = new System.Windows.Forms.ComboBox();
             this.btnCambiarEstado = new System.Windows.Forms.Button();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txbLugar = new System.Windows.Forms.TextBox();
@@ -80,7 +81,6 @@
             this.lblCupos = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblRotulo2 = new System.Windows.Forms.Label();
-            this.tbxEstado = new System.Windows.Forms.ComboBox();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -109,6 +109,7 @@
             // 
             // lblCerrarSesion
             // 
+            this.lblCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
@@ -122,6 +123,7 @@
             // 
             // pcbLogOutIcon
             // 
+            this.pcbLogOutIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
             this.pcbLogOutIcon.Location = new System.Drawing.Point(532, 11);
             this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
@@ -133,6 +135,7 @@
             // 
             // lblAdmin
             // 
+            this.lblAdmin.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdmin.ForeColor = System.Drawing.Color.Teal;
@@ -145,6 +148,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(410, 15);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
@@ -176,7 +180,7 @@
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
             this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
-            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 857);
+            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 749);
             this.pnlAreaAdministrador.TabIndex = 2;
             // 
             // panel1
@@ -312,6 +316,9 @@
             // 
             // gpbNuevoEvento
             // 
+            this.gpbNuevoEvento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gpbNuevoEvento.BackColor = System.Drawing.Color.White;
             this.gpbNuevoEvento.Controls.Add(this.tbxEstado);
             this.gpbNuevoEvento.Controls.Add(this.btnCambiarEstado);
@@ -343,14 +350,26 @@
             this.gpbNuevoEvento.Margin = new System.Windows.Forms.Padding(2);
             this.gpbNuevoEvento.Name = "gpbNuevoEvento";
             this.gpbNuevoEvento.Padding = new System.Windows.Forms.Padding(2);
-            this.gpbNuevoEvento.Size = new System.Drawing.Size(655, 770);
+            this.gpbNuevoEvento.Size = new System.Drawing.Size(672, 671);
             this.gpbNuevoEvento.TabIndex = 11;
             this.gpbNuevoEvento.TabStop = false;
             this.gpbNuevoEvento.Text = "Añadir Eventos";
             this.gpbNuevoEvento.Enter += new System.EventHandler(this.gpbNuevoEvento_Enter);
             // 
+            // tbxEstado
+            // 
+            this.tbxEstado.FormattingEnabled = true;
+            this.tbxEstado.Items.AddRange(new object[] {
+            "Disponible",
+            "No_Disponible"});
+            this.tbxEstado.Location = new System.Drawing.Point(8, 475);
+            this.tbxEstado.Name = "tbxEstado";
+            this.tbxEstado.Size = new System.Drawing.Size(507, 27);
+            this.tbxEstado.TabIndex = 90;
+            // 
             // btnCambiarEstado
             // 
+            this.btnCambiarEstado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCambiarEstado.BackColor = System.Drawing.Color.Teal;
             this.btnCambiarEstado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCambiarEstado.FlatAppearance.BorderSize = 0;
@@ -376,7 +395,7 @@
             this.dtpFecha.Location = new System.Drawing.Point(9, 264);
             this.dtpFecha.MinDate = new System.DateTime(2010, 3, 11, 0, 0, 0, 0);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(368, 26);
+            this.dtpFecha.Size = new System.Drawing.Size(506, 26);
             this.dtpFecha.TabIndex = 62;
             // 
             // txbLugar
@@ -389,7 +408,7 @@
             this.txbLugar.Margin = new System.Windows.Forms.Padding(2);
             this.txbLugar.Multiline = true;
             this.txbLugar.Name = "txbLugar";
-            this.txbLugar.Size = new System.Drawing.Size(369, 23);
+            this.txbLugar.Size = new System.Drawing.Size(508, 23);
             this.txbLugar.TabIndex = 61;
             // 
             // label4
@@ -418,14 +437,15 @@
             // 
             this.txbHorasConvalidas.BackColor = System.Drawing.Color.Teal;
             this.txbHorasConvalidas.ForeColor = System.Drawing.SystemColors.Window;
-            this.txbHorasConvalidas.Location = new System.Drawing.Point(7, 372);
+            this.txbHorasConvalidas.Location = new System.Drawing.Point(6, 372);
             this.txbHorasConvalidas.Name = "txbHorasConvalidas";
-            this.txbHorasConvalidas.Size = new System.Drawing.Size(367, 26);
+            this.txbHorasConvalidas.Size = new System.Drawing.Size(509, 26);
             this.txbHorasConvalidas.TabIndex = 58;
             this.txbHorasConvalidas.TextChanged += new System.EventHandler(this.txbHorasConvalidas_TextChanged);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEliminar.BackColor = System.Drawing.Color.Teal;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
@@ -455,6 +475,9 @@
             // 
             // lvwEventos
             // 
+            this.lvwEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvwEventos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clhIDEvento,
             this.clhNombreEvento,
@@ -479,19 +502,20 @@
             // 
             // clhIDEvento
             // 
-            this.clhIDEvento.DisplayIndex = 7;
+            this.clhIDEvento.DisplayIndex = 9;
             this.clhIDEvento.Text = "IDEvento";
+            this.clhIDEvento.Width = 50;
             // 
             // clhNombreEvento
             // 
-            this.clhNombreEvento.DisplayIndex = 2;
+            this.clhNombreEvento.DisplayIndex = 0;
             this.clhNombreEvento.Text = "Nombre";
             this.clhNombreEvento.Width = 180;
             // 
             // clhTipoConvalidacion
             // 
-            this.clhTipoConvalidacion.DisplayIndex = 1;
-            this.clhTipoConvalidacion.Text = "Tipo de convalidacion";
+            this.clhTipoConvalidacion.DisplayIndex = 8;
+            this.clhTipoConvalidacion.Text = "Beneficio:";
             this.clhTipoConvalidacion.Width = 200;
             // 
             // clhHorario
@@ -501,35 +525,32 @@
             // 
             // clhFecha
             // 
-            this.clhFecha.DisplayIndex = 8;
             this.clhFecha.Text = "Fecha";
             // 
             // clhLugar
             // 
-            this.clhLugar.DisplayIndex = 4;
+            this.clhLugar.DisplayIndex = 1;
             this.clhLugar.Text = "Lugar";
             this.clhLugar.Width = 80;
             // 
             // clhConvalida
             // 
-            this.clhConvalida.DisplayIndex = 9;
             this.clhConvalida.Text = "Convalida";
             // 
             // clhCupos
             // 
-            this.clhCupos.DisplayIndex = 5;
             this.clhCupos.Text = "Cupos";
             // 
             // clhTipoEvento
             // 
-            this.clhTipoEvento.DisplayIndex = 0;
+            this.clhTipoEvento.DisplayIndex = 2;
             this.clhTipoEvento.Text = "Tipo de Evento";
             this.clhTipoEvento.Width = 180;
             // 
             // clhEstadoEvento
             // 
-            this.clhEstadoEvento.DisplayIndex = 6;
-            this.clhEstadoEvento.Text = "Hora de Envio";
+            this.clhEstadoEvento.DisplayIndex = 5;
+            this.clhEstadoEvento.Text = "Estado Evento";
             this.clhEstadoEvento.Width = 180;
             // 
             // cbxBeneficio
@@ -541,7 +562,7 @@
             this.cbxBeneficio.Location = new System.Drawing.Point(152, 96);
             this.cbxBeneficio.Margin = new System.Windows.Forms.Padding(2);
             this.cbxBeneficio.Name = "cbxBeneficio";
-            this.cbxBeneficio.Size = new System.Drawing.Size(224, 27);
+            this.cbxBeneficio.Size = new System.Drawing.Size(363, 27);
             this.cbxBeneficio.TabIndex = 54;
             // 
             // cbxEvento
@@ -555,7 +576,7 @@
             this.cbxEvento.Location = new System.Drawing.Point(152, 51);
             this.cbxEvento.Margin = new System.Windows.Forms.Padding(2);
             this.cbxEvento.Name = "cbxEvento";
-            this.cbxEvento.Size = new System.Drawing.Size(224, 27);
+            this.cbxEvento.Size = new System.Drawing.Size(363, 27);
             this.cbxEvento.TabIndex = 53;
             // 
             // label2
@@ -601,7 +622,7 @@
             this.txbHorario.Margin = new System.Windows.Forms.Padding(2);
             this.txbHorario.Multiline = true;
             this.txbHorario.Name = "txbHorario";
-            this.txbHorario.Size = new System.Drawing.Size(369, 23);
+            this.txbHorario.Size = new System.Drawing.Size(508, 23);
             this.txbHorario.TabIndex = 43;
             // 
             // lblHorario
@@ -625,7 +646,7 @@
             this.txtNombreEvento.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreEvento.Multiline = true;
             this.txtNombreEvento.Name = "txtNombreEvento";
-            this.txtNombreEvento.Size = new System.Drawing.Size(369, 23);
+            this.txtNombreEvento.Size = new System.Drawing.Size(508, 23);
             this.txtNombreEvento.TabIndex = 41;
             // 
             // nombreEvento
@@ -641,6 +662,7 @@
             // 
             // btnEditar
             // 
+            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEditar.BackColor = System.Drawing.Color.Teal;
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatAppearance.BorderSize = 0;
@@ -658,6 +680,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGuardar.BackColor = System.Drawing.Color.Teal;
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
@@ -683,7 +706,7 @@
             this.txtCupos.Margin = new System.Windows.Forms.Padding(2);
             this.txtCupos.Multiline = true;
             this.txtCupos.Name = "txtCupos";
-            this.txtCupos.Size = new System.Drawing.Size(367, 23);
+            this.txtCupos.Size = new System.Drawing.Size(506, 23);
             this.txtCupos.TabIndex = 35;
             // 
             // lblCupos
@@ -721,23 +744,12 @@
             this.lblRotulo2.TabIndex = 0;
             this.lblRotulo2.Text = "Todos los campos son requeridos";
             // 
-            // tbxEstado
-            // 
-            this.tbxEstado.FormattingEnabled = true;
-            this.tbxEstado.Items.AddRange(new object[] {
-            "Disponible",
-            "No_Disponible"});
-            this.tbxEstado.Location = new System.Drawing.Point(8, 475);
-            this.tbxEstado.Name = "tbxEstado";
-            this.tbxEstado.Size = new System.Drawing.Size(368, 27);
-            this.tbxEstado.TabIndex = 90;
-            // 
             // AdminAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(846, 857);
+            this.ClientSize = new System.Drawing.Size(846, 749);
             this.Controls.Add(this.gpbNuevoEvento);
             this.Controls.Add(this.pnlPieArriba);
             this.Controls.Add(this.pnlAreaAdministrador);

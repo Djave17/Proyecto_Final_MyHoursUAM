@@ -48,7 +48,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbxEstudianteEventos = new System.Windows.Forms.GroupBox();
             this.lvAsistencia = new System.Windows.Forms.ListView();
-            this.clhID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhEstudianteId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhEstadoSolicitud = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -57,6 +56,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnConfirmarAsistencia = new System.Windows.Forms.Button();
+            this.clhIdSolicitud = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhIdEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -78,13 +79,15 @@
             this.pnlPieArriba.Controls.Add(this.label1);
             this.pnlPieArriba.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPieArriba.Location = new System.Drawing.Point(165, 0);
-            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlPieArriba.Name = "pnlPieArriba";
             this.pnlPieArriba.Size = new System.Drawing.Size(678, 73);
             this.pnlPieArriba.TabIndex = 7;
+            this.pnlPieArriba.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPieArriba_Paint);
             // 
             // lblCerrarSesion
             // 
+            this.lblCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
@@ -98,9 +101,10 @@
             // 
             // pcbLogOutIcon
             // 
+            this.pcbLogOutIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
             this.pcbLogOutIcon.Location = new System.Drawing.Point(533, 11);
-            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pcbLogOutIcon.Name = "pcbLogOutIcon";
             this.pcbLogOutIcon.Size = new System.Drawing.Size(40, 41);
             this.pcbLogOutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -109,6 +113,7 @@
             // 
             // lblAdmin
             // 
+            this.lblAdmin.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdmin.ForeColor = System.Drawing.Color.Teal;
@@ -121,9 +126,10 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(411, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,7 +156,7 @@
             this.pnlAreaAdministrador.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlAreaAdministrador.ForeColor = System.Drawing.Color.White;
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
-            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
             this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 690);
             this.pnlAreaAdministrador.TabIndex = 6;
@@ -165,7 +171,7 @@
             this.panel1.Controls.Add(this.btnAjustes);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 73);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(165, 540);
             this.panel1.TabIndex = 2;
@@ -179,7 +185,7 @@
             this.btnGraficos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGraficos.ForeColor = System.Drawing.Color.White;
             this.btnGraficos.Location = new System.Drawing.Point(2, 446);
-            this.btnGraficos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGraficos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGraficos.Name = "btnGraficos";
             this.btnGraficos.Size = new System.Drawing.Size(163, 120);
             this.btnGraficos.TabIndex = 23;
@@ -196,7 +202,7 @@
             this.btnAddPartidos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPartidos.ForeColor = System.Drawing.Color.White;
             this.btnAddPartidos.Location = new System.Drawing.Point(0, 105);
-            this.btnAddPartidos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddPartidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddPartidos.Name = "btnAddPartidos";
             this.btnAddPartidos.Size = new System.Drawing.Size(165, 120);
             this.btnAddPartidos.TabIndex = 21;
@@ -209,7 +215,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(0, 236);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(4, 103);
             this.panel2.TabIndex = 3;
@@ -223,7 +229,7 @@
             this.button1.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(-81, -9);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 120);
             this.button1.TabIndex = 21;
@@ -239,7 +245,7 @@
             this.btnAñadirEventos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirEventos.ForeColor = System.Drawing.Color.White;
             this.btnAñadirEventos.Location = new System.Drawing.Point(-2, 5);
-            this.btnAñadirEventos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAñadirEventos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAñadirEventos.Name = "btnAñadirEventos";
             this.btnAñadirEventos.Size = new System.Drawing.Size(165, 97);
             this.btnAñadirEventos.TabIndex = 9;
@@ -256,7 +262,7 @@
             this.btnAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsistencia.ForeColor = System.Drawing.Color.White;
             this.btnAsistencia.Location = new System.Drawing.Point(0, 236);
-            this.btnAsistencia.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAsistencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAsistencia.Name = "btnAsistencia";
             this.btnAsistencia.Size = new System.Drawing.Size(165, 99);
             this.btnAsistencia.TabIndex = 11;
@@ -273,7 +279,7 @@
             this.btnAjustes.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjustes.ForeColor = System.Drawing.Color.White;
             this.btnAjustes.Location = new System.Drawing.Point(0, 343);
-            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAjustes.Name = "btnAjustes";
             this.btnAjustes.Size = new System.Drawing.Size(165, 99);
             this.btnAjustes.TabIndex = 12;
@@ -286,7 +292,7 @@
             this.pnlIcon.Controls.Add(this.pictureBox1);
             this.pnlIcon.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlIcon.Location = new System.Drawing.Point(0, 0);
-            this.pnlIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlIcon.Name = "pnlIcon";
             this.pnlIcon.Size = new System.Drawing.Size(165, 73);
             this.pnlIcon.TabIndex = 1;
@@ -295,7 +301,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(61, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -305,6 +311,9 @@
             // 
             // gbxEstudianteEventos
             // 
+            this.gbxEstudianteEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbxEstudianteEventos.Controls.Add(this.lvAsistencia);
             this.gbxEstudianteEventos.Controls.Add(this.btnDenegarAsistencia);
             this.gbxEstudianteEventos.Controls.Add(this.label3);
@@ -320,8 +329,12 @@
             // 
             // lvAsistencia
             // 
+            this.lvAsistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvAsistencia.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clhID,
+            this.clhIdSolicitud,
+            this.clhIdEvento,
             this.clhEstudianteId,
             this.clhNombre,
             this.clhEstadoSolicitud,
@@ -330,17 +343,13 @@
             this.lvAsistencia.HideSelection = false;
             this.lvAsistencia.LabelEdit = true;
             this.lvAsistencia.Location = new System.Drawing.Point(0, 169);
-            this.lvAsistencia.Margin = new System.Windows.Forms.Padding(2);
+            this.lvAsistencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lvAsistencia.Name = "lvAsistencia";
             this.lvAsistencia.Size = new System.Drawing.Size(630, 350);
             this.lvAsistencia.TabIndex = 95;
             this.lvAsistencia.UseCompatibleStateImageBehavior = false;
             this.lvAsistencia.View = System.Windows.Forms.View.Details;
-            // 
-            // clhID
-            // 
-            this.clhID.Text = "ID";
-            this.clhID.Width = 100;
+            this.lvAsistencia.SelectedIndexChanged += new System.EventHandler(this.lvAsistencia_SelectedIndexChanged);
             // 
             // clhEstudianteId
             // 
@@ -405,6 +414,15 @@
             this.btnConfirmarAsistencia.UseVisualStyleBackColor = false;
             this.btnConfirmarAsistencia.Click += new System.EventHandler(this.btnConfirmarAsistencia_Click);
             // 
+            // clhIdSolicitud
+            // 
+            this.clhIdSolicitud.Text = "ID Solicitud";
+            this.clhIdSolicitud.Width = 80;
+            // 
+            // clhIdEvento
+            // 
+            this.clhIdEvento.Text = "ID ";
+            // 
             // AdminAsistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,11 +433,12 @@
             this.Controls.Add(this.pnlAreaAdministrador);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AdminAsistencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Asistencia";
-            this.Load += new System.EventHandler(this.AdminAsistencia_Load);
+            
+
             this.pnlPieArriba.ResumeLayout(false);
             this.pnlPieArriba.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).EndInit();
@@ -459,10 +478,11 @@
         private System.Windows.Forms.Button btnConfirmarAsistencia;
         private System.Windows.Forms.Button btnDenegarAsistencia;
         private System.Windows.Forms.ListView lvAsistencia;
-        private System.Windows.Forms.ColumnHeader clhID;
         private System.Windows.Forms.ColumnHeader clhEstudianteId;
         private System.Windows.Forms.ColumnHeader clhNombre;
         private System.Windows.Forms.ColumnHeader clhEstadoSolicitud;
         private System.Windows.Forms.ColumnHeader clhFechaSolicitud;
+        private System.Windows.Forms.ColumnHeader clhIdSolicitud;
+        private System.Windows.Forms.ColumnHeader clhIdEvento;
     }
 }

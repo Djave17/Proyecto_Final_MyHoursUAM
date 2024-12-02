@@ -1,17 +1,23 @@
 ﻿using MyHours_UAMApp.Forms.Administrador;
 using System;
 using System.Windows.Forms;
+
 using MyHours_UAMApp.Estructuras.Metodos;
+using MyHours_UAMApp.Estructuras;
 namespace MyHours_UAMApp
 
 {
     public partial class AdminAdd : Form
     {
+        // Instancia del servicio CRUD para manejar eventos
+        private CrudService<Evento> eventoService;
         public AdminAdd()
         {
             InitializeComponent();
+            eventoService = new CrudService<Evento>("eventos.dat");
             CargarEventosEnListView();
         }
+        // Método para cargar eventos en el ListView
         private void CargarEventosEnListView()
         {
             lvwEventos.Items.Clear();
@@ -53,7 +59,7 @@ namespace MyHours_UAMApp
 
         private void lblCerrarSesion_Click(object sender, EventArgs e)
         {
-            Rol form = new Rol();
+            IniciarSesion form = new IniciarSesion();
             form.Show();
             this.Close();
         }
@@ -102,7 +108,7 @@ namespace MyHours_UAMApp
 
             try
             {
-                string mensaje = Metodos.EliminarPartido(indice);
+                string mensaje = Metodos.EliminarEvento(indice);
 
                 MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarEventosEnListView();
