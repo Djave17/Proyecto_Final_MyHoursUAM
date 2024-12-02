@@ -596,7 +596,6 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                     nombreEvento = solicitud.Evento.nombreEvento;
                 }
                 item.SubItems.Add(nombreEvento);
-
                 item.SubItems.Add(solicitud.EstadoSolicitud.ToString());
                 item.SubItems.Add(solicitud.FechaSolicitud.ToString("dd/MM/yyyy HH:mm"));
                 listView.Items.Add(item);

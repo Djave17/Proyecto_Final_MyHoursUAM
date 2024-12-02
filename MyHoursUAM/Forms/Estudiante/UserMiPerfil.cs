@@ -47,7 +47,7 @@ namespace MyHours_UAMApp
 
         private void lblCerrarSesion_Click(object sender, EventArgs e)
         {
-            Rol form = new Rol();
+            IniciarSesion form = new IniciarSesion();
             form.Show();
             this.Close();
         }

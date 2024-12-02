@@ -133,12 +133,6 @@
     <Compile Include="Forms\Sesion\IniciarSesion.Designer.cs">
       <DependentUpon>IniciarSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Sesion\Rol.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sesion\Rol.Designer.cs">
-      <DependentUpon>Rol.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Sesion\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,9 +180,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sesion\IniciarSesion.resx">
       <DependentUpon>IniciarSesion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sesion\Rol.resx">
-      <DependentUpon>Rol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sesion\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>

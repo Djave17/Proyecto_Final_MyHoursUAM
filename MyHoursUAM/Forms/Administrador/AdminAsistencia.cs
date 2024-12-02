@@ -43,7 +43,7 @@ namespace MyHours_UAMApp
 
         private void lblCerrarSesion_Click(object sender, EventArgs e)
         {
-            Rol form = new Rol();
+            IniciarSesion form = new IniciarSesion();
             form.Show();
             this.Close();
         }
@@ -125,6 +125,11 @@ namespace MyHours_UAMApp
         }
 
         private void lvAsistencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlPieArriba_Paint(object sender, PaintEventArgs e)
         {
 
         }

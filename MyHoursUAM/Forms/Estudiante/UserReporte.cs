@@ -43,7 +43,7 @@ namespace MyHours_UAMApp
 
             int beneficioPartidos = Metodos.CalcularBeneficioPartidos(estudiante.cifEstudiante);
             lblBeneficioPartidos.Text = $"Partidos asistidos: {beneficioPartidos}";
-            CargarGrafico(); //LLamar funcion del grafico
+            CrearGrafico(horasLaborales,beneficioPartidos);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace MyHours_UAMApp
 
         private void lblCerrarSesion_Click(object sender, EventArgs e)
         {
-            Rol form = new Rol();
+            IniciarSesion form = new IniciarSesion();
             form.Show();
             this.Close();
         }
@@ -109,35 +109,51 @@ namespace MyHours_UAMApp
 
         }
 
-        private void CargarGrafico() //Grafico para el reporte
+        private void label2_Click(object sender, EventArgs e)
         {
-            chart1.Series.Clear();
+            IniciarSesion form = new IniciarSesion();
+            form.Show();
+            this.Close();
+        }
 
-            // Crear una nueva serie
-            var series = new Series("Convalidación")
-            {
-                ChartType = SeriesChartType.Column
-            };
-            foreach (ListViewItem item in lvwEventos.Items)
-            {
-                string nombreEvento = item.SubItems[1].Text;
-                string convalidacionStr = item.SubItems[3].Text; 
-
-                if (double.TryParse(convalidacionStr, out double convalidacion))
-                {
-                    series.Points.AddXY(nombreEvento, convalidacion);
-                }
-                else
-                {
-                    MessageBox.Show($"Error al convertir la convalidación para el evento: {nombreEvento}. Valor: {convalidacionStr}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-
-            chart1.Series.Add(series);
-            chart1.ChartAreas[0].AxisX.Title = "Eventos";
-            chart1.ChartAreas[0].AxisY.Title = "Convalidación";
+        private void pnlPieArriba_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbxPartidosAsistidos_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblHorasLaborales_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CrearGrafico(int horasLaborales, int beneficioPartidos)
+        {
+            chart1.Series.Clear();
+            chart1.Titles.Clear();
+
+            var series = new Series
+            {
+                Name = "Horas y Beneficios",
+                IsValueShownAsLabel = true,
+                ChartType = SeriesChartType.Pie
+            };
+
+            series.Points.AddXY("Horas Laborales", horasLaborales);
+            series.Points.AddXY("Beneficio Partidos", beneficioPartidos);
+
+            series.Label = "#VALX: #VAL (#PERCENT{P0})";
+            chart1.Series.Add(series);
+            chart1.Titles.Add("Horas Laborales y Beneficio Partidos");
+        }
     }
 }
