@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,10 +49,12 @@
   <ItemGroup>
     <Compile Include="Estructuras\Administrador.cs" />
     <Compile Include="Estructuras\Asistencia.cs" />
+    <Compile Include="Estructuras\SolicitudAsistencia.cs" />
     <Compile Include="Estructuras\Estudiante.cs" />
     <Compile Include="Estructuras\Evento.cs" />
     <Compile Include="Estructuras\Metodos\Metodos.cs" />
     <Compile Include="Estructuras\Partido.cs" />
+    <Compile Include="Estructuras\SesionActual.cs" />
     <Compile Include="Forms\Administrador\AdminAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +78,12 @@
     </Compile>
     <Compile Include="Forms\Administrador\AdminAddPartidos.Designer.cs">
       <DependentUpon>AdminAddPartidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\AdminGrafico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\AdminGrafico.Designer.cs">
+      <DependentUpon>AdminGrafico.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Administrador\SplashScreenAdmin.cs">
       <SubType>Form</SubType>
@@ -138,6 +147,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\CrudService.cs" />
     <EmbeddedResource Include="Forms\Administrador\AdminAdd.resx">
       <DependentUpon>AdminAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Administrador\AdminAddPartidos.resx">
       <DependentUpon>AdminAddPartidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrador\AdminGrafico.resx">
+      <DependentUpon>AdminGrafico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Administrador\SplashScreenAdmin.resx">
       <DependentUpon>SplashScreenAdmin.cs</DependentUpon>
@@ -202,11 +215,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\Administrador\administrador\" />
-    <Folder Include="Forms\servicios\" />
-    <Folder Include="Forms\Sesion\estudiante\" />
-    <Folder Include="Servicios\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

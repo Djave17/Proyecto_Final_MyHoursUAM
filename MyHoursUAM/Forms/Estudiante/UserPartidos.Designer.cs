@@ -47,18 +47,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.gbxEstudianteEventos = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.lvPartidos = new System.Windows.Forms.ListView();
-            this.clhNombrePartido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhLugarPartido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhLugar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhDeporte = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhHora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhHoraEnvio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhCantidadConvalidar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhConvalidar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhCupos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStudentIcon)).BeginInit();
@@ -79,13 +79,14 @@
             this.pnlPieArriba.Controls.Add(this.label1);
             this.pnlPieArriba.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPieArriba.Location = new System.Drawing.Point(165, 0);
-            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPieArriba.Name = "pnlPieArriba";
             this.pnlPieArriba.Size = new System.Drawing.Size(709, 73);
             this.pnlPieArriba.TabIndex = 9;
             // 
             // lblCerrarSesion
             // 
+            this.lblCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
@@ -99,9 +100,10 @@
             // 
             // pcbLogOutIcon
             // 
+            this.pcbLogOutIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
             this.pcbLogOutIcon.Location = new System.Drawing.Point(571, 19);
-            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbLogOutIcon.Name = "pcbLogOutIcon";
             this.pcbLogOutIcon.Size = new System.Drawing.Size(40, 41);
             this.pcbLogOutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,6 +112,7 @@
             // 
             // lblEstudiante
             // 
+            this.lblEstudiante.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblEstudiante.AutoSize = true;
             this.lblEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstudiante.ForeColor = System.Drawing.Color.Teal;
@@ -122,9 +125,10 @@
             // 
             // pcbStudentIcon
             // 
+            this.pcbStudentIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbStudentIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbStudentIcon.Image")));
             this.pcbStudentIcon.Location = new System.Drawing.Point(465, 21);
-            this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbStudentIcon.Name = "pcbStudentIcon";
             this.pcbStudentIcon.Size = new System.Drawing.Size(36, 38);
             this.pcbStudentIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,7 +155,7 @@
             this.pnlAreaAdministrador.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlAreaAdministrador.ForeColor = System.Drawing.Color.White;
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
-            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
             this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 629);
             this.pnlAreaAdministrador.TabIndex = 8;
@@ -166,7 +170,7 @@
             this.panel1.Controls.Add(this.btnVerEventos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 73);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(165, 620);
             this.panel1.TabIndex = 2;
@@ -180,7 +184,7 @@
             this.btnPartidos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPartidos.ForeColor = System.Drawing.Color.White;
             this.btnPartidos.Location = new System.Drawing.Point(2, 106);
-            this.btnPartidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPartidos.Margin = new System.Windows.Forms.Padding(2);
             this.btnPartidos.Name = "btnPartidos";
             this.btnPartidos.Size = new System.Drawing.Size(158, 97);
             this.btnPartidos.TabIndex = 16;
@@ -197,7 +201,7 @@
             this.btnReporte.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporte.ForeColor = System.Drawing.Color.White;
             this.btnReporte.Location = new System.Drawing.Point(-2, 416);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(2);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(165, 97);
             this.btnReporte.TabIndex = 15;
@@ -214,7 +218,7 @@
             this.button1.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(7, 203);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 99);
             this.button1.TabIndex = 13;
@@ -226,7 +230,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(0, 101);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(4, 103);
             this.panel2.TabIndex = 3;
@@ -240,7 +244,7 @@
             this.btnAjustes.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjustes.ForeColor = System.Drawing.Color.White;
             this.btnAjustes.Location = new System.Drawing.Point(-2, 307);
-            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2);
             this.btnAjustes.Name = "btnAjustes";
             this.btnAjustes.Size = new System.Drawing.Size(165, 99);
             this.btnAjustes.TabIndex = 12;
@@ -257,7 +261,7 @@
             this.btnVerEventos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerEventos.ForeColor = System.Drawing.Color.White;
             this.btnVerEventos.Location = new System.Drawing.Point(-2, 5);
-            this.btnVerEventos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerEventos.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerEventos.Name = "btnVerEventos";
             this.btnVerEventos.Size = new System.Drawing.Size(165, 99);
             this.btnVerEventos.TabIndex = 10;
@@ -270,7 +274,7 @@
             this.pnlIcon.Controls.Add(this.pictureBox1);
             this.pnlIcon.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlIcon.Location = new System.Drawing.Point(0, 0);
-            this.pnlIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pnlIcon.Name = "pnlIcon";
             this.pnlIcon.Size = new System.Drawing.Size(165, 73);
             this.pnlIcon.TabIndex = 1;
@@ -279,7 +283,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(61, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -290,8 +294,8 @@
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(170, 77);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Location = new System.Drawing.Point(170, 78);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(693, 541);
             this.listView1.TabIndex = 10;
@@ -299,6 +303,9 @@
             // 
             // gbxEstudianteEventos
             // 
+            this.gbxEstudianteEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbxEstudianteEventos.Controls.Add(this.label3);
             this.gbxEstudianteEventos.Controls.Add(this.label2);
             this.gbxEstudianteEventos.Controls.Add(this.button2);
@@ -311,75 +318,14 @@
             this.gbxEstudianteEventos.TabStop = false;
             this.gbxEstudianteEventos.Text = "Eventos";
             // 
-            // lvPartidos
+            // label3
             // 
-            this.lvPartidos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clhNombrePartido,
-            this.clhLugarPartido,
-            this.clhDeporte,
-            this.clhHora,
-            this.clhFecha,
-            this.clhHoraEnvio,
-            this.clhCantidadConvalidar,
-            this.clhCupos});
-            this.lvPartidos.FullRowSelect = true;
-            this.lvPartidos.HideSelection = false;
-            this.lvPartidos.Location = new System.Drawing.Point(0, 157);
-            this.lvPartidos.Margin = new System.Windows.Forms.Padding(2);
-            this.lvPartidos.Name = "lvPartidos";
-            this.lvPartidos.Size = new System.Drawing.Size(650, 349);
-            this.lvPartidos.TabIndex = 89;
-            this.lvPartidos.UseCompatibleStateImageBehavior = false;
-            this.lvPartidos.View = System.Windows.Forms.View.Details;
-            // 
-            // clhNombrePartido
-            // 
-            this.clhNombrePartido.Text = "Nombre";
-            this.clhNombrePartido.Width = 120;
-            // 
-            // clhLugarPartido
-            // 
-            this.clhLugarPartido.Text = "Lugar";
-            this.clhLugarPartido.Width = 120;
-            // 
-            // clhDeporte
-            // 
-            this.clhDeporte.Text = "Deporte";
-            this.clhDeporte.Width = 90;
-            // 
-            // clhHora
-            // 
-            this.clhHora.Text = "Hora";
-            // 
-            // clhFecha
-            // 
-            this.clhFecha.Text = "Fecha";
-            this.clhFecha.Width = 100;
-            // 
-            // clhHoraEnvio
-            // 
-            this.clhHoraEnvio.Text = "Hora de envio";
-            this.clhHoraEnvio.Width = 200;
-            // 
-            // clhCantidadConvalidar
-            // 
-            this.clhCantidadConvalidar.Text = "Cantidad a convalidar";
-            // 
-            // clhCupos
-            // 
-            this.clhCupos.Text = "Cupos";
-            this.clhCupos.Width = 75;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.CadetBlue;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(6, 120);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 29);
-            this.button2.TabIndex = 90;
-            this.button2.Text = "Enviar asistencia ";
-            this.button2.UseVisualStyleBackColor = false;
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(644, 43);
+            this.label3.TabIndex = 92;
+            this.label3.Text = "Es necesario enviar un comprobante de asistencia. ";
             // 
             // label2
             // 
@@ -392,14 +338,79 @@
     " de la asistencia.";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // button2
             // 
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(644, 43);
-            this.label3.TabIndex = 92;
-            this.label3.Text = "Es necesario enviar un comprobante de asistencia. ";
+            this.button2.BackColor = System.Drawing.Color.CadetBlue;
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(6, 120);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(176, 29);
+            this.button2.TabIndex = 90;
+            this.button2.Text = "Enviar asistencia ";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lvPartidos
+            // 
+            this.lvPartidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvPartidos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clhID,
+            this.clhNombre,
+            this.clhLugar,
+            this.clhDeporte,
+            this.clhHora,
+            this.clhFecha,
+            this.clhConvalidar,
+            this.clhCupos});
+            this.lvPartidos.FullRowSelect = true;
+            this.lvPartidos.HideSelection = false;
+            this.lvPartidos.Location = new System.Drawing.Point(0, 157);
+            this.lvPartidos.Margin = new System.Windows.Forms.Padding(2);
+            this.lvPartidos.Name = "lvPartidos";
+            this.lvPartidos.Size = new System.Drawing.Size(650, 349);
+            this.lvPartidos.TabIndex = 89;
+            this.lvPartidos.UseCompatibleStateImageBehavior = false;
+            this.lvPartidos.View = System.Windows.Forms.View.Details;
+            this.lvPartidos.SelectedIndexChanged += new System.EventHandler(this.lvPartidos_SelectedIndexChanged);
+            // 
+            // clhID
+            // 
+            this.clhID.Text = "ID";
+            // 
+            // clhNombre
+            // 
+            this.clhNombre.Text = "Nombre";
+            this.clhNombre.Width = 100;
+            // 
+            // clhLugar
+            // 
+            this.clhLugar.Text = "Lugar";
+            // 
+            // clhDeporte
+            // 
+            this.clhDeporte.Text = "Deporte";
+            this.clhDeporte.Width = 90;
+            // 
+            // clhHora
+            // 
+            this.clhHora.Text = "Hora";
+            this.clhHora.Width = 100;
+            // 
+            // clhFecha
+            // 
+            this.clhFecha.Text = "Fecha";
+            this.clhFecha.Width = 200;
+            // 
+            // clhConvalidar
+            // 
+            this.clhConvalidar.Text = "Cantidad a convalidar";
+            this.clhConvalidar.Width = 75;
+            // 
+            // clhCupos
+            // 
+            this.clhCupos.Text = "Cupos";
             // 
             // UserPartidos
             // 
@@ -412,7 +423,7 @@
             this.Controls.Add(this.pnlAreaAdministrador);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserPartidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Partidos";
@@ -449,17 +460,17 @@
         private System.Windows.Forms.Button btnPartidos;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.GroupBox gbxEstudianteEventos;
-        private System.Windows.Forms.ListView lvPartidos;
-        private System.Windows.Forms.ColumnHeader clhNombrePartido;
-        private System.Windows.Forms.ColumnHeader clhLugarPartido;
-        private System.Windows.Forms.ColumnHeader clhDeporte;
-        private System.Windows.Forms.ColumnHeader clhHora;
-        private System.Windows.Forms.ColumnHeader clhFecha;
-        private System.Windows.Forms.ColumnHeader clhHoraEnvio;
-        private System.Windows.Forms.ColumnHeader clhCantidadConvalidar;
-        private System.Windows.Forms.ColumnHeader clhCupos;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListView lvPartidos;
+        private System.Windows.Forms.ColumnHeader clhID;
+        private System.Windows.Forms.ColumnHeader clhNombre;
+        private System.Windows.Forms.ColumnHeader clhDeporte;
+        private System.Windows.Forms.ColumnHeader clhLugar;
+        private System.Windows.Forms.ColumnHeader clhHora;
+        private System.Windows.Forms.ColumnHeader clhFecha;
+        private System.Windows.Forms.ColumnHeader clhCupos;
+        private System.Windows.Forms.ColumnHeader clhConvalidar;
     }
 }

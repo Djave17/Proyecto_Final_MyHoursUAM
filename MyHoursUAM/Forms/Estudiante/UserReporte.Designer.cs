@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserReporte));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnReporte = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,6 +48,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblEstudiante = new System.Windows.Forms.Label();
             this.pcbStudentIcon = new System.Windows.Forms.PictureBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lvwEventos = new System.Windows.Forms.ListView();
+            this.clhIDEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhNombreEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhTipoConvalidacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhConvalida = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhHorario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhLugar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhTipoEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblHorasLaborales = new System.Windows.Forms.Label();
+            this.lblBeneficioPartidos = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlIcon.SuspendLayout();
@@ -52,6 +69,9 @@
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStudentIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnReporte
@@ -62,10 +82,10 @@
             this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReporte.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporte.ForeColor = System.Drawing.Color.White;
-            this.btnReporte.Location = new System.Drawing.Point(12, 527);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReporte.Location = new System.Drawing.Point(9, 428);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(2);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(202, 119);
+            this.btnReporte.Size = new System.Drawing.Size(152, 97);
             this.btnReporte.TabIndex = 15;
             this.btnReporte.Text = "📄 Reporte";
             this.btnReporte.UseVisualStyleBackColor = false;
@@ -80,10 +100,10 @@
             this.panel1.Controls.Add(this.btnAjustes);
             this.panel1.Controls.Add(this.btnVerEventos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 90);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 73);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 769);
+            this.panel1.Size = new System.Drawing.Size(165, 625);
             this.panel1.TabIndex = 2;
             // 
             // button1
@@ -94,10 +114,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(6, 250);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(4, 203);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 122);
+            this.button1.Size = new System.Drawing.Size(156, 99);
             this.button1.TabIndex = 13;
             this.button1.Text = "👤 Mi Perfil";
             this.button1.UseVisualStyleBackColor = false;
@@ -106,10 +126,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(3, 519);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(2, 422);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 127);
+            this.panel2.Size = new System.Drawing.Size(4, 103);
             this.panel2.TabIndex = 3;
             // 
             // btnPartidos
@@ -120,10 +140,10 @@
             this.btnPartidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPartidos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPartidos.ForeColor = System.Drawing.Color.White;
-            this.btnPartidos.Location = new System.Drawing.Point(-3, 124);
-            this.btnPartidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPartidos.Location = new System.Drawing.Point(-2, 101);
+            this.btnPartidos.Margin = new System.Windows.Forms.Padding(2);
             this.btnPartidos.Name = "btnPartidos";
-            this.btnPartidos.Size = new System.Drawing.Size(220, 119);
+            this.btnPartidos.Size = new System.Drawing.Size(165, 97);
             this.btnPartidos.TabIndex = 9;
             this.btnPartidos.Text = "⚽ Partidos";
             this.btnPartidos.UseVisualStyleBackColor = false;
@@ -137,10 +157,10 @@
             this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjustes.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjustes.ForeColor = System.Drawing.Color.White;
-            this.btnAjustes.Location = new System.Drawing.Point(-6, 378);
-            this.btnAjustes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAjustes.Location = new System.Drawing.Point(-4, 307);
+            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2);
             this.btnAjustes.Name = "btnAjustes";
-            this.btnAjustes.Size = new System.Drawing.Size(220, 122);
+            this.btnAjustes.Size = new System.Drawing.Size(165, 99);
             this.btnAjustes.TabIndex = 12;
             this.btnAjustes.Text = "⚙️   Ajustes";
             this.btnAjustes.UseVisualStyleBackColor = false;
@@ -154,10 +174,10 @@
             this.btnVerEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerEventos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerEventos.ForeColor = System.Drawing.Color.White;
-            this.btnVerEventos.Location = new System.Drawing.Point(-3, 6);
-            this.btnVerEventos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVerEventos.Location = new System.Drawing.Point(-2, 5);
+            this.btnVerEventos.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerEventos.Name = "btnVerEventos";
-            this.btnVerEventos.Size = new System.Drawing.Size(220, 122);
+            this.btnVerEventos.Size = new System.Drawing.Size(165, 99);
             this.btnVerEventos.TabIndex = 10;
             this.btnVerEventos.Text = "👁  Ver Eventos";
             this.btnVerEventos.UseVisualStyleBackColor = false;
@@ -166,10 +186,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(81, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(61, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(52, 78);
+            this.pictureBox1.Size = new System.Drawing.Size(39, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -180,9 +200,9 @@
             this.pnlIcon.Controls.Add(this.pictureBox1);
             this.pnlIcon.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlIcon.Location = new System.Drawing.Point(0, 0);
-            this.pnlIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pnlIcon.Name = "pnlIcon";
-            this.pnlIcon.Size = new System.Drawing.Size(220, 90);
+            this.pnlIcon.Size = new System.Drawing.Size(165, 73);
             this.pnlIcon.TabIndex = 1;
             // 
             // pnlAreaAdministrador
@@ -193,24 +213,25 @@
             this.pnlAreaAdministrador.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlAreaAdministrador.ForeColor = System.Drawing.Color.White;
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
-            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
-            this.pnlAreaAdministrador.Size = new System.Drawing.Size(220, 738);
+            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 749);
             this.pnlAreaAdministrador.TabIndex = 12;
             // 
             // pnlPieArriba
             // 
+            this.pnlPieArriba.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPieArriba.BackColor = System.Drawing.Color.White;
             this.pnlPieArriba.Controls.Add(this.lblCerrarSesion);
             this.pnlPieArriba.Controls.Add(this.pcbLogOutIcon);
             this.pnlPieArriba.Controls.Add(this.label1);
             this.pnlPieArriba.Controls.Add(this.lblEstudiante);
             this.pnlPieArriba.Controls.Add(this.pcbStudentIcon);
-            this.pnlPieArriba.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlPieArriba.Location = new System.Drawing.Point(220, 0);
-            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlPieArriba.Location = new System.Drawing.Point(165, 0);
+            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPieArriba.Name = "pnlPieArriba";
-            this.pnlPieArriba.Size = new System.Drawing.Size(887, 90);
+            this.pnlPieArriba.Size = new System.Drawing.Size(1316, 73);
             this.pnlPieArriba.TabIndex = 13;
             // 
             // lblCerrarSesion
@@ -218,9 +239,10 @@
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
-            this.lblCerrarSesion.Location = new System.Drawing.Point(779, 43);
+            this.lblCerrarSesion.Location = new System.Drawing.Point(1222, 35);
+            this.lblCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCerrarSesion.Name = "lblCerrarSesion";
-            this.lblCerrarSesion.Size = new System.Drawing.Size(102, 16);
+            this.lblCerrarSesion.Size = new System.Drawing.Size(83, 13);
             this.lblCerrarSesion.TabIndex = 4;
             this.lblCerrarSesion.Text = "Cerrar Sesion";
             this.lblCerrarSesion.Click += new System.EventHandler(this.lblCerrarSesion_Click);
@@ -228,10 +250,10 @@
             // pcbLogOutIcon
             // 
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
-            this.pcbLogOutIcon.Location = new System.Drawing.Point(720, 23);
-            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcbLogOutIcon.Location = new System.Drawing.Point(1096, 19);
+            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbLogOutIcon.Name = "pcbLogOutIcon";
-            this.pcbLogOutIcon.Size = new System.Drawing.Size(53, 50);
+            this.pcbLogOutIcon.Size = new System.Drawing.Size(40, 41);
             this.pcbLogOutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLogOutIcon.TabIndex = 3;
             this.pcbLogOutIcon.TabStop = false;
@@ -241,9 +263,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(27, 26);
+            this.label1.Location = new System.Drawing.Point(20, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 38);
+            this.label1.Size = new System.Drawing.Size(196, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "DASHBOARD";
             // 
@@ -252,32 +275,173 @@
             this.lblEstudiante.AutoSize = true;
             this.lblEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstudiante.ForeColor = System.Drawing.Color.Teal;
-            this.lblEstudiante.Location = new System.Drawing.Point(633, 43);
+            this.lblEstudiante.Location = new System.Drawing.Point(1025, 35);
+            this.lblEstudiante.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEstudiante.Name = "lblEstudiante";
-            this.lblEstudiante.Size = new System.Drawing.Size(80, 16);
+            this.lblEstudiante.Size = new System.Drawing.Size(67, 13);
             this.lblEstudiante.TabIndex = 0;
             this.lblEstudiante.Text = "Estudiante";
             // 
             // pcbStudentIcon
             // 
             this.pcbStudentIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbStudentIcon.Image")));
-            this.pcbStudentIcon.Location = new System.Drawing.Point(579, 26);
-            this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcbStudentIcon.Location = new System.Drawing.Point(985, 19);
+            this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbStudentIcon.Name = "pcbStudentIcon";
-            this.pcbStudentIcon.Size = new System.Drawing.Size(48, 47);
+            this.pcbStudentIcon.Size = new System.Drawing.Size(36, 38);
             this.pcbStudentIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbStudentIcon.TabIndex = 0;
             this.pcbStudentIcon.TabStop = false;
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(21, 34);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(898, 307);
+            this.chart1.TabIndex = 14;
+            this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.Silver;
+            this.groupBox1.Controls.Add(this.chart1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(191, 87);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(938, 365);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dashboard";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox2.Controls.Add(this.lvwEventos);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(191, 458);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(938, 358);
+            this.groupBox2.TabIndex = 16;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Eventos asistidos";
+            // 
+            // lvwEventos
+            // 
+            this.lvwEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvwEventos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clhIDEvento,
+            this.clhNombreEvento,
+            this.clhTipoConvalidacion,
+            this.clhConvalida,
+            this.clhHorario,
+            this.clhFecha,
+            this.clhLugar,
+            this.clhTipoEvento});
+            this.lvwEventos.FullRowSelect = true;
+            this.lvwEventos.HideSelection = false;
+            this.lvwEventos.Location = new System.Drawing.Point(12, 24);
+            this.lvwEventos.Margin = new System.Windows.Forms.Padding(2);
+            this.lvwEventos.Name = "lvwEventos";
+            this.lvwEventos.Size = new System.Drawing.Size(907, 316);
+            this.lvwEventos.TabIndex = 94;
+            this.lvwEventos.UseCompatibleStateImageBehavior = false;
+            this.lvwEventos.View = System.Windows.Forms.View.Details;
+            this.lvwEventos.SelectedIndexChanged += new System.EventHandler(this.lvwEventos_SelectedIndexChanged);
+            // 
+            // clhIDEvento
+            // 
+            this.clhIDEvento.Text = "IDEvento";
+            this.clhIDEvento.Width = 98;
+            // 
+            // clhNombreEvento
+            // 
+            this.clhNombreEvento.Text = "Nombre";
+            this.clhNombreEvento.Width = 180;
+            // 
+            // clhTipoConvalidacion
+            // 
+            this.clhTipoConvalidacion.DisplayIndex = 3;
+            this.clhTipoConvalidacion.Text = "Tipo de convalidacion";
+            this.clhTipoConvalidacion.Width = 200;
+            // 
+            // clhConvalida
+            // 
+            this.clhConvalida.DisplayIndex = 4;
+            this.clhConvalida.Text = "Convalida";
+            this.clhConvalida.Width = 101;
+            // 
+            // clhHorario
+            // 
+            this.clhHorario.DisplayIndex = 5;
+            this.clhHorario.Text = "Horario";
+            this.clhHorario.Width = 80;
+            // 
+            // clhFecha
+            // 
+            this.clhFecha.DisplayIndex = 7;
+            this.clhFecha.Text = "Fecha";
+            this.clhFecha.Width = 80;
+            // 
+            // clhLugar
+            // 
+            this.clhLugar.Text = "Lugar";
+            this.clhLugar.Width = 80;
+            // 
+            // clhTipoEvento
+            // 
+            this.clhTipoEvento.DisplayIndex = 2;
+            this.clhTipoEvento.Text = "Tipo de Evento";
+            this.clhTipoEvento.Width = 180;
+            // 
+            // lblHorasLaborales
+            // 
+            this.lblHorasLaborales.AutoSize = true;
+            this.lblHorasLaborales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorasLaborales.Location = new System.Drawing.Point(1135, 87);
+            this.lblHorasLaborales.Name = "lblHorasLaborales";
+            this.lblHorasLaborales.Size = new System.Drawing.Size(51, 20);
+            this.lblHorasLaborales.TabIndex = 17;
+            this.lblHorasLaborales.Text = "label2";
+            // 
+            // lblBeneficioPartidos
+            // 
+            this.lblBeneficioPartidos.AutoSize = true;
+            this.lblBeneficioPartidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBeneficioPartidos.Location = new System.Drawing.Point(1135, 121);
+            this.lblBeneficioPartidos.Name = "lblBeneficioPartidos";
+            this.lblBeneficioPartidos.Size = new System.Drawing.Size(51, 20);
+            this.lblBeneficioPartidos.TabIndex = 18;
+            this.lblBeneficioPartidos.Text = "label3";
+            this.lblBeneficioPartidos.Click += new System.EventHandler(this.label3_Click);
+            // 
             // UserReporte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1107, 738);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.lblBeneficioPartidos);
+            this.Controls.Add(this.lblHorasLaborales);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnlPieArriba);
             this.Controls.Add(this.pnlAreaAdministrador);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserReporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Reporte";
@@ -290,7 +454,11 @@
             this.pnlPieArriba.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStudentIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -312,5 +480,19 @@
         private System.Windows.Forms.Label lblEstudiante;
         private System.Windows.Forms.PictureBox pcbStudentIcon;
         private System.Windows.Forms.Button btnPartidos;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ListView lvwEventos;
+        private System.Windows.Forms.ColumnHeader clhIDEvento;
+        private System.Windows.Forms.ColumnHeader clhNombreEvento;
+        private System.Windows.Forms.ColumnHeader clhTipoConvalidacion;
+        private System.Windows.Forms.ColumnHeader clhConvalida;
+        private System.Windows.Forms.ColumnHeader clhHorario;
+        private System.Windows.Forms.ColumnHeader clhFecha;
+        private System.Windows.Forms.ColumnHeader clhLugar;
+        private System.Windows.Forms.ColumnHeader clhTipoEvento;
+        private System.Windows.Forms.Label lblHorasLaborales;
+        private System.Windows.Forms.Label lblBeneficioPartidos;
     }
 }

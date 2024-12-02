@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MyHours_UAMApp.Estructuras.Metodos;
+using MyHours_UAMApp.Estructuras;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +17,31 @@ namespace MyHours_UAMApp
         public UserReporte()
         {
             InitializeComponent();
+           
         }
 
         private void UserReporte_Load(object sender, EventArgs e)
         {
+            var estudiante = SesionActual.EstudianteActual;
 
+            if (estudiante == null)
+            {
+                MessageBox.Show("No se ha iniciado sesión como estudiante.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Obtener eventos asistidos
+            var eventosAsistidos = Metodos.ObtenerEventosAsistidos(estudiante.cifEstudiante);
+
+            // Usar el método centralizado para cargar los eventos en el ListView
+            Metodos.CargarEventosAsistidos(lvwEventos, eventosAsistidos);
+
+            // Actualizar etiquetas de horas y beneficios
+            int horasLaborales = Metodos.CalcularHorasLaborales(estudiante.cifEstudiante);
+            lblHorasLaborales.Text = $"Horas laborales: {horasLaborales}";
+
+            int beneficioPartidos = Metodos.CalcularBeneficioPartidos(estudiante.cifEstudiante);
+            lblBeneficioPartidos.Text = $"Partidos asistidos: {beneficioPartidos}";
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -63,6 +85,26 @@ namespace MyHours_UAMApp
             UserPartidos form = new UserPartidos();
             form.Show();
             this.Close();
+        }
+
+        private void lvEventosAsistidos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lvwEventos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

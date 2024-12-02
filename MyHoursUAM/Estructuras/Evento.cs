@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyHours_UAMApp.Estructuras
 {
+    [Serializable]
     internal class Evento
     {
         public string nombreEvento { get; set; }
@@ -33,6 +34,5 @@ namespace MyHours_UAMApp.Estructuras
             voluntario
         }
         public TipoEvento tipoEvento { get; set; }
-
     }
 }

@@ -10,5 +10,6 @@ namespace MyHours_UAMApp.Estructuras
     {
         public string cifAdministrador { get; set; }
         public string contraseñaAdministrador { get; set; }
+        public string nombreAdministrador { get; set; }
     }
 }

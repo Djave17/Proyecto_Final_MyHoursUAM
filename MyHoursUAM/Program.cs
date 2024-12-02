@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyHours_UAMApp.Estructuras.Metodos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace MyHours_UAMApp
         [STAThread]
         static void Main()
         {
+            Metodos.Inicializar(); //Cargamos los datos
             //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new SplashScreen());
