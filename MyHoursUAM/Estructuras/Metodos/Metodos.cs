@@ -652,7 +652,46 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
             return partidosAprobados;
         }
+        public static void CargarSolicitudesEnListViewPrueba(ListView listView, bool mostrarPartidos)
+        {
+            if (listView == null)
+            {
+                throw new ArgumentNullException(nameof(listView), "El ListView proporcionado es nulo.");
+            }
 
+            if (solicitudes == null)
+            {
+                throw new InvalidOperationException("La lista de solicitudes no ha sido inicializada.");
+            }
+
+            listView.Items.Clear();
+
+            foreach (var solicitud in solicitudes)
+            {
+                if (mostrarPartidos && solicitud.Partidos == null)
+                    continue;
+
+                if (!mostrarPartidos && solicitud.Eventos == null)
+                    continue;
+
+                var item = new ListViewItem(solicitud.Id);
+
+                if (mostrarPartidos)
+                {
+                    item.SubItems.Add("Partido");
+                    item.SubItems.Add(solicitud.Partidos?.nombrePartido ?? "N/A");
+                    item.SubItems.Add(solicitud.Partidos?.deporte.ToString() ?? "N/A");
+                }
+                else
+                {
+                    item.SubItems.Add("Evento");
+                    item.SubItems.Add(solicitud.Eventos?.nombreEvento ?? "N/A");
+                    item.SubItems.Add(solicitud.Eventos?.tipoBeneficio ?? "N/A");
+                }
+
+                listView.Items.Add(item);
+            }
+        }
 
 
         public static void CargarSolicitudesEnListView(ListView listView)

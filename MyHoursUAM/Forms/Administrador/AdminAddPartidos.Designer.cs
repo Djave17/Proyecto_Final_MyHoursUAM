@@ -235,7 +235,7 @@
             this.gpbAddPartidos.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbAddPartidos.Location = new System.Drawing.Point(172, 82);
             this.gpbAddPartidos.Name = "gpbAddPartidos";
-            this.gpbAddPartidos.Size = new System.Drawing.Size(575, 1072);
+            this.gpbAddPartidos.Size = new System.Drawing.Size(558, 1153);
             this.gpbAddPartidos.TabIndex = 2;
             this.gpbAddPartidos.TabStop = false;
             this.gpbAddPartidos.Text = "Añadir Partidos";
@@ -261,7 +261,7 @@
             this.btnCambiarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCambiarEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambiarEstado.ForeColor = System.Drawing.Color.White;
-            this.btnCambiarEstado.Location = new System.Drawing.Point(324, 483);
+            this.btnCambiarEstado.Location = new System.Drawing.Point(316, 483);
             this.btnCambiarEstado.Margin = new System.Windows.Forms.Padding(2);
             this.btnCambiarEstado.Name = "btnCambiarEstado";
             this.btnCambiarEstado.Size = new System.Drawing.Size(130, 28);
@@ -291,7 +291,7 @@
             this.lvPartidos.Location = new System.Drawing.Point(5, 524);
             this.lvPartidos.Margin = new System.Windows.Forms.Padding(2);
             this.lvPartidos.Name = "lvPartidos";
-            this.lvPartidos.Size = new System.Drawing.Size(564, 524);
+            this.lvPartidos.Size = new System.Drawing.Size(547, 605);
             this.lvPartidos.TabIndex = 88;
             this.lvPartidos.UseCompatibleStateImageBehavior = false;
             this.lvPartidos.View = System.Windows.Forms.View.Details;
@@ -463,7 +463,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(210, 483);
+            this.btnEliminar.Location = new System.Drawing.Point(202, 483);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(42, 28);
@@ -524,7 +524,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(266, 483);
+            this.btnEditar.Location = new System.Drawing.Point(258, 483);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(42, 28);
@@ -542,7 +542,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(152, 483);
+            this.btnGuardar.Location = new System.Drawing.Point(144, 483);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(42, 28);
@@ -593,7 +593,7 @@
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
-            this.lblCerrarSesion.Location = new System.Drawing.Point(491, 35);
+            this.lblCerrarSesion.Location = new System.Drawing.Point(474, 35);
             this.lblCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCerrarSesion.Name = "lblCerrarSesion";
             this.lblCerrarSesion.Size = new System.Drawing.Size(83, 13);
@@ -605,7 +605,7 @@
             // 
             this.pcbLogOutIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
-            this.pcbLogOutIcon.Location = new System.Drawing.Point(437, 17);
+            this.pcbLogOutIcon.Location = new System.Drawing.Point(420, 17);
             this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbLogOutIcon.Name = "pcbLogOutIcon";
             this.pcbLogOutIcon.Size = new System.Drawing.Size(40, 41);
@@ -619,7 +619,7 @@
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdmin.ForeColor = System.Drawing.Color.Teal;
-            this.lblAdmin.Location = new System.Drawing.Point(339, 35);
+            this.lblAdmin.Location = new System.Drawing.Point(322, 35);
             this.lblAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(83, 13);
@@ -630,7 +630,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(293, 20);
+            this.pictureBox2.Location = new System.Drawing.Point(276, 20);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 38);
@@ -663,7 +663,7 @@
             this.panel3.Location = new System.Drawing.Point(164, 1);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(582, 73);
+            this.panel3.Size = new System.Drawing.Size(565, 73);
             this.panel3.TabIndex = 3;
             // 
             // AdminAddPartidos

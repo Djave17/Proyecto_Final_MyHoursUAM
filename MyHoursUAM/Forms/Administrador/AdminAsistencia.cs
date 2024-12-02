@@ -18,7 +18,7 @@ namespace MyHours_UAMApp
         public AdminAsistencia()
         {
             InitializeComponent();
-            Metodos.CargarSolicitudesEnListView(lvAsistencia);
+            
 
         }
 
@@ -69,10 +69,11 @@ namespace MyHours_UAMApp
             this.Close();
         }
 
-        
+
 
         private void btnConfirmarAsistencia_Click(object sender, EventArgs e)
         {
+            // Validar que haya una solicitud seleccionada
             if (lvAsistencia.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Seleccione una solicitud para confirmar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -81,41 +82,50 @@ namespace MyHours_UAMApp
 
             try
             {
-                //verificar si es un partido o evento
-                if (lvAsistencia.SelectedItems[0].SubItems[1].Text == "Partido")
+                // Obtener el ID de la solicitud seleccionada
+                string solicitudId = lvAsistencia.SelectedItems[0].Text;
+
+                // Buscar la solicitud directamente en la lista global
+                var solicitud = Metodos.solicitudes.FirstOrDefault(s => s.Id == solicitudId);
+
+                if (solicitud == null)
                 {
-                    string solicitudId = lvAsistencia.SelectedItems[0].Text;
-                    // Confirmar la solicitud
-                    string mensaje = Metodos.ConfirmarSolicitudPartidos(solicitudId);
-                    MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // Actualizar vista
-                    Metodos.CargarSolicitudesEnListView(lvAsistencia);
+                    MessageBox.Show("No se encontró la solicitud seleccionada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string mensaje;
+
+                // Determinar si es un partido o un evento
+                if (solicitud.Partidos != null)
+                {
+                    // Confirmar partido
+                    mensaje = Metodos.ConfirmarSolicitudPartidos(solicitudId);
+                }
+                else if (solicitud.Eventos != null)
+                {
+                    // Confirmar evento
+                    mensaje = Metodos.ConfirmarSolicitud(solicitudId);
                 }
                 else
                 {
-                    string solicitudId = lvAsistencia.SelectedItems[0].Text;
-                    // Confirmar la solicitud
-                    string mensaje = Metodos.ConfirmarSolicitud(solicitudId);
-                    MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // Actualizar vista
-                    Metodos.CargarSolicitudesEnListView(lvAsistencia);
+                    // Caso inesperado: solicitud sin partido ni evento
+                    MessageBox.Show("La solicitud seleccionada no corresponde a un evento ni a un partido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                //string solicitudId = lvAsistencia.SelectedItems[0].Text;
 
-                //// Confirmar la solicitud
-                //string mensaje = Metodos.ConfirmarSolicitud(solicitudId);
+                // Mostrar resultado
+                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                //MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                //// Actualizar vista
-                //Metodos.CargarSolicitudesEnListView(lvAsistencia);
+                // Recargar el ListView (opcional: filtrar según tipo, si es necesario)
+                Metodos.CargarSolicitudesEnListViewPrueba(lvAsistencia, solicitud.Partidos != null);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al confirmar la solicitud: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+
 
         private void btnDenegarAsistencia_Click(object sender, EventArgs e)
         {
@@ -148,6 +158,26 @@ namespace MyHours_UAMApp
         private void pnlPieArriba_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void AdminAsistencia_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                // Validar si la lista solicitudes está inicializada
+                if (Metodos.solicitudes == null)
+                {
+                    MessageBox.Show("La lista de solicitudes no está inicializada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Cargar solicitudes en el ListView
+                Metodos.CargarSolicitudesEnListViewPrueba(lvAsistencia, false); // false: cargar eventos
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar las solicitudes: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
