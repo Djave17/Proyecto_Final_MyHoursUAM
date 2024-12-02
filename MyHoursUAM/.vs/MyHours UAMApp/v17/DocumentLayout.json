@@ -1,81 +1,81 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\",
+  "WorkspaceRootPath": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\forms\\administrador\\adminasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\forms\\administrador\\adminasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\administrador\\adminasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\forms\\administrador\\adminasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\forms\\administrador\\adminasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\administrador\\adminasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\forms\\administrador\\adminajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\administrador\\adminajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|d:\\desktop\\proyecto final\\david\\proyecto_final_myhoursuam\\myhoursuam\\forms\\administrador\\adminasistencia.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\administrador\\adminasistencia.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\estructuras\\metodos\\metodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:estructuras\\metodos\\metodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\forms\\administrador\\adminaddpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\administrador\\adminaddpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\forms\\estudiante\\userreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\estudiante\\userreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\forms\\administrador\\admingrafico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\administrador\\admingrafico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\forms\\estudiante\\userpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\estudiante\\userpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\forms\\estudiante\\userpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\estudiante\\userpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\forms\\estudiante\\userreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\estudiante\\userreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\forms\\administrador\\adminaddpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\administrador\\adminaddpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\estructuras\\solicitudasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:estructuras\\solicitudasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\forms\\estudiante\\userevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\forms\\estudiante\\userevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\estudiante\\userevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\forms\\estudiante\\userevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\forms\\estudiante\\userevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\estudiante\\userevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\estructuras\\estudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\forms\\estudiante\\userpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\estudiante\\userpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\forms\\estudiante\\userpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\estudiante\\userpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|d:\\desktop\\proyecto_final_myhoursuam-david\\proyecto_final_myhoursuam-david\\myhoursuam\\estructuras\\metodos\\metodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:estructuras\\metodos\\metodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\forms\\estudiante\\userreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\estudiante\\userreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\forms\\administrador\\adminaddpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\administrador\\adminaddpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\forms\\administrador\\admingrafico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\administrador\\admingrafico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\forms\\estudiante\\userreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\estudiante\\userreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\forms\\administrador\\adminaddpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\administrador\\adminaddpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\estructuras\\solicitudasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:estructuras\\solicitudasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\forms\\administrador\\adminasistencia.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\administrador\\adminasistencia.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\forms\\administrador\\adminajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\administrador\\adminajustes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\estructuras\\estudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:estructuras\\estudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\forms\\administrador\\adminadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\forms\\administrador\\adminadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\administrador\\adminadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\forms\\administrador\\adminadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\forms\\administrador\\adminadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\administrador\\adminadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -86,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,22 +106,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserReporte.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Estudiante\\UserReporte.cs",
-              "RelativeDocumentMoniker": "Forms\\Estudiante\\UserReporte.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Estudiante\\UserReporte.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Forms\\Estudiante\\UserReporte.cs [Dise\u00F1o]",
+              "DocumentIndex": 4,
+              "Title": "UserPartidos.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Estudiante\\UserPartidos.cs",
+              "RelativeDocumentMoniker": "Forms\\Estudiante\\UserPartidos.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Estudiante\\UserPartidos.cs",
+              "RelativeToolTip": "Forms\\Estudiante\\UserPartidos.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAkwGQAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T02:38:53.791Z"
+              "WhenOpened": "2024-12-02T04:17:48.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Metodos.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Estructuras\\Metodos\\Metodos.cs",
+              "RelativeDocumentMoniker": "Estructuras\\Metodos\\Metodos.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Estructuras\\Metodos\\Metodos.cs",
+              "RelativeToolTip": "Estructuras\\Metodos\\Metodos.cs",
+              "ViewState": "AgIAAOwCAAAAAAAAAAAQwOYCAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T03:49:54.264Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "UserReporte.cs",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Estudiante\\UserReporte.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Estudiante\\UserReporte.cs",
               "RelativeDocumentMoniker": "Forms\\Estudiante\\UserReporte.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Estudiante\\UserReporte.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Estudiante\\UserReporte.cs",
               "RelativeToolTip": "Forms\\Estudiante\\UserReporte.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwCUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -129,22 +144,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "UserPartidos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Estudiante\\UserPartidos.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Estudiante\\UserPartidos.cs",
               "RelativeDocumentMoniker": "Forms\\Estudiante\\UserPartidos.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Estudiante\\UserPartidos.cs [Dise\u00F1o]",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Estudiante\\UserPartidos.cs [Dise\u00F1o]",
               "RelativeToolTip": "Forms\\Estudiante\\UserPartidos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T04:14:56.008Z"
+              "WhenOpened": "2024-12-02T04:14:56.008Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "AdminAsistencia.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAsistencia.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminAsistencia.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAsistencia.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAsistencia.cs [Dise\u00F1o]",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminAsistencia.cs [Dise\u00F1o]",
               "RelativeToolTip": "Forms\\Administrador\\AdminAsistencia.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T05:07:53.188Z",
@@ -152,72 +168,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminAsistencia.Designer.cs",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAsistencia.Designer.cs",
-              "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAsistencia.Designer.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAsistencia.Designer.cs",
-              "RelativeToolTip": "Forms\\Administrador\\AdminAsistencia.Designer.cs",
-              "ViewState": "AgIAAMwBAAAAAAAAAAAgwBYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T06:03:34.324Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "AdminAddPartidos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAddPartidos.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminAddPartidos.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAddPartidos.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAddPartidos.cs [Dise\u00F1o]",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminAddPartidos.cs [Dise\u00F1o]",
               "RelativeToolTip": "Forms\\Administrador\\AdminAddPartidos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T05:00:01.966Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminAjustes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAjustes.cs",
-              "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAjustes.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAjustes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Forms\\Administrador\\AdminAjustes.cs [Dise\u00F1o]",
+              "DocumentIndex": 3,
+              "Title": "UserEvento.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Estudiante\\UserEvento.cs",
+              "RelativeDocumentMoniker": "Forms\\Estudiante\\UserEvento.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Estudiante\\UserEvento.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Forms\\Estudiante\\UserEvento.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T06:29:18.906Z",
+              "WhenOpened": "2024-12-02T04:14:44.684Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserEvento.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Estudiante\\UserEvento.cs",
+              "RelativeDocumentMoniker": "Forms\\Estudiante\\UserEvento.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Estudiante\\UserEvento.cs",
+              "RelativeToolTip": "Forms\\Estudiante\\UserEvento.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAkwGwAAACEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T04:14:46.068Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AdminAsistencia.cs",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAsistencia.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminAsistencia.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAsistencia.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAsistencia.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminAsistencia.cs",
               "RelativeToolTip": "Forms\\Administrador\\AdminAsistencia.cs",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAswHIAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAqwKsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T04:26:34.586Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Metodos.cs",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Estructuras\\Metodos\\Metodos.cs",
-              "RelativeDocumentMoniker": "Estructuras\\Metodos\\Metodos.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Estructuras\\Metodos\\Metodos.cs*",
-              "RelativeToolTip": "Estructuras\\Metodos\\Metodos.cs*",
-              "ViewState": "AgIAAJECAAAAAAAAAAAwwJECAAAbAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "UserReporte.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Estudiante\\UserReporte.cs",
+              "RelativeDocumentMoniker": "Forms\\Estudiante\\UserReporte.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Estudiante\\UserReporte.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Forms\\Estudiante\\UserReporte.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T03:49:54.264Z"
+              "WhenOpened": "2024-12-02T02:38:53.791Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "Estudiante.cs",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Estructuras\\Estudiante.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Estructuras\\Estudiante.cs",
               "RelativeDocumentMoniker": "Estructuras\\Estudiante.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Estructuras\\Estudiante.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Estructuras\\Estudiante.cs",
               "RelativeToolTip": "Estructuras\\Estudiante.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -225,23 +240,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserPartidos.cs",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Estudiante\\UserPartidos.cs",
-              "RelativeDocumentMoniker": "Forms\\Estudiante\\UserPartidos.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Estudiante\\UserPartidos.cs",
-              "RelativeToolTip": "Forms\\Estudiante\\UserPartidos.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAkwGQAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T04:17:48.061Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 11,
               "Title": "AdminAddPartidos.cs",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAddPartidos.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminAddPartidos.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAddPartidos.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAddPartidos.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminAddPartidos.cs",
               "RelativeToolTip": "Forms\\Administrador\\AdminAddPartidos.cs",
               "ViewState": "AgIAAGgAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -249,11 +252,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "AdminGrafico.cs",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminGrafico.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminGrafico.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminGrafico.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminGrafico.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminGrafico.cs",
               "RelativeToolTip": "Forms\\Administrador\\AdminGrafico.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAEwBgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -263,9 +266,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "SolicitudAsistencia.cs",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Estructuras\\SolicitudAsistencia.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Estructuras\\SolicitudAsistencia.cs",
               "RelativeDocumentMoniker": "Estructuras\\SolicitudAsistencia.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Estructuras\\SolicitudAsistencia.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Estructuras\\SolicitudAsistencia.cs",
               "RelativeToolTip": "Estructuras\\SolicitudAsistencia.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -273,11 +276,24 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AdminAsistencia.Designer.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminAsistencia.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAsistencia.Designer.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminAsistencia.Designer.cs",
+              "RelativeToolTip": "Forms\\Administrador\\AdminAsistencia.Designer.cs",
+              "ViewState": "AgIAAKMBAAAAAAAAAAAmwLcBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T06:03:34.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 12,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Program.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Program.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -285,32 +301,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UserEvento.cs",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Estudiante\\UserEvento.cs",
-              "RelativeDocumentMoniker": "Forms\\Estudiante\\UserEvento.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Estudiante\\UserEvento.cs",
-              "RelativeToolTip": "Forms\\Estudiante\\UserEvento.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAkwGwAAACEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T04:14:46.068Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "UserEvento.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Estudiante\\UserEvento.cs",
-              "RelativeDocumentMoniker": "Forms\\Estudiante\\UserEvento.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Estudiante\\UserEvento.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Forms\\Estudiante\\UserEvento.cs [Dise\u00F1o]",
+              "Title": "AdminAjustes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminAjustes.cs",
+              "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAjustes.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAjustes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAjustes.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T04:14:44.684Z"
+              "WhenOpened": "2024-12-02T06:29:18.906Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "AdminAdd.cs [Design]",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAdd.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminAdd.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAdd.cs",
               "ToolTip": "C:\\Users\\seque\\OneDrive\\Desktop\\Metodologia y Programacion\\RepoActualizado\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAdd.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -320,9 +324,9 @@
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "AdminAdd.cs",
-              "DocumentMoniker": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAdd.cs",
+              "DocumentMoniker": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminAdd.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAdd.cs",
-              "ToolTip": "D:\\Desktop\\Proyecto final\\David\\Proyecto_Final_MyHoursUAM\\MyHoursUAM\\Forms\\Administrador\\AdminAdd.cs",
+              "ToolTip": "D:\\Desktop\\Proyecto_Final_MyHoursUAM-David\\Proyecto_Final_MyHoursUAM-David\\MyHoursUAM\\Forms\\Administrador\\AdminAdd.cs",
               "RelativeToolTip": "Forms\\Administrador\\AdminAdd.cs",
               "ViewState": "AgIAAFYAAAAAAAAAAAAswG4AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

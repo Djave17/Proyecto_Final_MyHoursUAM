@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -19,7 +20,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         private static CrudService<Estudiante> estudiantesService = new CrudService<Estudiante>($"estudiantes.dat");
 
         // Listas públicas cargadas desde los archivos
-        public static List<SolicitudAsistencia> solicitudes = solicitudesService.GetAll();
+        public static List<SolicitudAsistencia> solicitudesEventos = solicitudesService.GetAll();
+        public static List<SolicitudAsistencia> solicitudesPartidos = solicitudesService.GetAll();
         //public static List<Estudiante> estudiantes = estudiantesService.GetAll();
         public static List<Evento> eventos = eventoService.GetAll();
         public static List<Partido> partidos = partidoService.GetAll();
@@ -38,7 +40,9 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             // Cargar listas desde los archivos binarios
             eventos = eventoService.GetAll() ?? new List<Evento>();
             partidos = partidoService.GetAll() ?? new List<Partido>();
-            solicitudes = solicitudesService.GetAll() ?? new List<SolicitudAsistencia>();
+            solicitudesEventos = solicitudesService.GetAll()?.Where(s => s.Eventos != null).ToList() ?? new List<SolicitudAsistencia>();
+            solicitudesPartidos = solicitudesService.GetAll()?.Where(s => s.Partidos != null).ToList() ?? new List<SolicitudAsistencia>();
+
 
             // Sincronizar contadores con los datos existentes
             SincronizarContadores();
@@ -517,7 +521,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         public static void EnviarSolicitudEvento(string estudianteId, Evento evento)
         {
             // Validar si ya existe una solicitud para este evento
-            if (solicitudes.Any(s => s.EstudianteId == estudianteId && s.Eventos.idEvento == evento.idEvento))
+            if (solicitudesEventos.Any(s => s.EstudianteId == estudianteId && s.Eventos.idEvento == evento.idEvento))
             {
                 throw new InvalidOperationException("Ya existe una solicitud para este evento.");
             }
@@ -550,7 +554,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 eventoActualizado.cupos--;
             }
 
-            // Guardar cambios en solicitudes y eventos
+            // Guardar cambios en solicitudesEventos y eventos
             solicitudesService.SaveData();
             eventoService.SaveData();
         }
@@ -564,39 +568,35 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         /// <exception cref="InvalidOperationException"></exception>
         public static void EnviarSolicitudPartido(string estudianteId, Partido partido)
         {
-            // Validar si ya existe una solicitud para este partido
-            if (solicitudes.Any(s => s.EstudianteId == estudianteId && s.Partidos != null && s.Partidos.idEvento == partido.idEvento))
+            if (solicitudesPartidos.Any(s => s.EstudianteId == estudianteId && s.Partidos?.idEvento == partido.idEvento))
             {
                 throw new InvalidOperationException("Ya existe una solicitud para este partido.");
             }
 
-            // Validar si hay cupos disponibles en el partido
             if (partido.cupos <= 0)
             {
                 throw new InvalidOperationException("El partido ya no tiene cupos disponibles.");
             }
 
-            // Validar si el partido está disponible
             if (partido.estadoEvento != Partido.EstadoEvento.Disponible)
             {
                 throw new InvalidOperationException("El partido no está disponible para asistencia.");
             }
 
-            // Crear y agregar la nueva solicitud
-            solicitudesService.Add(new SolicitudAsistencia
+            var nuevaSolicitud = new SolicitudAsistencia
             {
-                Id = "S" + contadorSolicitudes++, // Generar un ID único
+                Id = "S" + contadorSolicitudes++,
+                EventoId = partido.idEvento,
                 EstudianteId = estudianteId,
                 Partidos = partido,
                 EstadoSolicitud = SolicitudAsistencia.Estado.Pendiente,
                 FechaSolicitud = DateTime.Now
-            });
+            };
 
-            // Disminuir el número de cupos del partido
+            solicitudesPartidos.Add(nuevaSolicitud);
+            solicitudesService.Add(nuevaSolicitud);
             partido.cupos--;
 
-            // Guardar cambios
-            solicitudesService.SaveData();
             partidoService.SaveData();
         }
 
@@ -609,7 +609,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             if (estudiante == null)
                 return new List<Evento>();
 
-            var eventosAprobados = solicitudes
+            var eventosAprobados = solicitudesEventos
                 .Where(s => s.EstudianteId == estudianteId && s.EstadoSolicitud == SolicitudAsistencia.Estado.Aprobado)
                 .Select(s => s.Eventos)
                 .ToList();
@@ -636,11 +636,11 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             if (estudiante == null)
                 return new List<Partido>();
 
-            if (solicitudes == null || solicitudes.Count == 0)
+            if (solicitudesPartidos == null || solicitudesPartidos.Count == 0)
                 return new List<Partido>();
 
-            // Filtrar solicitudes aprobadas y verificar que los partidos no sean nulos
-            var partidosAprobados = solicitudes
+            // Filtrar solicitudesEventos aprobadas y verificar que los partidos no sean nulos
+            var partidosAprobados = solicitudesPartidos
                 .Where(s => s.EstudianteId == estudianteId && s.EstadoSolicitud == SolicitudAsistencia.Estado.Aprobado && s.Partidos != null)
                 .Select(s => s.Partidos)
                 .Where(p => p != null) // Validar partidos no nulos
@@ -652,146 +652,151 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
             return partidosAprobados;
         }
-        public static void CargarSolicitudesEnListViewPrueba(ListView listView, bool mostrarPartidos)
+
+
+
+        public static void CargarSolicitudesEnListView(ListView listView, bool mostrarPartidos)
         {
+            // Validar que el ListView no sea nulo
             if (listView == null)
             {
                 throw new ArgumentNullException(nameof(listView), "El ListView proporcionado es nulo.");
             }
 
-            if (solicitudes == null)
+            // Validar que la lista de solicitudesEventos esté inicializada
+            if (solicitudesEventos == null)
             {
                 throw new InvalidOperationException("La lista de solicitudes no ha sido inicializada.");
             }
 
+            // Limpiar el contenido del ListView
             listView.Items.Clear();
 
-            foreach (var solicitud in solicitudes)
+            // Iterar sobre las solicitudesEventos con índice
+            int index = 1; // Empezamos desde 1 para el índice humano
+            foreach (var solicitud in solicitudesEventos)
             {
+                // Filtrar solicitudesEventos según el tipo (partidos o eventos)
                 if (mostrarPartidos && solicitud.Partidos == null)
                     continue;
 
                 if (!mostrarPartidos && solicitud.Eventos == null)
                     continue;
 
-                var item = new ListViewItem(solicitud.Id);
+                // Crear un nuevo elemento para el ListView con el índice como primera columna
+                var item = new ListViewItem(solicitud.Id); // Índice como primer subítem
 
-                if (mostrarPartidos)
+                // Agregar detalles específicos según el tipo
+                if (mostrarPartidos && solicitud.Partidos != null)
                 {
-                    item.SubItems.Add("Partido");
-                    item.SubItems.Add(solicitud.Partidos?.nombrePartido ?? "N/A");
-                    item.SubItems.Add(solicitud.Partidos?.deporte.ToString() ?? "N/A");
+                                        // ID de la Solicitud
+                    item.SubItems.Add(solicitud.Partidos.idEvento);         // ID del Partido
+                    item.SubItems.Add(solicitud.EstudianteId);              // CIF del Estudiante
+                    item.SubItems.Add(solicitud.Partidos.nombrePartido);    // Nombre del Partido
+                    item.SubItems.Add(solicitud.EstadoSolicitud.ToString());// Estado de la Solicitud
+                    item.SubItems.Add(solicitud.FechaSolicitud.ToString("dd/MM/yyyy")); 
+                    item.SubItems.Add("Partido");// Fecha de la Solicitud
                 }
-                else
+                else if (!mostrarPartidos && solicitud.Eventos != null)
                 {
+                                                                            // ID de la Solicitud
+                    item.SubItems.Add(solicitud.Eventos.idEvento);          // ID del Evento
+                    item.SubItems.Add(solicitud.EstudianteId);              // CIF del Estudiante
+                    item.SubItems.Add(solicitud.Eventos.nombreEvento);      // Nombre del Evento
+                    item.SubItems.Add(solicitud.EstadoSolicitud.ToString());// Estado de la Solicitud
+                    item.SubItems.Add(solicitud.FechaSolicitud.ToString("dd/MM/yyyy")); // Fecha de la Solicitud
                     item.SubItems.Add("Evento");
-                    item.SubItems.Add(solicitud.Eventos?.nombreEvento ?? "N/A");
-                    item.SubItems.Add(solicitud.Eventos?.tipoBeneficio ?? "N/A");
                 }
 
+                // Incrementar el índice para la siguiente solicitud
+                index++;
+
+                // Agregar el elemento al ListView
                 listView.Items.Add(item);
             }
         }
 
 
-        public static void CargarSolicitudesEnListView(ListView listView)
+        public static string ConfirmarSolicitudEvento(string solicitudId)
         {
-            listView.Items.Clear();
-            foreach (var solicitud in solicitudes)
-            {
-                
+            var solicitud = solicitudesEventos.FirstOrDefault(s => s.Id == solicitudId);
+            if (solicitud == null) return "No se encontró la solicitud.";
 
-                var item = new ListViewItem(solicitud.Id.ToString());
-                string nombreEvento = string.Empty;
-                string idEvento = string.Empty;
-                if (solicitud.Eventos is Partido partido) //Validacion para mostrar nombre de evento o partido
-                {
-                    nombreEvento = partido.nombrePartido;
-                    idEvento = partido.idEvento;
-                }
-                else
-                {
-                    nombreEvento = solicitud.Eventos.nombreEvento;
-                    idEvento = solicitud.Eventos.idEvento;
-                }
-                item.SubItems.Add(idEvento);
-                item.SubItems.Add(solicitud.EstudianteId);
-                
-                item.SubItems.Add(nombreEvento);
-               
-                item.SubItems.Add(solicitud.EstadoSolicitud.ToString());
-                item.SubItems.Add(solicitud.FechaSolicitud.ToString("dd/MM/yyyy HH:mm"));
-                listView.Items.Add(item);
-            }
-        }
-       
-        public static string ConfirmarSolicitud(string solicitudId)
-        {
-            var solicitud = solicitudes.FirstOrDefault(s => s.Id == solicitudId);
-            if (solicitud == null)
-                return "No se encontró la solicitud.";
+            if (solicitud.EstadoSolicitud == SolicitudAsistencia.Estado.Aprobado)
+                return "La solicitud ya fue aprobada previamente.";
 
-            // Cambiar estado a Aprobado
             solicitud.EstadoSolicitud = SolicitudAsistencia.Estado.Aprobado;
-
-            // Buscar al estudiante relacionado
             var estudiante = estudiantes.FirstOrDefault(e => e.cifEstudiante == solicitud.EstudianteId);
-            if (estudiante == null)
-                return "No se encontró el estudiante asociado.";
+            if (estudiante == null) return "No se encontró el estudiante asociado.";
 
-            // Validar si el evento ya está registrado como asistido
             if (solicitud.Eventos != null && estudiante.eventosAsistidos.Contains(solicitud.Eventos.idEvento))
                 return "El evento ya está registrado como asistido para este estudiante.";
 
-            // Agregar evento asistido al estudiante
             if (solicitud.Eventos != null)
             {
                 estudiante.eventosAsistidos.Add(solicitud.Eventos.idEvento);
-                //estudiante.HorasCompletadas += solicitud.Evento.cantidadConvalidar; // Incrementar horas completadas
             }
 
-            
-
-            // Guardar datos actualizados
             solicitudesService.SaveData();
             estudiantesService.SaveData();
-            eventoService.SaveData();
 
-            return "Solicitud confirmada, evento actualizado y agregado a los eventos asistidos del estudiante.";
+            if (solicitud.Eventos != null)
+            {
+                eventoService.SaveData();
+            }
+
+            return "Solicitud confirmada.";
         }
+
         public static string ConfirmarSolicitudPartidos(string solicitudId)
         {
-            var solicitud = solicitudes.FirstOrDefault(s => s.Id == solicitudId);
+            var solicitud = solicitudesEventos.FirstOrDefault(s => s.Id == solicitudId);
             if (solicitud == null)
-                return "No se encontró la solicitud.";
-            // Cambiar estado a Aprobado
+                return $"No se encontró la solicitud con ID {solicitudId}.";
+
+            if (solicitud.EstadoSolicitud == SolicitudAsistencia.Estado.Aprobado)
+                return "La solicitud ya fue aprobada previamente.";
+
             solicitud.EstadoSolicitud = SolicitudAsistencia.Estado.Aprobado;
-            // Buscar al estudiante relacionado
+
             var estudiante = estudiantes.FirstOrDefault(e => e.cifEstudiante == solicitud.EstudianteId);
             if (estudiante == null)
                 return "No se encontró el estudiante asociado.";
-            // Validar si el evento ya está registrado como asistido
-            if (solicitud.Partidos != null && estudiante.partidosAsistidos.Contains(solicitud.Partidos.idEvento))
+
+            if (solicitud.Eventos != null && estudiante.eventosAsistidos.Contains(solicitud.Eventos.idEvento))
                 return "El evento ya está registrado como asistido para este estudiante.";
-            // Agregar evento asistido al estudiante
-            if (solicitud.Partidos != null)
+
+            if (solicitud.Eventos != null)
             {
-                estudiante.partidosAsistidos.Add(solicitud.Partidos.idEvento);
-                //estudiante.HorasCompletadas += solicitud.Evento.cantidadConvalidar; // Incrementar horas completadas
+                estudiante.eventosAsistidos.Add(solicitud.Eventos.idEvento);
             }
-            // Guardar datos actualizados
+
             solicitudesService.SaveData();
             estudiantesService.SaveData();
             eventoService.SaveData();
+
             return "Solicitud confirmada, evento actualizado y agregado a los eventos asistidos del estudiante.";
         }
 
 
 
         // Rechazar una solicitud
-        public static string RechazarSolicitud(string solicitudId)
+        public static string RechazarSolicitudEvento(string solicitudId)
         {
-            var solicitud = solicitudes.FirstOrDefault(s => s.Id == solicitudId);
+            var solicitud = solicitudesEventos.FirstOrDefault(s => s.Id == solicitudId);
+            if (solicitud == null)
+                return "No se encontró la solicitud.";
+
+            // Cambiar estado a Rechazado
+            solicitud.EstadoSolicitud = SolicitudAsistencia.Estado.Rechazado;
+
+            // Guardar cambios
+            solicitudesService.SaveData();
+            return "Solicitud rechazada correctamente.";
+        }
+        public static string RechazarSolicitudPartido(string solicitudId)
+        {
+            var solicitud = solicitudesPartidos.FirstOrDefault(s => s.Id == solicitudId);
             if (solicitud == null)
                 return "No se encontró la solicitud.";
 
@@ -865,9 +870,9 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 partidoCounter = partidos.Max(p => int.Parse(p.idEvento.TrimStart('P'))) + 1;
             }
 
-            if (solicitudes != null && solicitudes.Count > 0)
+            if (solicitudesEventos != null && solicitudesEventos.Count > 0)
             {
-                contadorSolicitudes = solicitudes.Max(s => int.Parse(s.Id.TrimStart('S'))) + 1;
+                contadorSolicitudes = solicitudesEventos.Max(s => int.Parse(s.Id.TrimStart('S'))) + 1;
             }
         }
 
