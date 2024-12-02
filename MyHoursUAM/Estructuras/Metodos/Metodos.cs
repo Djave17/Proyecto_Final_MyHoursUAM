@@ -564,40 +564,40 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         /// <exception cref="InvalidOperationException"></exception>
         public static void EnviarSolicitudPartido(string estudianteId, Partido partido)
         {
-            // Validar si ya existe una solicitud para este evento
-            if (solicitudes.Any(s => s.EstudianteId == estudianteId && s.Eventos.idEvento == partido.idEvento))
+            // Validar si ya existe una solicitud para este partido
+            if (solicitudes.Any(s => s.EstudianteId == estudianteId && s.Partidos != null && s.Partidos.idEvento == partido.idEvento))
             {
-                throw new InvalidOperationException("Ya existe una solicitud para este evento.");
+                throw new InvalidOperationException("Ya existe una solicitud para este partido.");
             }
-            // Validar si hay cupos disponibles en el evento
+
+            // Validar si hay cupos disponibles en el partido
             if (partido.cupos <= 0)
             {
-                throw new InvalidOperationException("El evento ya no tiene cupos disponibles.");
+                throw new InvalidOperationException("El partido ya no tiene cupos disponibles.");
             }
-            //validar si esta disponible
+
+            // Validar si el partido está disponible
             if (partido.estadoEvento != Partido.EstadoEvento.Disponible)
             {
-                throw new InvalidOperationException("El evento no está disponible para asistencia.");
+                throw new InvalidOperationException("El partido no está disponible para asistencia.");
             }
+
             // Crear y agregar la nueva solicitud
             solicitudesService.Add(new SolicitudAsistencia
             {
                 Id = "S" + contadorSolicitudes++, // Generar un ID único
-                EventoId = partido.idEvento,    
                 EstudianteId = estudianteId,
-                Eventos = partido,
+                Partidos = partido,
                 EstadoSolicitud = SolicitudAsistencia.Estado.Pendiente,
                 FechaSolicitud = DateTime.Now
             });
-            // Disminuir el número de cupos del evento
-            var eventoActualizado = eventos.FirstOrDefault(e => e.idEvento == partido.idEvento);
-            if (eventoActualizado != null)
-            {
-                eventoActualizado.cupos--;
-            }
-            // Guardar cambios en solicitudes y eventos
+
+            // Disminuir el número de cupos del partido
+            partido.cupos--;
+
+            // Guardar cambios
             solicitudesService.SaveData();
-            eventoService.SaveData();
+            partidoService.SaveData();
         }
 
 
@@ -627,17 +627,33 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         /// <returns></returns>
         public static List<Partido> ObtenerPartidosAsistidos(string estudianteId)
         {
+            if (estudiantes == null || estudiantes.Count == 0)
+            {
+                throw new InvalidOperationException("La lista de estudiantes no está inicializada.");
+            }
+
             var estudiante = estudiantes.FirstOrDefault(e => e.cifEstudiante == estudianteId);
             if (estudiante == null)
                 return new List<Partido>();
+
+            if (solicitudes == null || solicitudes.Count == 0)
+                return new List<Partido>();
+
+            // Filtrar solicitudes aprobadas y verificar que los partidos no sean nulos
             var partidosAprobados = solicitudes
-                .Where(s => s.EstudianteId == estudianteId && s.EstadoSolicitud == SolicitudAsistencia.Estado.Aprobado)
+                .Where(s => s.EstudianteId == estudianteId && s.EstadoSolicitud == SolicitudAsistencia.Estado.Aprobado && s.Partidos != null)
                 .Select(s => s.Partidos)
+                .Where(p => p != null) // Validar partidos no nulos
                 .ToList();
-            // Sincronizar partidos aprobados con eventosAsistidos
-            estudiante.partidosAsistidos = partidosAprobados.Select(e => e.idEvento).ToList();
+
+            estudiante.partidosAsistidos = partidosAprobados
+                .Select(p => p.idEvento)
+                .ToList();
+
             return partidosAprobados;
         }
+
+
 
         public static void CargarSolicitudesEnListView(ListView listView)
         {
@@ -704,6 +720,32 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
             return "Solicitud confirmada, evento actualizado y agregado a los eventos asistidos del estudiante.";
         }
+        public static string ConfirmarSolicitudPartidos(string solicitudId)
+        {
+            var solicitud = solicitudes.FirstOrDefault(s => s.Id == solicitudId);
+            if (solicitud == null)
+                return "No se encontró la solicitud.";
+            // Cambiar estado a Aprobado
+            solicitud.EstadoSolicitud = SolicitudAsistencia.Estado.Aprobado;
+            // Buscar al estudiante relacionado
+            var estudiante = estudiantes.FirstOrDefault(e => e.cifEstudiante == solicitud.EstudianteId);
+            if (estudiante == null)
+                return "No se encontró el estudiante asociado.";
+            // Validar si el evento ya está registrado como asistido
+            if (solicitud.Partidos != null && estudiante.partidosAsistidos.Contains(solicitud.Partidos.idEvento))
+                return "El evento ya está registrado como asistido para este estudiante.";
+            // Agregar evento asistido al estudiante
+            if (solicitud.Partidos != null)
+            {
+                estudiante.partidosAsistidos.Add(solicitud.Partidos.idEvento);
+                //estudiante.HorasCompletadas += solicitud.Evento.cantidadConvalidar; // Incrementar horas completadas
+            }
+            // Guardar datos actualizados
+            solicitudesService.SaveData();
+            estudiantesService.SaveData();
+            eventoService.SaveData();
+            return "Solicitud confirmada, evento actualizado y agregado a los eventos asistidos del estudiante.";
+        }
 
 
 
@@ -744,20 +786,29 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         //Cargar partidos asistidos en ListView
         public static void CargarPartidosAsistidos(ListView listView, List<Partido> partidosAsistidos)
         {
-            listView.Items.Clear(); // Limpiar el control antes de cargar nuevos datos
+            listView.Items.Clear();
+
+            if (partidosAsistidos == null || partidosAsistidos.Count == 0)
+            {
+                MessageBox.Show("No hay partidos asistidos registrados.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             foreach (var partido in partidosAsistidos)
             {
+                if (partido == null) continue; // Validar partidos no nulos
+
                 var item = new ListViewItem(partido.idEvento); // ID del evento
-                item.SubItems.Add(partido.idEvento);       // Nombre del evento
-                item.SubItems.Add(partido.nombrePartido);       // Nombre del evento
-                item.SubItems.Add(partido.tipoBeneficio);  // Tipo de convalidación
-                item.SubItems.Add(partido.cantidadConvalidar.ToString()); // Horas convalidadas
-                item.SubItems.Add(partido.horaEvento);         // Hora del evento
-                item.SubItems.Add(partido.fechaEvento);        // Fecha del evento
-                item.SubItems.Add(partido.deporte.ToString());        // Lugar del evento
+                item.SubItems.Add(partido.nombrePartido ?? "N/A"); // Manejar nulos
+                item.SubItems.Add(partido.tipoBeneficio ?? "N/A");
+                item.SubItems.Add(partido.cantidadConvalidar.ToString() ?? "0");
+                item.SubItems.Add(partido.horaEvento ?? "N/A");
+                item.SubItems.Add(partido.fechaEvento ?? "N/A");
+                item.SubItems.Add(partido.deporte.ToString() ?? "N/A");
                 listView.Items.Add(item);
             }
         }
+
 
         //public static List<Estudiante> estudiantes = CargarEstudiantesSincronizados();
 

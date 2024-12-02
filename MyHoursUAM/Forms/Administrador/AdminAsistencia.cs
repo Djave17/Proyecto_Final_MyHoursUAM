@@ -81,15 +81,34 @@ namespace MyHours_UAMApp
 
             try
             {
-                string solicitudId = lvAsistencia.SelectedItems[0].Text;
+                //verificar si es un partido o evento
+                if (lvAsistencia.SelectedItems[0].SubItems[1].Text == "Partido")
+                {
+                    string solicitudId = lvAsistencia.SelectedItems[0].Text;
+                    // Confirmar la solicitud
+                    string mensaje = Metodos.ConfirmarSolicitudPartidos(solicitudId);
+                    MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Actualizar vista
+                    Metodos.CargarSolicitudesEnListView(lvAsistencia);
+                }
+                else
+                {
+                    string solicitudId = lvAsistencia.SelectedItems[0].Text;
+                    // Confirmar la solicitud
+                    string mensaje = Metodos.ConfirmarSolicitud(solicitudId);
+                    MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Actualizar vista
+                    Metodos.CargarSolicitudesEnListView(lvAsistencia);
+                }
+                //string solicitudId = lvAsistencia.SelectedItems[0].Text;
 
-                // Confirmar la solicitud
-                string mensaje = Metodos.ConfirmarSolicitud(solicitudId);
+                //// Confirmar la solicitud
+                //string mensaje = Metodos.ConfirmarSolicitud(solicitudId);
 
-                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Actualizar vista
-                Metodos.CargarSolicitudesEnListView(lvAsistencia);
+                //// Actualizar vista
+                //Metodos.CargarSolicitudesEnListView(lvAsistencia);
             }
             catch (Exception ex)
             {
