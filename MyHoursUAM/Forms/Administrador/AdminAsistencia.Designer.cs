@@ -54,22 +54,20 @@
             this.clhNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhEstadoSolicitud = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhFechaSolicitud = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhTipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnDenegarAsistencia = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnConfirmarAsistencia = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvPartidos = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnDenegarPartido = new System.Windows.Forms.Button();
+            this.btnConfirmarPartido = new System.Windows.Forms.Button();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -94,7 +92,7 @@
             this.pnlPieArriba.Location = new System.Drawing.Point(165, 0);
             this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPieArriba.Name = "pnlPieArriba";
-            this.pnlPieArriba.Size = new System.Drawing.Size(838, 73);
+            this.pnlPieArriba.Size = new System.Drawing.Size(678, 73);
             this.pnlPieArriba.TabIndex = 7;
             this.pnlPieArriba.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPieArriba_Paint);
             // 
@@ -104,7 +102,7 @@
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
-            this.lblCerrarSesion.Location = new System.Drawing.Point(738, 28);
+            this.lblCerrarSesion.Location = new System.Drawing.Point(578, 28);
             this.lblCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCerrarSesion.Name = "lblCerrarSesion";
             this.lblCerrarSesion.Size = new System.Drawing.Size(83, 13);
@@ -116,7 +114,7 @@
             // 
             this.pcbLogOutIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
-            this.pcbLogOutIcon.Location = new System.Drawing.Point(693, 11);
+            this.pcbLogOutIcon.Location = new System.Drawing.Point(533, 11);
             this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbLogOutIcon.Name = "pcbLogOutIcon";
             this.pcbLogOutIcon.Size = new System.Drawing.Size(40, 41);
@@ -130,7 +128,7 @@
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdmin.ForeColor = System.Drawing.Color.Teal;
-            this.lblAdmin.Location = new System.Drawing.Point(612, 28);
+            this.lblAdmin.Location = new System.Drawing.Point(452, 28);
             this.lblAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(83, 13);
@@ -141,7 +139,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(571, 15);
+            this.pictureBox2.Location = new System.Drawing.Point(411, 15);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 38);
@@ -171,7 +169,7 @@
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
             this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
-            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 753);
+            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 690);
             this.pnlAreaAdministrador.TabIndex = 6;
             // 
             // panel1
@@ -335,10 +333,10 @@
             this.gbxEstudianteEventos.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxEstudianteEventos.Location = new System.Drawing.Point(191, 78);
             this.gbxEstudianteEventos.Name = "gbxEstudianteEventos";
-            this.gbxEstudianteEventos.Size = new System.Drawing.Size(804, 424);
+            this.gbxEstudianteEventos.Size = new System.Drawing.Size(635, 342);
             this.gbxEstudianteEventos.TabIndex = 94;
             this.gbxEstudianteEventos.TabStop = false;
-            this.gbxEstudianteEventos.Text = "Asistencia";
+            this.gbxEstudianteEventos.Text = "Asistencia Eventos";
             // 
             // lvAsistencia
             // 
@@ -351,15 +349,14 @@
             this.clhEstudianteId,
             this.clhNombre,
             this.clhEstadoSolicitud,
-            this.clhFechaSolicitud,
-            this.clhTipo});
+            this.clhFechaSolicitud});
             this.lvAsistencia.FullRowSelect = true;
             this.lvAsistencia.HideSelection = false;
             this.lvAsistencia.LabelEdit = true;
             this.lvAsistencia.Location = new System.Drawing.Point(0, 169);
             this.lvAsistencia.Margin = new System.Windows.Forms.Padding(2);
             this.lvAsistencia.Name = "lvAsistencia";
-            this.lvAsistencia.Size = new System.Drawing.Size(799, 214);
+            this.lvAsistencia.Size = new System.Drawing.Size(630, 173);
             this.lvAsistencia.TabIndex = 95;
             this.lvAsistencia.UseCompatibleStateImageBehavior = false;
             this.lvAsistencia.View = System.Windows.Forms.View.Details;
@@ -393,10 +390,6 @@
             // 
             this.clhFechaSolicitud.Text = "Fecha";
             this.clhFechaSolicitud.Width = 220;
-            // 
-            // clhTipo
-            // 
-            this.clhTipo.Text = "Tipo";
             // 
             // btnDenegarAsistencia
             // 
@@ -446,40 +439,39 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.lvPartidos);
+            this.groupBox1.Controls.Add(this.btnDenegarPartido);
+            this.groupBox1.Controls.Add(this.btnConfirmarPartido);
             this.groupBox1.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(187, 466);
+            this.groupBox1.Location = new System.Drawing.Point(191, 437);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(804, 394);
+            this.groupBox1.Size = new System.Drawing.Size(632, 322);
             this.groupBox1.TabIndex = 96;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Asistencia de partidos";
+            this.groupBox1.Text = "Asistencia Partidos";
             // 
-            // listView1
+            // lvPartidos
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lvPartidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvPartidos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7});
-            this.listView1.FullRowSelect = true;
-            this.listView1.HideSelection = false;
-            this.listView1.LabelEdit = true;
-            this.listView1.Location = new System.Drawing.Point(1, 107);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(799, 220);
-            this.listView1.TabIndex = 95;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.columnHeader6});
+            this.lvPartidos.FullRowSelect = true;
+            this.lvPartidos.HideSelection = false;
+            this.lvPartidos.LabelEdit = true;
+            this.lvPartidos.Location = new System.Drawing.Point(4, 82);
+            this.lvPartidos.Margin = new System.Windows.Forms.Padding(2);
+            this.lvPartidos.Name = "lvPartidos";
+            this.lvPartidos.Size = new System.Drawing.Size(627, 189);
+            this.lvPartidos.TabIndex = 95;
+            this.lvPartidos.UseCompatibleStateImageBehavior = false;
+            this.lvPartidos.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -510,38 +502,35 @@
             this.columnHeader6.Text = "Fecha";
             this.columnHeader6.Width = 220;
             // 
-            // columnHeader7
+            // btnDenegarPartido
             // 
-            this.columnHeader7.Text = "Tipo";
+            this.btnDenegarPartido.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnDenegarPartido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDenegarPartido.Location = new System.Drawing.Point(192, 33);
+            this.btnDenegarPartido.Name = "btnDenegarPartido";
+            this.btnDenegarPartido.Size = new System.Drawing.Size(176, 29);
+            this.btnDenegarPartido.TabIndex = 94;
+            this.btnDenegarPartido.Text = "Denegar Asistencia";
+            this.btnDenegarPartido.UseVisualStyleBackColor = false;
+            this.btnDenegarPartido.Click += new System.EventHandler(this.btnDenegarPartido_Click);
             // 
-            // button2
+            // btnConfirmarPartido
             // 
-            this.button2.BackColor = System.Drawing.Color.CadetBlue;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(182, 43);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 29);
-            this.button2.TabIndex = 94;
-            this.button2.Text = "Denegar Asistencia";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.CadetBlue;
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(0, 43);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(176, 29);
-            this.button3.TabIndex = 90;
-            this.button3.Text = "Confirmar Asistencia";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnConfirmarPartido.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnConfirmarPartido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnConfirmarPartido.Location = new System.Drawing.Point(10, 33);
+            this.btnConfirmarPartido.Name = "btnConfirmarPartido";
+            this.btnConfirmarPartido.Size = new System.Drawing.Size(176, 29);
+            this.btnConfirmarPartido.TabIndex = 90;
+            this.btnConfirmarPartido.Text = "Confirmar Asistencia";
+            this.btnConfirmarPartido.UseVisualStyleBackColor = false;
+            this.btnConfirmarPartido.Click += new System.EventHandler(this.btnConfirmarPartido_Click);
             // 
             // AdminAsistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 753);
+            this.ClientSize = new System.Drawing.Size(843, 690);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbxEstudianteEventos);
             this.Controls.Add(this.pnlPieArriba);
@@ -552,6 +541,7 @@
             this.Name = "AdminAsistencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Asistencia";
+            this.Load += new System.EventHandler(this.AdminAsistencia_Load);
             this.pnlPieArriba.ResumeLayout(false);
             this.pnlPieArriba.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).EndInit();
@@ -598,17 +588,15 @@
         private System.Windows.Forms.ColumnHeader clhFechaSolicitud;
         private System.Windows.Forms.ColumnHeader clhIdSolicitud;
         private System.Windows.Forms.ColumnHeader clhIdEvento;
-        private System.Windows.Forms.ColumnHeader clhTipo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvPartidos;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDenegarPartido;
+        private System.Windows.Forms.Button btnConfirmarPartido;
     }
 }

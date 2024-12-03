@@ -95,7 +95,7 @@
             this.btnReporte.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporte.ForeColor = System.Drawing.Color.White;
             this.btnReporte.Location = new System.Drawing.Point(9, 428);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(2);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(152, 97);
             this.btnReporte.TabIndex = 15;
@@ -113,7 +113,7 @@
             this.panel1.Controls.Add(this.btnVerEventos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 73);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(165, 674);
             this.panel1.TabIndex = 2;
@@ -127,7 +127,7 @@
             this.button1.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(4, 203);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 99);
             this.button1.TabIndex = 13;
@@ -139,7 +139,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(2, 422);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(4, 103);
             this.panel2.TabIndex = 3;
@@ -153,7 +153,7 @@
             this.btnPartidos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPartidos.ForeColor = System.Drawing.Color.White;
             this.btnPartidos.Location = new System.Drawing.Point(-2, 101);
-            this.btnPartidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPartidos.Margin = new System.Windows.Forms.Padding(2);
             this.btnPartidos.Name = "btnPartidos";
             this.btnPartidos.Size = new System.Drawing.Size(165, 97);
             this.btnPartidos.TabIndex = 9;
@@ -170,7 +170,7 @@
             this.btnAjustes.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjustes.ForeColor = System.Drawing.Color.White;
             this.btnAjustes.Location = new System.Drawing.Point(-4, 307);
-            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2);
             this.btnAjustes.Name = "btnAjustes";
             this.btnAjustes.Size = new System.Drawing.Size(165, 99);
             this.btnAjustes.TabIndex = 12;
@@ -187,7 +187,7 @@
             this.btnVerEventos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerEventos.ForeColor = System.Drawing.Color.White;
             this.btnVerEventos.Location = new System.Drawing.Point(-2, 5);
-            this.btnVerEventos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerEventos.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerEventos.Name = "btnVerEventos";
             this.btnVerEventos.Size = new System.Drawing.Size(165, 99);
             this.btnVerEventos.TabIndex = 10;
@@ -199,7 +199,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(61, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -212,7 +212,7 @@
             this.pnlIcon.Controls.Add(this.pictureBox1);
             this.pnlIcon.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlIcon.Location = new System.Drawing.Point(0, 0);
-            this.pnlIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pnlIcon.Name = "pnlIcon";
             this.pnlIcon.Size = new System.Drawing.Size(165, 73);
             this.pnlIcon.TabIndex = 1;
@@ -225,9 +225,9 @@
             this.pnlAreaAdministrador.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlAreaAdministrador.ForeColor = System.Drawing.Color.White;
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
-            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
-            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 857);
+            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 749);
             this.pnlAreaAdministrador.TabIndex = 12;
             // 
             // pnlPieArriba
@@ -242,7 +242,7 @@
             this.pnlPieArriba.Controls.Add(this.lblEstudiante);
             this.pnlPieArriba.Controls.Add(this.pcbStudentIcon);
             this.pnlPieArriba.Location = new System.Drawing.Point(165, 0);
-            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPieArriba.Name = "pnlPieArriba";
             this.pnlPieArriba.Size = new System.Drawing.Size(3538, 73);
             this.pnlPieArriba.TabIndex = 13;
@@ -279,7 +279,7 @@
             // 
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
             this.pcbLogOutIcon.Location = new System.Drawing.Point(1048, 19);
-            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbLogOutIcon.Name = "pcbLogOutIcon";
             this.pcbLogOutIcon.Size = new System.Drawing.Size(40, 41);
             this.pcbLogOutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -314,7 +314,7 @@
             // 
             this.pcbStudentIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbStudentIcon.Image")));
             this.pcbStudentIcon.Location = new System.Drawing.Point(928, 19);
-            this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbStudentIcon.Name = "pcbStudentIcon";
             this.pcbStudentIcon.Size = new System.Drawing.Size(36, 38);
             this.pcbStudentIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -335,7 +335,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(898, 307);
+            this.chart1.Size = new System.Drawing.Size(881, 307);
             this.chart1.TabIndex = 14;
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
@@ -346,7 +346,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.lblBeneficioPartidos);
             this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.lblHorasLaborales);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lvwEventos);
@@ -409,7 +411,7 @@
             this.lvwEventos.FullRowSelect = true;
             this.lvwEventos.HideSelection = false;
             this.lvwEventos.Location = new System.Drawing.Point(20, 387);
-            this.lvwEventos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwEventos.Margin = new System.Windows.Forms.Padding(2);
             this.lvwEventos.Name = "lvwEventos";
             this.lvwEventos.Size = new System.Drawing.Size(846, 152);
             this.lvwEventos.TabIndex = 94;
@@ -489,7 +491,7 @@
             this.lvwPartidosAsistidos.FullRowSelect = true;
             this.lvwPartidosAsistidos.HideSelection = false;
             this.lvwPartidosAsistidos.Location = new System.Drawing.Point(20, 580);
-            this.lvwPartidosAsistidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvwPartidosAsistidos.Margin = new System.Windows.Forms.Padding(2);
             this.lvwPartidosAsistidos.Name = "lvwPartidosAsistidos";
             this.lvwPartidosAsistidos.Size = new System.Drawing.Size(846, 152);
             this.lvwPartidosAsistidos.TabIndex = 94;
@@ -545,7 +547,7 @@
             // 
             this.lblHorasLaborales.AutoSize = true;
             this.lblHorasLaborales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorasLaborales.Location = new System.Drawing.Point(1099, 87);
+            this.lblHorasLaborales.Location = new System.Drawing.Point(942, 54);
             this.lblHorasLaborales.Name = "lblHorasLaborales";
             this.lblHorasLaborales.Size = new System.Drawing.Size(51, 20);
             this.lblHorasLaborales.TabIndex = 17;
@@ -556,7 +558,7 @@
             // 
             this.lblBeneficioPartidos.AutoSize = true;
             this.lblBeneficioPartidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBeneficioPartidos.Location = new System.Drawing.Point(1099, 121);
+            this.lblBeneficioPartidos.Location = new System.Drawing.Point(942, 87);
             this.lblBeneficioPartidos.Name = "lblBeneficioPartidos";
             this.lblBeneficioPartidos.Size = new System.Drawing.Size(51, 20);
             this.lblBeneficioPartidos.TabIndex = 18;
@@ -569,14 +571,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1370, 857);
-            this.Controls.Add(this.lblBeneficioPartidos);
-            this.Controls.Add(this.lblHorasLaborales);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnlPieArriba);
             this.Controls.Add(this.pnlAreaAdministrador);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserReporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Reporte";
@@ -593,7 +593,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

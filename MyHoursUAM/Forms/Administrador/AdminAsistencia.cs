@@ -18,7 +18,8 @@ namespace MyHours_UAMApp
         public AdminAsistencia()
         {
             InitializeComponent();
-            Metodos.CargarSolicitudesEnListView(lvAsistencia,true);
+            CargarSolicitudesEventos();
+            CargarSolicitudesPartidos();
 
         }
 
@@ -69,91 +70,36 @@ namespace MyHours_UAMApp
             this.Close();
         }
 
-
+        
 
         private void btnConfirmarAsistencia_Click(object sender, EventArgs e)
         {
-            if (lvAsistencia.SelectedItems.Count == 0)
+            if (lvAsistencia.SelectedItems.Count > 0)
+            {
+                var solicitudId = lvAsistencia.SelectedItems[0].Text;
+                var resultado = Metodos.ConfirmarSolicitudEvento(solicitudId);
+                MessageBox.Show(resultado, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarSolicitudesEventos();
+            }
+            else
             {
                 MessageBox.Show("Seleccione una solicitud para confirmar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                // Obtener el ID de la solicitud seleccionada desde la primera columna
-                string solicitudId = lvAsistencia.SelectedItems[0].SubItems[6].Text;
-                string solicitudA = lvAsistencia.SelectedItems[0].Text;
-
-                if (string.IsNullOrEmpty(solicitudId))
-                {
-                    MessageBox.Show("El ID de la solicitud no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                //// Buscar la solicitud en la lista
-                //var solicitud = Metodos.solicitudesEventos.FirstOrDefault(s => s.Id == solicitudId);
-
-                //if (solicitud == null)
-                //{
-                //    // Mostrar los IDs disponibles para depuración
-                //    var idsDisponibles = string.Join(", ", Metodos.solicitudesEventos.Select(s => s.Id));
-                //    MessageBox.Show($"No se encontró la solicitud. IDs disponibles: {idsDisponibles}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    return;
-                //}
-
-                string mensaje;
-
-                // Validar si es un partido o un evento basado en la solicitud
-                if (solicitudId == "Partido") // Es un partido
-                {
-                    mensaje = Metodos.ConfirmarSolicitudPartidos(solicitudA);
-                    Metodos.CargarSolicitudesEnListView(lvAsistencia,true);
-                }
-                else if (solicitudId == "Evento") // Es un evento
-                {
-                    mensaje = Metodos.ConfirmarSolicitudEvento(solicitudA);
-                    Metodos.CargarSolicitudesEnListView(lvAsistencia, true);
-                }
-                else
-                {
-                    MessageBox.Show("La solicitud seleccionada no corresponde a un evento ni a un partido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Mostrar resultado
-                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Recargar el ListView
-                Metodos.CargarSolicitudesEnListView(lvAsistencia, true);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al confirmar la solicitud: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-
         private void btnDenegarAsistencia_Click(object sender, EventArgs e)
         {
-            if (lvAsistencia.SelectedItems.Count == 0)
-            {
-                MessageBox.Show("Seleccione una solicitud para rechazar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            try
-            {
-                string solicitudId = lvAsistencia.SelectedItems[0].Text;
-                // Rechazar la solicitud
-                string mensaje = Metodos.RechazarSolicitudEvento(solicitudId);
-                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Actualizar vista
-                Metodos.CargarSolicitudesEnListView(lvAsistencia,true);
 
-            }
-            catch (Exception ex)
+            if (lvAsistencia.SelectedItems.Count > 0)
             {
-                MessageBox.Show($"Error al rechazar la solicitud: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                var solicitudId = lvAsistencia.SelectedItems[0].Text;
+                var resultado = Metodos.RechazarSolicitudEvento(solicitudId);
+                MessageBox.Show(resultado, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarSolicitudesEventos();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una solicitud para denegar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -167,9 +113,71 @@ namespace MyHours_UAMApp
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void AdminAsistencia_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConfirmarPartido_Click(object sender, EventArgs e)
+        {
+            if (lvPartidos.SelectedItems.Count > 0)
+            {
+                var solicitudId = lvPartidos.SelectedItems[0].Text;
+                var resultado = Metodos.ConfirmarSolicitudPartidos(solicitudId);
+                MessageBox.Show(resultado, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarSolicitudesPartidos();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una solicitud para confirmar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+        // Método para cargar solicitudes de eventos en el ListView
+        private void CargarSolicitudesEventos()
+        {
+            lvAsistencia.Items.Clear();
+            foreach (var solicitud in Metodos.solicitudesEventos)
+            {
+                var item = new ListViewItem(solicitud.Id);
+                item.SubItems.Add(solicitud.EventoId);
+                item.SubItems.Add(solicitud.EstudianteId);
+                item.SubItems.Add(solicitud.Eventos.nombreEvento);
+                item.SubItems.Add(solicitud.EstadoSolicitud.ToString());
+                item.SubItems.Add(solicitud.FechaSolicitud.ToString("dd/MM/yyyy HH:mm"));
+                lvAsistencia.Items.Add(item);
+            }
+        }
+
+        // Método para cargar solicitudes de partidos en el ListView
+        private void CargarSolicitudesPartidos()
+        {
+            lvPartidos.Items.Clear();
+            foreach (var solicitud in Metodos.solicitudesPartidos)
+            {
+                var item = new ListViewItem(solicitud.Id);
+                item.SubItems.Add(solicitud.EventoId);
+                item.SubItems.Add(solicitud.EstudianteId);
+                item.SubItems.Add(solicitud.Partidos.nombrePartido);
+                item.SubItems.Add(solicitud.EstadoSolicitud.ToString());
+                item.SubItems.Add(solicitud.FechaSolicitud.ToString("dd/MM/yyyy HH:mm"));
+                lvPartidos.Items.Add(item);
+            }
+        }
+
+        private void btnDenegarPartido_Click(object sender, EventArgs e)
+        {
+            if (lvPartidos.SelectedItems.Count > 0)
+            {
+                var solicitudId = lvPartidos.SelectedItems[0].Text;
+                var resultado = Metodos.RechazarSolicitudPartido(solicitudId);
+                MessageBox.Show(resultado, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarSolicitudesPartidos();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una solicitud para denegar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

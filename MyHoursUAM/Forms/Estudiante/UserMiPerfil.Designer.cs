@@ -57,6 +57,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnVerReporte = new System.Windows.Forms.Button();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStudentIcon)).BeginInit();
@@ -78,7 +79,7 @@
             this.pnlPieArriba.Controls.Add(this.label1);
             this.pnlPieArriba.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPieArriba.Location = new System.Drawing.Point(165, 0);
-            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPieArriba.Name = "pnlPieArriba";
             this.pnlPieArriba.Size = new System.Drawing.Size(665, 73);
             this.pnlPieArriba.TabIndex = 7;
@@ -102,7 +103,7 @@
             this.pcbLogOutIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
             this.pcbLogOutIcon.Location = new System.Drawing.Point(534, 21);
-            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbLogOutIcon.Name = "pcbLogOutIcon";
             this.pcbLogOutIcon.Size = new System.Drawing.Size(40, 41);
             this.pcbLogOutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -121,13 +122,14 @@
             this.lblEstudiante.Size = new System.Drawing.Size(67, 13);
             this.lblEstudiante.TabIndex = 5;
             this.lblEstudiante.Text = "Estudiante";
+            this.lblEstudiante.Click += new System.EventHandler(this.lblEstudiante_Click);
             // 
             // pcbStudentIcon
             // 
             this.pcbStudentIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbStudentIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbStudentIcon.Image")));
             this.pcbStudentIcon.Location = new System.Drawing.Point(428, 24);
-            this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbStudentIcon.Name = "pcbStudentIcon";
             this.pcbStudentIcon.Size = new System.Drawing.Size(36, 38);
             this.pcbStudentIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -154,7 +156,7 @@
             this.pnlAreaAdministrador.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlAreaAdministrador.ForeColor = System.Drawing.Color.White;
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
-            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
             this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 600);
             this.pnlAreaAdministrador.TabIndex = 6;
@@ -170,7 +172,7 @@
             this.panel1.Controls.Add(this.btnVerEventos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 73);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(165, 624);
             this.panel1.TabIndex = 2;
@@ -184,7 +186,7 @@
             this.btnPartidos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPartidos.ForeColor = System.Drawing.Color.White;
             this.btnPartidos.Location = new System.Drawing.Point(-2, 98);
-            this.btnPartidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPartidos.Margin = new System.Windows.Forms.Padding(2);
             this.btnPartidos.Name = "btnPartidos";
             this.btnPartidos.Size = new System.Drawing.Size(165, 97);
             this.btnPartidos.TabIndex = 15;
@@ -201,7 +203,7 @@
             this.btnReporte.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporte.ForeColor = System.Drawing.Color.White;
             this.btnReporte.Location = new System.Drawing.Point(-4, 414);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(2);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(165, 97);
             this.btnReporte.TabIndex = 14;
@@ -218,7 +220,7 @@
             this.button1.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(7, 202);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 99);
             this.button1.TabIndex = 13;
@@ -230,7 +232,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(0, 202);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(4, 103);
             this.panel2.TabIndex = 3;
@@ -244,7 +246,7 @@
             this.btnAjustes.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjustes.ForeColor = System.Drawing.Color.White;
             this.btnAjustes.Location = new System.Drawing.Point(-2, 306);
-            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2);
             this.btnAjustes.Name = "btnAjustes";
             this.btnAjustes.Size = new System.Drawing.Size(165, 99);
             this.btnAjustes.TabIndex = 12;
@@ -261,7 +263,7 @@
             this.btnAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsistencia.ForeColor = System.Drawing.Color.White;
             this.btnAsistencia.Location = new System.Drawing.Point(0, 104);
-            this.btnAsistencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAsistencia.Margin = new System.Windows.Forms.Padding(2);
             this.btnAsistencia.Name = "btnAsistencia";
             this.btnAsistencia.Size = new System.Drawing.Size(0, 0);
             this.btnAsistencia.TabIndex = 11;
@@ -277,7 +279,7 @@
             this.btnVerEventos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerEventos.ForeColor = System.Drawing.Color.White;
             this.btnVerEventos.Location = new System.Drawing.Point(-2, 5);
-            this.btnVerEventos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerEventos.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerEventos.Name = "btnVerEventos";
             this.btnVerEventos.Size = new System.Drawing.Size(165, 99);
             this.btnVerEventos.TabIndex = 10;
@@ -290,7 +292,7 @@
             this.pnlIcon.Controls.Add(this.pictureBox1);
             this.pnlIcon.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlIcon.Location = new System.Drawing.Point(0, 0);
-            this.pnlIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pnlIcon.Name = "pnlIcon";
             this.pnlIcon.Size = new System.Drawing.Size(165, 73);
             this.pnlIcon.TabIndex = 1;
@@ -299,7 +301,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(61, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -313,6 +315,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gpbDatosPersonales.BackColor = System.Drawing.Color.White;
+            this.gpbDatosPersonales.Controls.Add(this.btnVerReporte);
             this.gpbDatosPersonales.Controls.Add(this.lblRotulo2);
             this.gpbDatosPersonales.Controls.Add(this.label8);
             this.gpbDatosPersonales.Controls.Add(this.label9);
@@ -326,9 +329,9 @@
             this.gpbDatosPersonales.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbDatosPersonales.ForeColor = System.Drawing.Color.Black;
             this.gpbDatosPersonales.Location = new System.Drawing.Point(172, 78);
-            this.gpbDatosPersonales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbDatosPersonales.Margin = new System.Windows.Forms.Padding(2);
             this.gpbDatosPersonales.Name = "gpbDatosPersonales";
-            this.gpbDatosPersonales.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbDatosPersonales.Padding = new System.Windows.Forms.Padding(2);
             this.gpbDatosPersonales.Size = new System.Drawing.Size(650, 513);
             this.gpbDatosPersonales.TabIndex = 8;
             this.gpbDatosPersonales.TabStop = false;
@@ -434,12 +437,25 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(16, 50);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(143, 176);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 40;
             this.pictureBox3.TabStop = false;
+            // 
+            // btnVerReporte
+            // 
+            this.btnVerReporte.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnVerReporte.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerReporte.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnVerReporte.Location = new System.Drawing.Point(538, 409);
+            this.btnVerReporte.Name = "btnVerReporte";
+            this.btnVerReporte.Size = new System.Drawing.Size(98, 29);
+            this.btnVerReporte.TabIndex = 91;
+            this.btnVerReporte.Text = "Ver Reporte";
+            this.btnVerReporte.UseVisualStyleBackColor = false;
+            this.btnVerReporte.Click += new System.EventHandler(this.btnVerReporte_Click);
             // 
             // UserMiPerfil
             // 
@@ -451,7 +467,7 @@
             this.Controls.Add(this.pnlAreaAdministrador);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserMiPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Mi Perfil ";
@@ -501,5 +517,6 @@
         private System.Windows.Forms.PictureBox pcbStudentIcon;
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Button btnPartidos;
+        private System.Windows.Forms.Button btnVerReporte;
     }
 }

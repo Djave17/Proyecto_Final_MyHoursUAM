@@ -101,7 +101,7 @@ namespace MyHours_UAMApp
 
                 MessageBox.Show("Solicitud de asistencia enviada correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Actualizar vista (opcional: si necesitas reflejar solicitudesEventos pendientes en la interfaz del estudiante)
+                // Actualizar vista (opcional: si necesitas reflejar solicitudes pendientes en la interfaz del estudiante)
                 CargarEventosEnListView();
             }
             catch (Exception ex)
@@ -116,6 +116,11 @@ namespace MyHours_UAMApp
         }
 
         private void pnlPieArriba_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblEstudiante_Click(object sender, EventArgs e)
         {
 
         }
