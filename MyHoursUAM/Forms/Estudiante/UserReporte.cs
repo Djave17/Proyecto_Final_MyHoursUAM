@@ -1,13 +1,7 @@
-﻿using MyHours_UAMApp.Estructuras.Metodos;
-using MyHours_UAMApp.Estructuras;
+﻿using MyHours_UAMApp.Estructuras;
+using MyHours_UAMApp.Estructuras.Metodos;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -18,32 +12,61 @@ namespace MyHours_UAMApp
         public UserReporte()
         {
             InitializeComponent();
-           
+            if (!ValidarSesion())
+            {
+                return;
+            }
+            else
+            {
+                var (eventos, partidos) = ObtenerDatosAsistidos();
+                CargarDatosEnListViews(eventos, partidos);
+                ActualizarEstadisticas();
+            }
+
         }
 
         private void UserReporte_Load(object sender, EventArgs e)
         {
-            var estudiante = SesionActual.EstudianteActual;
+            var partidosAsistidos = Metodos.ObtenerPartidosAsistidos(SesionActual.EstudianteActual.cifEstudiante);
+            Metodos.CargarPartidosAsistidos(lvwPartidosAsistidos, partidosAsistidos);
 
+        }
+        private bool ValidarSesion()
+        {
+            var estudiante = SesionActual.EstudianteActual;
             if (estudiante == null)
             {
                 MessageBox.Show("No se ha iniciado sesión como estudiante.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
+            return true;
+        }
+        private (List<Evento> eventos, List<Partido> partidos) ObtenerDatosAsistidos()
+        {
+            var estudiante = SesionActual.EstudianteActual;
 
-            // Obtener eventos asistidos
             var eventosAsistidos = Metodos.ObtenerEventosAsistidos(estudiante.cifEstudiante);
+            var partidosAsistidos = Metodos.ObtenerPartidosAsistidos(estudiante.cifEstudiante);
 
-            // Usar el método centralizado para cargar los eventos en el ListView
-            Metodos.CargarEventosAsistidos(lvwEventos, eventosAsistidos);
+            return (eventosAsistidos, partidosAsistidos);
+        }
 
-            // Actualizar etiquetas de horas y beneficios
+        private void CargarDatosEnListViews(List<Evento> eventos, List<Partido> partidos)
+        {
+            Metodos.CargarEventosAsistidos(lvwEventos, eventos);
+            Metodos.CargarPartidosAsistidos(lvwPartidosAsistidos, partidos);
+        }
+        private void ActualizarEstadisticas()
+        {
+            var estudiante = SesionActual.EstudianteActual;
+
             int horasLaborales = Metodos.CalcularHorasLaborales(estudiante.cifEstudiante);
             lblHorasLaborales.Text = $"Horas laborales: {horasLaborales}";
 
-            int beneficioPartidos = Metodos.CalcularBeneficioPartidos(estudiante.cifEstudiante);
-            lblBeneficioPartidos.Text = $"Partidos asistidos: {beneficioPartidos}";
-            CrearGrafico(horasLaborales,beneficioPartidos);
+            int beneficioPartidos = Metodos.CalcularBeneficioPartidos(estudiante.cifEstudiante); //Uso de metodo CalcularBeneficioPartidos para contar partidos completados de 7
+            lblBeneficioPartidos.Text = $"Partidos completados: {beneficioPartidos}";
+
+            CrearGrafico(horasLaborales, beneficioPartidos);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -143,17 +166,22 @@ namespace MyHours_UAMApp
 
             var series = new Series
             {
-                Name = "Horas y Beneficios",
+                Name = "Horas y Partidos",
                 IsValueShownAsLabel = true,
                 ChartType = SeriesChartType.Pie
             };
 
             series.Points.AddXY("Horas Laborales", horasLaborales);
-            series.Points.AddXY("Beneficio Partidos", beneficioPartidos);
+            series.Points.AddXY("Partidos completados", beneficioPartidos);
 
             series.Label = "#VALX: #VAL (#PERCENT{P0})";
             chart1.Series.Add(series);
-            chart1.Titles.Add("Horas Laborales y Beneficio Partidos");
+            chart1.Titles.Add("Horas Laborales y Partidos completados");
+        }
+
+        private void lvwPartidosAsistidos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

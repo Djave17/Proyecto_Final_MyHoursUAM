@@ -15,7 +15,6 @@ D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\M
 D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.UserMiPerfil.resources
 D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.UserReporte.resources
 D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.IniciarSesion.resources
-D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.Rol.resources
 D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.SplashScreen.resources
 D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours_UAMApp.Properties.Resources.resources
 D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Debug\MyHours UAMApp.csproj.GenerateResource.cache

@@ -98,13 +98,13 @@ namespace MyHours_UAMApp
             {
                 var partidoSeleccionado = Metodos.partidos[indicePartido];
 
-                Metodos.EnviarSolicitud(SesionActual.EstudianteActual.cifEstudiante,partidoSeleccionado);
+                Metodos.EnviarSolicitudPartido(SesionActual.EstudianteActual.cifEstudiante,partidoSeleccionado);
                 MessageBox.Show("Solicitud de partido enviada correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarPartidosEnListView();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al enviar la solicitud de partido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al enviar la solicitud: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

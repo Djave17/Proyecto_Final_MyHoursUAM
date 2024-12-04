@@ -1,0 +1,391 @@
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\MyHours UAMApp.exe.config
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\MyHours UAMApp.exe
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\MyHours UAMApp.pdb
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.AssemblyReference.cache
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAdd.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAjustes.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAsistencia.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Administrador.AdminAddPartidos.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Administrador.AdminGrafico.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreenAdmin.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreenUser.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.UserCambiarContraseña.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.UserEvento.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.UserPartidos.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.UserMiPerfil.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.UserReporte.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.IniciarSesion.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreen.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.Properties.Resources.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.GenerateResource.cache
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.CoreCompileInputs.cache
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours UAMApp.exe
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours UAMApp.pdb
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.AssemblyReference.cache
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAdd.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAjustes.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAsistencia.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Administrador.AdminAddPartidos.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Administrador.AdminGrafico.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreenAdmin.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreenUser.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.UserCambiarContraseña.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.UserEvento.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.UserPartidos.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.UserMiPerfil.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.UserReporte.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Estudiante.UserReportView.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.IniciarSesion.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreen.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.Properties.Resources.resources
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.GenerateResource.cache
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.CoreCompileInputs.cache
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours UAMApp.exe
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours UAMApp.pdb
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\SqlServerTypes\x64\msvcr120.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\SqlServerTypes\x86\msvcr120.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\Reportes\RptEvento.rdlc
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\MyHours UAMApp.exe.config
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\MyHours UAMApp.exe
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\MyHours UAMApp.pdb
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\Microsoft.ReportViewer.Common.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\Microsoft.ReportViewer.Design.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\Microsoft.ReportViewer.WinForms.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\Microsoft.SqlServer.Types.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\EnvDTE.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\stdole.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\EnvDTE.xml
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Users\XADMIN\Downloads\Proyecto_Final_MyHoursUAM-David (5)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours .F47DA008.Up2Date
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\SqlServerTypes\x64\msvcr120.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\SqlServerTypes\x86\msvcr120.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\Reportes\RptEvento.rdlc
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\MyHours UAMApp.exe.config
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\MyHours UAMApp.exe
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\MyHours UAMApp.pdb
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\Microsoft.ReportViewer.Design.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\Microsoft.SqlServer.Types.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\EnvDTE.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\stdole.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.AssemblyReference.cache
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAdd.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAjustes.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAsistencia.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Administrador.AdminAddPartidos.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Administrador.AdminGrafico.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreenAdmin.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreenUser.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.UserCambiarContraseña.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.UserEvento.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.UserPartidos.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.UserMiPerfil.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.UserReporte.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Estudiante.UserReportView.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.IniciarSesion.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreen.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours_UAMApp.Properties.Resources.resources
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.GenerateResource.cache
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.CoreCompileInputs.cache
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours .F47DA008.Up2Date
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours UAMApp.exe
+C:\Users\labc205\Downloads\Proyecto_Final_MyHoursUAM-Andrea\Proyecto_Final_MyHoursUAM-Andrea\MyHoursUAM\obj\Release\MyHours UAMApp.pdb
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\SqlServerTypes\x64\msvcr120.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\SqlServerTypes\x86\msvcr120.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\Reportes\RptEvento.rdlc
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\MyHours UAMApp.exe.config
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\MyHours UAMApp.exe
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\MyHours UAMApp.pdb
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\Microsoft.ReportViewer.Common.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\Microsoft.ReportViewer.Design.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\Microsoft.ReportViewer.WinForms.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\Microsoft.SqlServer.Types.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\EnvDTE.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\stdole.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.AssemblyReference.cache
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAdd.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAjustes.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAsistencia.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Administrador.AdminAddPartidos.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Administrador.AdminGrafico.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreenAdmin.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreenUser.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.UserCambiarContraseña.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.UserEvento.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.UserPartidos.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.UserMiPerfil.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.UserReporte.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Estudiante.UserReportView.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.IniciarSesion.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreen.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours_UAMApp.Properties.Resources.resources
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.GenerateResource.cache
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.CoreCompileInputs.cache
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours .F47DA008.Up2Date
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours UAMApp.exe
+D:\Descargas\MyHoursUAM1\MyHoursUAM\obj\Release\MyHours UAMApp.pdb
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\SqlServerTypes\x64\msvcr120.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\SqlServerTypes\x86\msvcr120.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\Reportes\RptEvento.rdlc
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\Microsoft.ReportViewer.Common.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\Microsoft.ReportViewer.Design.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\Microsoft.ReportViewer.WinForms.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\Microsoft.SqlServer.Types.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\EnvDTE.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\stdole.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Estudiante.UserReportView.resources
+D:\Desktop\Proyecto final\David\Proyecto_Final_MyHoursUAM\MyHoursUAM\obj\Release\MyHours .F47DA008.Up2Date
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\SqlServerTypes\x64\msvcr120.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\SqlServerTypes\x86\msvcr120.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\Reportes\RptEvento.rdlc
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\MyHours UAMApp.exe.config
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\MyHours UAMApp.exe
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\MyHours UAMApp.pdb
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\Microsoft.ReportViewer.Design.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\Microsoft.SqlServer.Types.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\EnvDTE.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\stdole.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.AssemblyReference.cache
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAdd.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAjustes.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.AdminAsistencia.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Administrador.AdminAddPartidos.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Administrador.AdminGrafico.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreenAdmin.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreenUser.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.UserCambiarContraseña.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.UserEvento.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.UserPartidos.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.UserMiPerfil.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.UserReporte.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.Forms.Estudiante.UserReportView.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.IniciarSesion.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.SplashScreen.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours_UAMApp.Properties.Resources.resources
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.GenerateResource.cache
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours UAMApp.csproj.CoreCompileInputs.cache
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours .F47DA008.Up2Date
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours UAMApp.exe
+C:\Users\seque\Downloads\Proyecto_Final_MyHoursUAM-David (1)\Proyecto_Final_MyHoursUAM-David\MyHoursUAM\obj\Release\MyHours UAMApp.pdb
