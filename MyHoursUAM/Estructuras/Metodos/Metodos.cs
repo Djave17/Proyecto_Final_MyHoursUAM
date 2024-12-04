@@ -819,9 +819,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             foreach (var evento in eventosAsistidos)
             {
                 var item = new ListViewItem(evento.idEvento); // ID del evento
-                item.SubItems.Add(evento.idEvento);       // Nombre del evento
                 item.SubItems.Add(evento.nombreEvento);       // Nombre del evento
-                item.SubItems.Add(evento.tipoBeneficio);  // Tipo de convalidación
+                item.SubItems.Add(evento.tipoBeneficio.ToString());  // Tipo de convalidación
                 item.SubItems.Add(evento.cantidadConvalidar.ToString()); // Horas convalidadas
                 item.SubItems.Add(evento.horaEvento);         // Hora del evento
                 item.SubItems.Add(evento.fechaEvento);        // Fecha del evento
@@ -848,11 +847,12 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
                 var item = new ListViewItem(partido.idEvento); // ID del evento
                 item.SubItems.Add(partido.nombrePartido ?? "N/A"); // Manejar nulos
-                item.SubItems.Add(partido.tipoBeneficio ?? "N/A");
                 item.SubItems.Add(partido.cantidadConvalidar.ToString() ?? "0");
                 item.SubItems.Add(partido.horaEvento ?? "N/A");
                 item.SubItems.Add(partido.fechaEvento ?? "N/A");
-                item.SubItems.Add(partido.deporte.ToString() ?? "N/A");
+                item.SubItems.Add(partido.lugarPartido ?? "N/A");   
+                item.SubItems.Add(partido.deporte.ToString());
+
                 listView.Items.Add(item);
             }
         }

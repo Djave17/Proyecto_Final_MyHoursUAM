@@ -51,9 +51,12 @@
             this.pcbStudentIcon = new System.Windows.Forms.PictureBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblBeneficioPartidos = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblHorasLaborales = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lvwEventos = new System.Windows.Forms.ListView();
             this.clhIDEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhNombreEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -63,18 +66,14 @@
             this.clhFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhLugar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhTipoEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label3 = new System.Windows.Forms.Label();
             this.lvwPartidosAsistidos = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lblHorasLaborales = new System.Windows.Forms.Label();
-            this.lblBeneficioPartidos = new System.Windows.Forms.Label();
+            this.clhID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhConvalidacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhHora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhFechaPartido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhLugarPartido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhDeporte = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlIcon.SuspendLayout();
@@ -227,7 +226,7 @@
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
             this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
-            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 749);
+            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 856);
             this.pnlAreaAdministrador.TabIndex = 12;
             // 
             // pnlPieArriba
@@ -346,23 +345,34 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.lvwEventos);
+            this.groupBox1.Controls.Add(this.lvwPartidosAsistidos);
             this.groupBox1.Controls.Add(this.lblBeneficioPartidos);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.lblHorasLaborales);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.lvwEventos);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.lvwPartidosAsistidos);
             this.groupBox1.Controls.Add(this.chart1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(191, 87);
+            this.groupBox1.Location = new System.Drawing.Point(191, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(3070, 1067);
+            this.groupBox1.Size = new System.Drawing.Size(1167, 716);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Eventos";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // lblBeneficioPartidos
+            // 
+            this.lblBeneficioPartidos.AutoSize = true;
+            this.lblBeneficioPartidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBeneficioPartidos.Location = new System.Drawing.Point(942, 87);
+            this.lblBeneficioPartidos.Name = "lblBeneficioPartidos";
+            this.lblBeneficioPartidos.Size = new System.Drawing.Size(51, 20);
+            this.lblBeneficioPartidos.TabIndex = 18;
+            this.lblBeneficioPartidos.Text = "label3";
+            this.lblBeneficioPartidos.Click += new System.EventHandler(this.label3_Click);
             // 
             // label6
             // 
@@ -373,6 +383,17 @@
             this.label6.Size = new System.Drawing.Size(153, 20);
             this.label6.TabIndex = 98;
             this.label6.Text = "Partidos Asistidos";
+            // 
+            // lblHorasLaborales
+            // 
+            this.lblHorasLaborales.AutoSize = true;
+            this.lblHorasLaborales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorasLaborales.Location = new System.Drawing.Point(942, 54);
+            this.lblHorasLaborales.Name = "lblHorasLaborales";
+            this.lblHorasLaborales.Size = new System.Drawing.Size(51, 20);
+            this.lblHorasLaborales.TabIndex = 17;
+            this.lblHorasLaborales.Text = "label2";
+            this.lblHorasLaborales.Click += new System.EventHandler(this.lblHorasLaborales_Click);
             // 
             // label5
             // 
@@ -394,6 +415,16 @@
             this.label4.TabIndex = 96;
             this.label4.Text = "Eventos Asistidos";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 353);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 20);
+            this.label3.TabIndex = 95;
+            this.label3.Text = "Eventos Asistidos";
+            // 
             // lvwEventos
             // 
             this.lvwEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -410,14 +441,13 @@
             this.clhTipoEvento});
             this.lvwEventos.FullRowSelect = true;
             this.lvwEventos.HideSelection = false;
-            this.lvwEventos.Location = new System.Drawing.Point(20, 387);
+            this.lvwEventos.Location = new System.Drawing.Point(20, 375);
             this.lvwEventos.Margin = new System.Windows.Forms.Padding(2);
             this.lvwEventos.Name = "lvwEventos";
-            this.lvwEventos.Size = new System.Drawing.Size(846, 152);
-            this.lvwEventos.TabIndex = 94;
+            this.lvwEventos.Size = new System.Drawing.Size(882, 152);
+            this.lvwEventos.TabIndex = 99;
             this.lvwEventos.UseCompatibleStateImageBehavior = false;
             this.lvwEventos.View = System.Windows.Forms.View.Details;
-            this.lvwEventos.SelectedIndexChanged += new System.EventHandler(this.lvwEventos_SelectedIndexChanged);
             // 
             // clhIDEvento
             // 
@@ -464,106 +494,63 @@
             this.clhTipoEvento.Text = "Tipo de Evento";
             this.clhTipoEvento.Width = 160;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 353);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 20);
-            this.label3.TabIndex = 95;
-            this.label3.Text = "Eventos Asistidos";
-            // 
             // lvwPartidosAsistidos
             // 
             this.lvwPartidosAsistidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lvwPartidosAsistidos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8});
+            this.clhID,
+            this.clhNombre,
+            this.clhConvalidacion,
+            this.clhHora,
+            this.clhFechaPartido,
+            this.clhLugarPartido,
+            this.clhDeporte});
             this.lvwPartidosAsistidos.FullRowSelect = true;
             this.lvwPartidosAsistidos.HideSelection = false;
-            this.lvwPartidosAsistidos.Location = new System.Drawing.Point(20, 580);
+            this.lvwPartidosAsistidos.Location = new System.Drawing.Point(19, 570);
             this.lvwPartidosAsistidos.Margin = new System.Windows.Forms.Padding(2);
             this.lvwPartidosAsistidos.Name = "lvwPartidosAsistidos";
-            this.lvwPartidosAsistidos.Size = new System.Drawing.Size(846, 152);
-            this.lvwPartidosAsistidos.TabIndex = 94;
+            this.lvwPartidosAsistidos.Size = new System.Drawing.Size(882, 152);
+            this.lvwPartidosAsistidos.TabIndex = 100;
             this.lvwPartidosAsistidos.UseCompatibleStateImageBehavior = false;
             this.lvwPartidosAsistidos.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader1
+            // clhID
             // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 98;
+            this.clhID.Text = "ID";
+            this.clhID.Width = 98;
             // 
-            // columnHeader2
+            // clhNombre
             // 
-            this.columnHeader2.Text = "Nombre";
-            this.columnHeader2.Width = 160;
+            this.clhNombre.Text = "Nombre";
+            this.clhNombre.Width = 160;
             // 
-            // columnHeader3
+            // clhConvalidacion
             // 
-            this.columnHeader3.DisplayIndex = 3;
-            this.columnHeader3.Text = "Tipo de convalidacion";
-            this.columnHeader3.Width = 205;
+            this.clhConvalidacion.Text = "Convalidacion";
+            this.clhConvalidacion.Width = 140;
             // 
-            // columnHeader4
+            // clhHora
             // 
-            this.columnHeader4.DisplayIndex = 4;
-            this.columnHeader4.Text = "Convalidacion";
-            this.columnHeader4.Width = 140;
+            this.clhHora.Text = "Horario";
+            this.clhHora.Width = 130;
             // 
-            // columnHeader5
+            // clhFechaPartido
             // 
-            this.columnHeader5.DisplayIndex = 5;
-            this.columnHeader5.Text = "Horario";
-            this.columnHeader5.Width = 80;
+            this.clhFechaPartido.Text = "Fecha";
+            this.clhFechaPartido.Width = 178;
             // 
-            // columnHeader6
+            // clhLugarPartido
             // 
-            this.columnHeader6.DisplayIndex = 7;
-            this.columnHeader6.Text = "Fecha";
-            this.columnHeader6.Width = 80;
+            this.clhLugarPartido.Text = "Lugar";
+            this.clhLugarPartido.Width = 150;
             // 
-            // columnHeader7
+            // clhDeporte
             // 
-            this.columnHeader7.Text = "Lugar";
-            this.columnHeader7.Width = 80;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.DisplayIndex = 2;
-            this.columnHeader8.Text = "Tipo de Evento";
-            this.columnHeader8.Width = 160;
-            // 
-            // lblHorasLaborales
-            // 
-            this.lblHorasLaborales.AutoSize = true;
-            this.lblHorasLaborales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorasLaborales.Location = new System.Drawing.Point(942, 54);
-            this.lblHorasLaborales.Name = "lblHorasLaborales";
-            this.lblHorasLaborales.Size = new System.Drawing.Size(51, 20);
-            this.lblHorasLaborales.TabIndex = 17;
-            this.lblHorasLaborales.Text = "label2";
-            this.lblHorasLaborales.Click += new System.EventHandler(this.lblHorasLaborales_Click);
-            // 
-            // lblBeneficioPartidos
-            // 
-            this.lblBeneficioPartidos.AutoSize = true;
-            this.lblBeneficioPartidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBeneficioPartidos.Location = new System.Drawing.Point(942, 87);
-            this.lblBeneficioPartidos.Name = "lblBeneficioPartidos";
-            this.lblBeneficioPartidos.Size = new System.Drawing.Size(51, 20);
-            this.lblBeneficioPartidos.TabIndex = 18;
-            this.lblBeneficioPartidos.Text = "label3";
-            this.lblBeneficioPartidos.Click += new System.EventHandler(this.label3_Click);
+            this.clhDeporte.Text = "Deporte";
+            this.clhDeporte.Width = 160;
             // 
             // UserReporte
             // 
@@ -571,7 +558,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 856);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnlPieArriba);
             this.Controls.Add(this.pnlAreaAdministrador);
@@ -616,6 +603,13 @@
         private System.Windows.Forms.Button btnPartidos;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblHorasLaborales;
+        private System.Windows.Forms.Label lblBeneficioPartidos;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListView lvwEventos;
         private System.Windows.Forms.ColumnHeader clhIDEvento;
         private System.Windows.Forms.ColumnHeader clhNombreEvento;
@@ -625,21 +619,13 @@
         private System.Windows.Forms.ColumnHeader clhFecha;
         private System.Windows.Forms.ColumnHeader clhLugar;
         private System.Windows.Forms.ColumnHeader clhTipoEvento;
-        private System.Windows.Forms.Label lblHorasLaborales;
-        private System.Windows.Forms.Label lblBeneficioPartidos;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView lvwPartidosAsistidos;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ColumnHeader clhID;
+        private System.Windows.Forms.ColumnHeader clhNombre;
+        private System.Windows.Forms.ColumnHeader clhConvalidacion;
+        private System.Windows.Forms.ColumnHeader clhHora;
+        private System.Windows.Forms.ColumnHeader clhFechaPartido;
+        private System.Windows.Forms.ColumnHeader clhLugarPartido;
+        private System.Windows.Forms.ColumnHeader clhDeporte;
     }
 }
