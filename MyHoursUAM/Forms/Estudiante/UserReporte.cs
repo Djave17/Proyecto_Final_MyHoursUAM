@@ -1,14 +1,9 @@
-﻿using MyHours_UAMApp.Estructuras.Metodos;
-using MyHours_UAMApp.Estructuras;
+﻿using MyHours_UAMApp.Estructuras;
+using MyHours_UAMApp.Estructuras.Metodos;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace MyHours_UAMApp
 {
@@ -17,31 +12,61 @@ namespace MyHours_UAMApp
         public UserReporte()
         {
             InitializeComponent();
-           
+            if (!ValidarSesion())
+            {
+                return;
+            }
+            else
+            {
+                var (eventos, partidos) = ObtenerDatosAsistidos();
+                CargarDatosEnListViews(eventos, partidos);
+                ActualizarEstadisticas();
+            }
+
         }
 
         private void UserReporte_Load(object sender, EventArgs e)
         {
-            var estudiante = SesionActual.EstudianteActual;
+            var partidosAsistidos = Metodos.ObtenerPartidosAsistidos(SesionActual.EstudianteActual.cifEstudiante);
+            Metodos.CargarPartidosAsistidos(lvwPartidosAsistidos, partidosAsistidos);
 
+        }
+        private bool ValidarSesion()
+        {
+            var estudiante = SesionActual.EstudianteActual;
             if (estudiante == null)
             {
                 MessageBox.Show("No se ha iniciado sesión como estudiante.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
+            return true;
+        }
+        private (List<Evento> eventos, List<Partido> partidos) ObtenerDatosAsistidos()
+        {
+            var estudiante = SesionActual.EstudianteActual;
 
-            // Obtener eventos asistidos
             var eventosAsistidos = Metodos.ObtenerEventosAsistidos(estudiante.cifEstudiante);
+            var partidosAsistidos = Metodos.ObtenerPartidosAsistidos(estudiante.cifEstudiante);
 
-            // Usar el método centralizado para cargar los eventos en el ListView
-            Metodos.CargarEventosAsistidos(lvwEventos, eventosAsistidos);
+            return (eventosAsistidos, partidosAsistidos);
+        }
 
-            // Actualizar etiquetas de horas y beneficios
+        private void CargarDatosEnListViews(List<Evento> eventos, List<Partido> partidos)
+        {
+            Metodos.CargarEventosAsistidos(lvwEventos, eventos);
+            Metodos.CargarPartidosAsistidos(lvwPartidosAsistidos, partidos);
+        }
+        private void ActualizarEstadisticas()
+        {
+            var estudiante = SesionActual.EstudianteActual;
+
             int horasLaborales = Metodos.CalcularHorasLaborales(estudiante.cifEstudiante);
             lblHorasLaborales.Text = $"Horas laborales: {horasLaborales}";
 
             int beneficioPartidos = Metodos.CalcularBeneficioPartidos(estudiante.cifEstudiante);
             lblBeneficioPartidos.Text = $"Partidos asistidos: {beneficioPartidos}";
+
+            CrearGrafico(horasLaborales, beneficioPartidos);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -75,7 +100,7 @@ namespace MyHours_UAMApp
 
         private void lblCerrarSesion_Click(object sender, EventArgs e)
         {
-            Rol form = new Rol();
+            IniciarSesion form = new IniciarSesion();
             form.Show();
             this.Close();
         }
@@ -105,6 +130,53 @@ namespace MyHours_UAMApp
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            IniciarSesion form = new IniciarSesion();
+            form.Show();
+            this.Close();
+        }
+
+        private void pnlPieArriba_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbxPartidosAsistidos_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblHorasLaborales_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CrearGrafico(int horasLaborales, int beneficioPartidos)
+        {
+            chart1.Series.Clear();
+            chart1.Titles.Clear();
+
+            var series = new Series
+            {
+                Name = "Horas y Beneficios",
+                IsValueShownAsLabel = true,
+                ChartType = SeriesChartType.Pie
+            };
+
+            series.Points.AddXY("Horas Laborales", horasLaborales);
+            series.Points.AddXY("Beneficio Partidos", beneficioPartidos);
+
+            series.Label = "#VALX: #VAL (#PERCENT{P0})";
+            chart1.Series.Add(series);
+            chart1.Titles.Add("Horas Laborales y Beneficio Partidos");
         }
     }
 }

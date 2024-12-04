@@ -36,6 +36,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlAreaAdministrador = new System.Windows.Forms.Panel();
+            this.btnGraficos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -54,7 +55,6 @@
             this.txbActualContraseñaAdmin = new System.Windows.Forms.TextBox();
             this.lblActualContraseña = new System.Windows.Forms.Label();
             this.lblRotulo2 = new System.Windows.Forms.Label();
-            this.btnGraficos = new System.Windows.Forms.Button();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -75,13 +75,14 @@
             this.pnlPieArriba.Controls.Add(this.label1);
             this.pnlPieArriba.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPieArriba.Location = new System.Drawing.Point(165, 0);
-            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPieArriba.Name = "pnlPieArriba";
             this.pnlPieArriba.Size = new System.Drawing.Size(665, 73);
             this.pnlPieArriba.TabIndex = 9;
             // 
             // lblCerrarSesion
             // 
+            this.lblCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
@@ -95,9 +96,10 @@
             // 
             // pcbLogOutIcon
             // 
+            this.pcbLogOutIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
             this.pcbLogOutIcon.Location = new System.Drawing.Point(531, 11);
-            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbLogOutIcon.Name = "pcbLogOutIcon";
             this.pcbLogOutIcon.Size = new System.Drawing.Size(40, 41);
             this.pcbLogOutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,6 +108,7 @@
             // 
             // lblAdmin
             // 
+            this.lblAdmin.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdmin.ForeColor = System.Drawing.Color.Teal;
@@ -118,9 +121,10 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(409, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -148,10 +152,27 @@
             this.pnlAreaAdministrador.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlAreaAdministrador.ForeColor = System.Drawing.Color.White;
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
-            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
             this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 655);
             this.pnlAreaAdministrador.TabIndex = 8;
+            // 
+            // btnGraficos
+            // 
+            this.btnGraficos.BackColor = System.Drawing.Color.Transparent;
+            this.btnGraficos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGraficos.FlatAppearance.BorderSize = 0;
+            this.btnGraficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGraficos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraficos.ForeColor = System.Drawing.Color.White;
+            this.btnGraficos.Location = new System.Drawing.Point(2, 527);
+            this.btnGraficos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGraficos.Name = "btnGraficos";
+            this.btnGraficos.Size = new System.Drawing.Size(163, 120);
+            this.btnGraficos.TabIndex = 24;
+            this.btnGraficos.Text = "📈 Graficos";
+            this.btnGraficos.UseVisualStyleBackColor = false;
+            this.btnGraficos.Click += new System.EventHandler(this.btnGraficos_Click);
             // 
             // panel1
             // 
@@ -162,7 +183,7 @@
             this.panel1.Controls.Add(this.btnAjustes);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 73);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(165, 453);
             this.panel1.TabIndex = 2;
@@ -176,7 +197,7 @@
             this.button2.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(0, 110);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(165, 120);
             this.button2.TabIndex = 22;
@@ -188,7 +209,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(2, 351);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(4, 103);
             this.panel2.TabIndex = 3;
@@ -202,7 +223,7 @@
             this.btnAñadirEventos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirEventos.ForeColor = System.Drawing.Color.White;
             this.btnAñadirEventos.Location = new System.Drawing.Point(-2, 5);
-            this.btnAñadirEventos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAñadirEventos.Margin = new System.Windows.Forms.Padding(2);
             this.btnAñadirEventos.Name = "btnAñadirEventos";
             this.btnAñadirEventos.Size = new System.Drawing.Size(165, 97);
             this.btnAñadirEventos.TabIndex = 9;
@@ -219,7 +240,7 @@
             this.btnAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsistencia.ForeColor = System.Drawing.Color.White;
             this.btnAsistencia.Location = new System.Drawing.Point(0, 233);
-            this.btnAsistencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAsistencia.Margin = new System.Windows.Forms.Padding(2);
             this.btnAsistencia.Name = "btnAsistencia";
             this.btnAsistencia.Size = new System.Drawing.Size(165, 99);
             this.btnAsistencia.TabIndex = 11;
@@ -236,7 +257,7 @@
             this.btnAjustes.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjustes.ForeColor = System.Drawing.Color.White;
             this.btnAjustes.Location = new System.Drawing.Point(4, 351);
-            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2);
             this.btnAjustes.Name = "btnAjustes";
             this.btnAjustes.Size = new System.Drawing.Size(160, 99);
             this.btnAjustes.TabIndex = 12;
@@ -249,7 +270,7 @@
             this.pnlIcon.Controls.Add(this.pictureBox1);
             this.pnlIcon.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlIcon.Location = new System.Drawing.Point(0, 0);
-            this.pnlIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pnlIcon.Name = "pnlIcon";
             this.pnlIcon.Size = new System.Drawing.Size(165, 73);
             this.pnlIcon.TabIndex = 1;
@@ -258,7 +279,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(61, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -268,6 +289,9 @@
             // 
             // gpbCambioContraseña
             // 
+            this.gpbCambioContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gpbCambioContraseña.BackColor = System.Drawing.Color.White;
             this.gpbCambioContraseña.Controls.Add(this.btnCancel);
             this.gpbCambioContraseña.Controls.Add(this.btnGuardar);
@@ -280,9 +304,9 @@
             this.gpbCambioContraseña.Controls.Add(this.lblRotulo2);
             this.gpbCambioContraseña.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbCambioContraseña.Location = new System.Drawing.Point(182, 78);
-            this.gpbCambioContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbCambioContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.gpbCambioContraseña.Name = "gpbCambioContraseña";
-            this.gpbCambioContraseña.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbCambioContraseña.Padding = new System.Windows.Forms.Padding(2);
             this.gpbCambioContraseña.Size = new System.Drawing.Size(639, 440);
             this.gpbCambioContraseña.TabIndex = 10;
             this.gpbCambioContraseña.TabStop = false;
@@ -290,6 +314,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCancel.BackColor = System.Drawing.Color.Teal;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
@@ -297,7 +322,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(322, 300);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(48, 28);
             this.btnCancel.TabIndex = 39;
@@ -306,6 +331,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGuardar.BackColor = System.Drawing.Color.Teal;
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
@@ -313,7 +339,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(216, 300);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(48, 28);
             this.btnGuardar.TabIndex = 38;
@@ -327,10 +353,10 @@
             this.txbConfirmarContraseñaAdmin.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbConfirmarContraseñaAdmin.ForeColor = System.Drawing.Color.White;
             this.txbConfirmarContraseñaAdmin.Location = new System.Drawing.Point(8, 228);
-            this.txbConfirmarContraseñaAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbConfirmarContraseñaAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.txbConfirmarContraseñaAdmin.Multiline = true;
             this.txbConfirmarContraseñaAdmin.Name = "txbConfirmarContraseñaAdmin";
-            this.txbConfirmarContraseñaAdmin.Size = new System.Drawing.Size(242, 23);
+            this.txbConfirmarContraseñaAdmin.Size = new System.Drawing.Size(420, 23);
             this.txbConfirmarContraseñaAdmin.TabIndex = 35;
             // 
             // lblConfirmarContraseña
@@ -351,10 +377,10 @@
             this.txbNuevaContraseñaAdmin.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbNuevaContraseñaAdmin.ForeColor = System.Drawing.Color.White;
             this.txbNuevaContraseñaAdmin.Location = new System.Drawing.Point(8, 158);
-            this.txbNuevaContraseñaAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbNuevaContraseñaAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.txbNuevaContraseñaAdmin.Multiline = true;
             this.txbNuevaContraseñaAdmin.Name = "txbNuevaContraseñaAdmin";
-            this.txbNuevaContraseñaAdmin.Size = new System.Drawing.Size(242, 23);
+            this.txbNuevaContraseñaAdmin.Size = new System.Drawing.Size(420, 23);
             this.txbNuevaContraseñaAdmin.TabIndex = 33;
             // 
             // lblNuevaContraseña
@@ -375,10 +401,10 @@
             this.txbActualContraseñaAdmin.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbActualContraseñaAdmin.ForeColor = System.Drawing.Color.White;
             this.txbActualContraseñaAdmin.Location = new System.Drawing.Point(8, 85);
-            this.txbActualContraseñaAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbActualContraseñaAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.txbActualContraseñaAdmin.Multiline = true;
             this.txbActualContraseñaAdmin.Name = "txbActualContraseñaAdmin";
-            this.txbActualContraseñaAdmin.Size = new System.Drawing.Size(242, 23);
+            this.txbActualContraseñaAdmin.Size = new System.Drawing.Size(420, 23);
             this.txbActualContraseñaAdmin.TabIndex = 31;
             // 
             // lblActualContraseña
@@ -404,23 +430,6 @@
             this.lblRotulo2.TabIndex = 0;
             this.lblRotulo2.Text = "Todos los campos son requeridos";
             // 
-            // btnGraficos
-            // 
-            this.btnGraficos.BackColor = System.Drawing.Color.Transparent;
-            this.btnGraficos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGraficos.FlatAppearance.BorderSize = 0;
-            this.btnGraficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGraficos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGraficos.ForeColor = System.Drawing.Color.White;
-            this.btnGraficos.Location = new System.Drawing.Point(2, 527);
-            this.btnGraficos.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGraficos.Name = "btnGraficos";
-            this.btnGraficos.Size = new System.Drawing.Size(163, 120);
-            this.btnGraficos.TabIndex = 24;
-            this.btnGraficos.Text = "📈 Graficos";
-            this.btnGraficos.UseVisualStyleBackColor = false;
-            this.btnGraficos.Click += new System.EventHandler(this.btnGraficos_Click);
-            // 
             // AdminAjustes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -431,7 +440,7 @@
             this.Controls.Add(this.pnlAreaAdministrador);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminAjustes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Ajustes";

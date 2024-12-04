@@ -61,7 +61,7 @@ namespace MyHours_UAMApp
 
         private void lblCerrarSesion_Click(object sender, EventArgs e)
         {
-            Rol form = new Rol();
+            IniciarSesion form = new IniciarSesion();
             form.Show();
             this.Close();
         }
@@ -97,7 +97,7 @@ namespace MyHours_UAMApp
                 var eventoSeleccionado = Metodos.eventos[indiceEvento];
 
                 // Enviar solicitud usando el método actualizado
-                Metodos.EnviarSolicitud(SesionActual.EstudianteActual.cifEstudiante, eventoSeleccionado);
+                Metodos.EnviarSolicitudEvento(SesionActual.EstudianteActual.cifEstudiante, eventoSeleccionado);
 
                 MessageBox.Show("Solicitud de asistencia enviada correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -113,6 +113,16 @@ namespace MyHours_UAMApp
         private void UserEvento_Load(object sender, EventArgs e)
         {
            
+        }
+
+        private void pnlPieArriba_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblEstudiante_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

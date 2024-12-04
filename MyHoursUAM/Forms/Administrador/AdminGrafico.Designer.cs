@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminGrafico));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlPieArriba = new System.Windows.Forms.Panel();
             this.lblCerrarSesion = new System.Windows.Forms.Label();
             this.pcbLogOutIcon = new System.Windows.Forms.PictureBox();
@@ -67,61 +67,65 @@
             // 
             // pnlPieArriba
             // 
+            this.pnlPieArriba.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPieArriba.BackColor = System.Drawing.Color.White;
             this.pnlPieArriba.Controls.Add(this.lblCerrarSesion);
             this.pnlPieArriba.Controls.Add(this.pcbLogOutIcon);
             this.pnlPieArriba.Controls.Add(this.lblAdmin);
             this.pnlPieArriba.Controls.Add(this.pictureBox2);
             this.pnlPieArriba.Controls.Add(this.label1);
-            this.pnlPieArriba.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlPieArriba.Location = new System.Drawing.Point(165, 0);
-            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlPieArriba.Location = new System.Drawing.Point(220, 0);
+            this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlPieArriba.Name = "pnlPieArriba";
-            this.pnlPieArriba.Size = new System.Drawing.Size(674, 73);
+            this.pnlPieArriba.Size = new System.Drawing.Size(899, 90);
             this.pnlPieArriba.TabIndex = 14;
             // 
             // lblCerrarSesion
             // 
+            this.lblCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
-            this.lblCerrarSesion.Location = new System.Drawing.Point(575, 28);
-            this.lblCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCerrarSesion.Location = new System.Drawing.Point(767, 34);
             this.lblCerrarSesion.Name = "lblCerrarSesion";
-            this.lblCerrarSesion.Size = new System.Drawing.Size(83, 13);
+            this.lblCerrarSesion.Size = new System.Drawing.Size(102, 16);
             this.lblCerrarSesion.TabIndex = 21;
             this.lblCerrarSesion.Text = "Cerrar Sesion";
+            this.lblCerrarSesion.Click += new System.EventHandler(this.lblCerrarSesion_Click);
             // 
             // pcbLogOutIcon
             // 
+            this.pcbLogOutIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
-            this.pcbLogOutIcon.Location = new System.Drawing.Point(531, 11);
-            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.pcbLogOutIcon.Location = new System.Drawing.Point(708, 14);
+            this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcbLogOutIcon.Name = "pcbLogOutIcon";
-            this.pcbLogOutIcon.Size = new System.Drawing.Size(40, 41);
+            this.pcbLogOutIcon.Size = new System.Drawing.Size(53, 50);
             this.pcbLogOutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLogOutIcon.TabIndex = 20;
             this.pcbLogOutIcon.TabStop = false;
             // 
             // lblAdmin
             // 
+            this.lblAdmin.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdmin.ForeColor = System.Drawing.Color.Teal;
-            this.lblAdmin.Location = new System.Drawing.Point(449, 28);
-            this.lblAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAdmin.Location = new System.Drawing.Point(599, 34);
             this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(83, 13);
+            this.lblAdmin.Size = new System.Drawing.Size(103, 16);
             this.lblAdmin.TabIndex = 18;
             this.lblAdmin.Text = "Administrador";
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(409, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(545, 18);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 38);
+            this.pictureBox2.Size = new System.Drawing.Size(48, 47);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
@@ -131,10 +135,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(20, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(27, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 31);
+            this.label1.Size = new System.Drawing.Size(236, 38);
             this.label1.TabIndex = 2;
             this.label1.Text = "DASHBOARD";
             // 
@@ -148,18 +151,18 @@
             this.pnlAreaAdministrador.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlAreaAdministrador.ForeColor = System.Drawing.Color.White;
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
-            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
-            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 701);
+            this.pnlAreaAdministrador.Size = new System.Drawing.Size(220, 863);
             this.pnlAreaAdministrador.TabIndex = 13;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(2, 530);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(3, 652);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(4, 103);
+            this.panel2.Size = new System.Drawing.Size(5, 127);
             this.panel2.TabIndex = 3;
             // 
             // panel1
@@ -169,10 +172,10 @@
             this.panel1.Controls.Add(this.btnAsistencia);
             this.panel1.Controls.Add(this.btnAjustes);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 73);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 90);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(165, 453);
+            this.panel1.Size = new System.Drawing.Size(220, 558);
             this.panel1.TabIndex = 2;
             // 
             // button2
@@ -183,10 +186,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 110);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(0, 135);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 120);
+            this.button2.Size = new System.Drawing.Size(220, 148);
             this.button2.TabIndex = 22;
             this.button2.Text = "⚽ Añadir Partidos";
             this.button2.UseVisualStyleBackColor = false;
@@ -200,10 +203,10 @@
             this.btnAñadirEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAñadirEventos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirEventos.ForeColor = System.Drawing.Color.White;
-            this.btnAñadirEventos.Location = new System.Drawing.Point(-2, 5);
-            this.btnAñadirEventos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAñadirEventos.Location = new System.Drawing.Point(-3, 6);
+            this.btnAñadirEventos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAñadirEventos.Name = "btnAñadirEventos";
-            this.btnAñadirEventos.Size = new System.Drawing.Size(165, 97);
+            this.btnAñadirEventos.Size = new System.Drawing.Size(220, 119);
             this.btnAñadirEventos.TabIndex = 9;
             this.btnAñadirEventos.Text = "➕ Añadir Eventos";
             this.btnAñadirEventos.UseVisualStyleBackColor = false;
@@ -217,10 +220,10 @@
             this.btnAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsistencia.ForeColor = System.Drawing.Color.White;
-            this.btnAsistencia.Location = new System.Drawing.Point(0, 233);
-            this.btnAsistencia.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAsistencia.Location = new System.Drawing.Point(0, 287);
+            this.btnAsistencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAsistencia.Name = "btnAsistencia";
-            this.btnAsistencia.Size = new System.Drawing.Size(165, 99);
+            this.btnAsistencia.Size = new System.Drawing.Size(220, 122);
             this.btnAsistencia.TabIndex = 11;
             this.btnAsistencia.Text = "🗒️  Asistencia";
             this.btnAsistencia.UseVisualStyleBackColor = false;
@@ -234,10 +237,10 @@
             this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjustes.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjustes.ForeColor = System.Drawing.Color.White;
-            this.btnAjustes.Location = new System.Drawing.Point(4, 351);
-            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAjustes.Location = new System.Drawing.Point(5, 432);
+            this.btnAjustes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAjustes.Name = "btnAjustes";
-            this.btnAjustes.Size = new System.Drawing.Size(160, 99);
+            this.btnAjustes.Size = new System.Drawing.Size(213, 122);
             this.btnAjustes.TabIndex = 12;
             this.btnAjustes.Text = "⚙️   Ajustes";
             this.btnAjustes.UseVisualStyleBackColor = false;
@@ -248,18 +251,18 @@
             this.pnlIcon.Controls.Add(this.pictureBox1);
             this.pnlIcon.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlIcon.Location = new System.Drawing.Point(0, 0);
-            this.pnlIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlIcon.Name = "pnlIcon";
-            this.pnlIcon.Size = new System.Drawing.Size(165, 73);
+            this.pnlIcon.Size = new System.Drawing.Size(220, 90);
             this.pnlIcon.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(61, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(81, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 63);
+            this.pictureBox1.Size = new System.Drawing.Size(52, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -273,10 +276,10 @@
             this.btnGraficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGraficos.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGraficos.ForeColor = System.Drawing.Color.White;
-            this.btnGraficos.Location = new System.Drawing.Point(2, 527);
-            this.btnGraficos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGraficos.Location = new System.Drawing.Point(3, 649);
+            this.btnGraficos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGraficos.Name = "btnGraficos";
-            this.btnGraficos.Size = new System.Drawing.Size(163, 103);
+            this.btnGraficos.Size = new System.Drawing.Size(217, 127);
             this.btnGraficos.TabIndex = 23;
             this.btnGraficos.Text = "📈 Graficos";
             this.btnGraficos.UseVisualStyleBackColor = false;
@@ -287,48 +290,58 @@
             // 
             // graficoCupos
             // 
-            chartArea7.Name = "ChartArea1";
-            this.graficoCupos.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.graficoCupos.Legends.Add(legend7);
-            this.graficoCupos.Location = new System.Drawing.Point(191, 88);
+            this.graficoCupos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.Name = "ChartArea1";
+            this.graficoCupos.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.graficoCupos.Legends.Add(legend1);
+            this.graficoCupos.Location = new System.Drawing.Point(255, 108);
+            this.graficoCupos.Margin = new System.Windows.Forms.Padding(4);
             this.graficoCupos.Name = "graficoCupos";
             this.graficoCupos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.graficoCupos.Series.Add(series7);
-            this.graficoCupos.Size = new System.Drawing.Size(517, 284);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.graficoCupos.Series.Add(series1);
+            this.graficoCupos.Size = new System.Drawing.Size(689, 350);
             this.graficoCupos.TabIndex = 15;
             this.graficoCupos.Text = "chart1";
             // 
             // graficoHoras
             // 
-            chartArea8.Name = "ChartArea1";
-            this.graficoHoras.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.graficoHoras.Legends.Add(legend8);
-            this.graficoHoras.Location = new System.Drawing.Point(191, 382);
+            this.graficoHoras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea2.Name = "ChartArea1";
+            this.graficoHoras.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.graficoHoras.Legends.Add(legend2);
+            this.graficoHoras.Location = new System.Drawing.Point(255, 470);
+            this.graficoHoras.Margin = new System.Windows.Forms.Padding(4);
             this.graficoHoras.Name = "graficoHoras";
             this.graficoHoras.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.graficoHoras.Series.Add(series8);
-            this.graficoHoras.Size = new System.Drawing.Size(517, 317);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.graficoHoras.Series.Add(series2);
+            this.graficoHoras.Size = new System.Drawing.Size(689, 390);
             this.graficoHoras.TabIndex = 16;
             this.graficoHoras.Text = "chart2";
             // 
             // AdminGrafico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 701);
+            this.ClientSize = new System.Drawing.Size(1119, 863);
             this.Controls.Add(this.graficoHoras);
             this.Controls.Add(this.graficoCupos);
             this.Controls.Add(this.pnlPieArriba);
             this.Controls.Add(this.pnlAreaAdministrador);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminGrafico";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminGrafico";
             this.Load += new System.EventHandler(this.AdminGrafico_Load);
             this.pnlPieArriba.ResumeLayout(false);

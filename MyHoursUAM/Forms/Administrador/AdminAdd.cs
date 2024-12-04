@@ -59,7 +59,7 @@ namespace MyHours_UAMApp
 
         private void lblCerrarSesion_Click(object sender, EventArgs e)
         {
-            Rol form = new Rol();
+            IniciarSesion form = new IniciarSesion();
             form.Show();
             this.Close();
         }
@@ -108,7 +108,7 @@ namespace MyHours_UAMApp
 
             try
             {
-                string mensaje = Metodos.EliminarPartido(indice);
+                string mensaje = Metodos.EliminarEvento(indice);
 
                 MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarEventosEnListView();

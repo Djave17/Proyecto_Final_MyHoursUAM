@@ -20,10 +20,10 @@ namespace MyHours_UAMApp
         private void timer1_Tick(object sender, EventArgs e)
         {
            timer1.Enabled = true;
-           progressBar.Increment(2);
+           progressBar.Increment(20);
            if (progressBar.Value == 100 ) {
                 timer1.Enabled = false;
-                Rol form = new Rol();
+                IniciarSesion form = new IniciarSesion();
                 form.Show();
                 this.Hide();
         }

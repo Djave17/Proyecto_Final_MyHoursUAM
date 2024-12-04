@@ -51,14 +51,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.lvPartidos = new System.Windows.Forms.ListView();
-            this.clhID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhDeporte = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhLugar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhHora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhCupos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhConvalidar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhNombrePartido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhLugarPartido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhCantidadConvalidar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhEstado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStudentIcon)).BeginInit();
@@ -86,6 +87,7 @@
             // 
             // lblCerrarSesion
             // 
+            this.lblCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
@@ -99,6 +101,7 @@
             // 
             // pcbLogOutIcon
             // 
+            this.pcbLogOutIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
             this.pcbLogOutIcon.Location = new System.Drawing.Point(571, 19);
             this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
@@ -110,6 +113,7 @@
             // 
             // lblEstudiante
             // 
+            this.lblEstudiante.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblEstudiante.AutoSize = true;
             this.lblEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstudiante.ForeColor = System.Drawing.Color.Teal;
@@ -122,6 +126,7 @@
             // 
             // pcbStudentIcon
             // 
+            this.pcbStudentIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbStudentIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbStudentIcon.Image")));
             this.pcbStudentIcon.Location = new System.Drawing.Point(465, 21);
             this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(2);
@@ -299,10 +304,13 @@
             // 
             // gbxEstudianteEventos
             // 
+            this.gbxEstudianteEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbxEstudianteEventos.Controls.Add(this.lvPartidos);
             this.gbxEstudianteEventos.Controls.Add(this.label3);
             this.gbxEstudianteEventos.Controls.Add(this.label2);
             this.gbxEstudianteEventos.Controls.Add(this.button2);
-            this.gbxEstudianteEventos.Controls.Add(this.lvPartidos);
             this.gbxEstudianteEventos.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxEstudianteEventos.Location = new System.Drawing.Point(191, 92);
             this.gbxEstudianteEventos.Name = "gbxEstudianteEventos";
@@ -345,62 +353,72 @@
             // 
             // lvPartidos
             // 
+            this.lvPartidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvPartidos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clhID,
-            this.clhNombre,
-            this.clhLugar,
-            this.clhDeporte,
-            this.clhHora,
-            this.clhFecha,
-            this.clhConvalidar,
-            this.clhCupos});
+            this.columnHeader1,
+            this.clhNombrePartido,
+            this.clhLugarPartido,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.clhCantidadConvalidar,
+            this.clhEstado});
             this.lvPartidos.FullRowSelect = true;
             this.lvPartidos.HideSelection = false;
-            this.lvPartidos.Location = new System.Drawing.Point(0, 157);
+            this.lvPartidos.LabelEdit = true;
+            this.lvPartidos.Location = new System.Drawing.Point(9, 161);
             this.lvPartidos.Margin = new System.Windows.Forms.Padding(2);
             this.lvPartidos.Name = "lvPartidos";
-            this.lvPartidos.Size = new System.Drawing.Size(650, 349);
-            this.lvPartidos.TabIndex = 89;
+            this.lvPartidos.Size = new System.Drawing.Size(641, 340);
+            this.lvPartidos.TabIndex = 93;
             this.lvPartidos.UseCompatibleStateImageBehavior = false;
             this.lvPartidos.View = System.Windows.Forms.View.Details;
-            this.lvPartidos.SelectedIndexChanged += new System.EventHandler(this.lvPartidos_SelectedIndexChanged);
             // 
-            // clhID
+            // columnHeader1
             // 
-            this.clhID.Text = "ID";
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 100;
             // 
-            // clhNombre
+            // clhNombrePartido
             // 
-            this.clhNombre.Text = "Nombre";
-            this.clhNombre.Width = 100;
+            this.clhNombrePartido.Text = "Nombre";
+            this.clhNombrePartido.Width = 120;
             // 
-            // clhDeporte
+            // clhLugarPartido
             // 
-            this.clhDeporte.Text = "Deporte";
-            this.clhDeporte.Width = 90;
+            this.clhLugarPartido.Text = "Lugar";
+            this.clhLugarPartido.Width = 120;
             // 
-            // clhLugar
+            // columnHeader2
             // 
-            this.clhLugar.Text = "Lugar";
+            this.columnHeader2.Text = "Deporte";
+            this.columnHeader2.Width = 90;
             // 
-            // clhHora
+            // columnHeader3
             // 
-            this.clhHora.Text = "Hora";
-            this.clhHora.Width = 100;
+            this.columnHeader3.Text = "Hora";
             // 
-            // clhFecha
+            // columnHeader4
             // 
-            this.clhFecha.Text = "Fecha";
-            this.clhFecha.Width = 200;
+            this.columnHeader4.Text = "Fecha";
+            this.columnHeader4.Width = 100;
             // 
-            // clhCupos
+            // columnHeader5
             // 
-            this.clhCupos.Text = "Cupos";
+            this.columnHeader5.Text = "Cupos";
+            this.columnHeader5.Width = 75;
             // 
-            // clhConvalidar
+            // clhCantidadConvalidar
             // 
-            this.clhConvalidar.Text = "Cantidad a convalidar";
-            this.clhConvalidar.Width = 75;
+            this.clhCantidadConvalidar.Text = "Cantidad a convalidar";
+            // 
+            // clhEstado
+            // 
+            this.clhEstado.Text = "Estado";
+            this.clhEstado.Width = 200;
             // 
             // UserPartidos
             // 
@@ -454,13 +472,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListView lvPartidos;
-        private System.Windows.Forms.ColumnHeader clhID;
-        private System.Windows.Forms.ColumnHeader clhNombre;
-        private System.Windows.Forms.ColumnHeader clhDeporte;
-        private System.Windows.Forms.ColumnHeader clhLugar;
-        private System.Windows.Forms.ColumnHeader clhHora;
-        private System.Windows.Forms.ColumnHeader clhFecha;
-        private System.Windows.Forms.ColumnHeader clhCupos;
-        private System.Windows.Forms.ColumnHeader clhConvalidar;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader clhNombrePartido;
+        private System.Windows.Forms.ColumnHeader clhLugarPartido;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader clhCantidadConvalidar;
+        private System.Windows.Forms.ColumnHeader clhEstado;
     }
 }

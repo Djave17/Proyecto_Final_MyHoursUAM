@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyHours_UAMApp.Forms.Estudiante;
 
 namespace MyHours_UAMApp
 {
@@ -47,7 +48,7 @@ namespace MyHours_UAMApp
 
         private void lblCerrarSesion_Click(object sender, EventArgs e)
         {
-            Rol form = new Rol();
+            IniciarSesion form = new IniciarSesion();
             form.Show();
             this.Close();
         }
@@ -69,6 +70,18 @@ namespace MyHours_UAMApp
             UserPartidos form = new UserPartidos();
             form.Show();
             this.Close();
+        }
+
+        private void btnVerReporte_Click(object sender, EventArgs e)
+        {
+            UserReportView form = new UserReportView();
+            form.Show();
+            this.Close();
+        }
+
+        private void lblEstudiante_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

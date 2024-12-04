@@ -48,7 +48,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbxEstudianteEventos = new System.Windows.Forms.GroupBox();
             this.lvAsistencia = new System.Windows.Forms.ListView();
-            this.clhID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhIdSolicitud = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhIdEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhEstudianteId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhEstadoSolicitud = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -57,6 +58,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnConfirmarAsistencia = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lvPartidos = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnDenegarPartido = new System.Windows.Forms.Button();
+            this.btnConfirmarPartido = new System.Windows.Forms.Button();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -66,6 +77,7 @@
             this.pnlIcon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbxEstudianteEventos.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlPieArriba
@@ -82,9 +94,11 @@
             this.pnlPieArriba.Name = "pnlPieArriba";
             this.pnlPieArriba.Size = new System.Drawing.Size(678, 73);
             this.pnlPieArriba.TabIndex = 7;
+            this.pnlPieArriba.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPieArriba_Paint);
             // 
             // lblCerrarSesion
             // 
+            this.lblCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
@@ -98,6 +112,7 @@
             // 
             // pcbLogOutIcon
             // 
+            this.pcbLogOutIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
             this.pcbLogOutIcon.Location = new System.Drawing.Point(533, 11);
             this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
@@ -109,6 +124,7 @@
             // 
             // lblAdmin
             // 
+            this.lblAdmin.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdmin.ForeColor = System.Drawing.Color.Teal;
@@ -121,6 +137,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(411, 15);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
@@ -305,6 +322,9 @@
             // 
             // gbxEstudianteEventos
             // 
+            this.gbxEstudianteEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbxEstudianteEventos.Controls.Add(this.lvAsistencia);
             this.gbxEstudianteEventos.Controls.Add(this.btnDenegarAsistencia);
             this.gbxEstudianteEventos.Controls.Add(this.label3);
@@ -313,15 +333,19 @@
             this.gbxEstudianteEventos.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxEstudianteEventos.Location = new System.Drawing.Point(191, 78);
             this.gbxEstudianteEventos.Name = "gbxEstudianteEventos";
-            this.gbxEstudianteEventos.Size = new System.Drawing.Size(635, 519);
+            this.gbxEstudianteEventos.Size = new System.Drawing.Size(635, 342);
             this.gbxEstudianteEventos.TabIndex = 94;
             this.gbxEstudianteEventos.TabStop = false;
-            this.gbxEstudianteEventos.Text = "Asistencia";
+            this.gbxEstudianteEventos.Text = "Asistencia Eventos";
             // 
             // lvAsistencia
             // 
+            this.lvAsistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvAsistencia.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clhID,
+            this.clhIdSolicitud,
+            this.clhIdEvento,
             this.clhEstudianteId,
             this.clhNombre,
             this.clhEstadoSolicitud,
@@ -332,16 +356,20 @@
             this.lvAsistencia.Location = new System.Drawing.Point(0, 169);
             this.lvAsistencia.Margin = new System.Windows.Forms.Padding(2);
             this.lvAsistencia.Name = "lvAsistencia";
-            this.lvAsistencia.Size = new System.Drawing.Size(630, 350);
+            this.lvAsistencia.Size = new System.Drawing.Size(630, 173);
             this.lvAsistencia.TabIndex = 95;
             this.lvAsistencia.UseCompatibleStateImageBehavior = false;
             this.lvAsistencia.View = System.Windows.Forms.View.Details;
             this.lvAsistencia.SelectedIndexChanged += new System.EventHandler(this.lvAsistencia_SelectedIndexChanged);
             // 
-            // clhID
+            // clhIdSolicitud
             // 
-            this.clhID.Text = "ID";
-            this.clhID.Width = 100;
+            this.clhIdSolicitud.Text = "ID Solicitud";
+            this.clhIdSolicitud.Width = 80;
+            // 
+            // clhIdEvento
+            // 
+            this.clhIdEvento.Text = "ID ";
             // 
             // clhEstudianteId
             // 
@@ -406,11 +434,104 @@
             this.btnConfirmarAsistencia.UseVisualStyleBackColor = false;
             this.btnConfirmarAsistencia.Click += new System.EventHandler(this.btnConfirmarAsistencia_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.lvPartidos);
+            this.groupBox1.Controls.Add(this.btnDenegarPartido);
+            this.groupBox1.Controls.Add(this.btnConfirmarPartido);
+            this.groupBox1.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(191, 437);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(632, 322);
+            this.groupBox1.TabIndex = 96;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Asistencia Partidos";
+            // 
+            // lvPartidos
+            // 
+            this.lvPartidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvPartidos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.lvPartidos.FullRowSelect = true;
+            this.lvPartidos.HideSelection = false;
+            this.lvPartidos.LabelEdit = true;
+            this.lvPartidos.Location = new System.Drawing.Point(4, 82);
+            this.lvPartidos.Margin = new System.Windows.Forms.Padding(2);
+            this.lvPartidos.Name = "lvPartidos";
+            this.lvPartidos.Size = new System.Drawing.Size(627, 189);
+            this.lvPartidos.TabIndex = 95;
+            this.lvPartidos.UseCompatibleStateImageBehavior = false;
+            this.lvPartidos.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID Solicitud";
+            this.columnHeader1.Width = 80;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "ID ";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "CIF";
+            this.columnHeader3.Width = 120;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Evento";
+            this.columnHeader4.Width = 90;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Estado ";
+            this.columnHeader5.Width = 200;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Fecha";
+            this.columnHeader6.Width = 220;
+            // 
+            // btnDenegarPartido
+            // 
+            this.btnDenegarPartido.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnDenegarPartido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDenegarPartido.Location = new System.Drawing.Point(192, 33);
+            this.btnDenegarPartido.Name = "btnDenegarPartido";
+            this.btnDenegarPartido.Size = new System.Drawing.Size(176, 29);
+            this.btnDenegarPartido.TabIndex = 94;
+            this.btnDenegarPartido.Text = "Denegar Asistencia";
+            this.btnDenegarPartido.UseVisualStyleBackColor = false;
+            this.btnDenegarPartido.Click += new System.EventHandler(this.btnDenegarPartido_Click);
+            // 
+            // btnConfirmarPartido
+            // 
+            this.btnConfirmarPartido.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnConfirmarPartido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnConfirmarPartido.Location = new System.Drawing.Point(10, 33);
+            this.btnConfirmarPartido.Name = "btnConfirmarPartido";
+            this.btnConfirmarPartido.Size = new System.Drawing.Size(176, 29);
+            this.btnConfirmarPartido.TabIndex = 90;
+            this.btnConfirmarPartido.Text = "Confirmar Asistencia";
+            this.btnConfirmarPartido.UseVisualStyleBackColor = false;
+            this.btnConfirmarPartido.Click += new System.EventHandler(this.btnConfirmarPartido_Click);
+            // 
             // AdminAsistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 690);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbxEstudianteEventos);
             this.Controls.Add(this.pnlPieArriba);
             this.Controls.Add(this.pnlAreaAdministrador);
@@ -431,6 +552,7 @@
             this.pnlIcon.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbxEstudianteEventos.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -460,10 +582,21 @@
         private System.Windows.Forms.Button btnConfirmarAsistencia;
         private System.Windows.Forms.Button btnDenegarAsistencia;
         private System.Windows.Forms.ListView lvAsistencia;
-        private System.Windows.Forms.ColumnHeader clhID;
         private System.Windows.Forms.ColumnHeader clhEstudianteId;
         private System.Windows.Forms.ColumnHeader clhNombre;
         private System.Windows.Forms.ColumnHeader clhEstadoSolicitud;
         private System.Windows.Forms.ColumnHeader clhFechaSolicitud;
+        private System.Windows.Forms.ColumnHeader clhIdSolicitud;
+        private System.Windows.Forms.ColumnHeader clhIdEvento;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ListView lvPartidos;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.Button btnDenegarPartido;
+        private System.Windows.Forms.Button btnConfirmarPartido;
     }
 }

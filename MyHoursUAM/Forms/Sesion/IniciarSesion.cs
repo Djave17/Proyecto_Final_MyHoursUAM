@@ -117,12 +117,7 @@ namespace MyHours_UAMApp
 
         }
 
-        private void lblAtras_Click(object sender, EventArgs e)
-        {
-            Rol form = new Rol();
-            form.Show();
-            this.Close();
-        }
+       
 
         private void lblRotulo1_Click(object sender, EventArgs e)
         {

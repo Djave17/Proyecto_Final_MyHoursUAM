@@ -43,6 +43,7 @@
             this.pnlIcon = new System.Windows.Forms.Panel();
             this.pnlAreaAdministrador = new System.Windows.Forms.Panel();
             this.pnlPieArriba = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblCerrarSesion = new System.Windows.Forms.Label();
             this.pcbLogOutIcon = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,7 +51,12 @@
             this.pcbStudentIcon = new System.Windows.Forms.PictureBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblBeneficioPartidos = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblHorasLaborales = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lvwEventos = new System.Windows.Forms.ListView();
             this.clhIDEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhNombreEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -60,8 +66,14 @@
             this.clhFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhLugar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhTipoEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lblHorasLaborales = new System.Windows.Forms.Label();
-            this.lblBeneficioPartidos = new System.Windows.Forms.Label();
+            this.lvwPartidosAsistidos = new System.Windows.Forms.ListView();
+            this.clhID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhConvalidacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhHora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhFechaPartido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhLugarPartido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhDeporte = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlIcon.SuspendLayout();
@@ -71,7 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbStudentIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnReporte
@@ -103,7 +114,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 73);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(165, 625);
+            this.panel1.Size = new System.Drawing.Size(165, 674);
             this.panel1.TabIndex = 2;
             // 
             // button1
@@ -215,23 +226,40 @@
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
             this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
-            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 840);
+            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 856);
             this.pnlAreaAdministrador.TabIndex = 12;
             // 
             // pnlPieArriba
             // 
+            this.pnlPieArriba.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPieArriba.BackColor = System.Drawing.Color.White;
+            this.pnlPieArriba.Controls.Add(this.label2);
             this.pnlPieArriba.Controls.Add(this.lblCerrarSesion);
             this.pnlPieArriba.Controls.Add(this.pcbLogOutIcon);
             this.pnlPieArriba.Controls.Add(this.label1);
             this.pnlPieArriba.Controls.Add(this.lblEstudiante);
             this.pnlPieArriba.Controls.Add(this.pcbStudentIcon);
-            this.pnlPieArriba.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPieArriba.Location = new System.Drawing.Point(165, 0);
             this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPieArriba.Name = "pnlPieArriba";
-            this.pnlPieArriba.Size = new System.Drawing.Size(1316, 73);
+            this.pnlPieArriba.Size = new System.Drawing.Size(3538, 73);
             this.pnlPieArriba.TabIndex = 13;
+            this.pnlPieArriba.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPieArriba_Paint);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
+            this.label2.Location = new System.Drawing.Point(1683, 35);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Cerrar Sesion";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblCerrarSesion
             // 
@@ -249,7 +277,7 @@
             // pcbLogOutIcon
             // 
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
-            this.pcbLogOutIcon.Location = new System.Drawing.Point(1178, 19);
+            this.pcbLogOutIcon.Location = new System.Drawing.Point(1048, 19);
             this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbLogOutIcon.Name = "pcbLogOutIcon";
             this.pcbLogOutIcon.Size = new System.Drawing.Size(40, 41);
@@ -274,7 +302,7 @@
             this.lblEstudiante.AutoSize = true;
             this.lblEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstudiante.ForeColor = System.Drawing.Color.Teal;
-            this.lblEstudiante.Location = new System.Drawing.Point(1113, 35);
+            this.lblEstudiante.Location = new System.Drawing.Point(969, 35);
             this.lblEstudiante.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEstudiante.Name = "lblEstudiante";
             this.lblEstudiante.Size = new System.Drawing.Size(67, 13);
@@ -284,7 +312,7 @@
             // pcbStudentIcon
             // 
             this.pcbStudentIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbStudentIcon.Image")));
-            this.pcbStudentIcon.Location = new System.Drawing.Point(1072, 21);
+            this.pcbStudentIcon.Location = new System.Drawing.Point(928, 19);
             this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbStudentIcon.Name = "pcbStudentIcon";
             this.pcbStudentIcon.Size = new System.Drawing.Size(36, 38);
@@ -294,47 +322,114 @@
             // 
             // chart1
             // 
+            this.chart1.BorderlineColor = System.Drawing.Color.Teal;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(21, 34);
             this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(898, 307);
+            this.chart1.Size = new System.Drawing.Size(881, 307);
             this.chart1.TabIndex = 14;
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Silver;
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.lvwEventos);
+            this.groupBox1.Controls.Add(this.lvwPartidosAsistidos);
+            this.groupBox1.Controls.Add(this.lblBeneficioPartidos);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.lblHorasLaborales);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.chart1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(191, 87);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(191, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(938, 365);
+            this.groupBox1.Size = new System.Drawing.Size(1167, 716);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dashboard";
+            this.groupBox1.Text = "Eventos";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // groupBox2
+            // lblBeneficioPartidos
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox2.Controls.Add(this.lvwEventos);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(191, 458);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(938, 358);
-            this.groupBox2.TabIndex = 16;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Eventos asistidos";
+            this.lblBeneficioPartidos.AutoSize = true;
+            this.lblBeneficioPartidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBeneficioPartidos.Location = new System.Drawing.Point(942, 87);
+            this.lblBeneficioPartidos.Name = "lblBeneficioPartidos";
+            this.lblBeneficioPartidos.Size = new System.Drawing.Size(51, 20);
+            this.lblBeneficioPartidos.TabIndex = 18;
+            this.lblBeneficioPartidos.Text = "label3";
+            this.lblBeneficioPartidos.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 550);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(153, 20);
+            this.label6.TabIndex = 98;
+            this.label6.Text = "Partidos Asistidos";
+            // 
+            // lblHorasLaborales
+            // 
+            this.lblHorasLaborales.AutoSize = true;
+            this.lblHorasLaborales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorasLaborales.Location = new System.Drawing.Point(942, 54);
+            this.lblHorasLaborales.Name = "lblHorasLaborales";
+            this.lblHorasLaborales.Size = new System.Drawing.Size(51, 20);
+            this.lblHorasLaborales.TabIndex = 17;
+            this.lblHorasLaborales.Text = "label2";
+            this.lblHorasLaborales.Click += new System.EventHandler(this.lblHorasLaborales_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(1472, 530);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(152, 20);
+            this.label5.TabIndex = 97;
+            this.label5.Text = "Eventos Asistidos";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(1466, 523);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 20);
+            this.label4.TabIndex = 96;
+            this.label4.Text = "Eventos Asistidos";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 353);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 20);
+            this.label3.TabIndex = 95;
+            this.label3.Text = "Eventos Asistidos";
             // 
             // lvwEventos
             // 
+            this.lvwEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvwEventos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clhIDEvento,
             this.clhNombreEvento,
@@ -346,36 +441,35 @@
             this.clhTipoEvento});
             this.lvwEventos.FullRowSelect = true;
             this.lvwEventos.HideSelection = false;
-            this.lvwEventos.Location = new System.Drawing.Point(12, 24);
+            this.lvwEventos.Location = new System.Drawing.Point(20, 375);
             this.lvwEventos.Margin = new System.Windows.Forms.Padding(2);
             this.lvwEventos.Name = "lvwEventos";
-            this.lvwEventos.Size = new System.Drawing.Size(907, 316);
-            this.lvwEventos.TabIndex = 94;
+            this.lvwEventos.Size = new System.Drawing.Size(882, 152);
+            this.lvwEventos.TabIndex = 99;
             this.lvwEventos.UseCompatibleStateImageBehavior = false;
             this.lvwEventos.View = System.Windows.Forms.View.Details;
-            this.lvwEventos.SelectedIndexChanged += new System.EventHandler(this.lvwEventos_SelectedIndexChanged);
             // 
             // clhIDEvento
             // 
-            this.clhIDEvento.Text = "IDEvento";
+            this.clhIDEvento.Text = "ID";
             this.clhIDEvento.Width = 98;
             // 
             // clhNombreEvento
             // 
             this.clhNombreEvento.Text = "Nombre";
-            this.clhNombreEvento.Width = 180;
+            this.clhNombreEvento.Width = 160;
             // 
             // clhTipoConvalidacion
             // 
             this.clhTipoConvalidacion.DisplayIndex = 3;
             this.clhTipoConvalidacion.Text = "Tipo de convalidacion";
-            this.clhTipoConvalidacion.Width = 200;
+            this.clhTipoConvalidacion.Width = 205;
             // 
             // clhConvalida
             // 
             this.clhConvalida.DisplayIndex = 4;
-            this.clhConvalida.Text = "Convalida";
-            this.clhConvalida.Width = 101;
+            this.clhConvalida.Text = "Convalidacion";
+            this.clhConvalida.Width = 140;
             // 
             // clhHorario
             // 
@@ -398,38 +492,73 @@
             // 
             this.clhTipoEvento.DisplayIndex = 2;
             this.clhTipoEvento.Text = "Tipo de Evento";
-            this.clhTipoEvento.Width = 180;
+            this.clhTipoEvento.Width = 160;
             // 
-            // lblHorasLaborales
+            // lvwPartidosAsistidos
             // 
-            this.lblHorasLaborales.AutoSize = true;
-            this.lblHorasLaborales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorasLaborales.Location = new System.Drawing.Point(1135, 87);
-            this.lblHorasLaborales.Name = "lblHorasLaborales";
-            this.lblHorasLaborales.Size = new System.Drawing.Size(51, 20);
-            this.lblHorasLaborales.TabIndex = 17;
-            this.lblHorasLaborales.Text = "label2";
+            this.lvwPartidosAsistidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvwPartidosAsistidos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clhID,
+            this.clhNombre,
+            this.clhConvalidacion,
+            this.clhHora,
+            this.clhFechaPartido,
+            this.clhLugarPartido,
+            this.clhDeporte});
+            this.lvwPartidosAsistidos.FullRowSelect = true;
+            this.lvwPartidosAsistidos.HideSelection = false;
+            this.lvwPartidosAsistidos.Location = new System.Drawing.Point(19, 570);
+            this.lvwPartidosAsistidos.Margin = new System.Windows.Forms.Padding(2);
+            this.lvwPartidosAsistidos.Name = "lvwPartidosAsistidos";
+            this.lvwPartidosAsistidos.Size = new System.Drawing.Size(882, 152);
+            this.lvwPartidosAsistidos.TabIndex = 100;
+            this.lvwPartidosAsistidos.UseCompatibleStateImageBehavior = false;
+            this.lvwPartidosAsistidos.View = System.Windows.Forms.View.Details;
             // 
-            // lblBeneficioPartidos
+            // clhID
             // 
-            this.lblBeneficioPartidos.AutoSize = true;
-            this.lblBeneficioPartidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBeneficioPartidos.Location = new System.Drawing.Point(1135, 121);
-            this.lblBeneficioPartidos.Name = "lblBeneficioPartidos";
-            this.lblBeneficioPartidos.Size = new System.Drawing.Size(51, 20);
-            this.lblBeneficioPartidos.TabIndex = 18;
-            this.lblBeneficioPartidos.Text = "label3";
-            this.lblBeneficioPartidos.Click += new System.EventHandler(this.label3_Click);
+            this.clhID.Text = "ID";
+            this.clhID.Width = 98;
+            // 
+            // clhNombre
+            // 
+            this.clhNombre.Text = "Nombre";
+            this.clhNombre.Width = 160;
+            // 
+            // clhConvalidacion
+            // 
+            this.clhConvalidacion.Text = "Convalidacion";
+            this.clhConvalidacion.Width = 140;
+            // 
+            // clhHora
+            // 
+            this.clhHora.Text = "Horario";
+            this.clhHora.Width = 130;
+            // 
+            // clhFechaPartido
+            // 
+            this.clhFechaPartido.Text = "Fecha";
+            this.clhFechaPartido.Width = 178;
+            // 
+            // clhLugarPartido
+            // 
+            this.clhLugarPartido.Text = "Lugar";
+            this.clhLugarPartido.Width = 150;
+            // 
+            // clhDeporte
+            // 
+            this.clhDeporte.Text = "Deporte";
+            this.clhDeporte.Width = 160;
             // 
             // UserReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1481, 840);
-            this.Controls.Add(this.lblBeneficioPartidos);
-            this.Controls.Add(this.lblHorasLaborales);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(1370, 856);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnlPieArriba);
             this.Controls.Add(this.pnlAreaAdministrador);
@@ -449,9 +578,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbStudentIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -475,7 +603,13 @@
         private System.Windows.Forms.Button btnPartidos;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lblHorasLaborales;
+        private System.Windows.Forms.Label lblBeneficioPartidos;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListView lvwEventos;
         private System.Windows.Forms.ColumnHeader clhIDEvento;
         private System.Windows.Forms.ColumnHeader clhNombreEvento;
@@ -485,7 +619,13 @@
         private System.Windows.Forms.ColumnHeader clhFecha;
         private System.Windows.Forms.ColumnHeader clhLugar;
         private System.Windows.Forms.ColumnHeader clhTipoEvento;
-        private System.Windows.Forms.Label lblHorasLaborales;
-        private System.Windows.Forms.Label lblBeneficioPartidos;
+        private System.Windows.Forms.ListView lvwPartidosAsistidos;
+        private System.Windows.Forms.ColumnHeader clhID;
+        private System.Windows.Forms.ColumnHeader clhNombre;
+        private System.Windows.Forms.ColumnHeader clhConvalidacion;
+        private System.Windows.Forms.ColumnHeader clhHora;
+        private System.Windows.Forms.ColumnHeader clhFechaPartido;
+        private System.Windows.Forms.ColumnHeader clhLugarPartido;
+        private System.Windows.Forms.ColumnHeader clhDeporte;
     }
 }

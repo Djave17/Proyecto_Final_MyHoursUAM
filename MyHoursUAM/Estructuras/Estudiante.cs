@@ -21,6 +21,7 @@ namespace MyHours_UAMApp.Estructuras
         
        
         public List<string> eventosAsistidos { get;  set; } // IDs de eventos asistidos
+        public List<string> partidosAsistidos { get; set; } // IDs de eventos asistidos
         public Asistencia asistencia { get; set; }
 
         // Constructor
