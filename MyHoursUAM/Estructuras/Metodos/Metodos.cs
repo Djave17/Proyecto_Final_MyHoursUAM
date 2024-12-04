@@ -14,7 +14,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 {
     internal static class Metodos
     {
-
+        //MARK: - Instancias de CRUD
+        #region Instancias de CRUD
         // Instancias de CRUD para archivos globales
         private static CrudService<SolicitudAsistencia> solicitudesService = new CrudService<SolicitudAsistencia>("solicitudes.dat");
         private static CrudService<Evento> eventoService = new CrudService<Evento>("eventos.dat");
@@ -41,25 +42,28 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             new Administrador { cifAdministrador = "admin", contraseñaAdministrador = "admin" }
         };
 
+        #endregion Instancias de CRUD
 
-        //public static List<SolicitudAsistencia> Solicitudes = new List<SolicitudAsistencia>();
-        //public static List<Estudiante> estudiantes = estudiantesService.GetAll() ?? new List<Estudiante>();
-        //public static List<Partido> partidos = new List<Partido>();
-        //public static List<Evento> eventos = new List<Evento>();
-
-        /// <summary>
-        /// Sincroniza los contadores globales con los datos existentes.
-        /// </summary>
+        //MARK: - Contadores
+        #region Contadores
         //Contadores para IDs de eventos y partidos
-        private static int contadorSolicitudes = 1; // Contador global para IDs únicos de las solicitud
+        private static int contadorSolicitudesEventos = 1; // Contador global para IDs únicos de las solicitud eventos
+        private static int contadorSolicitudesPartidos = 1; // Contador global para IDs únicos de las solicitud partidos
         private static int eventoCounter = 1; // Contador para IDs de eventos
         private static int partidoCounter = 1; // Contador para IDs de partidos
+        #endregion Contadores
 
+        //MARK: - Inicializar
+        //Esta funcion es llamada en main
+        /// <summary>
+        /// Inicializa los datos de la aplicación.
+        /// </summary>
         public static void Inicializar()
         {
             try
             {
-                eventos = eventoService.GetAll() ?? new List<Evento>();
+                //get all viene de CrudService que hace un deserialize para obtener los datos del archivo binario y los carga en la lista 
+                eventos = eventoService.GetAll() ?? new List<Evento>(); 
                 partidos = partidoService.GetAll() ?? new List<Partido>();
                 solicitudesEventos = solicitudesEventosService.GetAll() ?? new List<SolicitudAsistencia>();
                 solicitudesPartidos = solicitudesPartidosService.GetAll() ?? new List<SolicitudAsistencia>();
@@ -89,28 +93,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         }
 
 
-        
-        /// <summary>
-        /// Devuelve todos los eventos como una lista.
-        /// </summary>
-        public static List<string[]> GetEventosAsString()
-        {
-            return eventos.Select(p => new string[]
-            {
-                p.idEvento,
-                p.nombreEvento,
-                p.tipoBeneficio,
-                p.horaEvento,
-                p.fechaEvento,
-                p.lugarEvento,
-                p.cantidadConvalidar.ToString(),
-                p.cupos.ToString(),
-                p.tipoEvento.ToString(),
-                p.estadoEvento.ToString(),
 
-
-            }).ToList();
-        }
+        //MARK : - LLamado de eventos y partidos
         public static (List<string[]>, List<string[]>) EventosPartidos()
         {
             var eventos = GetEventosAsString();
@@ -119,9 +103,10 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         }
 
 
-        
 
 
+        //MARK : - CRUD de eventos
+        #region CRUD de eventos
 
         /// <summary>
         /// Registra un nuevo evento con validaciones de campos obligatorios.
@@ -265,7 +250,24 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
             return $"Evento '{evento.nombreEvento}' eliminado correctamente.";
         }
+        #endregion CRUD de eventos
 
+        //MARK: - CRUD de partidos
+        #region CRUD de partidos
+        /// <summary>
+        /// Registra un nuevo partido con validaciones de campos obligatorios.
+        /// </summary>
+        /// <param name="idEvento"></param>
+        /// <param name="tipoDeporte"></param>
+        /// <param name="nombrePartido"></param>
+        /// <param name="cantidadAConvalidar"></param>
+        /// <param name="cupo"></param>
+        /// <param name="horaEnvio"></param>
+        /// <param name="hora"></param>
+        /// <param name="fecha"></param>
+        /// <param name="lugar"></param>
+        /// <param name="estadoEvento"></param>
+        /// <returns></returns>
         public static string RegistrarPartido(
             string idEvento,
             string tipoDeporte,
@@ -376,8 +378,10 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         }
 
         /// <summary>
-        /// Elimina un partido basado en su índice.
+        /// Eliminar un partido basado en su índice.
         /// </summary>
+        /// <param name="indice"></param>
+        /// <returns></returns>
         public static string EliminarPartido(int indice)
         {
             // Validar índice
@@ -392,7 +396,10 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
             return $"Partido '{nombrePartido}' eliminado exitosamente.";
         }
+        #endregion CRUD de partidos
 
+        //MARK: - Get partidos Get eventos
+        #region Getters partidos
         /// <summary>
         /// Devuelve todos los partidos como una lista de arreglos de string para su uso en un ListView.
         /// </summary>
@@ -412,7 +419,39 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
             }).ToList();
         }
-        //Cambiar estado del evento
+
+        /// <summary>
+        /// Devuelve todos los eventos como una lista.
+        /// </summary>
+        public static List<string[]> GetEventosAsString()
+        {
+            return eventos.Select(p => new string[]
+            {
+                p.idEvento,
+                p.nombreEvento,
+                p.tipoBeneficio,
+                p.horaEvento,
+                p.fechaEvento,
+                p.lugarEvento,
+                p.cantidadConvalidar.ToString(),
+                p.cupos.ToString(),
+                p.tipoEvento.ToString(),
+                p.estadoEvento.ToString(),
+
+
+            }).ToList();
+        }
+        #endregion Getters partidos
+
+        //MARK: - Cambiar estado del evento
+        #region Cambiar estados
+
+        /// <summary>
+        /// Cambiar el estado de un evento.
+        /// </summary>
+        /// <param name="indice"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public static string CambiarEstadoEvento(int indice)
         {
             // Validar índice
@@ -439,6 +478,16 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             // Retornar mensaje de éxito
             return $"El estado del evento '{evento.nombreEvento}' se cambió a {evento.estadoEvento}.";
         }
+
+        //MARK: - Métodos de autenticación
+        
+
+        /// <summary>
+        /// Cambiar el estado de un partido.
+        /// </summary>
+        /// <param name="indice"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public static string CambiarEstadoPartido(int indice)
         {
             // Validar índice
@@ -461,51 +510,17 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             // Retornar mensaje de éxito
             return $"El estado del partido '{partido.nombrePartido}' se cambió a {partido.estadoEvento}.";
         }
+        #endregion Cambiar estados
 
 
-        // Método para registrar asistencia
-        //public static string RegistrarAsistencia(int indiceEvento, string cifEstudiante)
-        //{
-        //    // Validar índice
-        //    if (indiceEvento < 0 || indiceEvento >= eventos.Count)
-        //    {
-        //        throw new ArgumentOutOfRangeException("Índice fuera de rango.");
-        //    }
-
-        //    // Obtener el evento y validar su disponibilidad
-        //    var evento = eventos[indiceEvento];
-        //    if (evento.estadoEvento != Evento.EstadoEvento.Disponible)
-        //    {
-        //        return $"El evento '{evento.nombreEvento}' no está disponible para asistencia.";
-        //    }
-
-        //    // Buscar estudiante activo
-        //    var estudiante = estudiantes.FirstOrDefault(e => e.cifEstudiante == cifEstudiante);
-        //    if (estudiante == null)
-        //    {
-        //        return "El estudiante no existe.";
-        //    }
-
-        //    // Verificar si el estudiante ya asistió al evento
-        //    if (estudiante.eventosAsistidos.Contains(evento.idEvento))
-        //    {
-        //        return $"El estudiante ya asistió al evento '{evento.nombreEvento}'.";
-        //    }
-
-        //    // Registrar asistencia
-        //    estudiante.eventosAsistidos.Add(evento.idEvento);
-        //    estudiante.HorasCompletadas += evento.cantidadConvalidar;
-
-        //    // Actualizar cupos del evento
-        //    evento.cupos--;
-        //    if (evento.cupos <= 0)
-        //    {
-        //        evento.estadoEvento = Evento.EstadoEvento.No_Disponible;
-        //    }
-
-        //    return $"Asistencia registrada exitosamente para el evento '{evento.nombreEvento}'.";
-        //}
-        // Método para validar inicio de sesión y determinar el rol
+        //MARK: - Métodos de autenticación
+        #region Métodos de autenticación
+        /// <summary>
+        /// Validar las credenciales de un usuario.
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <param name="contraseña"></param>
+        /// <returns></returns>
         public static (bool, string) ValidarCredenciales(string usuario, string contraseña)
         {
             // Validar si es administrador
@@ -525,6 +540,15 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             // Credenciales inválidas
             return (false, null);
         }
+        #endregion Métodos de autenticación
+
+        //MARK : - Métodos para calcular horas y partidos
+        #region Metodos para calcular horas y partidos
+        /// <summary>
+        /// Calcular las horas laborales de un estudiante.
+        /// </summary>
+        /// <param name="cifEstudiante"></param>
+        /// <returns></returns>
         public static int CalcularHorasLaborales(string cifEstudiante)
         {
             var estudiante = SesionActual.EstudianteActual;
@@ -534,19 +558,30 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             return eventosAsistidos.Sum(e => e.cantidadConvalidar); // Suponiendo que cantidadConvalidar representa las horas
         }
 
-        // Calcular el beneficio acumulado de partidos
+
+
+        // MARK: - Calcular el beneficio acumulado de partidos
+
+        /// <summary>
+        /// Calcular el beneficio acumulado de partidos.
+        /// </summary>
+        /// <param name="cifEstudiante"></param>
+        /// <returns></returns>
         public static int CalcularBeneficioPartidos(string cifEstudiante)
         {
             var estudiante = SesionActual.EstudianteActual;
             if (estudiante == null) return 0;
 
-            var partidosAsistidos = eventos.OfType<Partido>()
-                .Where(p => estudiante.eventosAsistidos.Contains(p.idEvento))
-                .ToList();
+            var partidosAsistidos = ObtenerPartidosAsistidos(cifEstudiante);
 
-            return partidosAsistidos.Count; // Calculando cantidad de partidos asistidos como beneficio
+            return partidosAsistidos.Sum(p => p.cantidadConvalidar); // Calculando cantidad de partidos asistidos como beneficio
         }
+        #endregion Metodos para calcular horas y partidos
 
+        // MARK: Envios de asistencia 
+
+        #region Envio de solicitudes de asistencia
+        //MARK: - Envio de solicitudes de asistencia
         //CAMBIOOOOO ANDREAAAAA COPIALO EN TU CODIGO
         // Enviar solicitud de asistencia
         public static void EnviarSolicitudEvento(string estudianteId, Evento evento)
@@ -562,7 +597,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
             solicitudesEventosService.Add(new SolicitudAsistencia
             {
-                Id = "S" + contadorSolicitudes++, // Genera un ID único
+                Id = "SE" + contadorSolicitudesEventos++, // Genera un ID único
                 EventoId = evento.idEvento,
                 EstudianteId = estudianteId,
                 Eventos = evento,
@@ -583,6 +618,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         }
 
         
+
+
         // Enviar solicitud de asistencia de partido //David: ANDREAAAAA AGREGA ESTOOOOO 
         /// <summary>
         /// Enviar solicitud de asistencia a un partido.
@@ -603,7 +640,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
             solicitudesPartidosService.Add(new SolicitudAsistencia
             {
-                Id = "S" + contadorSolicitudes++,
+                Id = "SP" + contadorSolicitudesPartidos++,
                 EventoId = partido.idEvento,
                 EstudianteId = estudianteId,
                 Partidos = partido,
@@ -621,10 +658,16 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             partidoService.SaveData();
             solicitudesPartidosService.SaveData();
         }
+        #endregion Envio de solicitudes de asistencia
 
 
-
-        // Obtener eventos asistidos por un estudiante
+        // MARK: Obtener eventos asistidos y partidos asistidos por un estudiante
+        #region Obtener eventos asistidos y partidos asistidos
+        /// <summary>
+        /// Obtener eventos asistidos por un estudiante.
+        /// </summary>
+        /// <param name="estudianteId"></param>
+        /// <returns></returns>
         public static List<Evento> ObtenerEventosAsistidos(string estudianteId)
         {
             var estudiante = estudiantes.FirstOrDefault(e => e.cifEstudiante == estudianteId);
@@ -675,8 +718,17 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             return partidosAprobados;
         }
 
+        #endregion Obtener eventos asistidos y partidos asistidos
 
 
+        // MARK: Cargar solicitudes en ListView
+        #region Cargar solicitudes en ListView
+        /// <summary>
+        /// Cargar las solicitudes de asistencia en un ListView.
+        /// </summary>
+        /// <param name="listView"></param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
         public static void CargarSolicitudesEnListViewEvento(ListView listView)
         {
             // Validar que el ListView no sea nulo
@@ -742,8 +794,17 @@ namespace MyHours_UAMApp.Estructuras.Metodos
                 item.SubItems.Add(solicitud.FechaSolicitud.ToString("dd/MM/yyyy HH:mm"));
                 listView.Items.Add(item);
             }
-        } 
+        }
+        #endregion Cargar solicitudes en ListView
 
+
+        //MARK: - Confirmar y rechazar solicitudes de asistencia
+        #region Confirmar y rechazar solicitudes de asistencia
+        /// <summary>
+        /// Confirmar una solicitud de asistencia a un evento.
+        /// </summary>
+        /// <param name="solicitudId"></param>
+        /// <returns></returns>
         public static string ConfirmarSolicitudEvento(string solicitudId)
         {
             var solicitud = solicitudesEventos.FirstOrDefault(s => s.Id == solicitudId);
@@ -811,7 +872,15 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             return "Solicitud rechazada correctamente.";
         }
 
+        #endregion Confirmar y rechazar solicitudes de asistencia
 
+        //MARK: - Cargar eventos y partidos asistidos en ListView
+        #region Cargar eventos y partidos asistidos en ListView
+        /// <summary>
+        /// Cargar eventos asistidos en un ListView.
+        /// </summary>
+        /// <param name="listView"></param>
+        /// <param name="eventosAsistidos"></param>
         public static void CargarEventosAsistidos(ListView listView, List<Evento> eventosAsistidos)
         {
             listView.Items.Clear(); // Limpiar el control antes de cargar nuevos datos
@@ -857,9 +926,13 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             }
         }
 
-
+        #endregion Cargar eventos y partidos asistidos en ListView
         //public static List<Estudiante> estudiantes = CargarEstudiantesSincronizados();
 
+        //MARK: - Sincronizar contadores
+        /// <summary>
+        /// Sincronizar los contadores de IDs de eventos y partidos.
+        /// </summary>
         private static void SincronizarContadores()
         {
             if (eventos != null && eventos.Count > 0)
@@ -876,9 +949,22 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
             if (solicitudesEventos != null && solicitudesEventos.Count > 0)
             {
-                contadorSolicitudes = solicitudesEventos.Max(s => int.Parse(s.Id.TrimStart('S'))) + 1;
+                contadorSolicitudesEventos = solicitudesEventos.Max(s => int.Parse(s.Id.TrimStart("SE".ToCharArray()))) + 1;
+            }
+
+            if (solicitudesPartidos != null && solicitudesPartidos.Count > 0)
+            {
+                contadorSolicitudesPartidos = solicitudesPartidos.Max(s => int.Parse(s.Id.TrimStart("SP".ToCharArray()))) + 1;
             }
         }
+
+        //MARK: - Configurar ReportViewer
+        #region Configurar ReportViewer
+        /// <summary>
+        /// Configurar el ReportViewer con los eventos asistidos por un estudiante.
+        /// </summary>
+        /// <param name="reportViewer"></param>
+        /// <param name="eventosAsistidos"></param>
         public static void ConfigurarReportViewer(ReportViewer reportViewer, List<Evento> eventosAsistidos)
         {
             // Crear un DataTable para los datos del reporte
@@ -910,19 +996,10 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             reportViewer.LocalReport.DataSources.Add(new ReportDataSource("DsEvento", tablaEventos));
             reportViewer.RefreshReport();
         }
-        public static List<SolicitudAsistencia> GetSolicitudesEventos()
-        {
-            // Filtrar las solicitudes que están vinculadas a eventos
-            return solicitudesService.GetAll().Where(s => s.Eventos != null).ToList();
-        }
-
-        public static List<SolicitudAsistencia> GetSolicitudesPartidos()
-        {
-            // Filtrar las solicitudes que están vinculadas a partidos
-            return solicitudesService.GetAll().Where(s => s.Partidos != null).ToList();
-        }
+        #endregion Configurar ReportViewer
 
         
+
 
 
 

@@ -42,41 +42,64 @@ Este sistema facilita el registro, la gestión y la validación de horas laboral
 
 ```plaintext
 MyHoursUAM/
+MyHoursUAM/
 ├── Administrador/           
 │   ├── AdminAdd.cs           # Formulario para agregar nuevos administradores
 │   ├── AdminAjustes.cs       # Configuración general del sistema
 │   ├── AdminAsistencia.cs    # Gestión de asistencias de estudiantes
 │   ├── AdminVer.cs           # Visualización de reportes y estadísticas
-│   └── SplashScreenAdmin.cs  # Pantalla inicial del administrador
+│   ├── SplashScreenAdmin.cs  # Pantalla inicial del administrador
+│   ├── AdminAddPartidos.cs   # Gestión de nuevos partidos
+│   ├── AdminGrafico.cs       # Generación de gráficos estadísticos
 │
 ├── Estudiante/              
-│   ├── UserEvento.cs         # Formulario para ver eventos disponibles
-│   ├── UserAsistencia.cs     # Formulario para verificar asistencias del usuario
-│   ├── UserMiPerfil.cs       # Configuración y detalles del perfil del estudiante
-│   ├── UserReporte.cs        # Generación de reportes personalizados
-│   └── SplashScreenUser.cs   # Pantalla inicial del estudiante
+│   ├── SplashScreenUser.cs   # Pantalla inicial del estudiante
+│   ├── UserAsistencia.cs     # Verificación de asistencias del usuario
+│   ├── UserEvento.cs         # Gestión y visualización de eventos
+│   ├── UserGestiones.cs      # Gestión de actividades personalizadas
+│   ├── UserMiPerfil.cs       # Configuración y detalles del perfil
+│   ├── UserReporte.cs        # Reportes personalizados del estudiante
+│   ├── UserReportView.cs     # Visualización de reportes en detalle
+│   ├── UserCambiarContraseña.cs  # Cambio de contraseña
+│   ├── UserPartidos.cs       # Gestión y visualización de partidos
 │
 ├── Estructuras/             
-│   ├── Administrador.cs      # Clase modelo para datos del administrador
-│   ├── Asistencia.cs         # Clase que gestiona las asistencias de estudiantes
-│   ├── Estudiante.cs         # Clase modelo para datos del estudiante
-│   ├── Evento.cs             # Clase que define eventos generales (base)
-│   ├── Partido.cs            # Clase especializada en eventos deportivos
-│   └── Metodos.cs            # Métodos auxiliares para lógica compartida
+│   ├── Administrador.cs      # Modelo para datos del administrador
+│   ├── Asistencia.cs         # Modelo para gestionar asistencias
+│   ├── Estudiante.cs         # Modelo para datos del estudiante
+│   ├── Evento.cs             # Definición general de eventos
+│   ├── Partido.cs            # Modelo especializado para partidos
+│   ├── SolicitudAsistencia.cs  # Gestión de solicitudes de asistencia
+│   ├── SesionActual.cs       # Representación del usuario en sesión
+│   ├── Metodos.cs            # Métodos auxiliares para lógica compartida
 │
 ├── Forms/                   
 │   ├── Sesion/              
 │   │   ├── IniciarSesion.cs  # Formulario de inicio de sesión
-│   │   ├── Rol.cs            # Selección de rol: estudiante o administrador
-│   │   └── SplashScreen.cs   # Pantalla inicial para todos los usuarios
-│   └── Administrador/Estudiante/  # Formularios organizados por rol
+│   │   ├── Rol.cs            # Selección de rol (estudiante o administrador)
+│   │   ├── SplashScreen.cs   # Pantalla de inicio general
+│   ├── Administrador/Estudiante/  # Subcarpetas organizadas por rol
+│
+├── Reportes/
+│   ├── RptEvento.rdlc        # Reporte de eventos
+│   ├── RptPartido.rdlc       # Reporte de partidos
+│
+├── Servicios/
+│   ├── CrudService.cs        # Servicios para operaciones CRUD
 │
 ├── Properties/              
-│   ├── AssemblyInfo.cs       # Información de ensamblado
-│   ├── Resources.resx        # Recursos visuales del sistema
-│   └── Settings.settings     # Configuración del entorno
+│   ├── AssemblyInfo.cs       # Información del ensamblado
+│   ├── Resources.resx        # Recursos visuales
+│   ├── Settings.settings     # Configuración del entorno
 │
-└── Program.cs                # Punto de entrada principal
+├── SqlServerTypes/
+│   ├── Loader.cs             # Configuración del tipo espacial de SQL Server
+│   ├── x64/                  # Binarios para sistemas de 64 bits
+│   ├── x86/                  # Binarios para sistemas de 32 bits
+│
+├── Program.cs                # Punto de entrada principal
+└── README.md                 # Documentación principal del proyecto
+
 ```
 
 ---
