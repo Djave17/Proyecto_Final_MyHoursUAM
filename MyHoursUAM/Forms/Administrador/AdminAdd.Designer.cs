@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminAdd));
             this.pnlPieArriba = new System.Windows.Forms.Panel();
             this.lblCerrarSesion = new System.Windows.Forms.Label();
@@ -81,6 +82,8 @@
             this.lblCupos = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblRotulo2 = new System.Windows.Forms.Label();
+            this.cMenuEditar = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -89,6 +92,7 @@
             this.pnlIcon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gpbNuevoEvento.SuspendLayout();
+            this.cMenuEditar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlPieArriba
@@ -489,6 +493,7 @@
             this.clhCupos,
             this.clhTipoEvento,
             this.clhEstadoEvento});
+            this.lvwEventos.ContextMenuStrip = this.cMenuEditar;
             this.lvwEventos.FullRowSelect = true;
             this.lvwEventos.HideSelection = false;
             this.lvwEventos.Location = new System.Drawing.Point(7, 576);
@@ -744,6 +749,21 @@
             this.lblRotulo2.TabIndex = 0;
             this.lblRotulo2.Text = "Todos los campos son requeridos";
             // 
+            // cMenuEditar
+            // 
+            this.cMenuEditar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editarToolStripMenuItem});
+            this.cMenuEditar.Name = "cMenuEditar";
+            this.cMenuEditar.Size = new System.Drawing.Size(181, 48);
+            this.cMenuEditar.Opening += new System.ComponentModel.CancelEventHandler(this.cMenuEditar_Opening);
+            // 
+            // editarToolStripMenuItem
+            // 
+            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarToolStripMenuItem.Text = "Editar";
+            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
+            // 
             // AdminAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -770,6 +790,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gpbNuevoEvento.ResumeLayout(false);
             this.gpbNuevoEvento.PerformLayout();
+            this.cMenuEditar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -828,5 +849,7 @@
         private System.Windows.Forms.Button btnCambiarEstado;
         private System.Windows.Forms.Button btnGraficos;
         private System.Windows.Forms.ComboBox tbxEstado;
+        private System.Windows.Forms.ContextMenuStrip cMenuEditar;
+        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
     }
 }

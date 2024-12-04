@@ -232,5 +232,34 @@ namespace MyHours_UAMApp.Forms.Administrador
             form.Show();
             this.Close();
         }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lvPartidos.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Por favor, seleccione un evento para editar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int indice = lvPartidos.SelectedIndices[0];
+            var ID = Guid.NewGuid().ToString();
+
+            try
+            {
+                txtNombreEvento.Text = lvPartidos.SelectedItems[0].SubItems[1].Text;
+                tbxLugar.Text = lvPartidos.SelectedItems[0].SubItems[2].Text;
+                cbxTipoDeporte.Text = lvPartidos.SelectedItems[0].SubItems[3].Text;
+                txbHorario.Text = lvPartidos.SelectedItems[0].SubItems[4].Text;
+                dtpFecha.Text = lvPartidos.SelectedItems[0].SubItems[5].Text;
+                txtCupos.Text = lvPartidos.SelectedItems[0].SubItems[6].Text;
+                txbHorasConvalidas.Text = lvPartidos.SelectedItems[0].SubItems[7].Text;
+                tbxEstado.Text = lvPartidos.SelectedItems[0].SubItems[8].Text;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al editar el evento: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

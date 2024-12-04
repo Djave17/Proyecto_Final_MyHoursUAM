@@ -51,7 +51,8 @@ namespace MyHours_UAMApp.Estructuras.Metodos
         /// Sincroniza los contadores globales con los datos existentes.
         /// </summary>
         //Contadores para IDs de eventos y partidos
-        private static int contadorSolicitudes = 1; // Contador global para IDs únicos de las solicitud
+        private static int contadorSolicitudesEventos = 1; // Contador global para IDs únicos de las solicitud eventos
+        private static int contadorSolicitudesPartidos = 1; // Contador global para IDs únicos de las solicitud partidos
         private static int eventoCounter = 1; // Contador para IDs de eventos
         private static int partidoCounter = 1; // Contador para IDs de partidos
 
@@ -540,11 +541,9 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             var estudiante = SesionActual.EstudianteActual;
             if (estudiante == null) return 0;
 
-            var partidosAsistidos = eventos.OfType<Partido>()
-                .Where(p => estudiante.eventosAsistidos.Contains(p.idEvento))
-                .ToList();
+            var partidosAsistidos = ObtenerPartidosAsistidos(cifEstudiante);
 
-            return partidosAsistidos.Count; // Calculando cantidad de partidos asistidos como beneficio
+            return partidosAsistidos.Sum(p => p.cantidadConvalidar); // Calculando cantidad de partidos asistidos como beneficio
         }
 
         //CAMBIOOOOO ANDREAAAAA COPIALO EN TU CODIGO
@@ -562,7 +561,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
             solicitudesEventosService.Add(new SolicitudAsistencia
             {
-                Id = "S" + contadorSolicitudes++, // Genera un ID único
+                Id = "SE" + contadorSolicitudesEventos++, // Genera un ID único
                 EventoId = evento.idEvento,
                 EstudianteId = estudianteId,
                 Eventos = evento,
@@ -603,7 +602,7 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
             solicitudesPartidosService.Add(new SolicitudAsistencia
             {
-                Id = "S" + contadorSolicitudes++,
+                Id = "SP" + contadorSolicitudesPartidos++,
                 EventoId = partido.idEvento,
                 EstudianteId = estudianteId,
                 Partidos = partido,
@@ -876,7 +875,12 @@ namespace MyHours_UAMApp.Estructuras.Metodos
 
             if (solicitudesEventos != null && solicitudesEventos.Count > 0)
             {
-                contadorSolicitudes = solicitudesEventos.Max(s => int.Parse(s.Id.TrimStart('S'))) + 1;
+                contadorSolicitudesEventos = solicitudesEventos.Max(s => int.Parse(s.Id.TrimStart("SE".ToCharArray()))) + 1;
+            }
+
+            if (solicitudesPartidos != null && solicitudesPartidos.Count > 0)
+            {
+                contadorSolicitudesPartidos = solicitudesPartidos.Max(s => int.Parse(s.Id.TrimStart("SP".ToCharArray()))) + 1;
             }
         }
         public static void ConfigurarReportViewer(ReportViewer reportViewer, List<Evento> eventosAsistidos)

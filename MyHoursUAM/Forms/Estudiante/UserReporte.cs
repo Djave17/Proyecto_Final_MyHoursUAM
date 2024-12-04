@@ -63,8 +63,8 @@ namespace MyHours_UAMApp
             int horasLaborales = Metodos.CalcularHorasLaborales(estudiante.cifEstudiante);
             lblHorasLaborales.Text = $"Horas laborales: {horasLaborales}";
 
-            int beneficioPartidos = Metodos.CalcularBeneficioPartidos(estudiante.cifEstudiante);
-            lblBeneficioPartidos.Text = $"Partidos asistidos: {beneficioPartidos}";
+            int beneficioPartidos = Metodos.CalcularBeneficioPartidos(estudiante.cifEstudiante); //Uso de metodo CalcularBeneficioPartidos para contar partidos completados de 7
+            lblBeneficioPartidos.Text = $"Partidos completados: {beneficioPartidos}";
 
             CrearGrafico(horasLaborales, beneficioPartidos);
         }
@@ -166,17 +166,22 @@ namespace MyHours_UAMApp
 
             var series = new Series
             {
-                Name = "Horas y Beneficios",
+                Name = "Horas y Partidos",
                 IsValueShownAsLabel = true,
                 ChartType = SeriesChartType.Pie
             };
 
             series.Points.AddXY("Horas Laborales", horasLaborales);
-            series.Points.AddXY("Beneficio Partidos", beneficioPartidos);
+            series.Points.AddXY("Partidos completados", beneficioPartidos);
 
             series.Label = "#VALX: #VAL (#PERCENT{P0})";
             chart1.Series.Add(series);
-            chart1.Titles.Add("Horas Laborales y Beneficio Partidos");
+            chart1.Titles.Add("Horas Laborales y Partidos completados");
+        }
+
+        private void lvwPartidosAsistidos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
