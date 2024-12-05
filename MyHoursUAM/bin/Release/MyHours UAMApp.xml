@@ -1,0 +1,511 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyHoursUAM</name>
+    </assembly>
+    <members>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.Inicializar">
+            <summary>
+            Inicializa los datos de la aplicación.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.RegistrarEvento(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Registra un nuevo evento con validaciones de campos obligatorios.
+            </summary>
+            <param name="tipoEvento">Tipo de evento (deportivo, cultural, etc.).</param>
+            <param name="tipoBeneficio">Tipo de beneficio asociado al evento.</param>
+            <param name="nombreEvento">Nombre del evento.</param>
+            <param name="cantidadConvalidar">Cantidad de horas a convalidar.</param>
+            <param name="cupos">Número de cupos disponibles.</param>
+            <param name="horaEnvio">Hora de envío del evento.</param>
+            <param name="hora">Hora del evento.</param>
+            <param name="fecha">Fecha del evento.</param>
+            <param name="lugar">Lugar donde se llevará a cabo el evento.</param>
+            <returns>Mensaje indicando el resultado del registro.</returns>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.EditarEvento(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Edita un evento existente basado en su índice y nuevos datos.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.EliminarEvento(System.Int32)">
+            <summary>
+            Elimina un evento basado en su índice.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.RegistrarPartido(System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Registra un nuevo partido con validaciones de campos obligatorios.
+            </summary>
+            <param name="idEvento"></param>
+            <param name="tipoDeporte"></param>
+            <param name="nombrePartido"></param>
+            <param name="cantidadAConvalidar"></param>
+            <param name="cupo"></param>
+            <param name="horaEnvio"></param>
+            <param name="hora"></param>
+            <param name="fecha"></param>
+            <param name="lugar"></param>
+            <param name="estadoEvento"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.EditarPartido(System.Int32,System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Edita un partido existente basado en su índice.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.EliminarPartido(System.Int32)">
+            <summary>
+            Eliminar un partido basado en su índice.
+            </summary>
+            <param name="indice"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.GetPartidosAsStringArray">
+            <summary>
+            Devuelve todos los partidos como una lista de arreglos de string para su uso en un ListView.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.GetEventosAsString">
+            <summary>
+            Devuelve todos los eventos como una lista.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.CambiarEstadoEvento(System.Int32)">
+            <summary>
+            Cambiar el estado de un evento.
+            </summary>
+            <param name="indice"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.CambiarEstadoPartido(System.Int32)">
+            <summary>
+            Cambiar el estado de un partido.
+            </summary>
+            <param name="indice"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.ValidarCredenciales(System.String,System.String)">
+            <summary>
+            Validar las credenciales de un usuario.
+            </summary>
+            <param name="usuario"></param>
+            <param name="contraseña"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.CalcularHorasLaborales(System.String)">
+            <summary>
+            Calcular las horas laborales de un estudiante.
+            </summary>
+            <param name="cifEstudiante"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.CalcularBeneficioPartidos(System.String)">
+            <summary>
+            Calcular el beneficio acumulado de partidos.
+            </summary>
+            <param name="cifEstudiante"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.EnviarSolicitudPartido(System.String,MyHours_UAMApp.Estructuras.Partido)">
+            <summary>
+            Enviar solicitud de asistencia a un partido.
+            </summary>
+            <param name="estudianteId"></param>
+            <param name="partido"></param>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.ObtenerEventosAsistidos(System.String)">
+            <summary>
+            Obtener eventos asistidos por un estudiante.
+            </summary>
+            <param name="estudianteId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.ObtenerPartidosAsistidos(System.String)">
+            <summary>
+            Obtener partidos asistidos por un estudiante.
+            </summary>
+            <param name="estudianteId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.CargarSolicitudesEnListViewEvento(System.Windows.Forms.ListView)">
+            <summary>
+            Cargar las solicitudes de asistencia en un ListView.
+            </summary>
+            <param name="listView"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.ConfirmarSolicitudEvento(System.String)">
+            <summary>
+            Confirmar una solicitud de asistencia a un evento.
+            </summary>
+            <param name="solicitudId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.CargarEventosAsistidos(System.Windows.Forms.ListView,System.Collections.Generic.List{MyHours_UAMApp.Estructuras.Evento})">
+            <summary>
+            Cargar eventos asistidos en un ListView.
+            </summary>
+            <param name="listView"></param>
+            <param name="eventosAsistidos"></param>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.SincronizarContadores">
+            <summary>
+            Sincronizar los contadores de IDs de eventos y partidos.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.Estructuras.Metodos.Metodos.ConfigurarReportViewer(Microsoft.Reporting.WinForms.ReportViewer,System.Collections.Generic.List{MyHours_UAMApp.Estructuras.Evento})">
+            <summary>
+            Configurar el ReportViewer con los eventos asistidos por un estudiante.
+            </summary>
+            <param name="reportViewer"></param>
+            <param name="eventosAsistidos"></param>
+        </member>
+        <member name="F:MyHours_UAMApp.AdminAdd.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.AdminAdd.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.AdminAdd.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.AdminAjustes.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.AdminAjustes.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.AdminAjustes.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.AdminAsistencia.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.AdminAsistencia.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.AdminAsistencia.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.Forms.Administrador.AdminAddPartidos.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.Forms.Administrador.AdminAddPartidos.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.Forms.Administrador.AdminAddPartidos.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.Forms.Administrador.AdminGrafico.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.Forms.Administrador.AdminGrafico.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.Forms.Administrador.AdminGrafico.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.Forms.Estudiante.UserReportView.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.Forms.Estudiante.UserReportView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.Forms.Estudiante.UserReportView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.Forms.Estudiante.UserReportViewPartidos.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.Forms.Estudiante.UserReportViewPartidos.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.Forms.Estudiante.UserReportViewPartidos.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.Forms.Sesion.RegistrarAdministrador.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.Forms.Sesion.RegistrarAdministrador.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.Forms.Sesion.RegistrarAdministrador.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.Forms.Sesion.RegistrarEstudiante.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.Forms.Sesion.RegistrarEstudiante.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.Forms.Sesion.RegistrarEstudiante.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.SplashScreenAdmin.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.SplashScreenAdmin.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.SplashScreenAdmin.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.SplashScreenUser.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.SplashScreenUser.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.SplashScreenUser.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.UserCambiarContraseña.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.UserCambiarContraseña.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.UserCambiarContraseña.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.UserEvento.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.UserEvento.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.UserEvento.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.UserPartidos.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.UserPartidos.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.UserPartidos.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.UserMiPerfil.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.UserMiPerfil.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.UserMiPerfil.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.UserReporte.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.UserReporte.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.UserReporte.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.IniciarSesion.components">
+            <summary>
+            Variable del diseñador necesaria.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.IniciarSesion.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén usando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.IniciarSesion.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido de este método con el editor de código.
+            </summary>
+        </member>
+        <member name="F:MyHours_UAMApp.SplashScreen.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.SplashScreen.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyHours_UAMApp.SplashScreen.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MyHours_UAMApp.Program.Main">
+            <summary>
+            Punto de entrada principal para la aplicación.
+            </summary>
+        </member>
+        <member name="T:MyHours_UAMApp.Properties.Resources">
+            <summary>
+              Clase de recurso fuertemente tipado para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:MyHours_UAMApp.Properties.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:MyHours_UAMApp.Properties.Resources.Culture">
+            <summary>
+              Invalida la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos usando esta clase de recursos fuertemente tipados.
+            </summary>
+        </member>
+        <member name="T:SqlServerTypes.Utilities">
+            <summary>
+            Utility methods related to CLR Types for SQL Server 
+            </summary>
+        </member>
+        <member name="M:SqlServerTypes.Utilities.LoadNativeAssemblies(System.String)">
+            <summary>
+            Loads the required native assemblies for the current architecture (x86 or x64)
+            </summary>
+            <param name="rootApplicationPath">
+            Root path of the current application. Use Server.MapPath(".") for ASP.NET applications
+            and AppDomain.CurrentDomain.BaseDirectory for desktop applications.
+            </param>
+        </member>
+    </members>
+</doc>
