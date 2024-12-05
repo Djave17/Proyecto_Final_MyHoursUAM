@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MyHours_UAMApp</RootNamespace>
+    <AssemblyName>MyHours UAMApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Estructuras\Administrador.cs" />
+    <Compile Include="Estructuras\Asistencia.cs" />
+    <Compile Include="Estructuras\SolicitudAsistencia.cs" />
+    <Compile Include="Estructuras\Estudiante.cs" />
+    <Compile Include="Estructuras\Evento.cs" />
+    <Compile Include="Estructuras\Metodos\Metodos.cs" />
+    <Compile Include="Estructuras\Partido.cs" />
+    <Compile Include="Estructuras\SesionActual.cs" />
+    <Compile Include="Forms\Administrador\AdminAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\AdminAdd.Designer.cs">
+      <DependentUpon>AdminAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\AdminAjustes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\AdminAjustes.Designer.cs">
+      <DependentUpon>AdminAjustes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\AdminAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\AdminAsistencia.Designer.cs">
+      <DependentUpon>AdminAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\AdminAddPartidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\AdminAddPartidos.Designer.cs">
+      <DependentUpon>AdminAddPartidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\AdminGrafico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\AdminGrafico.Designer.cs">
+      <DependentUpon>AdminGrafico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\SplashScreenAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\SplashScreenAdmin.Designer.cs">
+      <DependentUpon>SplashScreenAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estudiante\SplashScreenUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estudiante\SplashScreenUser.Designer.cs">
+      <DependentUpon>SplashScreenUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estudiante\UserCambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estudiante\UserCambiarContraseña.Designer.cs">
+      <DependentUpon>UserCambiarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estudiante\UserEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estudiante\UserEvento.Designer.cs">
+      <DependentUpon>UserEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estudiante\UserPartidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estudiante\UserPartidos.Designer.cs">
+      <DependentUpon>UserPartidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estudiante\UserMiPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estudiante\UserMiPerfil.Designer.cs">
+      <DependentUpon>UserMiPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estudiante\UserReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estudiante\UserReporte.Designer.cs">
+      <DependentUpon>UserReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sesion\IniciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sesion\IniciarSesion.Designer.cs">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sesion\Rol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sesion\Rol.Designer.cs">
+      <DependentUpon>Rol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sesion\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sesion\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\CrudService.cs" />
+    <EmbeddedResource Include="Forms\Administrador\AdminAdd.resx">
+      <DependentUpon>AdminAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrador\AdminAjustes.resx">
+      <DependentUpon>AdminAjustes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrador\AdminAsistencia.resx">
+      <DependentUpon>AdminAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrador\AdminAddPartidos.resx">
+      <DependentUpon>AdminAddPartidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrador\AdminGrafico.resx">
+      <DependentUpon>AdminGrafico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrador\SplashScreenAdmin.resx">
+      <DependentUpon>SplashScreenAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estudiante\SplashScreenUser.resx">
+      <DependentUpon>SplashScreenUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estudiante\UserCambiarContraseña.resx">
+      <DependentUpon>UserCambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estudiante\UserEvento.resx">
+      <DependentUpon>UserEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estudiante\UserPartidos.resx">
+      <DependentUpon>UserPartidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estudiante\UserMiPerfil.resx">
+      <DependentUpon>UserMiPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estudiante\UserReporte.resx">
+      <DependentUpon>UserReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sesion\IniciarSesion.resx">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sesion\Rol.resx">
+      <DependentUpon>Rol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sesion\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
