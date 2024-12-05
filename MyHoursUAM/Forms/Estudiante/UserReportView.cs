@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -9,6 +8,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyHours_UAMApp.Estructuras.Metodos;
 using MyHours_UAMApp.Estructuras;
+using Microsoft.Reporting.WinForms;
+using System.IO;
+using System;
 
 namespace MyHours_UAMApp.Forms.Estudiante
 {
@@ -36,7 +38,6 @@ namespace MyHours_UAMApp.Forms.Estudiante
 
         private void UserReportView_Load(object sender, EventArgs e)
         {
-
             var estudiante = SesionActual.EstudianteActual;
 
             if (estudiante == null)
@@ -46,17 +47,13 @@ namespace MyHours_UAMApp.Forms.Estudiante
                 return;
             }
 
-            // Obtener eventos asistidos por el estudiant2e
+            // Obtener eventos asistidos por el estudiante
             var eventosAsistidos = Metodos.ObtenerEventosAsistidos(estudiante.cifEstudiante);
 
             // Configurar el ReportViewer
             Metodos.ConfigurarReportViewer(reportViewer1, eventosAsistidos);
 
-            //Calcular y mostrar las horas laborales
-            int horasLaborales = Metodos.CalcularHorasLaborales(estudiante.cifEstudiante);
-            lblHorasLaborales.Text = $"Horas laborales: {horasLaborales}";
-
-
+            this.reportViewer1.RefreshReport();
         }
 
         private void lblEstudiante_Click(object sender, EventArgs e)
@@ -107,5 +104,42 @@ namespace MyHours_UAMApp.Forms.Estudiante
             form.Show();
             this.Close();
         }
+
+        // Métodos para exportar el reporte
+        private void ExportarReporte(string formato, string nombreArchivo)
+        {
+            Warning[] warnings;
+            string[] streamIds;
+            string mimeType;
+            string encoding;
+            string extension;
+
+            // Renderizar el reporte en el formato deseado
+            byte[] bytes = reportViewer1.LocalReport.Render(
+                formato, null, out mimeType, out encoding, out extension, out streamIds, out warnings);
+
+            // Guardar el archivo exportado
+            string rutaArchivo = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), nombreArchivo + "." + extension);
+            File.WriteAllBytes(rutaArchivo, bytes);
+
+            // Mostrar mensaje de éxito
+            MessageBox.Show($"Reporte exportado como {formato.ToUpper()} en:\n{rutaArchivo}", "Exportación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnExportarPDF_Click(object sender, EventArgs e)
+        {
+            ExportarReporte("PDF", "Reporte");
+        }
+
+        private void btnExportarExcel_Click(object sender, EventArgs e)
+        {
+            ExportarReporte("EXCEL", "Reporte");
+        }
+
+        private void btnExportarWord_Click(object sender, EventArgs e)
+        {
+            ExportarReporte("WORD", "Reporte");
+        }
     }
 }
+

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyHours_UAMApp.Forms;
+using MyHours_UAMApp.Forms.Sesion;
 
 namespace MyHours_UAMApp
 {
@@ -146,5 +147,44 @@ namespace MyHours_UAMApp
             form.Show();
             this.Close();
         }
-    }
+
+      private void lblRegistrarse_Click(object sender, EventArgs e)
+      {
+          RegistrarEstudiante form = new RegistrarEstudiante();
+         form.Show();
+         this.Close();
+      }
+
+      private void label1_Click(object sender, EventArgs e)
+      {
+         RegistrarAdministrador registrarAdministrador = new RegistrarAdministrador();
+         registrarAdministrador.Show();
+         this.Close();
+      }
+
+      private void lblAtras_Click(object sender, EventArgs e)
+      {
+
+      }
+
+      private void pnl2_Paint(object sender, PaintEventArgs e)
+      {
+
+      }
+
+      private void pnl1_Paint(object sender, PaintEventArgs e)
+      {
+
+      }
+
+      private void lblContraseña_Click(object sender, EventArgs e)
+      {
+
+      }
+
+      private void lblCIF_Click(object sender, EventArgs e)
+      {
+
+      }
+   }
 }

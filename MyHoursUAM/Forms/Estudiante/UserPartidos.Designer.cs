@@ -47,9 +47,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.gbxEstudianteEventos = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.lvPartidos = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhNombrePartido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -60,6 +57,9 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhCantidadConvalidar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhEstado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStudentIcon)).BeginInit();
@@ -319,38 +319,6 @@
             this.gbxEstudianteEventos.TabStop = false;
             this.gbxEstudianteEventos.Text = "Eventos";
             // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(644, 43);
-            this.label3.TabIndex = 92;
-            this.label3.Text = "Es necesario enviar un comprobante de asistencia. ";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(644, 43);
-            this.label2.TabIndex = 91;
-            this.label2.Text = "Marcar asistencia seleccione el evento que esté disponible según la hora de envío" +
-    " de la asistencia.";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.CadetBlue;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(6, 120);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 29);
-            this.button2.TabIndex = 90;
-            this.button2.Text = "Enviar asistencia ";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // lvPartidos
             // 
             this.lvPartidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -372,7 +340,7 @@
             this.lvPartidos.Location = new System.Drawing.Point(9, 161);
             this.lvPartidos.Margin = new System.Windows.Forms.Padding(2);
             this.lvPartidos.Name = "lvPartidos";
-            this.lvPartidos.Size = new System.Drawing.Size(641, 340);
+            this.lvPartidos.Size = new System.Drawing.Size(641, 353);
             this.lvPartidos.TabIndex = 93;
             this.lvPartidos.UseCompatibleStateImageBehavior = false;
             this.lvPartidos.View = System.Windows.Forms.View.Details;
@@ -420,6 +388,38 @@
             this.clhEstado.Text = "Estado";
             this.clhEstado.Width = 200;
             // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(644, 43);
+            this.label3.TabIndex = 92;
+            this.label3.Text = "Es necesario enviar un comprobante de asistencia. ";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(644, 43);
+            this.label2.TabIndex = 91;
+            this.label2.Text = "Marcar asistencia seleccione el evento que esté disponible según la hora de envío" +
+    " de la asistencia.";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.CadetBlue;
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(6, 120);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(176, 29);
+            this.button2.TabIndex = 90;
+            this.button2.Text = "Enviar asistencia ";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // UserPartidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,6 +435,7 @@
             this.Name = "UserPartidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Partidos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlPieArriba.ResumeLayout(false);
             this.pnlPieArriba.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).EndInit();

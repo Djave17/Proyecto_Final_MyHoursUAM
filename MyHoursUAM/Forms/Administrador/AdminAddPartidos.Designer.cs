@@ -51,6 +51,8 @@
             this.clhCupos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhCantidadConvalidar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhEstado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cmenuPartidos = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.tbxLugar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -76,15 +78,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cmenuPartidos = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gpbAddPartidos.SuspendLayout();
+            this.cmenuPartidos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            this.cmenuPartidos.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -239,7 +239,7 @@
             this.gpbAddPartidos.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbAddPartidos.Location = new System.Drawing.Point(172, 82);
             this.gpbAddPartidos.Name = "gpbAddPartidos";
-            this.gpbAddPartidos.Size = new System.Drawing.Size(541, 1234);
+            this.gpbAddPartidos.Size = new System.Drawing.Size(647, 1315);
             this.gpbAddPartidos.TabIndex = 2;
             this.gpbAddPartidos.TabStop = false;
             this.gpbAddPartidos.Text = "Añadir Partidos";
@@ -265,7 +265,7 @@
             this.btnCambiarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCambiarEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambiarEstado.ForeColor = System.Drawing.Color.White;
-            this.btnCambiarEstado.Location = new System.Drawing.Point(307, 483);
+            this.btnCambiarEstado.Location = new System.Drawing.Point(360, 483);
             this.btnCambiarEstado.Margin = new System.Windows.Forms.Padding(2);
             this.btnCambiarEstado.Name = "btnCambiarEstado";
             this.btnCambiarEstado.Size = new System.Drawing.Size(130, 28);
@@ -296,7 +296,7 @@
             this.lvPartidos.Location = new System.Drawing.Point(5, 524);
             this.lvPartidos.Margin = new System.Windows.Forms.Padding(2);
             this.lvPartidos.Name = "lvPartidos";
-            this.lvPartidos.Size = new System.Drawing.Size(530, 686);
+            this.lvPartidos.Size = new System.Drawing.Size(636, 767);
             this.lvPartidos.TabIndex = 88;
             this.lvPartidos.UseCompatibleStateImageBehavior = false;
             this.lvPartidos.View = System.Windows.Forms.View.Details;
@@ -344,6 +344,20 @@
             // 
             this.clhEstado.Text = "Estado";
             this.clhEstado.Width = 200;
+            // 
+            // cmenuPartidos
+            // 
+            this.cmenuPartidos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editarToolStripMenuItem});
+            this.cmenuPartidos.Name = "cmenuPartidos";
+            this.cmenuPartidos.Size = new System.Drawing.Size(105, 26);
+            // 
+            // editarToolStripMenuItem
+            // 
+            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.editarToolStripMenuItem.Text = "Editar";
+            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
             // dtpFecha
             // 
@@ -468,7 +482,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(193, 483);
+            this.btnEliminar.Location = new System.Drawing.Point(246, 483);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(42, 28);
@@ -529,7 +543,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(249, 483);
+            this.btnEditar.Location = new System.Drawing.Point(302, 483);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(42, 28);
@@ -547,7 +561,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(135, 483);
+            this.btnGuardar.Location = new System.Drawing.Point(188, 483);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(42, 28);
@@ -598,7 +612,7 @@
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
-            this.lblCerrarSesion.Location = new System.Drawing.Point(457, 35);
+            this.lblCerrarSesion.Location = new System.Drawing.Point(564, 35);
             this.lblCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCerrarSesion.Name = "lblCerrarSesion";
             this.lblCerrarSesion.Size = new System.Drawing.Size(83, 13);
@@ -610,7 +624,7 @@
             // 
             this.pcbLogOutIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
-            this.pcbLogOutIcon.Location = new System.Drawing.Point(403, 17);
+            this.pcbLogOutIcon.Location = new System.Drawing.Point(510, 17);
             this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbLogOutIcon.Name = "pcbLogOutIcon";
             this.pcbLogOutIcon.Size = new System.Drawing.Size(40, 41);
@@ -624,7 +638,7 @@
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdmin.ForeColor = System.Drawing.Color.Teal;
-            this.lblAdmin.Location = new System.Drawing.Point(305, 35);
+            this.lblAdmin.Location = new System.Drawing.Point(412, 35);
             this.lblAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(83, 13);
@@ -635,7 +649,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(259, 20);
+            this.pictureBox2.Location = new System.Drawing.Point(366, 20);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 38);
@@ -668,22 +682,8 @@
             this.panel3.Location = new System.Drawing.Point(164, 1);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(548, 73);
+            this.panel3.Size = new System.Drawing.Size(655, 73);
             this.panel3.TabIndex = 3;
-            // 
-            // cmenuPartidos
-            // 
-            this.cmenuPartidos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editarToolStripMenuItem});
-            this.cmenuPartidos.Name = "cmenuPartidos";
-            this.cmenuPartidos.Size = new System.Drawing.Size(181, 48);
-            // 
-            // editarToolStripMenuItem
-            // 
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editarToolStripMenuItem.Text = "Editar";
-            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
             // AdminAddPartidos
             // 
@@ -698,15 +698,16 @@
             this.Name = "AdminAddPartidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Añadir Partidos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gpbAddPartidos.ResumeLayout(false);
             this.gpbAddPartidos.PerformLayout();
+            this.cmenuPartidos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.cmenuPartidos.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

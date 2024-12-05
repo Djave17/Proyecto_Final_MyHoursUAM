@@ -67,6 +67,8 @@
             this.clhCupos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhTipoEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhEstadoEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cMenuEditar = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cbxBeneficio = new System.Windows.Forms.ComboBox();
             this.cbxEvento = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -82,8 +84,6 @@
             this.lblCupos = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblRotulo2 = new System.Windows.Forms.Label();
-            this.cMenuEditar = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -558,6 +558,21 @@
             this.clhEstadoEvento.Text = "Estado Evento";
             this.clhEstadoEvento.Width = 180;
             // 
+            // cMenuEditar
+            // 
+            this.cMenuEditar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editarToolStripMenuItem});
+            this.cMenuEditar.Name = "cMenuEditar";
+            this.cMenuEditar.Size = new System.Drawing.Size(105, 26);
+            this.cMenuEditar.Opening += new System.ComponentModel.CancelEventHandler(this.cMenuEditar_Opening);
+            // 
+            // editarToolStripMenuItem
+            // 
+            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.editarToolStripMenuItem.Text = "Editar";
+            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
+            // 
             // cbxBeneficio
             // 
             this.cbxBeneficio.FormattingEnabled = true;
@@ -749,26 +764,13 @@
             this.lblRotulo2.TabIndex = 0;
             this.lblRotulo2.Text = "Todos los campos son requeridos";
             // 
-            // cMenuEditar
-            // 
-            this.cMenuEditar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editarToolStripMenuItem});
-            this.cMenuEditar.Name = "cMenuEditar";
-            this.cMenuEditar.Size = new System.Drawing.Size(181, 48);
-            this.cMenuEditar.Opening += new System.ComponentModel.CancelEventHandler(this.cMenuEditar_Opening);
-            // 
-            // editarToolStripMenuItem
-            // 
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editarToolStripMenuItem.Text = "Editar";
-            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
-            // 
             // AdminAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoScrollMargin = new System.Drawing.Size(1, 1);
+            this.AutoScrollMinSize = new System.Drawing.Size(1, 1);
             this.ClientSize = new System.Drawing.Size(846, 749);
             this.Controls.Add(this.gpbNuevoEvento);
             this.Controls.Add(this.pnlPieArriba);
@@ -779,6 +781,7 @@
             this.Name = "AdminAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Añadir Eventos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AdminAdd_Load);
             this.pnlPieArriba.ResumeLayout(false);
             this.pnlPieArriba.PerformLayout();

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MyHours_UAMApp.Estructuras
 {
-    internal class Asistencia
+   [Serializable]
+   internal class Asistencia
     {
         //Aca se debe de guadar el comprobante de la asistencia (imagen) y al estudiante que pertenece
 

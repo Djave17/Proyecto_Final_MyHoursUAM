@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("MyHours UAMApp")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("MyHoursUAM App")]
+[assembly: AssemblyDescription("MyHoursUAM es una aplicacion de escritorio que permite a los estudiantes becados de la Universidad Americana (UAM) inscribir sus partidos y eventos, y llevar un registro de estos.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("MyHours UAMApp")]

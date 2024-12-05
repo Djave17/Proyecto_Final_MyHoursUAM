@@ -72,16 +72,38 @@ namespace MyHours_UAMApp
             this.Close();
         }
 
-        private void btnVerReporte_Click(object sender, EventArgs e)
-        {
-            UserReportView form = new UserReportView();
-            form.Show();
-            this.Close();
-        }
+      
 
         private void lblEstudiante_Click(object sender, EventArgs e)
         {
 
         }
+
+        
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem != null)
+            {
+                if (comboBox1.SelectedItem.ToString().Trim() == "Eventos")
+                {
+                    UserReportView formEventos = new UserReportView();
+                    formEventos.Show();
+                    this.Hide();
+                }
+                else if (comboBox1.SelectedItem.ToString().Trim() == "Partidos")
+                {
+                    UserReportViewPartidos formPartidos = new UserReportViewPartidos();
+                    formPartidos.Show();
+                    this.Hide();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona una opción válida.");
+            }
+        }
+
+
     }
 }

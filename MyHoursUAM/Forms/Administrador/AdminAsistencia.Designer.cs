@@ -541,6 +541,7 @@
             this.Name = "AdminAsistencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Asistencia";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AdminAsistencia_Load);
             this.pnlPieArriba.ResumeLayout(false);
             this.pnlPieArriba.PerformLayout();

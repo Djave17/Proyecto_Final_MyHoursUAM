@@ -47,6 +47,7 @@
             this.pnlIcon = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gpbDatosPersonales = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblRotulo2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnVerReporte = new System.Windows.Forms.Button();
             this.pnlPieArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStudentIcon)).BeginInit();
@@ -81,7 +81,7 @@
             this.pnlPieArriba.Location = new System.Drawing.Point(165, 0);
             this.pnlPieArriba.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPieArriba.Name = "pnlPieArriba";
-            this.pnlPieArriba.Size = new System.Drawing.Size(665, 73);
+            this.pnlPieArriba.Size = new System.Drawing.Size(879, 73);
             this.pnlPieArriba.TabIndex = 7;
             // 
             // lblCerrarSesion
@@ -90,7 +90,7 @@
             this.lblCerrarSesion.AutoSize = true;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.Teal;
-            this.lblCerrarSesion.Location = new System.Drawing.Point(578, 37);
+            this.lblCerrarSesion.Location = new System.Drawing.Point(792, 37);
             this.lblCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCerrarSesion.Name = "lblCerrarSesion";
             this.lblCerrarSesion.Size = new System.Drawing.Size(83, 13);
@@ -102,7 +102,7 @@
             // 
             this.pcbLogOutIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbLogOutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogOutIcon.Image")));
-            this.pcbLogOutIcon.Location = new System.Drawing.Point(534, 21);
+            this.pcbLogOutIcon.Location = new System.Drawing.Point(748, 21);
             this.pcbLogOutIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbLogOutIcon.Name = "pcbLogOutIcon";
             this.pcbLogOutIcon.Size = new System.Drawing.Size(40, 41);
@@ -116,7 +116,7 @@
             this.lblEstudiante.AutoSize = true;
             this.lblEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstudiante.ForeColor = System.Drawing.Color.Teal;
-            this.lblEstudiante.Location = new System.Drawing.Point(469, 37);
+            this.lblEstudiante.Location = new System.Drawing.Point(683, 37);
             this.lblEstudiante.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEstudiante.Name = "lblEstudiante";
             this.lblEstudiante.Size = new System.Drawing.Size(67, 13);
@@ -128,7 +128,7 @@
             // 
             this.pcbStudentIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pcbStudentIcon.Image = ((System.Drawing.Image)(resources.GetObject("pcbStudentIcon.Image")));
-            this.pcbStudentIcon.Location = new System.Drawing.Point(428, 24);
+            this.pcbStudentIcon.Location = new System.Drawing.Point(642, 24);
             this.pcbStudentIcon.Margin = new System.Windows.Forms.Padding(2);
             this.pcbStudentIcon.Name = "pcbStudentIcon";
             this.pcbStudentIcon.Size = new System.Drawing.Size(36, 38);
@@ -315,7 +315,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gpbDatosPersonales.BackColor = System.Drawing.Color.White;
-            this.gpbDatosPersonales.Controls.Add(this.btnVerReporte);
+            this.gpbDatosPersonales.Controls.Add(this.comboBox1);
             this.gpbDatosPersonales.Controls.Add(this.lblRotulo2);
             this.gpbDatosPersonales.Controls.Add(this.label8);
             this.gpbDatosPersonales.Controls.Add(this.label9);
@@ -332,10 +332,26 @@
             this.gpbDatosPersonales.Margin = new System.Windows.Forms.Padding(2);
             this.gpbDatosPersonales.Name = "gpbDatosPersonales";
             this.gpbDatosPersonales.Padding = new System.Windows.Forms.Padding(2);
-            this.gpbDatosPersonales.Size = new System.Drawing.Size(650, 513);
+            this.gpbDatosPersonales.Size = new System.Drawing.Size(864, 513);
             this.gpbDatosPersonales.TabIndex = 8;
             this.gpbDatosPersonales.TabStop = false;
             this.gpbDatosPersonales.Text = "Mis Datos Personales";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.CadetBlue;
+            this.comboBox1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Eventos",
+            "Partidos"});
+            this.comboBox1.Location = new System.Drawing.Point(716, 426);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 93;
+            this.comboBox1.Tag = "";
+            this.comboBox1.Text = "Ver Reporte";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // lblRotulo2
             // 
@@ -444,24 +460,11 @@
             this.pictureBox3.TabIndex = 40;
             this.pictureBox3.TabStop = false;
             // 
-            // btnVerReporte
-            // 
-            this.btnVerReporte.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnVerReporte.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerReporte.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnVerReporte.Location = new System.Drawing.Point(538, 409);
-            this.btnVerReporte.Name = "btnVerReporte";
-            this.btnVerReporte.Size = new System.Drawing.Size(98, 29);
-            this.btnVerReporte.TabIndex = 91;
-            this.btnVerReporte.Text = "Ver Reporte";
-            this.btnVerReporte.UseVisualStyleBackColor = false;
-            this.btnVerReporte.Click += new System.EventHandler(this.btnVerReporte_Click);
-            // 
             // UserMiPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 600);
+            this.ClientSize = new System.Drawing.Size(1044, 600);
             this.Controls.Add(this.gpbDatosPersonales);
             this.Controls.Add(this.pnlPieArriba);
             this.Controls.Add(this.pnlAreaAdministrador);
@@ -471,6 +474,7 @@
             this.Name = "UserMiPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Mi Perfil ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UserMiPerfil_Load);
             this.pnlPieArriba.ResumeLayout(false);
             this.pnlPieArriba.PerformLayout();
@@ -517,6 +521,6 @@
         private System.Windows.Forms.PictureBox pcbStudentIcon;
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Button btnPartidos;
-        private System.Windows.Forms.Button btnVerReporte;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

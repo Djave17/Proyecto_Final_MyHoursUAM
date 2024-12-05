@@ -307,7 +307,7 @@
             this.gpbCambioContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.gpbCambioContraseña.Name = "gpbCambioContraseña";
             this.gpbCambioContraseña.Padding = new System.Windows.Forms.Padding(2);
-            this.gpbCambioContraseña.Size = new System.Drawing.Size(639, 440);
+            this.gpbCambioContraseña.Size = new System.Drawing.Size(639, 566);
             this.gpbCambioContraseña.TabIndex = 10;
             this.gpbCambioContraseña.TabStop = false;
             this.gpbCambioContraseña.Text = "Cambio de Contraseña";
@@ -444,6 +444,7 @@
             this.Name = "AdminAjustes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Ajustes";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlPieArriba.ResumeLayout(false);
             this.pnlPieArriba.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogOutIcon)).EndInit();

@@ -7,11 +7,27 @@
     <ProjectGuid>{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>MyHours_UAMApp</RootNamespace>
-    <AssemblyName>MyHours UAMApp</AssemblyName>
+    <AssemblyName>MyHoursUAM</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\seque\OneDrive\Documents\MyHoursUAM\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -27,10 +43,26 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\MyHours UAMApp.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>whatsapp_image_2024_12_03_at_9_37_46_pm_tmh_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>41D1548AB1663043A7D89119BBA9C76C4D2BFFAD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MyHours UAMApp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -151,11 +183,29 @@
     <Compile Include="Forms\Estudiante\UserReportView.Designer.cs">
       <DependentUpon>UserReportView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Estudiante\UserReportViewPartidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estudiante\UserReportViewPartidos.Designer.cs">
+      <DependentUpon>UserReportViewPartidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Sesion\IniciarSesion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Sesion\IniciarSesion.Designer.cs">
       <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sesion\RegistrarAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sesion\RegistrarAdministrador.Designer.cs">
+      <DependentUpon>RegistrarAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sesion\RegistrarEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sesion\RegistrarEstudiante.Designer.cs">
+      <DependentUpon>RegistrarEstudiante.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Sesion\SplashScreen.cs">
       <SubType>Form</SubType>
@@ -206,8 +256,17 @@
     <EmbeddedResource Include="Forms\Estudiante\UserReportView.resx">
       <DependentUpon>UserReportView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estudiante\UserReportViewPartidos.resx">
+      <DependentUpon>UserReportViewPartidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sesion\IniciarSesion.resx">
       <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sesion\RegistrarAdministrador.resx">
+      <DependentUpon>RegistrarAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sesion\RegistrarEstudiante.resx">
+      <DependentUpon>RegistrarEstudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sesion\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
@@ -224,7 +283,10 @@
     <EmbeddedResource Include="Reportes\RptEvento.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\RptPartido.rdlc" />
+    <EmbeddedResource Include="Reportes\RptPartido.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="MyHours UAMApp_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\MyHours_UAMApp.Estructuras.Evento.datasource" />
     <None Include="Properties\DataSources\MyHours_UAMApp.Estructuras.Partido.datasource" />
@@ -255,6 +317,19 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="whatsapp_image_2024_12_03_at_9_37_46_pm_tmh_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

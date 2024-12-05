@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserReporte));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnReporte = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,6 +43,7 @@
             this.pnlIcon = new System.Windows.Forms.Panel();
             this.pnlAreaAdministrador = new System.Windows.Forms.Panel();
             this.pnlPieArriba = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCerrarSesion = new System.Windows.Forms.Label();
             this.pcbLogOutIcon = new System.Windows.Forms.PictureBox();
@@ -226,7 +227,7 @@
             this.pnlAreaAdministrador.Location = new System.Drawing.Point(0, 0);
             this.pnlAreaAdministrador.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAreaAdministrador.Name = "pnlAreaAdministrador";
-            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 856);
+            this.pnlAreaAdministrador.Size = new System.Drawing.Size(165, 749);
             this.pnlAreaAdministrador.TabIndex = 12;
             // 
             // pnlPieArriba
@@ -234,6 +235,7 @@
             this.pnlPieArriba.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPieArriba.BackColor = System.Drawing.Color.White;
+            this.pnlPieArriba.Controls.Add(this.label7);
             this.pnlPieArriba.Controls.Add(this.label2);
             this.pnlPieArriba.Controls.Add(this.lblCerrarSesion);
             this.pnlPieArriba.Controls.Add(this.pcbLogOutIcon);
@@ -246,6 +248,20 @@
             this.pnlPieArriba.Size = new System.Drawing.Size(3538, 73);
             this.pnlPieArriba.TabIndex = 13;
             this.pnlPieArriba.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPieArriba_Paint);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Teal;
+            this.label7.Location = new System.Drawing.Point(1101, 35);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(83, 13);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Cerrar Sesion";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label2
             // 
@@ -323,26 +339,25 @@
             // chart1
             // 
             this.chart1.BorderlineColor = System.Drawing.Color.Teal;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart1.Legends.Add(legend5);
             this.chart1.Location = new System.Drawing.Point(21, 34);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(881, 307);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart1.Series.Add(series5);
+            this.chart1.Size = new System.Drawing.Size(881, 252);
             this.chart1.TabIndex = 14;
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.lvwEventos);
@@ -355,9 +370,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.chart1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(191, 89);
+            this.groupBox1.Location = new System.Drawing.Point(191, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1167, 716);
+            this.groupBox1.Size = new System.Drawing.Size(1167, 650);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Eventos";
@@ -365,8 +380,7 @@
             // 
             // lvwEventos
             // 
-            this.lvwEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lvwEventos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lvwEventos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clhIDEvento,
@@ -379,10 +393,10 @@
             this.clhTipoEvento});
             this.lvwEventos.FullRowSelect = true;
             this.lvwEventos.HideSelection = false;
-            this.lvwEventos.Location = new System.Drawing.Point(20, 375);
+            this.lvwEventos.Location = new System.Drawing.Point(19, 313);
             this.lvwEventos.Margin = new System.Windows.Forms.Padding(2);
             this.lvwEventos.Name = "lvwEventos";
-            this.lvwEventos.Size = new System.Drawing.Size(882, 152);
+            this.lvwEventos.Size = new System.Drawing.Size(882, 135);
             this.lvwEventos.TabIndex = 99;
             this.lvwEventos.UseCompatibleStateImageBehavior = false;
             this.lvwEventos.View = System.Windows.Forms.View.Details;
@@ -434,8 +448,7 @@
             // 
             // lvwPartidosAsistidos
             // 
-            this.lvwPartidosAsistidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lvwPartidosAsistidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lvwPartidosAsistidos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clhID,
@@ -447,10 +460,10 @@
             this.clhDeporte});
             this.lvwPartidosAsistidos.FullRowSelect = true;
             this.lvwPartidosAsistidos.HideSelection = false;
-            this.lvwPartidosAsistidos.Location = new System.Drawing.Point(19, 570);
+            this.lvwPartidosAsistidos.Location = new System.Drawing.Point(19, 489);
             this.lvwPartidosAsistidos.Margin = new System.Windows.Forms.Padding(2);
             this.lvwPartidosAsistidos.Name = "lvwPartidosAsistidos";
-            this.lvwPartidosAsistidos.Size = new System.Drawing.Size(882, 152);
+            this.lvwPartidosAsistidos.Size = new System.Drawing.Size(882, 156);
             this.lvwPartidosAsistidos.TabIndex = 100;
             this.lvwPartidosAsistidos.UseCompatibleStateImageBehavior = false;
             this.lvwPartidosAsistidos.View = System.Windows.Forms.View.Details;
@@ -505,7 +518,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 550);
+            this.label6.Location = new System.Drawing.Point(17, 467);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(153, 20);
@@ -546,7 +559,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 353);
+            this.label3.Location = new System.Drawing.Point(16, 291);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 20);
@@ -559,7 +572,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1370, 856);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnlPieArriba);
             this.Controls.Add(this.pnlAreaAdministrador);
@@ -568,6 +581,7 @@
             this.Name = "UserReporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyHoursUAM - Reporte";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UserReporte_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -628,5 +642,6 @@
         private System.Windows.Forms.ColumnHeader clhFechaPartido;
         private System.Windows.Forms.ColumnHeader clhLugarPartido;
         private System.Windows.Forms.ColumnHeader clhDeporte;
+        private System.Windows.Forms.Label label7;
     }
 }

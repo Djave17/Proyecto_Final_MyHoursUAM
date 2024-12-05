@@ -183,5 +183,12 @@ namespace MyHours_UAMApp
         {
 
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            IniciarSesion form = new IniciarSesion();
+            form.Show();
+            this.Close();
+        }
     }
 }
