@@ -137,42 +137,55 @@ namespace MyHours_UAMApp.Forms.Estudiante
 
         }
 
+        /*
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             // Obtener valores de los controles del formulario
-            string fechaEvento = dtpInicio.Value.ToString("yyyy-MM-dd");
-            string nombrePartido = txtNombre.Text.Trim();
-            string lugarEvento = txtLugar.Text.Trim();
+            string filtroNombrePartido = txtNombre.Text; // Usamos el valor del filtro (por ejemplo, "Evento")
 
-            // Crear una lista de parámetros dinámicamente
-            List<ReportParameter> parameters = new List<ReportParameter>();
+            // Cargar el DataSet (aquí debería estar el dataset que ya tienes configurado)
+            DataSet dataSet = ObtenerDataSet(); // Método que crea y llena tu DataSet
 
-            if (!string.IsNullOrWhiteSpace(fechaEvento))
-            {
-                parameters.Add(new ReportParameter("Fecha", fechaEvento));
-            }
-            if (!string.IsNullOrWhiteSpace(nombrePartido))
-            {
-                parameters.Add(new ReportParameter("NombrePartido", nombrePartido));
-            }
-            if (!string.IsNullOrWhiteSpace(lugarEvento))
-            {
-                parameters.Add(new ReportParameter("LugarEvento", lugarEvento));
-            }
+            // Obtenemos la DataTable dentro del DataSet (asegúrate de usar el nombre correcto)
+            DataTable tablaDatos = dataSet.Tables["NombreDeLaTabla"]; // Cambia "NombreDeLaTabla" por el nombre real
 
-            // Validar que al menos un parámetro tenga valor
-            if (parameters.Count == 0)
+            if (tablaDatos == null)
             {
-                MessageBox.Show("Por favor, ingrese al menos un valor para filtrar el informe.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No se encontraron datos en la tabla especificada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Configurar el ReportViewer
-            reportViewer1.LocalReport.ReportPath = "RptPartido.rdlc"; // Ruta al informe
-            reportViewer1.LocalReport.SetParameters(parameters);      // Pasar los parámetros
-            reportViewer1.RefreshReport();
+            // Aplicamos el filtro si el usuario ingresó algo en txtNombre
+            if (!string.IsNullOrEmpty(filtroNombrePartido))
+            {
+                DataRow[] filasFiltradas = tablaDatos.Select($"NombrePartido LIKE '%{filtroNombrePartido}%'");
 
-        }
+                // Crear una nueva DataTable solo con las filas filtradas
+                DataTable tablaFiltrada = tablaDatos.Clone(); // Clona la estructura de la tabla original
+                foreach (DataRow fila in filasFiltradas)
+                {
+                    tablaFiltrada.ImportRow(fila);
+                }
+
+                // Enlazamos la tabla filtrada al ReportViewer
+                ReportDataSource fuenteReporte = new ReportDataSource("DataSet1", tablaFiltrada); // Cambia "DataSet1" si tu informe tiene otro nombre
+                reportViewer1.LocalReport.DataSources.Clear();
+                reportViewer1.LocalReport.DataSources.Add(fuenteReporte);
+            }
+            else
+            {
+                // Si no se ingresó ningún filtro, mostramos todos los datos
+                ReportDataSource fuenteReporte = new ReportDataSource("DataSet1", tablaDatos);
+                reportViewer1.LocalReport.DataSources.Clear();
+                reportViewer1.LocalReport.DataSources.Add(fuenteReporte);
+            }
+
+            // Configurar el reporte
+            reportViewer1.LocalReport.ReportPath = "RptPartido.rdlc"; // Ruta al informe
+            reportViewer1.RefreshReport();
+        }*/
+
+
             // Evento para validar si hay datos en el reporte
             private void reportViewer1_RenderingComplete(object sender, Microsoft.Reporting.WinForms.RenderingCompleteEventArgs e)
             {

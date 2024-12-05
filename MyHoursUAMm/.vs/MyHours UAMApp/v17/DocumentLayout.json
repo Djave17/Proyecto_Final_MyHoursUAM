@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\forms\\estudiante\\userreportviewpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\estudiante\\userreportviewpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,8 +11,12 @@
       "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\estudiante\\userreportviewpartidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|c:\\users\\xadmin\\onedrive\\escritorio\\myhoursuamm\\forms\\estudiante\\userreportview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\forms\\estudiante\\userreportview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:forms\\estudiante\\userreportview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\estructuras\\metodos\\metodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:estructuras\\metodos\\metodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\reportes\\rptpartido.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
@@ -33,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\reportes\\rptevento.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
       "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:reportes\\rptevento.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\estructuras\\metodos\\metodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|solutionrelative:estructuras\\metodos\\metodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21C7D605-75F4-4D2D-BDAD-E6C81D3D5D64}|MyHours UAMApp.csproj|C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\forms\\estudiante\\userevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -149,11 +145,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UserReportViewPartidos.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Estudiante\\UserReportViewPartidos.cs",
               "RelativeDocumentMoniker": "Forms\\Estudiante\\UserReportViewPartidos.cs",
@@ -166,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "UserReportView.Designer.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Estudiante\\UserReportView.Designer.cs",
               "RelativeDocumentMoniker": "Forms\\Estudiante\\UserReportView.Designer.cs",
@@ -188,13 +184,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UserReportViewPartidos.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Estudiante\\UserReportViewPartidos.cs",
               "RelativeDocumentMoniker": "Forms\\Estudiante\\UserReportViewPartidos.cs",
               "ToolTip": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Estudiante\\UserReportViewPartidos.cs",
               "RelativeToolTip": "Forms\\Estudiante\\UserReportViewPartidos.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAQwLoAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAKMAAADgLTMzM7MZwLsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-05T02:51:05.499Z",
               "EditorCaption": ""
@@ -213,15 +209,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Metodos.cs",
+              "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Estructuras\\Metodos\\Metodos.cs",
+              "RelativeDocumentMoniker": "Estructuras\\Metodos\\Metodos.cs",
+              "ToolTip": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Estructuras\\Metodos\\Metodos.cs",
+              "RelativeToolTip": "Estructuras\\Metodos\\Metodos.cs",
+              "ViewState": "AgIAAEQEAAAAlpmZmfkwwEYEAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T06:49:00.802Z",
+              "WhenOpened": "2024-12-02T03:49:54.264Z",
               "EditorCaption": ""
             },
             {
@@ -233,8 +229,7 @@
               "ToolTip": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Reportes\\RptEvento.rdlc [Dise\u00F1o]",
               "RelativeToolTip": "Reportes\\RptEvento.rdlc [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
-              "WhenOpened": "2024-12-02T14:47:45.749Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-12-02T14:47:45.749Z"
             },
             {
               "$type": "Document",
@@ -246,8 +241,7 @@
               "RelativeToolTip": "Forms\\Estudiante\\UserReportView.cs",
               "ViewState": "AgIAAA4AAAAAlpmZmZkIwJAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T14:56:37.242Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T14:56:37.242Z"
             },
             {
               "$type": "Document",
@@ -258,24 +252,11 @@
               "ToolTip": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Estudiante\\UserReportView.cs [Dise\u00F1o]",
               "RelativeToolTip": "Forms\\Estudiante\\UserReportView.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T03:32:46.015Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-12-05T03:32:46.015Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Metodos.cs",
-              "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Estructuras\\Metodos\\Metodos.cs",
-              "RelativeDocumentMoniker": "Estructuras\\Metodos\\Metodos.cs",
-              "ToolTip": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Estructuras\\Metodos\\Metodos.cs",
-              "RelativeToolTip": "Estructuras\\Metodos\\Metodos.cs",
-              "ViewState": "AgIAAKkDAABAMzMzM3MvwMUDAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T03:49:54.264Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "UserEvento.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Estudiante\\UserEvento.cs",
               "RelativeDocumentMoniker": "Forms\\Estudiante\\UserEvento.cs",
@@ -286,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "StandalonePreviewStore.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\AppData\\Local\\Temp\\.vsdbgsrc\\3c94fdec11449c41968ebd55fd1976f537a1ddfb91f519e2af191c13143b782b\\StandalonePreviewStore.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\3c94fdec11449c41968ebd55fd1976f537a1ddfb91f519e2af191c13143b782b\\StandalonePreviewStore.cs",
@@ -298,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "SplashScreenAdmin.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Administrador\\SplashScreenAdmin.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\SplashScreenAdmin.cs",
@@ -310,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "AdminAdd.Designer.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Administrador\\AdminAdd.Designer.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAdd.Designer.cs",
@@ -322,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "SplashScreen.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Sesion\\SplashScreen.cs",
               "RelativeDocumentMoniker": "Forms\\Sesion\\SplashScreen.cs",
@@ -333,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "SplashScreenUser.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Estudiante\\SplashScreenUser.cs",
               "RelativeDocumentMoniker": "Forms\\Estudiante\\SplashScreenUser.cs",
@@ -345,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "AdminAdd.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Administrador\\AdminAdd.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAdd.cs",
@@ -357,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "AdminAdd.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Administrador\\AdminAdd.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAdd.cs",
@@ -368,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "UserReporte.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Estudiante\\UserReporte.cs",
               "RelativeDocumentMoniker": "Forms\\Estudiante\\UserReporte.cs",
@@ -380,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "UserReporte.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Estudiante\\UserReporte.cs",
               "RelativeDocumentMoniker": "Forms\\Estudiante\\UserReporte.cs",
@@ -391,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "UserReporte.Designer.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Estudiante\\UserReporte.Designer.cs",
               "RelativeDocumentMoniker": "Forms\\Estudiante\\UserReporte.Designer.cs",
@@ -403,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "AdminAsistencia.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Administrador\\AdminAsistencia.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAsistencia.cs",
@@ -415,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "AdminAsistencia.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Administrador\\AdminAsistencia.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAsistencia.cs",
@@ -426,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "IniciarSesion.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Sesion\\IniciarSesion.cs",
               "RelativeDocumentMoniker": "Forms\\Sesion\\IniciarSesion.cs",
@@ -437,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": "Estudiante.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Estructuras\\Estudiante.cs",
               "RelativeDocumentMoniker": "Estructuras\\Estudiante.cs",
@@ -449,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "SplashScreen.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Sesion\\SplashScreen.cs",
               "RelativeDocumentMoniker": "Forms\\Sesion\\SplashScreen.cs",
@@ -461,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "IniciarSesion.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Sesion\\IniciarSesion.cs",
               "RelativeDocumentMoniker": "Forms\\Sesion\\IniciarSesion.cs",
@@ -473,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 28,
               "Title": "AdminGrafico.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Administrador\\AdminGrafico.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminGrafico.cs",
@@ -485,7 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "AdminAddPartidos.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Administrador\\AdminAddPartidos.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAddPartidos.cs",
@@ -497,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "AdminAddPartidos.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Administrador\\AdminAddPartidos.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAddPartidos.cs",
@@ -508,7 +489,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "UserPartidos.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Estudiante\\UserPartidos.cs",
               "RelativeDocumentMoniker": "Forms\\Estudiante\\UserPartidos.cs",
@@ -520,7 +501,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "UserPartidos.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Estudiante\\UserPartidos.cs",
               "RelativeDocumentMoniker": "Forms\\Estudiante\\UserPartidos.cs",
@@ -531,7 +512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 32,
               "Title": "SolicitudAsistencia.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Estructuras\\SolicitudAsistencia.cs",
               "RelativeDocumentMoniker": "Estructuras\\SolicitudAsistencia.cs",
@@ -543,7 +524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 33,
               "Title": "AdminAsistencia.Designer.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Administrador\\AdminAsistencia.Designer.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAsistencia.Designer.cs",
@@ -554,7 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
               "Title": "AdminAjustes.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Administrador\\AdminAjustes.cs",
               "RelativeDocumentMoniker": "Forms\\Administrador\\AdminAjustes.cs",
@@ -565,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "UserEvento.cs",
               "DocumentMoniker": "C:\\Users\\XADMIN\\OneDrive\\Escritorio\\MyHoursUAMm\\Forms\\Estudiante\\UserEvento.cs",
               "RelativeDocumentMoniker": "Forms\\Estudiante\\UserEvento.cs",

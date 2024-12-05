@@ -1093,7 +1093,49 @@ namespace MyHours_UAMApp.Estructuras.Metodos
             }
         }
 
+        public static DataSet ObtenerDataSet()
+        {
+            // Crear un nuevo DataSet
+            DataSet dataSet = new DataSet();
 
+            // Crear una nueva DataTable para los datos de partidos
+            DataTable tablaPartidos = new DataTable("NombreDeLaTabla");
+
+            // Definir las columnas de la tabla (ajustar nombres y tipos según sea necesario)
+            tablaPartidos.Columns.Add("IdEvento", typeof(string));
+            tablaPartidos.Columns.Add("NombrePartido", typeof(string));
+            tablaPartidos.Columns.Add("LugarPartido", typeof(string));
+            tablaPartidos.Columns.Add("Deporte", typeof(string));
+            tablaPartidos.Columns.Add("HoraEvento", typeof(string));
+            tablaPartidos.Columns.Add("FechaEvento", typeof(string));
+            tablaPartidos.Columns.Add("CantidadConvalidar", typeof(int));
+            tablaPartidos.Columns.Add("Cupos", typeof(int));
+            tablaPartidos.Columns.Add("EstadoEvento", typeof(string));
+
+            // Obtener los datos de los partidos desde el servicio
+            List<Partido> partidos = partidoService.GetAll() ?? new List<Partido>();
+
+            // Llenar la DataTable con los datos de los partidos
+            foreach (var partido in partidos)
+            {
+                tablaPartidos.Rows.Add(
+                    partido.idEvento,
+                    partido.nombrePartido,
+                    partido.lugarPartido,
+                    partido.deporte.ToString(),
+                    partido.horaEvento,
+                    partido.fechaEvento,
+                    partido.cantidadConvalidar,
+                    partido.cupos,
+                    partido.estadoEvento.ToString()
+                );
+            }
+
+            // Agregar la DataTable al DataSet
+            dataSet.Tables.Add(tablaPartidos);
+
+            return dataSet;
+        }
 
 
 
